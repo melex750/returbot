@@ -4,7 +4,7 @@ Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large varie
 Current version is 0.0.09c. Creation of this mod is still near beginning as number of version hints, not even half of levels is done yet and no programs for bots were written at all.
 
 <h5>Installation:</h5>
-Simply put both archives either into "C:\Users\username\colobot\mods\" directory on Windows or into "/home/username/.local/share/colobot/mods/" directory on Linux.
+Simply put both /returbot/ and /returbot_music/ either into "C:\Users\username\colobot\mods\" directory on Windows or into "/home/username/.local/share/colobot/mods/" directory on Linux.
 
 <h5>Plot:</h5>
 Several expeditions consisting entirely of bots were sent to find a planet that should soon become alternative to Earth. One of expeditions succeeded and sent a signal back to Earth using a communication estabilished on variety of transitional planets and maintained by automatic system. On the Earth there was a space ship capable to perform hyper jumps. Using it's unique ability it jumped from Earth to Terranova - the planet found by bots. After that, however, a problem occured - long connection between Earth and Terranova suddenly got lost. And now it is your mission to travel back from Terranova to Earth through each planet used for connection and, amongst performing other tasks, restore these communications. You will reside in a low orbital module without need to get outside and all the work will be done by bots under your control.

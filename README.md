@@ -1,4 +1,3 @@
-About:
 Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large variety of levels, just like original story mode. There is no astronaut and all the levels are intended to be passable for those who want to use only programming. Complexity of useful programming becomes wider with every chapter, although this is not a straight programming course but rather just a game with various challenges.
 
 Status:

@@ -9,5 +9,6 @@ Simply put both archives either into "C:\Users\username\colobot\mods\" directory
 <h5>Plot:</h5>
 Several expeditions consisting entirely of bots were sent to find a planet that should soon become alternative to Earth. One of expeditions succeeded and sent a signal back to Earth using a communication estabilished on variety of transitional planets and maintained by automatic system. On the Earth there was a space ship capable to perform hyper jumps. Using it's unique ability it jumped from Earth to Terranova - the planet found by bots. After that, however, a problem occured - long connection between Earth and Terranova suddenly got lost. And now it is your mission to travel back from Terranova to Earth through each planet used for connection and, amongst performing other tasks, restore these communications. You will reside in a low orbital module without need to get outside and all the work will be done by bots under your control.
 
+<br><br>
 
 More info available [here](https://colobot.info/forum/showthread.php?tid=949&pid=8033).

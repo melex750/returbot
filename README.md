@@ -1,7 +1,7 @@
 Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large variety of levels, just like original story mode. There is no astronaut and all the levels are intended to be passable for those who want to use only programming. Complexity of useful programming becomes wider with every chapter, although this is not a straight programming course but rather just a game with various challenges.
 
 <h5>Status:</h5>
-Current version is 0.0.09c. Creation of this mod is still near beginning as number of version hints, not even half of levels is done yet and no programs for bots were written at all. So, why do I keep uploading these unfinished versions from time to time? Mostly because I am not certain about the future, that is. I might eventually fall offline for a dead long time, at any time and without warning.
+Current version is 0.0.09c. Creation of this mod is still near beginning as number of version hints, not even half of levels is done yet and no programs for bots were written at all.
 
 <h5>Installation:</h5>
 Simply put both archives either into "C:\Users\<username>\colobot\mods\" directory on Windows or into "/home/<username>/.local/share/colobot/mods/" directory on Linux.

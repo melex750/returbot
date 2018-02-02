@@ -1,0 +1,146 @@
+extern void object::Reinforce()
+{
+	point	path[];
+    point   hill, towsite, waiter, convsite;
+	int		i, mid = cmdline(0);
+
+    errmode(0);
+	
+    hill.x = -33;
+    hill.y = -36;
+    hill.z =  0;
+	
+    convsite.x = 46;
+    convsite.y = 108;
+    convsite.z = 0;
+	
+    towsite.x = -36.44;
+    towsite.y = -24.19;
+    towsite.z =  0;
+    
+    waiter.x = 15;
+    waiter.y = 15;
+    waiter.z = 0;
+    
+	i = 0;
+    path[i].x =  238;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x =  200;  path[i].y = -332;  path[i++].z = 0;
+    path[i].x =  168;  path[i].y = -346;  path[i++].z = 0;
+    path[i].x =  143;  path[i].y = -352;  path[i++].z = 0;
+    path[i].x =  124;  path[i].y = -354;  path[i++].z = 0;
+    path[i].x =   90;  path[i].y = -352;  path[i++].z = 0;
+    path[i].x =   71;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x =   38;  path[i].y = -333;  path[i++].z = 0;
+    path[i].x =   23;  path[i].y = -345;  path[i++].z = 0;
+    path[i].x =    4;  path[i].y = -356;  path[i++].z = 0;
+    path[i].x =  -15;  path[i].y = -354;  path[i++].z = 0;
+    path[i].x =  -25;  path[i].y = -347;  path[i++].z = 0;
+    path[i].x =  -43;  path[i].y = -335;  path[i++].z = 0;
+    path[i].x =  -57;  path[i].y = -328;  path[i++].z = 0;
+    path[i].x =  -82;  path[i].y = -342;  path[i++].z = 0;
+    path[i].x = -100;  path[i].y = -346;  path[i++].z = 0;
+    path[i].x = -117;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x = -133;  path[i].y = -318;  path[i++].z = 0;
+    path[i].x = -145;  path[i].y = -301;  path[i++].z = 0;
+    path[i].x = -154;  path[i].y = -288;  path[i++].z = 0;
+    path[i].x = -165;  path[i].y = -276;  path[i++].z = 0;
+    path[i].x = -181;  path[i].y = -276;  path[i++].z = 0;
+    path[i].x = -201;  path[i].y = -275;  path[i++].z = 0;
+    path[i].x = -229;  path[i].y = -273;  path[i++].z = 0;
+    path[i].x = -233;  path[i].y = -290;  path[i++].z = 0;
+    path[i].x = -238;  path[i].y = -311;  path[i++].z = 0;
+    path[i].x = -245;  path[i].y = -331;  path[i++].z = 0;
+    path[i].x = -259;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x = -280;  path[i].y = -331;  path[i++].z = 0;
+    path[i].x = -287;  path[i].y = -305;  path[i++].z = 0;
+    path[i].x = -296;  path[i].y = -286;  path[i++].z = 0;
+    path[i].x = -308;  path[i].y = -268;  path[i++].z = 0;
+    path[i].x = -317;  path[i].y = -241;  path[i++].z = 0;
+    path[i].x = -320;  path[i].y = -208;  path[i++].z = 0;
+    path[i].x = -317;  path[i].y = -189;  path[i++].z = 0;
+    path[i].x = -313;  path[i].y = -161;  path[i++].z = 0;
+    path[i].x = -335;  path[i].y = -145;  path[i++].z = 0;
+    path[i].x = -348;  path[i].y = -119;  path[i++].z = 0;
+    path[i].x = -347;  path[i].y = -101;  path[i++].z = 0;
+    path[i].x = -329;  path[i].y =  -85;  path[i++].z = 0;
+    path[i].x = -301;  path[i].y =  -65;  path[i++].z = 0;
+    path[i].x = -316;  path[i].y =  -28;  path[i++].z = 0;
+    path[i].x = -313;  path[i].y =   -1;  path[i++].z = 0;
+    path[i].x = -315;  path[i].y =   23;  path[i++].z = 0;
+    path[i].x = -318;  path[i].y =   55;  path[i++].z = 0;
+    path[i].x = -309;  path[i].y =   72;  path[i++].z = 0;
+    path[i].x = -295;  path[i].y =   94;  path[i++].z = 0;
+    path[i].x = -298;  path[i].y =  132;  path[i++].z = 0;
+    path[i].x = -301;  path[i].y =  190;  path[i++].z = 0;
+    path[i].x = -272;  path[i].y =  223;  path[i++].z = 0;
+    path[i].x = -238;  path[i].y =  228;  path[i++].z = 0;
+    path[i].x = -217;  path[i].y =  221;  path[i++].z = 0;
+    path[i].x = -196;  path[i].y =  225;  path[i++].z = 0;
+    path[i].x = -139;  path[i].y =  228;  path[i++].z = 0;
+    path[i].x =  -98;  path[i].y =  236;  path[i++].z = 0;
+    path[i].x =  -69;  path[i].y =  207;  path[i++].z = 0;
+    path[i].x =  -20;  path[i].y =  166;  path[i++].z = 0;
+    path[i].x =    1;  path[i].y =  134;  path[i++].z = 0;
+    path[i].x =   13;  path[i].y =  121;  path[i++].z = 0;
+    path[i].x =   28;  path[i].y =  103;  path[i++].z = 0;
+
+	grab();
+
+    if(distance2d(position,hill) > 200)
+    {
+        for ( i=0 ; i < sizeof(path) ; i++ )
+        {
+            while(goto(path[i]) != 0)
+            {
+                wait(1);
+            }
+        }
+    }
+    if(load.category == Titanium)
+    {
+        if(radar(Converter) == null)
+        {
+            convsite = flatspace(convsite,6);
+            goto(convsite);
+            drop();
+            build(Converter);
+            goto(radar(TitaniumOre).position);
+            grab();
+            goto(radar(Converter).position);
+            drop();
+            move(-2.5);
+            while(radar(Titanium) == null)
+            {
+                wait(1);
+            }
+            goto(radar(Titanium).position);
+            grab();
+        }
+        while(goto(waiter) != 0)
+        {
+            wait(1);
+        }
+        // towsite = flatspace(towsite,3.5);
+        while(goto(towsite) != 0)
+        {
+            wait(1);
+        }
+        drop();
+        build(DefenseTower);
+        while(goto(waiter) != 0)
+        {
+            wait(1);
+        }
+    }
+    if(load.category == NuclearCell)
+    {
+        goto(waiter);
+        turn(-60);
+        move(4);
+        while(radar(DefenseTower) == null or goto(radar(DefenseTower).position) != 0 or radar(DefenseTower).energyCell != null)
+        {
+            wait(1);
+        }
+        drop();
+    }
+}

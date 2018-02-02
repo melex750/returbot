@@ -1,0 +1,22 @@
+\b;Satellite Report
+Currently in a geo-stationary orbit of Crystalium.
+\c;
+\s;-> SURFACE\c;
+\tab;Temperature:      5.4C
+\tab;Atmosphere:       nitrogen
+\tab;Wind:             0.0 mps
+\tab;Titanium ore:     none
+\tab;Uranium ore:      none
+
+\s;-> SUBSOIL\c;
+\tab;Energy source:    almost everywhere
+\tab;Titanium ore:     area around the ship (probe needed)
+\tab;Uranium ore:      dark areas (probe needed)
+
+\s;-> ADDITIONAL INFORMATION\c;
+\tab;Detected:         giant spiders
+\tab;  - Threat:       active
+\tab;Detected:         undetermined flying organisms
+\tab;  - Threat:       ?
+\tab;It is strongly advised to use \l;radar station\u object\radar; to determine threat if it is possible.
+\n;

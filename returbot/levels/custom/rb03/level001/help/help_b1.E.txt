@@ -1,0 +1,13 @@
+\b;From Mission Control
+Your \l;space ship\u object\base; succesfully and uneventfully landed on Centaury and this fact by itself couldn't leave us in dejection.
+
+Our current priority is to investigate conditions in which radar site installed on Centaury might have been disabled. We already obtained a lot of unusual information while studying satellite observations and we have some serious materials corroborating one of our theories in this respect. For full certitude we only miss a little. We want you to dispatch a bot for intelligence gathering.
+
+You will have to inspect a site south-east from where your \l;space ship\u object\base; is landed in which a shipwreck had it's place. As far as we know ruined \l;space ship\u object\base; belonged to a workgroup directly engaged in service of the radar site, and thus any data that you will get from there will tell us more about reasons behind loss of this installation. Though, if you won't discover there anything worth of attention, then you might as well take off immediately.
+
+Always remember to check satellite report every time your \l;space ship\u object\base; touches ground as it will often contain information crucial for your current mission.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

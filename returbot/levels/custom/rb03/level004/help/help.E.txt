@@ -1,0 +1,16 @@
+\b;From Mission Control
+Yout current mission is to install a new radar site and ensure it's safety. Conditions on Centaury are fairly good as well as this location which means that you will have to install only one \l;radar station\u object\radar;.
+
+Eliminate few \l;giant spiders\u object\spider; remained in this area and build a \l;radar station\u object\radar; on one of heights around. For the former you will have to put production of new weapon on regular basis and use it in action.
+
+\b;Procedure
+Develop in a \l;research center\u object\research; and assemble in a \l;bot factory\u object\factory; a \l;shooter\u object\botfr;. Use it to clean up this area of any insects. When all the aliens will be eliminated, build a \l;radar station\u object\radar; on a height - the most suitable point for it's location appears to be the mountain south-east from where you landed; exact coordinates for installing: 30, -130. Your \l;wheeled grabber\u object\botgr; should reach this point without much difficulty.
+
+Be very careful with energy - fireball cannon of \l;shooter\u object\botfr; consumes large amount of energy with each burst and your power resources are limited to set of \l;accumulators\u object\power; transported by you onboard; otherwise your power resources will cease before you will complete your mission.
+
+We recommend you to build a radar station in your base before starting hunt, this way you will know where the enemy exactly is. During attack, if you control \l;shooter\u object\botfr; manually, move your mouse to hit with one burst as many enemies as possible, or, if you use a program, use instruction \c;\l;fire\u cbot\fire;\n; with value less than 1.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

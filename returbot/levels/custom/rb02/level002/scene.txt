@@ -1,0 +1,85 @@
+Title.E text="Extraction"
+Title.R text="Добыча"
+Resume.E text="Extract some uranium ore from subsoil."
+Resume.R text="Добудьте немного урановой руды из подпочвы."
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+// Loading name="programs/8_ServiceTower1_link.txt"
+// SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="Quiet3.ogg"
+
+// Planets for SpaceShip transition animation
+Planet mode=1 pos=1.2; 0.2 dim=0.40 speed= 0.000 dir=0.5 image="planet02.png" uv1=0.0;0.0 uv2=0.5;0.5
+Planet mode=1 pos=4.0;-0.4 dim=0.20 speed= 0.000 dir=0.7 image="planet02.png" uv1=0.0;0.0 uv2=0.5;0.5
+Planet mode=1 pos=4.4; 0.3 dim=0.30 speed= 0.000 dir=0.3 image="planet02.png" uv1=0.0;0.5 uv2=0.5;1.0
+Planet mode=1 pos=3.5; 0.4 dim=0.12 speed= 0.000 dir=0.8 image="planet02.png" uv1=0.5;0.5 uv2=1.0;1.0
+Planet mode=1 pos=0.0; 0.2 dim=0.06 speed= 0.000 dir=0.4 image="planet02.png" uv1=0.0;0.0 uv2=0.5;0.5
+Planet mode=1 pos=2.0; 0.5 dim=0.05 speed= 0.000 dir=2.0 image="planet02.png" uv1=0.5;0.5 uv2=1.0;1.0
+Planet mode=1 pos=4.1; 0.1 dim=0.10 speed= 0.000 dir=0.3 image="planet02.png" uv1=0.5;0.0 uv2=1.0;0.5
+
+#Include file="%chap%/planet.txt"
+// TerrainBlitz sleep=60 delay=3 magnetic=50
+TerrainRelief image="m_relief_14.png" factor=1.0
+TerrainResource image="m_res_14.png"
+#Include file="%chap%/terrain.txt"
+TerrainCreate
+
+BeginObject
+
+CreateObject pos= -80.00;-106.00 dir=0.0 type=SpaceShip run=1
+CreateObject pos=-83.25;-109.25 dir=1.5 type=WheeledGrabber power=0.75 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= -76.75;-109.25 dir=1.5 type=WheeledGrabber power=0.75 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+
+CreateObject pos=-83.75;-103.50 dir=0.0 type=Titanium
+CreateObject pos= -82.50;-103.50 dir=0.0 type=Titanium
+// CreateObject pos= -80.60;-103.50 dir=0.0 type=Titanium
+// CreateObject pos= -79.40;-103.50 dir=0.0 type=Titanium
+CreateObject pos= -77.50;-103.50 dir=0.0 type=PowerCell
+CreateObject pos= -76.25;-103.50 dir=0.0 type=PowerCell
+CreateObject pos=-83.75;-102.25 dir=0.0 type=Titanium
+CreateObject pos= -82.50;-102.25 dir=0.0 type=Titanium
+// CreateObject pos= -80.60;-102.25 dir=0.0 type=Titanium
+// CreateObject pos= -79.40;-102.25 dir=0.0 type=Titanium
+CreateObject pos= -77.50;-102.25 dir=0.0 type=PowerCell
+CreateObject pos= -76.25;-102.25 dir=0.0 type=PowerCell
+
+CreateObject pos=-83.75;-105.50 dir=0.0 type=Titanium
+CreateObject pos= -82.50;-105.50 dir=0.0 type=Titanium
+CreateObject pos=-83.75;-106.75 dir=0.0 type=Titanium
+CreateObject pos= -82.50;-106.75 dir=0.0 type=Titanium
+CreateObject pos=-77.50;-105.50 dir=0.0 type=PowerCell
+CreateObject pos= -76.25;-105.50 dir=0.0 type=PowerCell
+CreateObject pos=-77.50;-106.75 dir=0.0 type=PowerCell power=0.25
+CreateObject pos= -76.25;-106.75 dir=0.0 type=PowerCell power=0.25
+
+
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+
+MapColor floor=0.702;0.502;0.310 water=0.604;0.922;1.000
+MapZoom factor=2
+
+EnableBuild type=BotFactory
+EnableBuild type=Derrick
+EnableBuild type=ExchangePost
+EnableBuild type=FlatGround
+EnableBuild type=Flag
+
+EnableResearch type=SNIFFER
+
+DoneResearch type=SNIFFER
+
+EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
+EndMissionTake pos=-80.00;-106.00 dist=8.00 type=UraniumOre min=3
+EndMissionTake pos=-80.00;-106.00 dist=8.00 tool=Grabber min=1
+
+Camera pos=12.50;-250.00 h=2.50

@@ -1,0 +1,2 @@
+Title.E text="RB: On Frozium" resume="Frozium"
+Title.R text="RB: На Фрозиуме" resume="Фрозиум"

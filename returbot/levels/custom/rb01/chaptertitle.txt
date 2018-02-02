@@ -1,0 +1,5 @@
+Title.E text="RB: Leaving Terranova" resume="Terranova"
+Title.D text="RB: Weg von der Terranova" resume="Terranova"
+Title.F text="RB: Départ de la Terranova" resume="Terranova"
+Title.P text="RB: Pożegnanie z Noweja Ziemią" resume="Nowa Ziemia"
+Title.R text="RB: Покидая Терранову" resume="Терранова"

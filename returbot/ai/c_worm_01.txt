@@ -1,0 +1,173 @@
+extern void object::PowerWorm( )
+{
+	int     list[];
+	int     i, ip, thismoved = 1;
+	object  p[], moved[];
+	float   dim, dist, prox, idist = 10, ddist = 100, stimer, ftimer, waiter;
+	point   dest = position, center = position;
+    Ctrl_underctrl underctrl();
+    bool tlock = false;
+    
+	errmode(0);  // ne stoppe pas si erreur
+	// while ( ismovie() != 0 )  wait(1);
+
+	i = 0;
+	// list[i++] = PowerStation;
+	// list[i++] = PowerPlant;
+	// list[i++] = DefenseTower;
+	// list[i++] = ResearchCenter;
+	list[i++] = WingedGrabber;
+	list[i++] = TrackedGrabber;
+	list[i++] = WheeledGrabber;
+	list[i++] = LeggedGrabber;
+	list[i++] = WingedShooter;
+	list[i++] = TrackedShooter;
+	list[i++] = WheeledShooter;
+	list[i++] = LeggedShooter;
+	list[i++] = WingedOrgaShooter;
+	list[i++] = TrackedOrgaShooter;
+	list[i++] = WheeledOrgaShooter;
+	list[i++] = LeggedOrgaShooter;
+	list[i++] = WingedSniffer;
+	list[i++] = TrackedSniffer;
+	list[i++] = WheeledSniffer;
+	list[i++] = LeggedSniffer;
+	list[i++] = Thumper;
+	list[i++] = PhazerShooter;
+	list[i++] = Recycler;
+	list[i++] = Shielder;
+	list[i++] = Subber;
+    
+    if(cmdline(0) != nan and cmdline(0) != 0)
+    {
+        ddist = cmdline(0);
+    }
+    if(cmdline(1) != nan and cmdline(1) > 0)
+    {
+        turn(-343);
+        while ( ismovie() != 0 )  wait(0.5);
+    }
+    ftimer = abstime();
+    stimer = abstime();
+    if(cmdline(1) != nan and cmdline(1) > 0)
+    {
+        waiter = cmdline(1);
+        while(true)
+        {
+            if(ftimer > abstime())
+            {
+                waiter = waiter - (ftimer - abstime());
+                ftimer = abstime();
+            }
+            else
+            {
+                ftimer = abstime();
+            }
+            if(ftimer >= waiter + stimer)
+            {
+                break;
+            }
+        }
+    }
+    
+    wait(rand()*3);
+    
+	while ( true )
+	{
+		p = radarall(list,0,360,0,ddist);
+		if ( p != null )
+		{
+			ip = 0;
+            tlock = false;
+			while(ip < sizeof(p))
+			{
+                if(radar(SpaceShip) != null and distance(p[ip].position,radar(SpaceShip).position) <= 20)
+                {
+                    ip++;
+                    continue;
+                }
+                else if(((p[ip].category == PowerStation or p[ip].category == PowerPlant) and p[ip].energyLevel > 0.1) or (p[ip].energyCell != null and p[ip].energyCell.energyLevel > 0.1))
+                {
+                    i = 0;
+                    while (i < sizeof(underctrl.list))
+                    {
+                        if(underctrl.list[i] == p[ip])
+                        {
+                            i = 1234;
+                            break;
+                        }
+                        else
+                        {
+                            i++;
+                        }
+                    }
+                    if(i == 1234)
+                    {
+                        ip++;
+                        continue;
+                    }
+                    else if(distance(p[ip].position,position) <= idist)
+                    {
+                        message("Incorrect current route is in use", DisplayError);
+                        underctrl.list[sizeof(underctrl.list)] = p[ip];
+                        underctrl.power[sizeof(underctrl.power)] = 98765;
+                        underctrl.orientation[sizeof(underctrl.orientation)] = 98765;
+                        underctrl.delay[sizeof(underctrl.delay)] = abstime()+1.2;
+                        ip++;
+                        continue;
+                    }
+                    thismoved = 1;
+                    i = 0;
+                    while(i < sizeof(moved))
+                    {
+                        if(moved[i] == p[ip])
+                        {
+                            if(p[ip].altitude > 0)
+                            {
+                                thismoved = 2;
+                            }
+                            else
+                            {
+                                thismoved = 3;
+                            }
+                            break;
+                        }
+                        i++;
+                    }
+                    if(thismoved == 1 and (p[ip].altitude > 0 or p[ip].velocity.x != 0 or p[ip].velocity.y != 0))
+                    {
+                        moved[sizeof(moved)] = p[ip];
+                        if(p[ip].altitude > 0)
+                        {
+                            thismoved = 2;
+                        }
+                        else
+                        {
+                            thismoved = 3;
+                        }
+                    }
+                    if(tlock != true and i != 1234 and p[ip].altitude <= 0 and topo(p[ip].position) >= 0 and (thismoved == 3 or p[ip].category == PowerStation or p[ip].category == PowerPlant or p[ip].category == DefenseTower or p[ip].category == ResearchCenter))
+                    {
+                        turn(direction(p[ip].position));
+                        motor(1,1);
+                        wait(0.2);
+                        tlock = true;
+                        center = position;
+                    }
+                }
+                ip++;
+            }
+            if(tlock != true)
+            {
+                p = null;
+            }
+        }
+		if ( p == null )
+		{
+            dest.x = center.x + (rand()-0.5)*6;
+            dest.y = center.y + (rand()-0.5)*6;
+            goto(dest);
+            wait(rand()*2);
+		}
+	}
+}

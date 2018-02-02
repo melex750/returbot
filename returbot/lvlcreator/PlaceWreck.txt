@@ -1,0 +1,13 @@
+extern void object::Create_Wreck()
+{// Creates an object at this.position
+	// Uncomment the one you want
+	WreckTypes wt();
+	int type = nan;
+	//type = wt.WreckBotw1;
+	//type = wt.WreckBotw2;
+	//type = wt.WreckBott1;
+	//type = wt.WreckBott2;
+	//type = wt.WreckBotr1;
+	//type = wt.WreckBotr2;
+	PlaceWreck(type);
+}

@@ -1,0 +1,6 @@
+\b;From Mission Control
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

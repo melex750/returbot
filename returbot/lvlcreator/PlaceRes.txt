@@ -1,0 +1,12 @@
+extern void object::Place_Resource()
+{// Creates an object at this.position
+	// Uncomment the one you want
+	int type = nan;
+	//type = TitaniumOre;
+	//type = Titanium;
+	//type = UraniumOre;
+	//type = PowerCell;
+	//type = NuclearCell;
+	//type = OrgaMatter;
+	PlaceRes(type);
+}

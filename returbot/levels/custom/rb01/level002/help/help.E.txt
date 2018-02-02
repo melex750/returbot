@@ -1,0 +1,16 @@
+\b;From Mission Control
+Now you will have to build a \l;bot factory\u object\factory; in which you will have to construct a new bot. It will be a \l;grabber\u object\botgr;, the one just like yours, because you will need two of them.
+
+\b;Task 2
+You will need to find a \l;titanium cube\u object\titan; from which you will create a new building - \l;bot factory\u object\factory; in that case. Building requires not only this, but also certain amount of flat and free space. \l;Titanium cube\u object\titan; might already be in such place, exactly where you will need your new building, then fine, you just start building. If you want to create a building in another place, move \l;titanium cube\u object\titan; there.
+
+When you will complete building you will have to find and pick another \l;titanium cube\u object\titan;. It will serve as a material for construction of new bot. You will place it inside a \l;bot factory\u object\factory; that you built and then start construction of a new bot - \l;grabber\u object\botgr; in that case.
+
+After that you will have to find and pick a \l;power cell\u object\power;, preferably charged one. Of course, not the one in your own \l;grabber\u object\factory;, but the one you will have to find somewhere nearby. Just pick it and equip with it newly constructed \l;grabber\u object\botgr;.
+
+Then move both \l;grabbers\u object\botgr; near the \l;space ship\u object\base;. Don't take them aboard yet, just take them nearby.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

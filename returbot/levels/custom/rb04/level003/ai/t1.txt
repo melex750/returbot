@@ -1,0 +1,11 @@
+extern void object::t1( )
+{
+        while(ismovie() == 1) { wait(0.1); };
+        while(ismovie() == 0 and energyCell.energyLevel >= 0.1)
+        {
+            move(10);
+            turn(-180);
+            move(10);
+            turn(-180);
+        }
+}

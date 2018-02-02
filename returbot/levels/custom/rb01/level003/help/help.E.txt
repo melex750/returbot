@@ -1,0 +1,17 @@
+\b;From Mission Control
+You will need to have \l;titanium cubes\u object\titan; and \l;power cells\u object\power; and bots and probably other things too aboard of your \l;space ship\u object\base;. If you won't take care of your supplies, then you might get into very difficult situation. Use your \l;grabbers\u object\botgr; to deliver 8 \l;power cells\u object\power; and 2 \l;titanium cubes\u object\titan; to your \l;space ship\u object\base;.
+
+Note: \l;accumulators\u object\power;, if there are any aboard, are being recharged when you move from one planet to another. Which means that when you are about to leave some planet you don't really need to care if \l;accumulators\u object\power; aboard are charged or not. But just for some practice, try to sort them out and take aboard only charged ones - after all this is the very purpose for which they were scattered all around in such fashion.
+
+Also, sometimes we can take control over your \l;space ship\u object\base; or infrastructure left by you or previous expeditions to do some of simple and safe work for you, but this requires connection with planet to be already well estabilished.
+
+\b;Remember
+\l;Grabbers\u object\botgr; are the most universal and needed type of bot, without which you basically will not be able to perform most of tasks that will appear in your journey. Every time you complete another one mission and about to launch your \l;space ship\u object\base;, you should always return aboard at least one \l;grabber\u object\botgr;. If you will lose all your grabbers then you will lose your mission.
+
+\b;Task 3
+Find and take aboard of your \l;space ship\u object\base; 8 \l;power cells\u object\power;, 2 \l;titanium cubes\u object\titan; and 2 \l;grabbers\u object\botgr; in the end. It is not necessary, but for the sake of practice try to take only fully charged \l;power cells\u object\power;. When you're done, take off.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

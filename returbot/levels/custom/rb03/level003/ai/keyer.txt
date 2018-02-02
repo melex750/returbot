@@ -1,0 +1,9 @@
+extern void object::Keyer( )
+{
+        grab(Behind);
+        while(radar(TargetBot,0,360,0,120) != null)
+        {
+            wait(1);
+        }
+        drop(InFront);
+}

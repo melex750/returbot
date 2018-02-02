@@ -1,0 +1,6 @@
+extern void object::Output_Wrecks_Ruins_File()
+{
+	string filename = "";
+	filename = "obj_wrecks.txt";
+	SaveWrecksRuinsToFile(filename);
+}

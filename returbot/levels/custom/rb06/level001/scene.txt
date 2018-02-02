@@ -1,0 +1,351 @@
+// Chapter: 6
+//   Level: 1
+
+Title.E text="Beyond reach"
+Resume.E text="Engage a new type of bot to reach location of rare natural resource."
+Title.R text="Вне досягаемости"
+Resume.R text="Задействуйте новый тип бота, чтобы добраться до местонахождения редкого природного ресурса."
+
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+//Loading name="programs/9_terranova.txt"
+//SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="music004.ogg"
+
+// Planets for SpaceShip transition animation
+Planet mode=1 pos=4.1;0.1 dim=0.1 speed=0.0 dir=0.3 image="planet03.png" uv1=0.5;0.0 uv2=1.0;0.5
+Planet mode=1 pos=1.00; 0.60 dim=0.02 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=1.10;-0.30 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=1.20; 0.40 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=1.50;-0.40 dim=0.06 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=2.00; 0.30 dim=0.08 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=2.50;-0.50 dim=0.04 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=3.85; 0.10 dim=0.06 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=4.00;-0.50 dim=0.02 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet mode=1 pos=4.20; 0.30 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+
+Audio         filename="music004.ogg"
+
+AmbientColor air=0.400;0.400;0.400;0.400 water=0.078;0.078;0.078;0.078 // grey
+FogColor air=0.706;0.871;1.000;0.000 water=0.039;0.078;0.392;0.000 // grey
+VehicleColor color=0.686;0.820;0.843;0.000 // bleu-sable
+DeepView air=100.00 water=25.00
+FogStart air=0.1 water=0.1
+SecondTexture rank=3
+Background up=0.298;0.412;0.886;0.000 down=0.753;0.980;1.000;
+ForegroundName image="lens5.png"
+
+Planet pos=0.00;0.70 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=1.00;0.60 dim=0.02 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=1.20;0.40 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=2.00;0.40 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=2.50;0.50 dim=0.04 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=3.00;0.30 dim=0.04 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=3.85;0.30 dim=0.06 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=4.00;0.70 dim=0.02 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=4.10;0.50 dim=0.03 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+Planet pos=5.30;0.30 dim=0.08 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
+
+TerrainGenerate     vision=400.00 depth=1 hard=0.7
+TerrainWind     speed=0.0;0.0
+TerrainRelief   image="o_relief_01.png" factor=1.0
+TerrainResource image="o_res_01.png"
+TerrainWater        image="lava04.png" level=8.0 moveX=1.0 moveY=0.3 water=TO color=100;200;255;0
+TerrainInitTextures image="m_crys" dx=1 dy=1 table=2
+
+// #Include file="%cat%/../../terrain.txt"
+
+TerrainCreate
+
+// MaxFlyingHeight max=45
+
+
+GroundSpot color=0.000;0.563;0.761 min=-10 max=8.50 smooth=3
+
+// GroundSpot pos=0;163.75 radius=270 color=0.392;0.392;0.784 // aerie
+GroundSpot pos=-188;213 radius=60 color=0.592;0.592;0.784 // radius=40 color=0.392;0.392;0.784 // lair
+
+BeginObject
+LevelController script="/%lvl%/Control.txt"
+
+CreateObject pos= 0.00; 145.00 dir=0.0 type=SpaceShip run=13
+CreateObject pos=-3.25;141.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 3.25;141.25 dir=1.5 type=WheeledGrabber power=1.0 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+
+// CreateObject pos= -3.25; 148.25 dir=1.5 type=RadarStation selectable=0 // magnifyDamage=0.25
+
+CreateObject pos=-3.75; 147.50 dir=0.0 type=Titanium
+CreateObject pos=-2.50; 147.50 dir=0.0 type=Titanium
+CreateObject pos=-0.625; 147.50 dir=0.0 type=Titanium
+CreateObject pos= 0.625; 147.50 dir=0.0 type=Titanium
+CreateObject pos= 2.50; 147.50 dir=0.0 type=PowerCell
+CreateObject pos= 3.75; 147.50 dir=0.0 type=PowerCell
+CreateObject pos=-3.75; 148.75 dir=0.0 type=Titanium
+CreateObject pos=-2.50; 148.75 dir=0.0 type=Titanium
+CreateObject pos=-0.625; 148.75 dir=0.0 type=Titanium
+CreateObject pos= 0.625; 148.75 dir=0.0 type=Titanium
+CreateObject pos= 2.50; 148.75 dir=0.0 type=PowerCell
+CreateObject pos= 3.75; 148.75 dir=0.0 type=PowerCell
+
+// CreateObject pos= 0.00; 147.50 dir=0.0 type=Titanium
+// CreateObject pos= 0.00; 148.75 dir=0.0 type=Titanium
+
+// CreateObject pos=-0.625; 147.20 dir=0.0 type=Titanium
+// CreateObject pos= 0.625; 147.20 dir=0.0 type=Titanium
+// CreateObject pos=-0.625; 148.25 dir=0.0 type=Titanium
+// CreateObject pos= 0.625; 148.25 dir=0.0 type=Titanium
+// CreateObject pos=-0.625; 149.30 dir=0.0 type=PowerCell
+// CreateObject pos= 0.625; 149.30 dir=0.0 type=PowerCell
+
+// CreateObject pos=-43;195 dir=1.2 type=TitaniumOre
+// CreateObject pos=-49;188 dir=1.2 type=TitaniumOre
+// CreateObject pos=-56;165 dir=1.2 type=TitaniumOre
+// CreateObject pos=33;192 dir=1.2 type=TitaniumOre
+//
+// CreateObject pos=37.4742;237.326 dir=1.96637 type=TitaniumOre
+// CreateObject pos=52.0619;234.759 dir=1.00215 type=TitaniumOre
+// CreateObject pos=86.1703;253.201 dir=0.0507194 type=TitaniumOre
+// CreateObject pos=104.925;226.749 dir=0.132632 type=TitaniumOre
+// CreateObject pos=121.272;222.738 dir=0.292051 type=TitaniumOre
+// CreateObject pos=133.477;145.989 dir=1.50956 type=TitaniumOre
+// CreateObject pos=45.3492;63.5905 dir=0.960701 type=TitaniumOre
+// CreateObject pos=23.0198;50.4837 dir=0.797239 type=TitaniumOre
+// CreateObject pos=10.2716;51.8881 dir=1.1011 type=TitaniumOre
+// CreateObject pos=-29.967;50.4056 dir=1.12784 type=TitaniumOre
+// CreateObject pos=21.5929;50.9267 dir=0.255729 type=TitaniumOre
+// CreateObject pos=-118.78;137.727 dir=0.19305 type=TitaniumOre
+// CreateObject pos=-116.658;134.004 dir=0.408611 type=TitaniumOre
+// CreateObject pos=-117.518;166.7 dir=1.97086 type=TitaniumOre
+//
+// // CreateObject pos=143.513;180.008 dir=0.458311 type=UraniumOre
+// // CreateObject pos=128.183;174.229 dir=0.793266 type=UraniumOre
+// // CreateObject pos=142.752;166.877 dir=0.106157 type=UraniumOre
+// // CreateObject pos=130.282;166.29 dir=1.56409 type=UraniumOre
+//
+// // CreateObject pos=86.7537;79.0351 dir=1.65258 type=UraniumOre
+// // CreateObject pos=88.5602;58.3682 dir=1.23826 type=UraniumOre
+// // CreateObject pos=94.3442;81.6747 dir=1.34529 type=UraniumOre
+// // CreateObject pos=79.4653;74.39 dir=1.7855 type=UraniumOre
+// // CreateObject pos=114.95;67.8463 dir=0.0733575 type=UraniumOre
+// // CreateObject pos=43.9016;45.3996 dir=0.98742 type=UraniumOre
+//
+// // CreateObject pos=-193.799;237.863 dir=0.347798 type=UraniumOre
+// CreateObject pos=-165.157;243.333 dir=0.459906 type=UraniumOre
+// CreateObject pos=-160.692;233.277 dir=0.468571 type=UraniumOre
+// CreateObject pos=-188.774;217.047 dir=1.59738 type=UraniumOre
+// // CreateObject pos=-203.021;198.077 dir=1.74535 type=UraniumOre
+// CreateObject pos=-212.02;189.113 dir=1.02716 type=UraniumOre
+// CreateObject pos=-154.17;200.157 dir=0.67262 type=UraniumOre
+// CreateObject pos=-144.043;214.949 dir=0.337121 type=UraniumOre
+// // CreateObject pos=-142.702;210.655 dir=0.45436 type=UraniumOre
+// CreateObject pos=-214.011;234.546 dir=1.57194 type=UraniumOre
+// CreateObject pos=-203.342;226.033 dir=0.990143 type=UraniumOre
+// CreateObject pos=-205.512;215.466 dir=0.178779 type=UraniumOre
+
+
+
+// CreateObject pos=299;-164 dir=0.3 type=AlienNest
+// CreateObject pos=299;-164 dir=0.3 type=OrgaMatter
+// CreateObject pos=-295;-92 dir=1.2 type=AlienNest
+// CreateObject pos=-295;-92 dir=1.2 type=OrgaMatter
+
+// These things hidden under nests prevent them from spawning orga matter.
+CreateObject pos=9;-139 dir=1.5 type=AlienNest
+// CreateObject pos=9;-139 dir=1.5 type=Quartz0 h=-7 proxyActivate=1 proxyDistance=0
+CreateObject pos=9;-139 dir=1.5 type=OrgaMatter
+CreateObject pos=-146;-177 dir=1.0 type=AlienNest
+// CreateObject pos=-146;-177 dir=1.0 type=Quartz0 h=-7 proxyActivate=1 proxyDistance=0
+CreateObject pos=-146;-177 dir=1.0 type=OrgaMatter
+// CreateObject pos=-188;213 dir=0.8 type=AlienNest
+// CreateObject pos=-188;213 dir=0.8 type=Quartz0 h=-7 proxyActivate=1 proxyDistance=0
+// CreateObject pos=-188;213 dir=0.8 type=OrgaMatter
+// CreateObject pos=138;173 dir=1.5 type=AlienNest
+// CreateObject pos=138;173 dir=1.5 type=Quartz0 h=-7 proxyActivate=1 proxyDistance=0
+// CreateObject pos=138;173 dir=1.5 type=OrgaMatter
+CreateObject pos=-213;-113 dir=1.5 type=AlienNest
+// CreateObject pos=-213;-113 dir=1.5 type=Quartz0 h=-7 proxyActivate=1 proxyDistance=0
+CreateObject pos=-213;-113 dir=1.5 type=OrgaMatter
+
+CreateObject pos=-308.87; 130.92 dir=1.5 type=AlienNest
+CreateObject pos= 308.63; 130.94 dir=1.5 type=AlienNest
+
+// CreateObject pos=46;238 dir=1.5 type=AlienNest
+// CreateObject pos=46;238 dir=1.5 type=Quartz0 h=-7 proxyActive=1 proxyDistance=0
+// CreateObject pos=46;238 dir=1.5 type=OrgaMatter
+
+// CreateObject pos=-153.65;-190.01 dir=1.677 cmdline=1005 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=-158.06;-139.71 dir=1.67365 cmdline=1005 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=-41.85;-208.07 dir=1.53271 cmdline=1010 type=AlienAnt script1="m_ant_01.txt" run=1
+
+// CreateObject pos=4.49661;-113.512 dir=0.403083 cmdline=1010 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=11.9916;-139.622 dir=1.32167 cmdline=1010 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=51.5828;-129.617 dir=0.165934 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=113.414;-118.948 dir=0.173858 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=91.7344;-73.7737 dir=0.914136 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+// CreateObject pos=-68.5549;-90.6951 dir=0.872765 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+
+CreateObject pos=-205.102;227.475 dir=0.570842 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-207.753;195.175 dir=0.320683 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-166.969;218.282 dir=1.94175 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-148.301;181.128 dir=0.425451 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
+
+CreateObject pos=8;-136 dir=1.5 cmdline=105 type=AlienWasp script1="m_wasp_02.txt" run=1
+CreateObject pos=8;-136 dir=1.5 type=OrgaMatter
+CreateObject pos=106;-109 dir=1.5 cmdline=105 type=AlienWasp script1="m_wasp_02.txt" run=1
+CreateObject pos=106;-109 dir=1.5 type=OrgaMatter
+CreateObject pos=-284;-111 dir=1.5 cmdline=245 type=AlienWasp script1="m_wasp_02.txt" run=1
+CreateObject pos=-284;-111 dir=1.5 type=OrgaMatter
+CreateObject pos=272;-211 dir=1.5 cmdline=245 type=AlienWasp script1="m_wasp_02.txt" run=1
+CreateObject pos=272;-211 dir=1.5 type=OrgaMatter
+CreateObject pos=-72;-289 dir=1.5 cmdline=265 type=AlienWasp script1="m_wasp_02.txt" run=1
+CreateObject pos=-72;-289 dir=1.5 type=OrgaMatter
+CreateObject pos=-267;-293 dir=1.5 cmdline=265 type=AlienWasp script1="m_wasp_02.txt" run=1
+CreateObject pos=-267;-293 dir=1.5 type=OrgaMatter
+
+CreateObject pos=-186.528;209.363 dir=0.971481 type=Quartz0
+CreateObject pos=-189.468;211.106 dir=1.46306 type=Quartz1
+CreateObject pos=-186.906;212.854 dir=0.816796 type=Quartz1
+CreateObject pos=-185.693;207.333 dir=0.322306 type=Quartz1
+CreateObject pos=-197.412;196.69 dir=1.5355 type=Quartz0
+CreateObject pos=-206.963;206.353 dir=0.803994 type=Quartz0
+CreateObject pos=-213.105;189.251 dir=1.11088 type=Quartz0
+CreateObject pos=-164.431;199.174 dir=0.737957 type=Quartz1
+CreateObject pos=-130.266;192.161 dir=0.837476 type=Quartz3
+CreateObject pos=-163.748;172.873 dir=1.27171 type=Quartz2
+CreateObject pos=-166.322;241.052 dir=0.134132 type=Quartz2
+CreateObject pos=-202.802;226.839 dir=0.0943493 type=Quartz3
+CreateObject pos=-262.968;221.957 dir=1.68929 type=Quartz3
+CreateObject pos=-275.164;271.364 dir=1.0935 type=Quartz2
+CreateObject pos=-208.136;326.279 dir=1.6915 type=Quartz1
+CreateObject pos=-144.704;272.144 dir=0.155609 type=Quartz1
+CreateObject pos=-97.2778;225.425 dir=1.71666 type=Quartz0
+CreateObject pos=-97.4236;233.752 dir=1.3368 type=Quartz2
+CreateObject pos=-89.3372;258.431 dir=1.9625 type=Quartz3
+CreateObject pos=-214.951;130.782 dir=0.198592 type=Quartz3
+CreateObject pos=-273.532;180.282 dir=1.75266 type=Quartz2
+CreateObject pos=-304.233;214.353 dir=0.718277 type=Quartz3
+CreateObject pos=-332.196;274.024 dir=0.0463411 type=Quartz2
+
+CreateObject pos=-121.414;116.749 dir=1.69781 type=Quartz0
+CreateObject pos=-80.7962;67.5718 dir=0.0135057 type=Quartz2
+CreateObject pos=-55.6154;73.3756 dir=0.660262 type=Quartz2
+CreateObject pos=-20.8263;8.81426 dir=0.0457994 type=Quartz1
+CreateObject pos=-53.6916;32.1093 dir=1.8148 type=Quartz3
+CreateObject pos=-6.21322;58.0485 dir=1.45088 type=Quartz1
+CreateObject pos=60.1863;46.7437 dir=1.2285 type=Quartz1
+CreateObject pos=107.888;72.3038 dir=1.80954 type=Quartz3
+CreateObject pos=139.506;163.603 dir=0.354978 type=Quartz1
+CreateObject pos=140.557;167.616 dir=0.624529 type=Quartz0
+CreateObject pos=139.606;184.259 dir=0.177421 type=Quartz3
+CreateObject pos=124.007;173.181 dir=0.321756 type=Quartz0
+CreateObject pos=124.643;177.316 dir=1.21478 type=Quartz3
+CreateObject pos=127.045;214.778 dir=1.34201 type=Quartz1
+CreateObject pos=106.627;221.104 dir=0.437581 type=Quartz2
+CreateObject pos=108.359;243.173 dir=0.0452259 type=Quartz3
+CreateObject pos=74.4717;251.655 dir=1.53448 type=Quartz2
+CreateObject pos=30.8377;246.414 dir=0.579265 type=Quartz1
+CreateObject pos=33.3628;231.408 dir=1.1662 type=Quartz1
+CreateObject pos=49.3553;231.637 dir=0.526472 type=Quartz2
+CreateObject pos=11.8363;248.252 dir=1.77798 type=Quartz3
+
+CreateObject pos=-26.9757;281.565 dir=0.17885 type=Quartz2
+CreateObject pos=-24.6936;311.378 dir=1.87206 type=Quartz2
+CreateObject pos=25.5806;292.737 dir=1.53788 type=Quartz3
+CreateObject pos=58.4309;308.454 dir=0.761795 type=Quartz3
+CreateObject pos=102.96;284.631 dir=0.409796 type=Quartz3
+CreateObject pos=157.272;234.698 dir=1.95916 type=Quartz0
+CreateObject pos=172.971;160.877 dir=0.509143 type=Quartz3
+CreateObject pos=170.468;158.831 dir=0.0145555 type=Quartz0
+CreateObject pos=169.274;160.747 dir=1.73716 type=Quartz0
+CreateObject pos=-61.2309;319.761 dir=0.817468 type=Quartz0
+CreateObject pos=-113.873;332.948 dir=1.04592 type=Quartz0
+CreateObject pos=-115.256;334.506 dir=0.818591 type=Quartz1
+CreateObject pos=-111.992;335.55 dir=1.79924 type=Quartz2
+
+CreateObject pos=30.2007;185.617 dir=1.79891 type=Quartz1
+CreateObject pos=57.1518;199.065 dir=1.63144 type=Quartz2
+CreateObject pos=62.4024;143.598 dir=0.195237 type=Quartz0
+CreateObject pos=38.9785;123.241 dir=1.40031 type=Quartz1
+CreateObject pos=-50.0335;132.718 dir=0.982684 type=Quartz0
+CreateObject pos=-51.5239;167.314 dir=1.26135 type=Quartz2
+CreateObject pos=-51.6122;171.293 dir=0.471097 type=Quartz1
+CreateObject pos=-49.1014;172.209 dir=1.78887 type=Quartz1
+CreateObject pos=-44.229;173.86 dir=0.904005 type=Quartz0
+CreateObject pos=-44.0848;182.188 dir=1.32276 type=Quartz2
+CreateObject pos=-72.8505;201.132 dir=1.32007 type=Quartz2
+CreateObject pos=-40.183;145.408 dir=0.93603 type=Quartz2
+CreateObject pos=65.914;177.633 dir=0.100827 type=Quartz2
+CreateObject pos=64.3801;173.387 dir=1.44361 type=Quartz3
+CreateObject pos=62.2756;176.224 dir=0.64822 type=Quartz1
+CreateObject pos=4.52524;117.588 dir=1.08281 type=Quartz0
+CreateObject pos=1.57814;118.233 dir=1.21171 type=Quartz2
+CreateObject pos=46.9281;159.623 dir=1.51657 type=Quartz0
+CreateObject pos=87.2206;141.161 dir=1.1124 type=Quartz1
+CreateObject pos=92.1849;164.757 dir=1.58149 type=Quartz1
+CreateObject pos=91.9825;168.165 dir=1.88374 type=Quartz2
+CreateObject pos=90.2769;166.198 dir=0.325157 type=Quartz0
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.67 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.48 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.48 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.24 type=Object
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.30; 0.00; 0.30 type=Quartz
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.30; 0.30; 0.00 type=Quartz
+
+WaterColor color=-0.6;-0.1;-0.1;0.0
+
+MapColor floor=0.451;0.757;0.929  water=0.6;0.8;0.9 // water=0.451;0.757;0.929 // water=0.737;0.882;0.965
+MapZoom  factor=2
+
+EnableBuild type=Flag
+EnableBuild type=FlatGround
+EnableBuild type=BotFactory
+EnableBuild type=ExchangePost
+EnableBuild type=RepairCenter // water, wasps and spiders destroy bots instantly, but whatever
+EnableBuild type=DefenseTower
+EnableBuild type=Converter
+EnableBuild type=PowerStation
+EnableBuild type=PowerPlant
+EnableBuild type=RadarStation
+EnableBuild type=Derrick
+// EnableBuild type=ResearchCenter
+EnableBuild type=NuclearPlant
+EnableBuild type=AutoLab
+
+EnableResearch type=TRACKER
+// EnableResearch type=WINGER
+EnableResearch type=SHOOTER
+EnableResearch type=TOWER
+EnableResearch type=SUBBER
+EnableResearch type=SNIFFER
+EnableResearch type=RECYCLER
+EnableResearch type=THUMPER
+EnableResearch type=ATOMIC
+EnableResearch type=iGUN
+
+DoneResearch type=TRACKER
+// DoneResearch type=WINGER
+DoneResearch type=SHOOTER
+DoneResearch type=TOWER
+DoneResearch type=SUBBER
+DoneResearch type=SNIFFER
+DoneResearch type=RECYCLER
+DoneResearch type=THUMPER
+DoneResearch type=ATOMIC
+// DoneResearch type=iGUN
+
+
+EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
+// EndMissionTake pos=0.00;145.00 dist=8 type=OrgaMatter min=1
+// EndMissionTake pos=0.00;145.00 dist=8 tool=OrgaShooter min=1
+EndMissionTake pos=0.00;145.00 dist=8 tool=Grabber min=1
+// EndMissionTake pos=0.00;145.00 dist=8 type=Subber min=1
+EndMissionTake pos=-359.00;-359.00 dist=2 type=TitaniumOre min=1
+
+Camera eye=0.00;5.00;-50.00 lookat=0.00;1.00;-3.25 delay=0

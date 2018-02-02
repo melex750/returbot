@@ -1,0 +1,5 @@
+extern void object::ReportThisPosition()
+{
+	point pos = this.position;
+	message(("X:"+pos.x+"  Y:"+pos.y+"  Z:"+pos.z+"  topo:"+topo(pos)));
+}

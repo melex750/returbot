@@ -1,0 +1,8 @@
+extern void object::Output_Bots_File()
+{
+	string filename = "";
+	filename = "obj_bots.txt";
+	SaveBotsToFile(filename);
+
+	// Also Saves "Me"(Astronaut)
+}

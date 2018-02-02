@@ -1,0 +1,14 @@
+\b;From Mission Control
+Cheers, operator. You are going to see new planets once more again. It doesn't seems like you need to be fed with following at this point or at all... But formalities are everywhere.
+
+We would want to thank you for your decision to take this role and take execution of this important mission. As you know, necessity in finding a new home for humanity was hanging on us all for years and in the end we found this planet named Terranova. It was found by one of fully robotized expeditions, after which it, using line of connection estabilished by it in the process of search, sent a signal back to Earth. Orienting on it our the only and unique space ship, which took aboard the most progressive exporers, scientists and engineers, performed hyperjump from Earth to Terranova. It was colossal success. Sadly, recently we've lost connection with Earth. Apparently, something happened with communications estabilished on transitional planets. Only now we begin to realize how little we know about what was happening there... You embark into journey during which you will visit several planets. Our resources here on Terranova are narrow and therefore your expedition is only one. You will have to take various tasks, but of them all the one is the most important today - to check on communications and bring them into working condition. You will reside in a low orbital module and bots under your control - in the \l;space ship\u object\base; which as you can see was already installed nearby.
+
+Everything is almost ready for departure, only few little things remained. Now you will perform few simple tasks...
+
+\b;Task 1
+\l;Battery\u object\power; of the \l;grabber\u object\botgr; controlled by you is almost dead and it needs to be replaced with another one. Take a \l;titanium cube\u object\titan; right in front of your \l;grabber\u object\botgr; into it's grip, take it to a \l;power cell factory\u object\energy; and place it on the platform on the \l;factory\u object\energy;. Wait while the \l;factory\u object\energy; produces new \l;accumulator\u object\power;. Then take produced \l;accumulator\u object\power;, place it nearby and swap exhausted \l;accumulator\u object\power; of the \l;grabber\u object\botgr; with fresh \l;accumulator\u object\power;. After that head back to exit.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

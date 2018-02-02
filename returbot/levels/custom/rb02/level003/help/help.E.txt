@@ -1,0 +1,9 @@
+\b;From Mission Control
+Your last task on this planet is to retrieve \l;black box\u object\bbox; with important information about next stopover in your journey left in this area by another expedition. You will have to utilize a bot with alternative type of chassis. Motor of a \l;tracked grabber\u object\botgc; consumes more energy, but provides much better passableness, in many cases being the only type of chassis able to deliver bot equipped with it to certain destination.
+
+Research in a \l;research center\u object\research; tracked bots and assemble in a \l;bot factory\u object\factory; a \l;tracked grabber\u object\botgc;. Build a \l;radar station\u object\radar; which will detect and mark location of \l;black box\u object\bbox; on your minimap in the lower right corner. Deliver \l;black box\u object\bbox; aboard of your \l;space ship\u object\base; using your \l;tracked grabber\u object\botgc;. Take off.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

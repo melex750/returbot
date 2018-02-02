@@ -1,0 +1,5 @@
+Title.E text="RB: On Volcano" resume="Volcano"
+Title.D text="RB: Auf Vulkania" resume="Vulkania"
+Title.F text="RB: Sur Volcano" resume="Volcano"
+Title.P text="RB: Na Wulkanii" resume="Wulkania"
+Title.R text="RB: На Вулкане" resume="Вулкан"

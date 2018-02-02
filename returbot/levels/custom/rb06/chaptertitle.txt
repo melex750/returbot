@@ -1,0 +1,5 @@
+Title.E text="RB: On Crystalium" resume="Crystalium"
+Title.D text="RB: Auf Kristallia" resume="Kristallia"
+Title.F text="RB: Sur Crystalium" resume="Crystalium"
+Title.P text="RB: Na Krystalii" resume="Krystalia"
+Title.R text="RB: На Кристаллиуме" resume="Кристаллиум"

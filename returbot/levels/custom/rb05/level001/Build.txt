@@ -1,0 +1,17 @@
+extern void object::Build()
+{
+	int type = nan;
+	// Uncomment below the one you want:
+	// type = ResearchCenter;
+	// type = BotFactory;
+	// type = Converter;
+	// type = RadarStation;
+	// type = ExchangePost;
+	// type = DefenseTower;
+	// type = Derrick;
+	
+	if(type == nan)
+	{message("Edit this script to pick certain type of building.",DisplayWarning);}
+	else
+	{build(type);}
+}

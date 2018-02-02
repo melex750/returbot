@@ -1,0 +1,236 @@
+Title.E text="Range"
+Title.R text="Стрельбище"
+Resume.E text="Practice in shooting mobile targets."
+Resume.R text="Попрактикуйтесь в стрельбе по подвижным целям."
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+// Loading name="programs/7_CollectTitanium3.txt"
+// SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="music006.ogg"
+
+#Include file="%chap%/planet.txt"
+TerrainRelief image="m_relief_06.png" factor=1.0
+TerrainResource image="m_resae.png"
+TerrainWater image="lava05.png" level=25.0 moveX=2.0 moveY=1.0 air=TO water=TO color=1.000;0.502;0.000;
+TerrainLava mode=1
+#Include file="%chap%/terrain.txt"
+TerrainCreate
+
+BeginObject
+
+CreateObject pos=32.50;55.00 dir=0.5 type=SpaceShip run=1
+CreateObject pos=35.75;51.75 dir=1.0 type=WheeledGrabber power=1.0 // script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=35.75;58.25 dir=1.0 type=WheeledGrabber power=1.0 // script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=29.25;51.75 dir=0.75 type=TrackedShooter power=1.0 select=1 script1="%lvl%/programs/shoot.txt" scriptReadOnly1=false script2="%lvl%/programs/shoot2.txt" scriptReadOnly2=false
+
+CreateObject pos=28.75; 57.50 dir=0.0 type=PowerCell
+CreateObject pos=30.00; 57.50 dir=0.0 type=PowerCell
+CreateObject pos=31.875; 57.50 dir=0.0 type=PowerCell
+CreateObject pos=33.125; 57.50 dir=0.0 type=PowerCell
+// CreateObject pos= 35.00; 57.50 dir=0.0 type=PowerCell
+// CreateObject pos= 36.25; 57.50 dir=0.0 type=PowerCell
+CreateObject pos=28.75; 58.75 dir=0.0 type=PowerCell
+CreateObject pos=30.00; 58.75 dir=0.0 type=PowerCell
+CreateObject pos=31.875; 58.75 dir=0.0 type=PowerCell
+CreateObject pos=33.125; 58.75 dir=0.0 type=PowerCell
+// CreateObject pos=35.00; 58.75 dir=0.0 type=PowerCell
+// CreateObject pos=36.25; 58.75 dir=0.0 type=PowerCell
+
+// CreateObject pos=-33;-28 dir=0.0 type=RadarStation selectable=0
+// CreateObject pos=-40;30 dir=0.0 type=PowerStation power=1.0 selectable=0
+
+CreateObject pos=-95.0;05.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;10.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;15.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;20.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;25.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;30.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;35.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;40.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;45.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;50.0 dir=1.5 type=Barricade1
+CreateObject pos=-95.0;55.0 dir=1.5 type=Barricade1
+
+CreateObject pos=-09.0;05.0 dir=1.5 type=Barricade1
+CreateObject pos=-09.0;10.0 dir=1.5 type=Barricade1
+CreateObject pos=-09.0;15.0 dir=1.5 type=Barricade1
+// CreateObject pos=-09.0;20.0 dir=1.5 type=Barricade1
+// CreateObject pos=-09.0;25.0 dir=1.5 type=Barricade1
+// CreateObject pos=-09.0;30.0 dir=1.5 type=Barricade1
+// CreateObject pos=-09.0;35.0 dir=1.5 type=Barricade1
+// CreateObject pos=-09.0;40.0 dir=1.5 type=Barricade1
+CreateObject pos=-09.0;45.0 dir=1.5 type=Barricade1
+CreateObject pos=-09.0;50.0 dir=1.5 type=Barricade1
+CreateObject pos=-09.0;55.0 dir=1.5 type=Barricade1
+
+CreateObject pos=-92.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-87.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-82.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-77.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-72.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-67.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-62.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-57.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-52.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-47.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-42.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-37.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-32.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-27.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-22.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-17.0;57.5 dir=1.0 type=Barricade1
+CreateObject pos=-12.0;57.5 dir=1.0 type=Barricade1
+
+CreateObject pos=-92.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-87.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-82.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-77.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-72.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-67.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-62.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-57.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-52.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-47.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-42.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-37.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-32.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-27.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-22.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-17.0;02.5 dir=1.0 type=Barricade1
+CreateObject pos=-12.0;02.5 dir=1.0 type=Barricade1
+
+CreateObject pos=-12.0;17.5 dir=1.0 type=Barricade1
+CreateObject pos=-17.0;17.5 dir=1.0 type=Barrier1
+CreateObject pos=-22.0;17.5 dir=1.0 type=Barricade1
+CreateObject pos=-27.0;17.5 dir=1.0 type=Barricade1
+CreateObject pos=-32.0;17.5 dir=1.0 type=Barricade1
+CreateObject pos=-37.0;17.5 dir=1.0 type=Barricade1
+CreateObject pos=-42.0;17.5 dir=1.0 type=Barrier1
+CreateObject pos=-47.0;17.5 dir=1.0 type=Barricade1
+CreateObject pos=-52.0;17.5 dir=1.0 type=Barricade1
+
+CreateObject pos=-12.0;42.5 dir=1.0 type=Barricade1
+CreateObject pos=-17.0;42.5 dir=1.0 type=Barrier1
+CreateObject pos=-22.0;42.5 dir=1.0 type=Barricade1
+CreateObject pos=-27.0;42.5 dir=1.0 type=Barricade1
+CreateObject pos=-32.0;42.5 dir=1.0 type=Barricade1
+CreateObject pos=-37.0;42.5 dir=1.0 type=Barricade1
+CreateObject pos=-42.0;42.5 dir=1.0 type=Barrier1
+CreateObject pos=-47.0;42.5 dir=1.0 type=Barricade1
+CreateObject pos=-52.0;42.5 dir=1.0 type=Barricade1
+
+CreateObject pos=-54.5;10.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;15.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;20.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;25.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;30.0 dir=1.5 type=Barrier1
+CreateObject pos=-54.5;35.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;40.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;45.0 dir=1.5 type=Barricade1
+CreateObject pos=-54.5;50.0 dir=1.5 type=Barricade1
+
+CreateObject pos=-52.0;52.5 dir=1.0 type=Barricade1
+CreateObject pos=-47.0;52.5 dir=1.0 type=Barrier1
+CreateObject pos=-42.0;52.5 dir=1.0 type=Barricade1
+CreateObject pos=-37.0;52.5 dir=1.0 type=Barrier1
+CreateObject pos=-32.0;52.5 dir=1.0 type=Barricade1
+CreateObject pos=-27.0;52.5 dir=1.0 type=Barricade1
+CreateObject pos=-22.0;52.5 dir=1.0 type=Barrier1
+CreateObject pos=-17.0;52.5 dir=1.0 type=Barricade1
+CreateObject pos=-12.0;52.5 dir=1.0 type=Barrier1
+
+CreateObject pos=-52.0;07.5 dir=1.0 type=Barricade1
+CreateObject pos=-47.0;07.5 dir=1.0 type=Barrier1
+CreateObject pos=-42.0;07.5 dir=1.0 type=Barrier1
+CreateObject pos=-37.0;07.5 dir=1.0 type=Barrier1
+CreateObject pos=-32.0;07.5 dir=1.0 type=Barricade1
+CreateObject pos=-27.0;07.5 dir=1.0 type=Barricade1
+CreateObject pos=-22.0;07.5 dir=1.0 type=Barricade1
+CreateObject pos=-17.0;07.5 dir=1.0 type=Barrier1
+CreateObject pos=-12.0;07.5 dir=1.0 type=Barricade1
+
+CreateObject pos=-77.0;15.0 dir=1.5 type=Barricade1
+CreateObject pos=-77.0;20.0 dir=1.5 type=Barricade1
+CreateObject pos=-77.0;25.0 dir=1.5 type=Barrier1
+CreateObject pos=-77.0;30.0 dir=1.5 type=Barricade1
+CreateObject pos=-77.0;35.0 dir=1.5 type=Barrier1
+CreateObject pos=-77.0;40.0 dir=1.5 type=Barricade1
+CreateObject pos=-77.0;45.0 dir=1.5 type=Barricade1
+
+CreateObject pos=-65.0;15.0 dir=1.5 type=Barricade1
+CreateObject pos=-65.0;20.0 dir=1.5 type=Barricade1
+CreateObject pos=-65.0;25.0 dir=1.5 type=Barrier1
+CreateObject pos=-65.0;30.0 dir=1.5 type=Barricade1
+CreateObject pos=-65.0;35.0 dir=1.5 type=Barrier1
+CreateObject pos=-65.0;40.0 dir=1.5 type=Barricade1
+CreateObject pos=-65.0;45.0 dir=1.5 type=Barricade1
+
+CreateObject pos=-24.5;05.0 dir=1.5 type=Barricade1
+CreateObject pos=-24.5;55.0 dir=1.5 type=Barricade1
+
+CreateObject pos=-52.0;30.0 dir=1.5 type=GoalArea
+CreateObject pos=-42.0;40.0 dir=1.5 type=GoalArea
+CreateObject pos=-42.0;20.0 dir=1.5 type=GoalArea
+CreateObject pos=-17.0;40.0 dir=1.5 type=GoalArea
+CreateObject pos=-17.0;20.0 dir=1.5 type=GoalArea
+
+CreateObject pos=-12.0;05.0 dir=1.0 type=TargetBot power=1.0 script1="%lvl%/ai/t1.txt" run=1
+CreateObject pos=-27.0;05.0 dir=1.0 type=TargetBot power=1.0 script1="%lvl%/ai/t3.txt" run=1
+CreateObject pos=-12.0;55.0 dir=1.0 type=TargetBot power=1.0 script1="%lvl%/ai/t2.txt" run=1
+CreateObject pos=-27.0;55.0 dir=1.0 type=TargetBot power=1.0 script1="%lvl%/ai/t3.txt" run=1
+
+CreateObject pos=-81.0;15.0 dir=1.5 type=TargetBot power=1.0 script1="%lvl%/ai/t4.txt" run=1
+CreateObject pos=-69.0;15.0 dir=1.5 type=TargetBot power=1.0 script1="%lvl%/ai/t4.txt" run=1
+
+CreateObject pos=-78.5;45.0 dir=0.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-66.5;45.0 dir=0.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-78.5;15.0 dir=1.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-66.5;15.0 dir=1.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+
+// Some spiders in background
+// CreateObject pos=283.06;32.6638 cmdline=1020 dir=1.61098 type=AlienSpider script1="m_spider_01.txt" run=1
+// CreateObject pos=214.79;265.90 cmdline=1030 dir=1.61098 type=AlienSpider script1="m_spider_01.txt" run=1
+// // CreateObject pos=-78.4285;237.002 cmdline=1010 dir=0.981533 type=AlienSpider script1="m_spider_01.txt" run=1
+// // CreateObject pos=-283.515;-30.1976 cmdline=1020 dir=0.648818 type=AlienSpider script1="m_spider_01.txt" run=1
+// CreateObject pos=-45.5339;-271.844 cmdline=1040 dir=1.64848 type=AlienSpider script1="m_spider_01.txt" run=1
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+WaterColor color=-0.2;-0.5;-0.8 // orange
+
+MapColor floor=0.647;0.557;0.420 water=1.000;0.682;0.251
+MapZoom factor=2
+
+// EnableBuild type=BotFactory
+// EnableBuild type=Converter
+// EnableBuild type=PowerStation
+// EnableBuild type=PowerPlant
+// EnableBuild type=DefenseTower
+// EnableBuild type=ExchangePost
+EnableBuild type=FlatGround
+EnableBuild type=Flag
+
+EnableResearch type=TRACKER
+EnableResearch type=SNIFFER
+EnableResearch type=SHOOTER
+EnableResearch type=TOWER
+EnableResearch type=RECYCLER
+DoneResearch type=TRACKER
+DoneResearch type=SNIFFER
+DoneResearch type=SHOOTER
+DoneResearch type=TOWER
+DoneResearch type=RECYCLER
+
+EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
+EndMissionTake pos=32.50;55.00 dist=8.0 tool=Grabber min=1
+EndMissionTake pos=0.00;0.00 dist=1000.0 type=TargetBot min=0 max=0
+
+Camera eye=0.00;5.00;0.00 lookat=0.00;1.00;0.00 delay=0

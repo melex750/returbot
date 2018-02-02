@@ -1,0 +1,18 @@
+\b;From Mission Control
+You succesfully entered atmosphere of Volcano. Some important tasks already expect you on this planet, however, supplies transported by you onboard are exhausted and necessity to restore them appears to be urgent.
+
+Normally there should be no problem with power or material supply on Volcano, since this planet is rich of underground power and useful ores. Unfortunately, your building construction systems conceal a defect which makes them disfunctional should they be left in conditions of high temperatures for too long and we cannot fix it now. Atmospheric temperature now steadily increases everywhere. With no possibility to construct new buildings and no reserves aboard you might find yourself in a very difficult situation.
+
+Your \l;space ship\u object\base; lands in one of few regions with atmospheric temperature remaining low for the time, thus you should restore your reserves now while you can.
+
+\b;Concretely
+Deliver aboard 2 \l;grabbers\u object\botgr;, 2 \l;titanium cubes\u object\titan; and 10 fully charged \l;power cells\u object\power;.
+
+To manufacture new \l;power cells\u object\power; and to recharge \l;power cells\u object\power; in your bots, you will need to build a \l;power plant\u object\energy; and a \l;power station\u object\station; on shore of lava lake nearby.
+
+You will have quite a lot of boring and repetitive routine on collecting, processing and delivering materials and production to get done, and doing all this manually doesn't looks like a good idea. We recommend you to complement your single \l;grabber\u object\botgr; with one or two more and delegate all the work to them.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

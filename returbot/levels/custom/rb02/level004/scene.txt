@@ -1,0 +1,148 @@
+Title.E text="Sheltering"
+Title.R text="Укрытие"
+Resume.E text="Protect your bots from electrical storms on the way to distant camp."
+Resume.R text="Защитите своих ботов от электромагнитной бури на пути к удаленному лагерю."
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+// Loading name="programs/8_ServiceTower1_link.txt"
+// SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="music008.ogg"
+
+// Planets for SpaceShip transition animation
+Planet mode=1 pos=1.2; 0.2 dim=0.40 speed= 0.000 dir=0.5 image="planet02.png" uv1=0.0;0.0 uv2=0.5;0.5
+Planet mode=1 pos=4.0;-0.4 dim=0.20 speed= 0.000 dir=0.7 image="planet02.png" uv1=0.0;0.0 uv2=0.5;0.5
+Planet mode=1 pos=4.4; 0.3 dim=0.30 speed= 0.000 dir=0.3 image="planet02.png" uv1=0.0;0.5 uv2=0.5;1.0
+Planet mode=1 pos=3.5; 0.4 dim=0.12 speed= 0.000 dir=0.8 image="planet02.png" uv1=0.5;0.5 uv2=1.0;1.0
+Planet mode=1 pos=0.0; 0.2 dim=0.06 speed= 0.000 dir=0.4 image="planet02.png" uv1=0.0;0.0 uv2=0.5;0.5
+Planet mode=1 pos=2.0; 0.5 dim=0.05 speed= 0.000 dir=2.0 image="planet02.png" uv1=0.5;0.5 uv2=1.0;1.0
+Planet mode=1 pos=4.1; 0.1 dim=0.10 speed= 0.000 dir=0.3 image="planet02.png" uv1=0.5;0.0 uv2=1.0;0.5
+
+#Include file="%chap%/planet.txt"
+TerrainBlitz sleep=10 delay=5 magnetic=200
+TerrainRelief image="m_relief_17.png" factor=1.0
+TerrainResource image="m_res_17.png"
+#Include file="%chap%/terrain.txt"
+TerrainCreate
+
+BeginObject
+CreateObject pos= 0.00; 0.00 dir=0.0 type=SpaceShip run=1
+CreateObject pos=-3.25;-3.25 dir=1.5 type=WheeledGrabber power=0.55 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 0.00; 3.25 dir=1.5 type=WheeledGrabber power=0.15 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 3.25;-3.25 dir=1.5 type=TrackedGrabber power=0.35 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 3.25; 0.00 dir=1.5 type=BlackBox
+
+CreateObject pos= 2.50; 2.20 dir=0.0 type=PowerCell power=0.65
+CreateObject pos= 3.75; 2.20 dir=0.0 type=PowerCell power=0.10
+CreateObject pos= 2.50; 3.25 dir=0.0 type=PowerCell power=0.20
+CreateObject pos= 3.75; 3.25 dir=0.0 type=PowerCell power=0.15
+CreateObject pos= 2.50; 4.30 dir=0.0 type=PowerCell power=0.05
+CreateObject pos= 3.75; 4.30 dir=0.0 type=PowerCell power=0.00
+CreateObject pos=-3.25; 2.50 dir=0.0 type=Titanium
+CreateObject pos=-3.25; 3.75 dir=0.0 type=Titanium
+
+
+CreateObject pos=-145.566;-129.908 dir=0.523467 type=TNT
+CreateObject pos=-145.746;-132.752 dir=0.51046 type=TNT
+CreateObject pos=-147.708;-131.61 dir=2 type=RedFlag
+
+CreateObject pos=-1.38235;151.18 dir=2 type=BlueFlag
+CreateObject pos=-47.8104;-228.441 dir=2 type=BlueFlag
+
+CreateObject pos=11.0556;55.8552 dir=1.0 type=RuinBotFactory
+CreateObject pos=11.0556;55.8552 dir=0.0 type=WreckBotw2
+CreateObject pos=19.318;41.2627 dir=0.0226974 type=WreckBott2
+CreateObject pos=-14.8803;57.8303 dir=0.199979 type=RuinSupport
+CreateObject pos=-25.8044;88.5204 dir=0.467454 type=RuinRadar
+CreateObject pos=0.657433;63.7619 dir=0.648288 type=RuinDoor
+CreateObject pos=-6.50094;70.4705 dir=1.26103 type=WreckBotw1
+CreateObject pos=10.4326;107.067 dir=1.79716 type=WreckBotw1
+CreateObject pos=-25.361;92.068 dir=0.676974 type=RuinSupport
+
+CreateObject pos=-155.131;-155.169 dir=1.55604 type=RuinBotFactory
+CreateObject pos=-143.483;-115.082 dir=0.98904 type=RuinConvert
+CreateObject pos=-142.514;-109.197 dir=1.93174 type=RuinDoor
+CreateObject pos=-155.129;-122.181 dir=0.547135 type=RuinRadar
+CreateObject pos=-159.244;-133.362 dir=1.44665 type=RuinSupport
+CreateObject pos=-137.016;-169.923 dir=0.316611 type=WreckBotw1
+CreateObject pos=-159.538;-127.519 dir=1.50966 type=WreckBotw2
+CreateObject pos=-150.604;-81.0995 dir=1.56086 type=WreckBott2
+CreateObject pos=-140.465;-133.645 dir=0.33727 type=WreckBott2
+CreateObject pos=-110.284;-202.346 dir=1.28172 type=RuinRadar
+CreateObject pos=-112.358;-203.137 dir=0.805358 type=RuinSupport
+
+CreateObject pos=122.912;-121.585 dir=1.55363 type=RuinConvert
+CreateObject pos=130.135;-73.4537 dir=1.53794 type=RuinRadar
+CreateObject pos=134.581;-110.756 dir=1.26173 type=RuinSupport
+CreateObject pos=134.26;-88.0935 dir=1.86376 type=RuinSupport
+CreateObject pos=123.313;-104.188 dir=1.03705 type=RuinSupport
+CreateObject pos=125.344;-100.226 dir=0.521125 type=WreckBotw1
+CreateObject pos=164.994;-85.4578 dir=1.44933 type=WreckBotw2
+CreateObject pos=132.412;-76.6883 dir=1.31562 type=WreckBott1
+CreateObject pos=130.358;-26.9597 dir=1.80273 type=WreckBotr2
+
+CreateObject pos=81.8755;182.358 dir=1.71315 type=WreckBotr2
+CreateObject pos=182.792;80.9162 dir=1.47618 type=RuinBotFactory
+CreateObject pos=179.024;101.183 dir=0.27094 type=RuinSupport
+CreateObject pos=186.107;93.6461 dir=0.407695 type=RuinSupport
+CreateObject pos=178.854;81.9775 dir=0.845803 type=RuinSupport
+CreateObject pos=185.747;103.029 dir=1.84515 type=WreckBott2
+CreateObject pos=-38.9827;-150.638 dir=1.51249 type=RuinRadar
+CreateObject pos=-48.0493;-143.153 dir=1.07533 type=WreckBott1
+CreateObject pos=-175.492;95.2181 dir=1.11342 type=WreckBott2
+CreateObject pos=-253.238;105.59 dir=0.000893826 type=RuinBotFactory
+CreateObject pos=-247.488;105.67 dir=0.988728 type=WreckBotr1
+CreateObject pos=-143.17;177.13 dir=0.00134328 type=RuinRadar
+// CreateObject pos=-129.697;47.6612 dir=1.02104 type=RuinConvert
+CreateObject pos=-85.5685;-50.1373 dir=0.0252677 type=RuinConvert
+CreateObject pos=-82.1922;-50.1471 dir=0.996701 type=WreckBott2
+
+// CreateObject pos=-123.237;64.31 dir=1.04039 type=Mine
+// CreateObject pos=-139.337;62.3196 dir=1.42801 type=Mine
+// CreateObject pos=-131.026;44.4141 dir=1.1652 type=Mine
+// CreateObject pos=-134.532;73.4965 dir=1.32836 type=Mine
+// CreateObject pos=-139.85;45.1998 dir=0.652391 type=Mine
+// CreateObject pos=-143.577;-169.505 dir=0.272192 type=Mine
+// CreateObject pos=-132.088;-170.464 dir=0.273175 type=Mine
+// CreateObject pos=-113.25;-209.482 dir=0.159421 type=Mine
+// CreateObject pos=-102.513;-202.291 dir=1.66428 type=Mine
+// CreateObject pos=-113.147;-194.682 dir=1.07038 type=Mine
+// CreateObject pos=-230.732;102.17 dir=0.944361 type=Mine
+// CreateObject pos=-240.858;96.0604 dir=1.22151 type=Mine
+// CreateObject pos=-235.7;114.344 dir=1.72245 type=Mine
+// CreateObject pos=-246.21;96.8928 dir=0.983184 type=Mine
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+
+MapColor floor=0.702;0.502;0.310 water=0.604;0.922;1.000
+MapZoom factor=2
+
+EnableBuild type=BotFactory
+EnableBuild type=Derrick
+EnableBuild type=Converter
+EnableBuild type=RadarStation
+EnableBuild type=PowerCaptor
+EnableBuild type=ExchangePost
+EnableBuild type=FlatGround
+EnableBuild type=Flag
+
+EnableResearch type=TRACKER
+EnableResearch type=SNIFFER
+EnableResearch type=RECYCLER
+DoneResearch type=TRACKER
+DoneResearch type=SNIFFER
+DoneResearch type=RECYCLER
+
+EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
+EndMissionTake pos=0.00;0.00 dist=8.00 type=TNT min=1
+EndMissionTake pos=0.00;0.00 dist=8.00 tool=Grabber min=1
+
+Camera pos=12.50;-250.00 h=2.50

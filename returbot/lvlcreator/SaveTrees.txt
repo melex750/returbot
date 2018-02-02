@@ -1,0 +1,6 @@
+extern void object::Output_Trees_File()
+{
+	string filename = "";
+	filename = "obj_trees.txt";
+	SaveTreesToFile(filename);
+}

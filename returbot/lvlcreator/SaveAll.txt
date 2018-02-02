@@ -1,0 +1,20 @@
+extern void object::Output_All_obj_Files()
+{
+	// comment this line to confirm //
+	// message("Edit this program for confirmation"); return;
+
+
+	SaveBotsToFile("obj_bots.txt");// Also Saves "Me"(Astronaut)
+
+	SaveBldgsToFile("obj_bldgs.txt");
+
+	SaveResourcesToFile("obj_rsrcs.txt");
+
+	SaveBugsToFile("obj_insects.txt");
+
+	SaveWrecksRuinsToFile("obj_wrecks.txt");
+
+	SaveTreesToFile("obj_trees.txt");
+
+	SaveOtherToFile("obj_other.txt");
+}

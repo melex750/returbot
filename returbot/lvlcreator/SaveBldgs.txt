@@ -1,0 +1,6 @@
+extern void object::Output_Buildings_File()
+{
+	string filename = "";
+	filename = "obj_bldgs.txt";
+	SaveBldgsToFile(filename);
+}

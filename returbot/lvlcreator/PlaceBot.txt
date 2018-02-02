@@ -1,0 +1,30 @@
+extern void object::Create_Bot_Or_Me()
+{// Creates an object at this.position
+	// Uncomment the one you want
+	int type = nan;
+	//type = Me; // Astronaut
+	//type = WheeledGrabber;
+	//type = WheeledSniffer;
+	//type = WheeledShooter;
+	//type = WheeledOrgaShooter;
+	//type = TrackedGrabber;
+	//type = TrackedSniffer;
+	//type = TrackedShooter;
+	//type = TrackedOrgaShooter;
+	//type = WingedGrabber;
+	//type = WingedSniffer;
+	//type = WingedShooter;
+	//type = WingedOrgaShooter;
+	//type = LeggedGrabber;
+	//type = LeggedSniffer;
+	//type = LeggedShooter;
+	//type = LeggedOrgaShooter;
+	//type = Subber;
+	//type = Thumper;
+	//type = Recycler;
+	//type = Shielder;
+	//type = PhazerShooter;
+	//type = TargetBot;
+	//type = PracticeBot;
+	PlaceBot(type);
+}

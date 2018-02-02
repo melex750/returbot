@@ -1,0 +1,159 @@
+extern void object::Attack( )
+{
+	int		list[], i;
+	object	p, p2;
+	point	dest, orig;
+    float       mp = 1, tp = 1;
+
+	errmode(0);
+	while ( ismovie() != 0 )  wait(1);
+
+	i = 0;
+	list[i++] = WingedGrabber;
+	list[i++] = TrackedGrabber;
+	list[i++] = WheeledGrabber;
+	list[i++] = LeggedGrabber;
+	list[i++] = WingedShooter;
+	list[i++] = TrackedShooter;
+	list[i++] = WheeledShooter;
+	list[i++] = LeggedShooter;
+	list[i++] = WingedOrgaShooter;
+	list[i++] = TrackedOrgaShooter;
+	list[i++] = WheeledOrgaShooter;
+	list[i++] = LeggedOrgaShooter;
+	list[i++] = WingedSniffer;
+	list[i++] = TrackedSniffer;
+	list[i++] = WheeledSniffer;
+	list[i++] = LeggedSniffer;
+	list[i++] = Thumper;
+	list[i++] = PhazerShooter;
+	list[i++] = Recycler;
+	list[i++] = Shielder;
+	list[i++] = Subber;
+	list[i++] = Me;
+	list[i++] = Derrick;
+	list[i++] = BotFactory;
+	list[i++] = PowerStation;
+	list[i++] = Converter;
+	list[i++] = RepairCenter;
+	list[i++] = DefenseTower;
+	list[i++] = ResearchCenter;
+	list[i++] = RadarStation;
+	list[i++] = ExchangePost;
+	list[i++] = PowerPlant;
+	list[i++] = AutoLab;
+	// list[i++] = NuclearPlant; // too freaking big
+	list[i++] = Titanium;
+	list[i++] = PowerCell;
+	list[i++] = NuclearCell;
+
+    orig = position;
+    
+    i = 0;
+    p2 = retobject(0);
+    while(p2 != null)
+    {
+        p2 = retobject(i);
+        if(p2 != null and p2.category == TrackedGrabber)
+        {
+            break;
+        }
+        i++;
+    }
+    
+    motor(1,1);
+    motor(-1,-1);
+    motor(0,0);
+    wait(cmdline(0));
+	while ( ismovie() == 0 )
+	{
+		if ( load == null )
+		{
+                p = search(OrgaMatter, orig);
+                if ( p == null )
+                {
+                    jet(1);  // monte
+                    dest = position;
+                    dest.x += (rand()-0.5)*10;
+                    dest.y += (rand()-0.5)*10;
+                    goto(dest);  // va n'importe où
+                    wait(2);
+                }
+                else
+                {
+                    dest = p.position;
+                    dest.z = position.z;
+                    if ( distance(dest, position) > 1.25 )
+                    {
+                        jet(1);  // monte
+                        goto(p.position);
+                    }
+                    else
+                    {
+                        jet(-1);
+                        while ( altitude > 0 );
+                        grab();
+                    }
+                }
+		}
+		else  // porte matière ?
+		{
+            p = radar(list, 0, 360, 0, 1000, 1, FilterOnlyLanding);
+            if(p2 != null and p2.category == TrackedGrabber and p2.shieldLevel > 0 and (p == null or distance(position,p.position) > distance(position,p2.position)))
+            {
+                p = p2;
+            }
+			if ( p != null )
+			{
+                dest = p.position;
+                if(p.velocity.x != nan)
+                {
+                    dest.x = p.position.x + p.velocity.x / 3;
+                }
+                if(p.velocity.y != nan)
+                {
+                    dest.y = p.position.y + p.velocity.y / 3;
+                }
+				if ( distance2d(position,dest) < 1.25 )
+				{
+					drop();
+				}
+				else
+				{
+                    jet(1);
+                    if(direction(dest) > 2)
+                    {
+                        tp = direction(dest) / 60;
+                        if(distance2d(position,dest) < 6)
+                        {
+                            tp = tp + tp / distance2d(position,dest);
+                        }
+                        motor (mp-0.3*tp, mp+0.3*tp);
+                    }
+                    else if(direction(dest) < -2)
+                    {
+                        tp = -direction(dest) / 60;
+                        motor (mp+0.3*tp, mp-0.3*tp);
+                    }
+                    else
+                    {
+                        motor (mp, mp);
+                    }
+                    wait(0.1);
+				}
+			}
+            else
+            {
+                jet(1);  // monte
+                dest = position;
+                dest.x += (rand()-0.5)*10;
+                dest.y += (rand()-0.5)*10;
+                goto(dest);  // va n'importe où
+                wait(2);
+            }
+		}
+	}
+    motor(0,0);
+    jet(1);
+    goto(orig);
+}

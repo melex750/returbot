@@ -1,0 +1,24 @@
+\b;Satellite Report
+Currently in a geo-stationary orbit of Centaury.
+\c;
+\s;-> SURFACE\c;
+\tab;Temperature:      23.4C
+\tab;Atmosphere:       oxygen, nitrogen, ammonia
+\tab;Wind:             1.2 mps
+\tab;Titanium ore:     none
+\tab;Uranium ore:      none
+
+\s;-> SUBSOIL\c;
+\tab;Energy source:    no data available
+\tab;Titanium ore:     no data available
+\tab;Uranium ore:      no data available
+
+\s;-> ADDITIONAL INFORMATION\c;
+\tab;Detected:         inactive objects
+\tab;Detected:         reusable derelicts
+\tab;Detected:         giant spiders
+\tab;  - Threat:       passive
+\tab;Detected:         undetermined organisms
+\tab;  - Threat:       ?
+\tab;It is strongly advised to use \l;radar station\u object\radar; to determine threat if it is possible.
+\n;

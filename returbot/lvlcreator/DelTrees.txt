@@ -1,0 +1,27 @@
+extern void object::Remove_Trees()
+{// remove trees in the defined area
+
+	TreeTypes tt();
+
+	// Tree types range from:
+	// Greenery0 to Greenery19
+	// and Tree0 to Tree3
+
+	int[] types;
+	int i = 0;
+	//types[i++] = tt.Greenery10;
+	//types[i++] = tt.Greenery11;
+
+	point center(0,0); // (0,0) == middle of the map
+
+	//center = this.position; // position of this bot
+
+	float radius = 10;
+
+	//DelTrees(center, radius);        // remove all trees in area
+
+	DelTrees(center, radius, types);   // remove only certain trees in area
+
+	DelAllTrees();                   // remove all trees on the map
+
+}

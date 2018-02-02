@@ -1,0 +1,10 @@
+\b;From Mission Control
+It seems that you're done on Centaury. You now need to retrieve \l;black box\u object\bbox; with information about planet you will have to visit next, abandoned somewhere in northern part of this area. There are \l;spiders\u object\spider; in that part and they appear to be quite cocked. As soon as you will put \l;radar station\u object\radar; into operation in order to determine relocation of \l;black box\u object\bbox; they will discover your presence in this area and most likely will assault you. You, however, can turn that into advantage by organizing some defense beforehand. For such you can use a \l;defense tower\u object\tower;, project of which you will find in a \l;research center\u object\research;. Just install it at northern boundary and supply it with a \l;battery\u object\power; before installing a \l;radar station\u object\radar;.
+
+\t;\l;Orga-shooters\u object\botor;
+At present time we examine construction of \l;the bot\u object\botor; retrieved by you in the past mission as well as principles of operation of it's orga-ball cannon. We named it "orga-shooter" and it appears to be correct name indeed. Unfortunately, we are not able to inquire into working principles of this bizarre technology, which means that in the nearest future there will be no plans for this bot and thus you will not be able to reproduce it on regular base.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

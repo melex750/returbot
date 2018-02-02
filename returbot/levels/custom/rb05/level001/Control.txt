@@ -1,0 +1,85 @@
+public class Ctrl_underctrl
+{
+	static object[] list;
+	static float[] delay;
+	static float[] power;
+	static float[] orientation;
+	static object[] thumpers;
+	static float[] thpower;
+	static point[] thpos;
+	static float[] thori;
+    static object[] worms;
+}
+
+
+extern void LvlCntlr_main()
+{
+    // errmode(0);
+    Ctrl_underctrl underctrl();
+    int i;
+    object i2;
+	while(true)
+	{
+        i = 0;
+        while(i < sizeof(underctrl.thumpers))
+        {
+            if(underctrl.thumpers[i] != null)
+            {
+                if(underctrl.thumpers[i].energyCell == null)
+                {
+                    underctrl.thumpers[i] = null;
+                }
+                else if(underctrl.thumpers[i].position != underctrl.thpos[i] or underctrl.thumpers[i].orientation != underctrl.thori[i] or underctrl.thpower[i] < underctrl.thumpers[i].energyCell.energyLevel)
+                {
+                    underctrl.thpos[i] = underctrl.thumpers[i].position;
+                    underctrl.thori[i] = underctrl.thumpers[i].orientation;
+                    underctrl.thpower[i] = underctrl.thumpers[i].energyCell.energyLevel;
+                }
+            }
+            i++;
+        }
+        i = 0;
+        while(i < sizeof(underctrl.list))
+	    {
+            i2 = underctrl.list[i];
+		    if(i2 != null)
+            {
+                if(underctrl.delay[i] != 987654321 and (abstime() >= underctrl.delay[i] or underctrl.delay[i] - abstime() > 5.0))
+                {
+                    if(i2.category == PowerStation or i2.category == PowerPlant)
+                    {
+                        underctrl.power[i] = i2.energyLevel;
+                    }
+                    else if(i2.energyCell != null)
+                    {
+                        underctrl.power[i] = i2.energyCell.energyLevel;
+                    }
+                    else
+                    {
+                        underctrl.power[i] = 98765;
+                    }
+                    underctrl.orientation[i] = i2.orientation;
+                    underctrl.delay[i] = 987654321;
+                }
+                if(i2 != null and underctrl.delay[i] == 987654321)
+                {
+                    if(((i2.category == PowerStation or i2.category == PowerPlant) and i2.energyLevel <= 0.1) or ((i2.category != PowerStation and i2.category != PowerPlant) and (i2.energyCell == null or i2.energyCell.energyLevel <= 0.1)))
+                    {
+                        underctrl.list[i] = null;
+                    }
+                    else if(((i2.category == PowerStation or i2.category == PowerPlant) and (i2.energyLevel - underctrl.power[i] > 0.002  or i2.energyLevel - underctrl.power[i] < -0.002)) or ((i2.category != PowerStation and i2.category != PowerPlant and i2.energyCell != null) and (i2.altitude > 0 or i2.velocity.x != 0 or i2.velocity.y != 0 or i2.energyCell.energyLevel - underctrl.power[i] > 0.002 or i2.energyCell.energyLevel - underctrl.power[i] < -0.002 or i2.orientation - underctrl.orientation[i] > 0.75 or i2.orientation - underctrl.orientation[i] < -0.75)))
+                    {
+                        try
+                        {
+                            delete(i2.id,1);
+                        }
+                        catch(i2.shieldLevel <= 0)
+                        {
+                        }
+                    }
+                }
+            }
+            i++;
+	    }
+	}
+}

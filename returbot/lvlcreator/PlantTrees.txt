@@ -1,0 +1,14 @@
+extern void object::Plant_One_Quartz()
+{
+	TreeTypes tt();
+
+	// Types are randomly chosen from this list.
+	int[] types;
+	int i = 0;
+	types[i++] = tt.Quartz0;
+	types[i++] = tt.Quartz1;
+	types[i++] = tt.Quartz2;
+	types[i++] = tt.Quartz3;
+
+	PlantOneTree(types);
+}

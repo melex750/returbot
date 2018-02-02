@@ -1,0 +1,6 @@
+extern void object::One_File_All_Objects()
+{
+	string filename = "";
+	filename = "obj_all.txt";
+	SaveAllToFile(filename);
+}

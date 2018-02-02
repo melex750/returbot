@@ -1,0 +1,38 @@
+public class Roam_data
+{
+    float center;
+    float roamDist;
+    float guardDist;
+    float attackDist;
+    float frange;
+}
+
+public int Rdata_check(point pos, int rdk[])
+{
+    rdk[1] = 1;
+    rdk[2] = 1;
+    return rdk;
+}
+
+public Roam_data Rdata_return(point pos, int rdk[])
+{
+    Roam_data = rdata;
+    rdata.center[ci] = pos;
+    rdata.roamDist[ci] = 0;
+    rdata.guardDist[ci] = 0;
+    if(rdk[0] == 1)
+    {
+        rdata.attackDist[ci] = 40;
+        rdata.frange[ci] = 40;
+    }
+    else if(rdk[0] == 2)
+    {
+        rdata.attackDist[ci] = 45;
+        rdata.frange[ci] = 9;
+    }
+    return rdata;
+}
+
+extern void LvlCntlr_main()
+{
+}

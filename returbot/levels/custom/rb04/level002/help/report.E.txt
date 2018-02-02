@@ -1,0 +1,19 @@
+\b;Satellite Report
+Currently in a geo-stationary orbit of Volcano.
+\c;
+\s;-> SURFACE\c;
+\tab;Temperature:      72.3C
+\tab;Atmosphere:       CO2, SO2, HCN, HS, CH4, NH3
+\tab;Wind:             2.2 mps
+\tab;Titanium ore:     some
+\tab;Uranium ore:      none
+
+\s;-> SUBSOIL\c;
+\tab;Energy source:    everywhere
+\tab;Titanium ore:     no data available
+\tab;Uranium ore:      no data available
+
+\s;-> ADDITIONAL INFORMATION\c;
+\tab;Detected:         inactive objects
+\tab;Detected:         reusable derelicts
+\n;

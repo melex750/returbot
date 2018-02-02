@@ -1,0 +1,4 @@
+extern void object::Remove_Tree()
+{// remove nearest tree within 5m
+	DelTree();
+}

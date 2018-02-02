@@ -1,0 +1,74 @@
+public class Roam_data
+{
+    point center;
+    float roamDist;
+    float guardDist;
+    float attackDist;
+    float frange;
+    float appmin;
+    float pred;
+    float cgo;
+    int mid;
+    int status;
+    int fp;
+    void Roam_data()
+    {
+        fp = 0;
+    }
+}
+
+public void Rdata_set(int cat, point pos, Roam_data rdata)
+{
+    if(rdata.status == -1)
+    {
+        rdata.status = 1;
+        rdata.center = pos;
+        if(rdata.mid == 2)
+        {
+            rdata.roamDist = 100;
+            rdata.guardDist = 200;
+        }
+        else
+        {
+            rdata.roamDist = 60;
+            rdata.guardDist = 120;
+        }
+        if(cat == AlienAnt)
+        {
+            rdata.attackDist = 40;
+            rdata.frange = 40;
+        }
+        else
+        {
+            rdata.attackDist = 45;
+            rdata.frange = 8;
+        }
+    }
+    object r = search(RadarStation, pos);
+    if(r != null and rdata.center != r.position)
+    {
+        rdata.center = r.position;
+        rdata.roamDist = 175+25*rand();
+        rdata.guardDist = 160+40*rand();
+    }
+}
+
+extern void LvlCntlr_main()
+{
+    // wait(0.3);
+    object boxes[] = radarall(BlackBox);
+    int i = 0;
+    int n = 100;
+    while(n >= sizeof(boxes))
+    {
+        n = rand() * 10;
+    }
+    while(i < sizeof(boxes))
+    {
+        if(i != n)
+        {
+            delete(boxes[i].id,0);
+        }
+        i = i + 1;
+    }
+}

@@ -1,0 +1,7 @@
+\b;From Mission Control
+We are working on the project of \l;nuclear plant\u object\nuclear; which you will be able to construct yourself and which will allow you to manufacture \l;nuclear power cells\u object\atomic; for your needs. The work is still in progress. Now we need you to extract 3 pieces of \l;uranium ore\u object\uranore; from subsoil. Deposit is located in the small valley north-eastward from where you landed. Look at satellite report: it says that there is ore in the subsoil, but it needs to be located precisely, so that you build a \l;derrick\u object\derrick; in the right place. For this construct in a \l;bot factory\u object\factory; a \l;sniffer\u object\botsr; and send it for ground probing. It should leave a \l;spot\u object\uranspot; when it will find the right place. In this place build a \l;derrick\u object\derrick;, which will extract ore for you.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

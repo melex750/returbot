@@ -1,0 +1,34 @@
+Ground spot for water on Crystallium:
+GroundSpot color=0.000;0.563;0.761 min=-10 max=8.50 smooth=3 // for water with level=8.0
+
+Greenery color for Crystallium:
+GreeneryColor color=0.650;0.850;0.850
+
+Crystallium bottom, normal:
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+WaterColor color=-0.6;-0.1;-0.6
+
+MapColor floor=0.647;0.557;0.420 water=0.604;0.922;1.000
+MapZoom factor=2
+
+Crystallium bottom, foggy:
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.16; 0.16; 0.16 type=Quartz
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.16; 0.16; 0.16 type=Quartz
+
+WaterColor color=-0.6;-0.1;-0.1;0.0
+
+MapColor floor=0.451;0.757;0.929 water=0.737;0.882;0.965
+MapZoom  factor=2 enable=1

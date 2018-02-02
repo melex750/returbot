@@ -1,0 +1,7 @@
+\b;From Mission Control
+You are in the middle of area acrawl with ants and thus must do your business there quickly - stun all the insects around with your new weapon, retrieve the black box and leave the place for good. Don't give the enemy a chance to get up before you left.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

@@ -1,0 +1,14 @@
+extern void object::Create_Ruin()
+{// Creates an object at this.position
+	// Uncomment the one you want
+	RuinTypes rt();
+	int type = nan;
+	//type = rt.RuinBotFactory;
+	//type = rt.RuinDoor;
+	//type = rt.RuinSupport;
+	//type = rt.RuinRadar;
+	//type = rt.RuinConvert;
+	//type = rt.RuinBaseCamp;
+	//type = rt.RuinHeadCamp;
+	PlaceRuin(type);
+}

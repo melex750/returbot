@@ -1,0 +1,5 @@
+Title.E text="RB: On Orpheon" resume="Orpheon"
+Title.D text="RB: Auf Orpheon" resume="Orpheon"
+Title.F text="RB: Sur Orphéon" resume="Orphéon"
+Title.P text="RB: Na Orfenii" resume="Orfenia"
+Title.R text="RB: На Орфее" resume="Орфей"

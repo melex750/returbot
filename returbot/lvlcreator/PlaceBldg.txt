@@ -1,0 +1,19 @@
+extern void object::Create_Building()
+{// Creates an object at this.position
+	// Uncomment the one you want
+	int type = nan;
+	//type = Derrick;
+	//type = BotFactory;
+	//type = PowerStation;
+	//type = Converter;
+	//type = RepairStation;
+	//type = DefenseTower;
+	//type = ResearchCenter;
+	//type = RadarStation;
+	//type = PowerPlant;
+	//type = AutoLab;
+	//type = NuclearPlant;
+	//type = ExchangePost;
+	//type = PowerCaptor;
+	PlaceBldg(type);
+}

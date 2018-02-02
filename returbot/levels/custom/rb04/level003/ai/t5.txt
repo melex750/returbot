@@ -1,0 +1,15 @@
+extern void object::t6( )
+{
+        while(ismovie() == 1) { wait(0.1); };
+        move(5);
+        while(ismovie() == 0 and energyCell.energyLevel >= 0.1 and radar(TargetBot,0,360,0,100) != null and radar(TargetBot,0,360,0,100).position.x < -40)
+        {
+            wait(rand()*2);
+            move(5);
+            turn(-180);
+            wait(5+rand()*5);
+            move(5);
+            turn(-180);
+        }
+        move(-5);
+}

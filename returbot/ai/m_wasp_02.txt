@@ -1,0 +1,217 @@
+extern void object::Attack( )
+{
+	int		list[], buildings[], i;
+	object	p, ps[];
+	point	dest, orig;
+    float       mp = 1, tp = 1, gd;
+
+	errmode(0);
+	while ( ismovie() != 0 )  wait(1);
+
+	i = 0;
+	list[i++] = WingedGrabber;
+	list[i++] = TrackedGrabber;
+	list[i++] = WheeledGrabber;
+	list[i++] = LeggedGrabber;
+	list[i++] = WingedShooter;
+	list[i++] = TrackedShooter;
+	list[i++] = WheeledShooter;
+	list[i++] = LeggedShooter;
+	list[i++] = WingedOrgaShooter;
+	list[i++] = TrackedOrgaShooter;
+	list[i++] = WheeledOrgaShooter;
+	list[i++] = LeggedOrgaShooter;
+	list[i++] = WingedSniffer;
+	list[i++] = TrackedSniffer;
+	list[i++] = WheeledSniffer;
+	list[i++] = LeggedSniffer;
+	list[i++] = Thumper;
+	list[i++] = PhazerShooter;
+	list[i++] = Recycler;
+	list[i++] = Shielder;
+	list[i++] = Subber;
+	list[i++] = Me;
+	list[i++] = Derrick;
+	list[i++] = BotFactory;
+	list[i++] = PowerStation;
+	list[i++] = Converter;
+	list[i++] = RepairCenter;
+	list[i++] = DefenseTower;
+	list[i++] = ResearchCenter;
+	list[i++] = RadarStation;
+	list[i++] = ExchangePost;
+	list[i++] = PowerPlant;
+	list[i++] = AutoLab;
+	// list[i++] = NuclearPlant; // too freaking big
+    
+	i = 0;
+	buildings[i++] = Derrick;
+	buildings[i++] = BotFactory;
+	buildings[i++] = PowerStation;
+	buildings[i++] = Converter;
+	buildings[i++] = RepairCenter;
+	buildings[i++] = DefenseTower;
+	buildings[i++] = ResearchCenter;
+	buildings[i++] = RadarStation;
+	buildings[i++] = ExchangePost;
+	buildings[i++] = PowerPlant;
+	buildings[i++] = AutoLab;
+	buildings[i++] = NuclearPlant;
+
+    orig = position;
+    gd = cmdline(0);
+    
+    motor(1,1);
+    motor(-1,-1);
+    motor(0,0);
+    
+	while ( ismovie() == 0 )
+	{
+		if ( load == null )
+		{
+                p = search(OrgaMatter, orig);
+                if ( p == null )
+                {
+                    jet(1);  // monte
+                    dest = position;
+                    dest.x += (rand()-0.5)*10;
+                    dest.y += (rand()-0.5)*10;
+                    goto(dest);  // va n'importe où
+                    wait(2);
+                }
+                else
+                {
+                    dest = p.position;
+                    dest.z = position.z;
+                    if ( distance(dest, position) > 1.25 )
+                    {
+                        jet(1);  // monte
+                        goto(p.position);
+                    }
+                    else
+                    {
+                        jet(-1);
+                        while ( altitude > 0 );
+                        grab();
+                    }
+                }
+		}
+		else  // porte matière ?
+		{
+            ps = radarall(list, 0, 360, 0, 1000, 1, FilterOnlyLanding);
+            i = 0;
+            p = null;
+            while(i < sizeof(ps))
+            {
+                // Detect enemy only if it is not underwater
+                if(ps[i] != null and ps[i].shieldLevel > 0 and ps[i].altitude + topo(ps[i].position) > -2.0 and (gd == 0 or distance2d(orig,ps[i].position) <= gd))
+                {
+                    p = ps[i];
+                    break;
+                }
+                i++;
+            }
+			if (p != null)
+			{
+                dest = p.position;
+				if (distance2d(position,dest) <= 20 and search(buildings,dest) == p)
+				{
+                    if (distance2d(position,dest) > 1.25)
+                    {
+                        goto(dest);  // va sur la cible
+                    }
+                    else
+                    {
+                        drop();  // lâche la matière
+                    }
+				}
+                else if(p != null)
+                {
+                    if(p != null and p.velocity.x != nan)
+                    {
+                        dest.x = dest.x + p.velocity.x;
+                    }
+                    if(p != null and p.velocity.y != nan)
+                    {
+                        dest.y = dest.y + p.velocity.y;
+                    }
+                    if ( distance2d(position,dest) < 1.25 )
+                    {
+                        drop();
+                    }
+                    else
+                    {
+                        jet(1);
+                        if(direction(dest) > 2)
+                        {
+                            tp = direction(dest) / 60;
+                            if(distance2d(position,dest) < 6)
+                            {
+                                tp = tp + tp / distance2d(position,dest);
+                            }
+                            motor (mp-0.3*tp, mp+0.3*tp);
+                        }
+                        else if(direction(dest) < -2)
+                        {
+                            tp = -direction(dest) / 60;
+                            motor (mp+0.3*tp, mp-0.3*tp);
+                        }
+                        else
+                        {
+                            motor (mp, mp);
+                        }
+                        wait(0.1);
+                    }
+                }
+			}
+            else
+            {
+                if(distance2d(position,dest) < 10)
+                {
+                    dest = orig;
+                    dest.x += gd*-0.4 + gd*0.8*rand();
+                    dest.y += gd*-0.4 + gd*0.8*rand();
+                    if(dest.x > 360)
+                    {
+                        dest.x = 350;
+                    }
+                    if(dest.x < -360)
+                    {
+                        dest.x = -350;
+                    }
+                    if(dest.y > 360)
+                    {
+                        dest.y = 350;
+                    }
+                    if(dest.y < -360)
+                    {
+                        dest.y = -350;
+                    }
+                }
+                jet(1);
+                if(direction(dest) > 2)
+                {
+                    tp = direction(dest) / 60;
+                    if(distance2d(position,dest) < 6)
+                    {
+                        tp = tp + tp / distance2d(position,dest);
+                    }
+                    motor (mp-0.3*tp, mp+0.3*tp);
+                }
+                else if(direction(dest) < -2)
+                {
+                    tp = -direction(dest) / 60;
+                    motor (mp+0.3*tp, mp-0.3*tp);
+                }
+                else
+                {
+                    motor (mp, mp);
+                }
+                wait(0.1);
+            }
+		}
+	}
+    motor(0,0);
+    jet(1);
+    goto(orig);
+}

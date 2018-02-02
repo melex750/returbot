@@ -1,0 +1,656 @@
+public class TreeData
+{
+	static float MinSpacing = 3;
+	static float MinElevation = 0;
+	static float MaxElevation = 0;
+	static point pts[];
+	static int   sort[9][9][];
+	void ClearData()
+	{
+		pts = null;
+		for (int hx=0;hx<9;hx++) for (int hy=0;hy<9;hy++) sort[hx][hy]=null;
+	}
+}
+public class SceneData
+{
+	static int[] ignore = null;
+	static string[] cat;
+	static int[] AllBldgTypes=null;
+	static int[] AllTreeTypes=null;
+	void setData()
+	{ipf(10000);
+	for (int i=0;i<1001;i++) cat[i]="";
+	cat[70]="Greenery0";cat[71]="Greenery1";
+	cat[72]="Greenery2";cat[73]="Greenery3";
+	cat[74]="Greenery4";cat[75]="Greenery5";
+	cat[76]="Greenery6";cat[77]="Greenery7";
+	cat[78]="Greenery8";cat[79]="Greenery9";
+	cat[80]="Greenery10";cat[81]="Greenery11";
+	cat[82]="Greenery12";cat[83]="Greenery13";
+	cat[84]="Greenery14";cat[85]="Greenery15";
+	cat[86]="Greenery16";cat[87]="Greenery17";
+	cat[88]="Greenery18";cat[89]="Greenery19";
+	cat[90]="Tree0";cat[91]="Tree1";
+	cat[92]="Tree2";cat[93]="Tree3";
+	cat[600]="WreckBotw1";cat[601]="WreckBotw2";
+	cat[602]="WreckBott1";cat[603]="WreckBott2";
+	cat[604]="WreckBotr1";cat[605]="WreckBotr2";
+	cat[606]="RuinBotFactory";cat[607]="RuinDoor";
+	cat[608]="RuinSupport";cat[609]="RuinRadar";
+	cat[610]="RuinConvert";cat[611]="RuinBaseCamp";
+	cat[612]="RuinHeadCamp";
+	cat[700]="Quartz0";cat[701]="Quartz1";
+	cat[702]="Quartz2";cat[703]="Quartz3";
+	int i = 0;for(int j=70;j<94;j++) if (IsTypeTree(j)) AllTreeTypes[i++]=j;
+	i = 0;for(int j=700;j<704;j++) if (IsTypeTree(j)) AllTreeTypes[i++]=j;
+	    i = 0;for(int j=5;j<20;j++) if (IsTypeBldg(j)) AllBldgTypes[i++]=j;
+	}
+}
+public class TreeTypes
+{
+	int Greenery0  = 70, Greenery1  = 71, Greenery2  = 72;
+	int Greenery3  = 73, Greenery4  = 74, Greenery5  = 75;
+	int Greenery6  = 76, Greenery7  = 77, Greenery8  = 78;
+	int Greenery9  = 79, Greenery10 = 80, Greenery11 = 81;
+	int Greenery12 = 82, Greenery13 = 83, Greenery14 = 84;
+	int Greenery15 = 85, Greenery16 = 86, Greenery17 = 87;
+	int Greenery18 = 88, Greenery19 = 89;
+	int Tree0 = 90, Tree1 = 91, Tree2 = 92, Tree3 = 93;
+	int Quartz0 = 700, Quartz1 = 701, Quartz2 = 702, Quartz3 = 703;
+}
+bool CheckTreeTypes(int[] types)
+{
+	if (types == null || sizeof(types)==0) return false;
+	for (int i = 0; i<sizeof(types); i++)
+		if (!IsTypeTree(types[i])) return false;
+	return true;
+}
+public class RuinTypes{int RuinBotFactory = 606, RuinDoor = 607, RuinSupport = 608, RuinRadar = 609, RuinConvert = 610, RuinBaseCamp = 611, RuinHeadCamp = 612;}
+public class WreckTypes{int WreckBotw1 = 600, WreckBotw2 = 601, WreckBott1 = 602, WreckBott2 = 603, WreckBotr1 = 604, WreckBotr2 = 605;}
+int[] All_Tree_Types(){SceneData sd();return sd.AllTreeTypes;}
+int[] All_Bldg_Types(){SceneData sd();return sd.AllBldgTypes;}
+void SetIgnore()
+{
+	int d = 0;
+	SceneData sd();
+	while(true)
+	{
+		object item = retobject(d++);
+		if (item==null) break;
+		sd.ignore[d-1] = item.id;
+	}
+}
+public void Set_Min_Spacing(float minspc)
+{
+	TreeData td();
+	td.MinSpacing = minspc;
+	if (minspc < 3) td.MinSpacing = 3;
+}
+public void Set_Min_Elevation(float minelev)
+{
+	TreeData td();
+	td.MinElevation = minelev;
+	if (minelev > td.MaxElevation) td.MaxElevation = minelev;
+}
+public void Set_Max_Elevation(float maxelev)
+{
+	TreeData td();
+	td.MaxElevation = maxelev;
+	if (maxelev < td.MinElevation) td.MaxElevation = td.MinElevation;
+}
+bool IsIgnore(object item)
+{
+	if (item==null) return false;
+	SceneData sd();
+	if (sd.ignore == null || sizeof(sd.ignore)==0) return false;
+	for(int i = 0; i<sizeof(sd.ignore);i++) if (item.id==sd.ignore[i]) return true;
+	return false;
+}
+float DistToNearestObj(point pnt)
+{
+	object item = search(Any,pnt);
+	if (item == null || IsIgnore(item)) return 10000;
+	return distance(pnt,item.position);
+}
+int BucketXY(float pntxy, float xy, float radius)
+{
+	float wth = radius/4.5;
+	float lxy = xy-radius;
+	if (pntxy>=lxy       && pntxy < lxy+wth)   return 0;
+	if (pntxy>=lxy+wth   && pntxy < lxy+wth*2) return 1;
+	if (pntxy>=lxy+wth*2 && pntxy < lxy+wth*3) return 2;
+	if (pntxy>=lxy+wth*3 && pntxy < lxy+wth*4) return 3;
+	if (pntxy>=lxy+wth*4 && pntxy <= lxy+wth*5) return 4;
+	if (pntxy>lxy+wth*5 && pntxy <= lxy+wth*6) return 5;
+	if (pntxy>lxy+wth*6 && pntxy <= lxy+wth*7) return 6;
+	if (pntxy>lxy+wth*7 && pntxy <= lxy+wth*8) return 7;
+	if (pntxy>lxy+wth*8 && pntxy <= lxy+wth*9) return 8;
+	return -1;
+}
+bool SortPoints(point center, float radius)
+{ipf(10000);
+	TreeData td();
+	int sx, sy;
+	int si[9][9];
+	for (int hx=0;hx<9;hx++) for (int hy=0;hy<9;hy++) {si[hx][hy]=0;td.sort[hx][hy]=null;}
+	for(int i=0; i<sizeof(td.pts); i++)
+	{
+		point pnt = td.pts[i];
+		sx = BucketXY(pnt.x, center.x, radius);
+		if (sx == -1) return false;
+		sy = BucketXY(pnt.y, center.y, radius);
+		if (sy == -1) return false;
+		td.sort[sx][sy][ si[sx][sy]++ ] = i;
+	}
+	wait(0.01);
+	return true;
+}
+bool CheckOneBkt(point tp, int m, int bx, int by)
+{
+	TreeData td();
+	if (bx == -1 || by == -1 || bx == 9 || by == 9) return true;
+	if ( td.sort[bx][by] == null || sizeof(td.sort[bx][by]) == 0 ) return true;
+	for (int n=0; n < sizeof(td.sort[bx][by]); n++)
+	{
+		if (td.sort[bx][by][n] == m) continue;
+		if (distance(tp, td.pts[ td.sort[bx][by][n] ])< td.MinSpacing) return false;
+	}
+	return true;
+}
+bool CheckBuckets(point tp, int m, point center, float radius)
+{
+	int bx = BucketXY(tp.x,center.x,radius);
+	if (bx == -1) return false;
+	int by = BucketXY(tp.y,center.y,radius);
+	if (by == -1) return false;
+	for (int cx=bx-1;cx<bx+2;cx++) for (int cy=by-1;cy<by+2;cy++)
+	if (!CheckOneBkt(tp,m,cy,cx)) return false;
+	return true;
+}
+void MoveEachPointRandomly(float spc, point center, float radius)
+{ipf(10000);
+	TreeData td();
+	if (sizeof(td.pts)==0) return;
+	int tries = 0;
+	bool sorted = false;
+	if (sizeof(td.pts)>100 && radius >= td.MinSpacing*4.5) {sorted = SortPoints(center, radius);}
+	if (sorted) message("randomizing points, please wait...");wait(0.01);
+	for (int m=0; m < sizeof(td.pts); m++)
+	{
+		if (tries==100) {tries=0;continue;}
+		bool good = true;
+		point tp = td.pts[m];
+		float dir = rand() * 360;
+		float len = rand() * spc;
+		tp.x += cos(dir)*len;
+		tp.y += sin(dir)*len;
+		float elev = topo(tp);
+		if (elev < td.MinElevation || elev > td.MaxElevation) {--m; continue;}
+		++tries;
+		if (DistToNearestObj(tp)<td.MinSpacing) {--m; continue;}
+		object bldg = search(All_Bldg_Types(),tp);
+		if (bldg != null && bldg.category == NuclearPlant && distance2d(tp,bldg.position)<10) {--m; continue;}
+		if (bldg != null && distance2d(tp,bldg.position)<7) {--m; continue;}
+		if (sorted) good = CheckBuckets(tp, m, center, radius);
+		else
+		for (int n=0; n < sizeof(td.pts); n++)
+		{
+			if (n == m) continue;
+			if (distance(tp, td.pts[n])< td.MinSpacing){good = false;break;}
+		}
+		if (good) {td.pts[m] = tp; tries=0;} else --m;
+	}
+}
+int RandomTreeType(int[] types)
+{
+	if (sizeof(types)==1) return types[0];
+	int typ = trunc(rand()*sizeof(types));
+	return types[typ];
+}
+public void Scatter_Plants(float spc, int[] types, point center, float radius, bool square)
+{ipf(10000);
+	TreeData td();
+	TreeTypes tt();
+	if(!CheckTreeTypes(types)){MsgSAT();return;}
+	td.ClearData();
+	int i = 0;
+	if (spc < td.MinSpacing) spc = td.MinSpacing;
+	for (int x = 0; (center.x-radius) + (x*spc) <= (center.x+radius); x++)
+	{
+		for (int y = 0; (center.y-radius) + (y*spc) <= (center.y+radius); y++)
+		{
+			point cp = new point((center.x-radius) + (x*spc), (center.y-radius) + (y*spc));
+			float elev = topo(cp);
+			if (elev > td.MinElevation && elev < td.MaxElevation &&
+			    DistToNearestObj(cp) > td.MinSpacing &&
+			    (square || distance2d(center,cp) <= radius)) td.pts[i++] = cp;
+			if (i>9998) break;
+		}
+		if (i>9998) break;
+	}
+	message(""+sizeof(td.pts)+" points");
+	MoveEachPointRandomly(spc, center, radius);
+	for (int k = 0; k < sizeof(td.pts); k++)
+	{
+		produce(td.pts[k],-(rand()*360),RandomTreeType(types));
+	}
+}
+public void DelAllTrees()
+{
+	DelTrees(new point(0,0),10000,All_Tree_Types());
+}
+public void DelTrees(point pnt, float radius, int[] types)
+{ipf(10000);
+	if (sizeof(types) == 0 || types == null || IsNan0(radius))
+	{MsgSAT();return;}
+	//TURNOFF
+	while(false)
+	{
+		object item = search(types,pnt);
+		if (item == null) break;
+		if (distance2d(pnt, item.position) > radius) break;
+		delete(item.id,0);
+	}
+}
+public void DelTrees(point pnt, float radius)
+{
+	DelTrees(pnt,radius,All_Tree_Types());
+}
+string CatToStr(int cat)
+{
+	if (cat<0||cat>1000) return "";
+	SceneData sd();
+	return sd.cat[cat];
+}
+int TWToFile(file f, bool trees, bool wrecks)//Trees Ruins and wrecks
+{
+	int d = 0;
+	int tot = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null) break;
+		if ((trees && IsTypeTree(item.category))||(wrecks && IsTypeWreck(item.category)))
+		{
+			if (IsIgnore(item)) continue;
+			point  pos = item.position;
+			string cat = CatToStr(item.category);
+			float  rot = (360-item.orientation)/180;
+			f.writeln("CreateObject pos="+pos.x+";"+pos.y+" dir="+rot+" type="+cat);
+			++tot;
+		}
+	}
+	return tot;
+}
+void MsgCTF(){message("Edit this program to change the filename.");}
+void MsgNF(string wht){message("No "+wht+" Found");}
+void MsgSVN(string wht){message("saving "+wht+" to file");}
+void MsgSVD(string wht){message(""+wht+" saved to \"files\" folder");}
+void MsgTOT(int tot, string wht){message(""+tot+" "+wht);}
+public void SaveTreesToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	if (null == radar((All_Tree_Types()))){MsgNF("Trees"); return;}
+	MsgSVN("trees");
+	file f(filename,"w");
+	int tot = TWToFile(f,true,false);
+	f.writeln("");wait(1);f.close();
+	MsgTOT(tot,"trees");MsgSVD(filename);
+}
+public void SaveWrecksRuinsToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Wrecks Or Ruins"); return;}
+		if (IsTypeWreck(item.category)) break;
+	}
+	MsgSVN("wrecks and ruins");
+	file f(filename,"w");
+	int tot = TWToFile(f,false,true);
+	f.writeln("");wait(1);f.close();
+	MsgTOT(tot,"ruins and wrecks");MsgSVD(filename);
+}
+public void DelTree()
+{
+	object item = radar(All_Tree_Types(),0,360,0,5);
+	if (item == null) return;
+	delete(item.id,0);
+}
+public void object::PlantOneTree(int[] types)
+{
+	TreeTypes tt();
+	if(!CheckTreeTypes(types)){MsgSAT();return;}
+	produce(this.position,-(rand()*360),RandomTreeType(types));
+}
+string GetPowerEQ(object item)
+{
+	int icat = item.category;
+	if (IsTypeBldg(icat) || icat == 300)
+	{
+		if (icat != PowerPlant && icat != ResearchCenter
+		    && icat != DefenseTower && icat != NuclearPlant) return "";
+	}
+	object eCell = item.energyCell;
+	if (eCell == null) return " power=-1";
+	int cat = eCell.category;
+	if (cat != PowerCell && cat != NuclearCell) return " power=-1";
+	float plvl = (eCell.energyLevel>1) ? 1 : eCell.energyLevel;
+	return (" power=" +(plvl*((cat == PowerCell) ? 1 : 100)));
+}
+int BBToFile(file f, bool bots, bool bldgs) // Bots and Buildings
+{
+	int d = 0;
+	int tot = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null) break;
+		if ((bots && IsTypeBot(item.category)) || (bldgs && IsTypeBldg(item.category)) )
+		{
+			if (IsIgnore(item)) continue;
+			point  pos = item.position;
+			float  rot = (360-item.orientation)/180;
+			string out = "CreateObject pos="+pos.x+";"+pos.y+" dir="+rot+" type="+item.category;
+			out += GetPowerEQ(item);
+			f.writeln(out);
+			++tot;
+		}
+	}
+	return tot;
+}
+public void SaveBotsToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Bots"); return;}
+		if (IsTypeBot(item.category) && !IsIgnore(item)) break;
+	}
+	MsgSVN("bots");
+	file f(filename,"w");
+	int tot = BBToFile(f,true,false);
+	f.writeln("");wait(1);f.close();
+	MsgTOT(tot,"bots");MsgSVD(filename);
+}
+public void SaveBldgsToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Buildings"); return;}
+		if (IsTypeBldg(item.category) && !IsIgnore(item)) break;
+	}
+	MsgSVN("buildings");
+	file f(filename,"w");
+	int tot = BBToFile(f,false,true);
+	f.writeln("");wait(1);f.close();
+	MsgTOT(tot,"buildings");MsgSVD(filename);
+}
+int BROToFile(file f, bool bugs, bool res, bool other) // Bugs and Resources and Other
+{
+	int d = 0;
+	int tot = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null) break;
+		if ((bugs && IsTypeBug(item.category)) ||
+		    (res && IsTypeRes(item.category) && item.position.x != nan) ||
+		    (other && IsTypeOther(item.category)) )
+		{
+			if (IsIgnore(item)) continue;
+			point  pos = item.position;
+			float  rot = (360-item.orientation)/180;
+			string out = "CreateObject pos="+pos.x+";"+pos.y+" dir="+rot+" type="+item.category;
+			f.writeln(out);
+			++tot;
+		}
+	}
+	return tot;
+}
+public void SaveBugsToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Insects"); return;}
+		if (IsTypeBug(item.category)) break;
+	}
+	MsgSVN("insects");
+	file f(filename,"w");
+	int tot = BROToFile(f,true,false,false);
+	f.writeln("");wait(1);f.close();
+	MsgTOT(tot,"insects");MsgSVD(filename);
+}
+public void SaveResourcesToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Resources"); return;}
+		if (IsTypeRes(item.category) && !IsIgnore(item) && item.position.x != nan) break;
+	}
+	MsgSVN("resources");
+	file f(filename,"w");
+	int tot = BROToFile(f,false,true,false);
+	f.writeln("");wait(1);f.close();
+	MsgTOT(tot,"resources");MsgSVD(filename);
+}
+public void SaveOtherToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Other Objects"); return;}
+		if (IsTypeOther(item.category) && !IsIgnore(item) && item.position.x != nan) break;
+	}
+	MsgSVN("other objects");
+	file f(filename,"w");
+	int tot = BROToFile(f,false,false,true);
+	f.writeln("");
+	wait(1);
+	f.close();
+	MsgTOT(tot,"other");
+	MsgSVD(filename);
+}
+public void SaveAllToFile(string filename)
+{
+	if (filename==""){MsgCTF();return;}
+	int d = 0;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){MsgNF("Objects"); return;}
+		if (!IsIgnore(item) && item.position.x != nan) break;
+	}
+	MsgSVN("all objects");
+	file f(filename,"w");
+	f.writeln("// Me and Bots");
+	int tot = BBToFile(f,true,false);
+	f.writeln("// Buildings");
+	tot += BBToFile(f,false,true);
+	f.writeln("// Resources");
+	tot += BROToFile(f,false,true,false);
+	f.writeln("// Insects");
+	tot += BROToFile(f,true,false,false);
+	f.writeln("// Wrecks and Ruins");
+	tot += TWToFile(f,false,true);
+	f.writeln("// Trees");
+	tot += TWToFile(f,true,false);
+	f.writeln("// Other Objects");
+	tot += BROToFile(f,false,false,true);
+	f.writeln("");
+	wait(1);
+	f.close();
+	MsgTOT(tot,"total objects");
+	MsgSVD(filename);
+}
+bool IsNan0(int num){return (num == nan || num == 0);}
+bool GTLT(int sm,int num,int lg){ipf(10000);return (num > sm && num < lg);}
+bool IsTypeBot(int type)
+{
+	if (IsNan0(type)) return false;
+	if (GTLT(109,type,114) || GTLT(119,type,124) ||
+	    GTLT(129,type,134) || GTLT(139,type,144) ||
+	    GTLT(199,type,204) || GTLT(209,type,212) ||
+	    type == 100 || type == 300 ) return true;
+	return false;
+}
+bool IsTypeBldg(int type)
+{
+	if (IsNan0(type)) return false;
+	if (GTLT(4,type,10) || GTLT(10,type,16) || GTLT(17,type,20)) return true;
+	return false;
+}
+bool IsTypeBug(int type)
+{
+	if (IsNan0(type)) return false;
+	if (GTLT(499,type,506) || type == AlienNest) return true;
+	return false;
+}
+bool IsTypeRes(int type)
+{
+	if (IsNan0(type)) return false;
+	if (GTLT(30,type,37)) return true;
+	return false;
+}
+bool IsTypeTree(int type)
+{ipf(10000);
+	if (IsNan0(type)) return false;
+	if (GTLT(69,type,94)) return true;
+	if (GTLT(699,type,704)) return true;
+	return false;
+}
+bool IsTypeWreck(int type)
+{
+	if (IsNan0(type)) return false;
+	if (GTLT(599,type,606)||GTLT(605,type,613)) return true;
+	return false;
+}
+bool IsTypeOther(int type)
+{
+	if (IsNan0(type)) return false;
+	if (type == 62 || type == 94 || type == 213) return false;
+	if (IsTypeBot(type)) return false;
+	if (IsTypeBldg(type)) return false;
+	if (IsTypeBug(type)) return false;
+	if (IsTypeRes(type)) return false;
+	if (IsTypeTree(type)) return false;
+	if (IsTypeWreck(type)) return false;
+	return true;
+}
+void MsgSAT(){message("Edit this program to select a type");}
+void MsgWTS(){message("Wrong type selected.");}
+public void object::PlaceBot(int type)
+{
+if (IsNan0(type)){MsgSAT();return;}
+if (!IsTypeBot(type)){MsgWTS();MsgSAT();return;}
+produce(type);
+}
+public void object::PlaceBug(int type)
+{
+if (IsNan0(type)){MsgSAT();return;}
+if (!IsTypeBug(type)){MsgWTS();MsgSAT();return;}
+produce(type);
+}
+public void object::PlaceBldg(int type)
+{
+if (IsNan0(type)){MsgSAT();return;}
+if (!IsTypeBldg(type)){MsgWTS();MsgSAT();return;}
+produce(type);
+}
+public void object::PlaceRes(int type)
+{
+if (IsNan0(type)){MsgSAT();return;}
+if (!IsTypeRes(type)){MsgWTS();MsgSAT();return;}
+produce(type);
+}
+public void object::PlaceRuin(int type)
+{
+if (IsNan0(type)){MsgSAT();return;}
+if (!IsTypeWreck(type)){MsgWTS();MsgSAT();return;}
+produce(type);
+}
+public void object::PlaceWreck(int type)
+{
+if (IsNan0(type)){MsgSAT();return;}
+if (!IsTypeWreck(type)){MsgWTS();MsgSAT();return;}
+produce(type);
+}
+public void object::DelObject()
+{
+	int d = 0;
+	int cid = nan;
+	float cd = 10000;
+	object cob = null;
+	while (true)
+	{
+		object item = retobject(d++);
+		if (item == null){break;}
+		if (!IsTypeTree(item.category) && !IsIgnore(item))
+		{
+			float dist = distance2d(this.position, item.position);
+			float angl = abs(direction(item.position));
+			if (angl <= 45 && dist <= 10 && dist < cd)
+			{
+				cd = distance2d(this.position, item.position);
+				cid = item.id;
+				cob = item;
+			}
+		}
+	}
+	if (cid == nan) return;
+	int cat = cob.category;
+	if (((IsTypeBot(cat) && cat!=300)|| cat == NuclearPlant ||
+	    cat == PowerPlant || cat == ResearchCenter ||
+	    cat == DefenseTower) && cob.energyCell != null) {message("cannot remove object with a powercell."); return;}
+	delete(cid,1);
+}
+public void object::RotateObject(object item, float angl, bool IsOri)
+{ipf(10000);
+	if (!IsOri && angl==0) {message("angle is set to 0, edit this program to set an angle.");return;}
+	if (item==null || IsIgnore(item)) return;
+	int cat = item.category;
+	point pos = new point(item.position.x,item.position.y);
+	float ori = (IsOri) ? -angl : -(item.orientation+angl);
+	object pcell = null;
+	float plvl = -1;
+	if (cat != PowerCell && cat != NuclearCell)
+	{
+		if ((IsTypeBot(cat)&&cat!=300)|| cat == NuclearPlant ||
+		    cat == PowerPlant || cat == ResearchCenter ||
+		    cat == DefenseTower) pcell = item.energyCell;
+		if (pcell != null) {message("cannot rotate object with a powercell."); return;}
+	} else plvl = item.energyLevel;
+	delete(item.id,0);
+	produce(pos,ori,cat,"",plvl);
+}
+extern void LvlCntlr_main()
+{ipf(10000);
+SceneData sd();
+sd.setData();
+DelAllTrees();
+int d = 0;
+//TURNOFF
+while (false)
+{
+	object item = retobject(d++);
+	if (item == null) break;
+	if (IsTypeWreck(item.category)
+	    || item.category == 95 ) {delete(item.id,0);--d;}
+}
+SetIgnore();
+}

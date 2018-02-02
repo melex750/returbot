@@ -1,0 +1,136 @@
+Title.E text="Production"
+Title.R text="Производство"
+Resume.E text="Organize a production cycle in order to restore your resources."
+Resume.R text="Организуйте производственный цикл, чтобы восполнить свои ресурсы."
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+// Loading name="programs/7_CollectTitanium3.txt"
+// SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="music006.ogg"
+
+#Include file="%chap%/planet.txt"
+TerrainRelief image="m_relief_03.png" factor=1.0
+TerrainResource image="m_res_03.png"
+TerrainWater image="lava05.png" level=8 moveX=2.0 moveY=1.0 air=TO water=TO color=1.000;0.502;0.000;
+TerrainLava mode=1
+#Include file="%chap%/terrain.txt"
+
+TerrainLevel id=20;21;22;23 min=50.0 max=99.0 slope=0.0 freq=100.0
+TerrainLevel id=10;11;12;13 min= 0.0 max=50.0 slope=0.0 freq=100.0
+TerrainLevel id=14;15;16;17 min=8.0 max=45.0 slope=7.0 freq=100.0
+TerrainLevel id=20;21;22;23;24;25;26;27 min=140.0 max=900.0 slope=7.0 freq=100.0
+
+TerrainCreate
+
+BeginObject
+CreateObject pos=0;0 dir=0.0 type=SpaceShip run=11
+CreateObject pos= 0.00;-3.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 0.00; 3.25 dir=1.5 type=Titanium
+
+CreateObject pos=33.0581;-3.88766 dir=2 type=TitaniumOre
+CreateObject pos=7.38396;60.7847 dir=2 type=TitaniumOre
+CreateObject pos=44.6347;28.5046 dir=2 type=TitaniumOre
+CreateObject pos=-22.8647;90.7143 dir=2 type=TitaniumOre
+CreateObject pos=-35.0018;107.101 dir=2 type=TitaniumOre
+CreateObject pos=-46.7918;89.8701 dir=2 type=TitaniumOre
+CreateObject pos=-49.2875;91.2261 dir=2 type=TitaniumOre
+CreateObject pos=-38.7398;92.8348 dir=2 type=TitaniumOre
+CreateObject pos=-46.4636;99.6686 dir=2 type=TitaniumOre
+CreateObject pos=-63.2341;111.602 dir=2 type=TitaniumOre
+CreateObject pos=-65.1735;110.585 dir=2 type=TitaniumOre
+CreateObject pos=-54.0388;110.416 dir=2 type=TitaniumOre
+CreateObject pos=-60.0344;132.952 dir=2 type=TitaniumOre
+CreateObject pos=-55.7009;131.442 dir=2 type=TitaniumOre
+CreateObject pos=-54.9222;125.638 dir=2 type=TitaniumOre
+CreateObject pos=-55.7031;120.847 dir=2 type=TitaniumOre
+CreateObject pos=-50.7003;122.688 dir=2 type=TitaniumOre
+CreateObject pos=-45.8166;122.838 dir=2 type=TitaniumOre
+CreateObject pos=-28.5929;130.299 dir=2 type=TitaniumOre
+CreateObject pos=-32.4607;125.743 dir=2 type=TitaniumOre
+CreateObject pos=-24.7618;111.062 dir=2 type=TitaniumOre
+CreateObject pos=-29.9352;120.777 dir=2 type=TitaniumOre
+CreateObject pos=-32.236;121.381 dir=2 type=TitaniumOre
+CreateObject pos=-47.2567;105.187 dir=2 type=TitaniumOre
+CreateObject pos=-13.9141;93.2102 dir=2 type=TitaniumOre
+// CreateObject pos=2.41599;87.4598 dir=2 type=TitaniumOre
+CreateObject pos=-44.2611;-54.4411 dir=2 type=TitaniumOre
+CreateObject pos=-46.143;-47.2878 dir=2 type=TitaniumOre
+
+CreateObject pos=13.3452;133.764 dir=2 type=TitaniumOre
+CreateObject pos=50.0963;148.182 dir=2 type=TitaniumOre
+CreateObject pos=84.0204;74.4776 dir=2 type=TitaniumOre
+CreateObject pos=86.6227;85.0413 dir=2 type=TitaniumOre
+CreateObject pos=97.2773;82.0134 dir=2 type=TitaniumOre
+CreateObject pos=110.018;97.1272 dir=2 type=TitaniumOre
+CreateObject pos=120.101;87.0229 dir=2 type=TitaniumOre
+CreateObject pos=55.4697;140.283 dir=2 type=TitaniumOre
+CreateObject pos=52.3859;134.994 dir=2 type=TitaniumOre
+CreateObject pos=56.416;151.581 dir=2 type=TitaniumOre
+CreateObject pos=19.7151;138.732 dir=2 type=TitaniumOre
+CreateObject pos=47.6724;142.195 dir=2 type=TitaniumOre
+CreateObject pos=56.5476;145.319 dir=2 type=TitaniumOre
+CreateObject pos=80.4013;157.967 dir=2 type=TitaniumOre
+CreateObject pos=128.236;150.586 dir=2 type=TitaniumOre
+CreateObject pos=123.406;143.083 dir=2 type=TitaniumOre
+CreateObject pos=131.222;150.713 dir=2 type=TitaniumOre
+
+CreateObject pos=-40.1229;107.182 dir=1.82274 type=Greenery18
+CreateObject pos=-38.8707;108.414 dir=1.441 type=Greenery19
+CreateObject pos=-42.8716;122.444 dir=0.450531 type=Greenery16
+CreateObject pos=-25.6867;122.781 dir=1.12545 type=Greenery19
+CreateObject pos=-23.7475;117.465 dir=0.723816 type=Greenery15
+CreateObject pos=-50.2972;85.4569 dir=0.11659 type=Greenery15
+CreateObject pos=-25.8017;132.377 dir=0.855075 type=Greenery18
+CreateObject pos=1.92947;82.6771 dir=0.47539 type=Greenery16
+CreateObject pos=23.9141;-43.7523 dir=1.71887 type=Greenery17
+CreateObject pos=18.0003;-10.7802 dir=0.432529 type=Greenery17
+CreateObject pos=-21.6198;-8.44622 dir=1.56192 type=Greenery15
+CreateObject pos=-72.6988;14.3514 dir=1.34046 type=Greenery16
+CreateObject pos=-69.0669;11.4937 dir=1.3462 type=Greenery18
+CreateObject pos=-54.4188;13.7943 dir=1.32069 type=Greenery16
+CreateObject pos=-44.6201;-49.7804 dir=0.107356 type=Greenery16
+CreateObject pos=53.4587;51.5867 dir=1.7131 type=Greenery15
+CreateObject pos=118.604;99.4871 dir=1.9543 type=Greenery15
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+WaterColor color=-0.2;-0.5;-0.8 // orange
+
+MapColor floor=0.647;0.557;0.420 water=1.000;0.682;0.251
+MapZoom factor=2
+
+EnableBuild type=BotFactory
+EnableBuild type=Converter
+EnableBuild type=PowerStation
+EnableBuild type=PowerPlant
+EnableBuild type=RadarStation
+EnableBuild type=ExchangePost
+EnableBuild type=DefenseTower
+EnableBuild type=FlatGround
+EnableBuild type=Flag
+
+EnableResearch type=TRACKER
+EnableResearch type=SNIFFER
+EnableResearch type=RECYCLER
+EnableResearch type=SHOOTER
+EnableResearch type=TOWER
+DoneResearch type=TRACKER
+DoneResearch type=SNIFFER
+DoneResearch type=RECYCLER
+DoneResearch type=SHOOTER
+DoneResearch type=TOWER
+
+EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
+EndMissionTake pos=0.00; 0.00 dist=8.0 tool=Grabber min=2
+EndMissionTake pos=0.00; 0.00 dist=8.0 type=Titanium min=2
+EndMissionTake pos=0.00; 0.00 dist=8.0 type=PowerCell min=10
+
+Camera eye=0.00;5.00;0.00 lookat=0.00;1.00;0.00 delay=0

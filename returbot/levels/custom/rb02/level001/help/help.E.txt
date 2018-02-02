@@ -1,0 +1,7 @@
+\b;From Mission Control
+Now you should fill the lack and instead of 2 \l;titanium cubes\u object\titan; aboard get 8 of them. Build a \l;titanium ore convertor\u object\convert; and deliver there as many pieces of \l;titanium ore\u object\titanore; as you will need to. Manufactured \l;titanium cubes\u object\titan; take aboard of the \l;ship\u object\base;.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

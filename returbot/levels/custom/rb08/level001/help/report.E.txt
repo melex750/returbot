@@ -1,0 +1,18 @@
+\b;Satellite Report
+Currently in a geo-stationary orbit of Frozium.
+\c;
+\s;-> SURFACE\c;
+\tab;Temperature:      -104.2 C
+\tab;Atmosphere:       Xe, N2, CO2
+\tab;Wind:             48.2 mps
+\tab;Titanium ore:     None
+\tab;Uranium ore:      None
+\tab;Misc. composition: H20(s)
+
+\s;-> SUBSOIL\c;
+\tab;Energy:           Unobtainable
+\tab;Titanium ore:     Unobtainable
+\tab;Uranium ore:      Unobtainable
+
+\s;-> ADDITIONAL INFORMATION\c;
+\tab;Detected:         Reusable derelicts

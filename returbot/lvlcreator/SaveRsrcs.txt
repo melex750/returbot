@@ -1,0 +1,6 @@
+extern void object::Output_Resources_File()
+{
+	string filename = "";
+	filename = "obj_rsrcs.txt";
+	SaveResourcesToFile(filename);
+}

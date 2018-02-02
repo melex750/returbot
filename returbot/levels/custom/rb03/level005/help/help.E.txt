@@ -1,0 +1,9 @@
+\b;From Mission Control
+You will have to find and deliver aboard a bot of an unknown type, left somewhere in this area, for further examining. Abandoned bots were spotted by satellite in the far eastern part and in the nothern part of this area. Besides that, we did not get any more details. Given that country in the northern part is rather unfit for wheeled bots, we recommend you to start moving towards the east. You don't have to worry about your power resources too much, as on your way you should come across abandoned resource bases remained from a previous expedition.
+
+We've noticed that your construction systems went down for an unknown reason. We are working on debug, but for now you will have to work whilst being unable to create new buildings.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

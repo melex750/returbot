@@ -1,0 +1,5 @@
+extern void object::Remove_Object()
+{// remove nearest object within 10m in front of this bot
+	// Does not remove trees or the helper bots
+	DelObject();
+}

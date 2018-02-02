@@ -1,0 +1,19 @@
+extern void LvlCntlr_main()
+{
+    // wait(0.3);
+    object boxes[] = radarall(BlackBox);
+    int i = 0;
+    int n = 100;
+    while(n >= sizeof(boxes))
+    {
+        n = rand() * 10;
+    }
+    while(i < sizeof(boxes))
+    {
+        if(i != n)
+        {
+            delete(boxes[i].id,0);
+        }
+        i = i + 1;
+    }
+}

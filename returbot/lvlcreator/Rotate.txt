@@ -1,0 +1,10 @@
+extern void object::Rotate_Object()
+{
+	object item = radar(Any,0,45,0,10);
+
+	float angle = 10;
+
+	bool SetOrientation = false;
+
+	RotateObject(item, angle, SetOrientation);
+}

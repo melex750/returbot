@@ -1,0 +1,15 @@
+\b;From Mission Control
+As you were about to take off, we received from the satellite the following piece of information: \l;explosive devices\u object\tnt; of a type yet to be determined have been spotted in this region, and some are located in area marked with \l;red flag\u object\flag;. You will have to deliver one of these aboard of your \l;ship\u object\base;. It appears that this is going to be your first serious task.
+
+You will now have to work in conditions of electromagnetic storms which present utmost danger to your bots and buildings. The previous expedition did not take such factor into account when it unfolded it's activities in this region and it was exterminated by suddenly started electromagnetic storm entirely. Don't repeat their mistake - don't leave your equipment without protection!
+
+Protection for your buildings, bots and resources is provided by your \l;space ship\u object\base; and \l;parabolic lightning conductors\u object\captor;, which attract all the lightnigs within area around which is displayed when you push \button 41;. Furthermore, \l;lightning conductors\u object\captor; transform every impulse they catch into energy suitable to recharge bots with \l;accumulators\u object\power;. The later comes especially useful given that your power resources are almost exhausted.
+
+We also passed to you schemes of new bot - \l;recycler\u object\botrecy;, which can convert \l;ruins\u object\ruin; and \l;wrecks\u object\wreck; into \l;titanium cubes\u object\titan;.
+
+Your resources right now are limited, thus you should think better on what are you planning to do next. And be very careful with \l;explosive device\u object\tnt; as even littlest impact might make it detonate.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

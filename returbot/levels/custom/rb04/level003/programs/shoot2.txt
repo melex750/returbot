@@ -1,0 +1,5 @@
+extern void object::ShootHigher( )
+{
+        aim(6,0);
+        fire(0.2);
+}

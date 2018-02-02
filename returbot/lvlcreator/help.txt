@@ -1,0 +1,31 @@
+\b;WingedGrabber's programs
+* Place trees randomly.
+
+* Create and remove objects.
+
+\b;TrackedGrabber's programs
+* Create text files filled with CreateObject commands
+   representing the objects you created.
+
+These files can be found in the "files" folder.
+
+For info. about files in CBOT. \c;\l;(click here)\u cbot\file;\n;
+
+\t;Steps to include files in your userlevel:
+
+Copy the files to your userlevel folder named level001 or level002...
+
+Then in the same folder, edit scene.txt:
+
+After the "BeginObject" command, type:
+
+#Include file="%chap%/<folder with scene.txt>/obj_bots.txt"
+
+#Include file="%chap%/<folder with scene.txt>/obj_insects.txt"
+
+#Include file="%chap%/<folder with scene.txt>/obj_trees.txt"
+
+...
+
+\t;See also
+\l;Controls\u command;.

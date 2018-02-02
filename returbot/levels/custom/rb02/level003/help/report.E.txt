@@ -1,0 +1,18 @@
+\b;Satellite Report
+Currently in a geo-stationary orbit of Orpheon.
+\c;
+\s;-> SURFACE\c;
+\tab;Temperature:      -72.8C
+\tab;Atmosphere:       none
+\tab;Wind:             0.0 mps
+\tab;Titanium ore:     some
+\tab;Uranium ore:      none
+
+\s;-> SUBSOIL\c;
+\tab;Energy source:    not detected
+\tab;Titanium ore:     not detected
+\tab;Uranium ore:      not detected
+
+\s;-> ADDITIONAL INFORMATION\c;
+\tab;Detected:         inactive objects
+\n;

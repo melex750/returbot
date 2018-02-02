@@ -1,0 +1,226 @@
+extern void object::Reinforce()
+{
+	point	path[];
+    point   patrol[];
+    point   hill;
+	int		i = 0, m = 1, mid = cmdline(0);
+
+    errmode(0);
+	
+    hill.x = -33;
+    hill.y = -36;
+    hill.z =  0.00;
+    
+	i = 0;
+    path[i].x =  238;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x =  200;  path[i].y = -332;  path[i++].z = 0;
+    path[i].x =  168;  path[i].y = -346;  path[i++].z = 0;
+    path[i].x =  143;  path[i].y = -352;  path[i++].z = 0;
+    path[i].x =  124;  path[i].y = -354;  path[i++].z = 0;
+    path[i].x =   90;  path[i].y = -352;  path[i++].z = 0;
+    path[i].x =   71;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x =   38;  path[i].y = -333;  path[i++].z = 0;
+    path[i].x =   23;  path[i].y = -345;  path[i++].z = 0;
+    path[i].x =    4;  path[i].y = -356;  path[i++].z = 0;
+    path[i].x =  -15;  path[i].y = -354;  path[i++].z = 0;
+    path[i].x =  -25;  path[i].y = -347;  path[i++].z = 0;
+    path[i].x =  -43;  path[i].y = -335;  path[i++].z = 0;
+    path[i].x =  -57;  path[i].y = -328;  path[i++].z = 0;
+    path[i].x =  -82;  path[i].y = -342;  path[i++].z = 0;
+    path[i].x = -100;  path[i].y = -346;  path[i++].z = 0;
+    path[i].x = -117;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x = -133;  path[i].y = -318;  path[i++].z = 0;
+    path[i].x = -145;  path[i].y = -301;  path[i++].z = 0;
+    path[i].x = -154;  path[i].y = -288;  path[i++].z = 0;
+    path[i].x = -165;  path[i].y = -276;  path[i++].z = 0;
+    path[i].x = -181;  path[i].y = -276;  path[i++].z = 0;
+    path[i].x = -201;  path[i].y = -275;  path[i++].z = 0;
+    path[i].x = -229;  path[i].y = -273;  path[i++].z = 0;
+    path[i].x = -233;  path[i].y = -290;  path[i++].z = 0;
+    path[i].x = -238;  path[i].y = -311;  path[i++].z = 0;
+    path[i].x = -245;  path[i].y = -331;  path[i++].z = 0;
+    path[i].x = -259;  path[i].y = -337;  path[i++].z = 0;
+    path[i].x = -280;  path[i].y = -331;  path[i++].z = 0;
+    path[i].x = -287;  path[i].y = -305;  path[i++].z = 0;
+    path[i].x = -296;  path[i].y = -286;  path[i++].z = 0;
+    path[i].x = -308;  path[i].y = -268;  path[i++].z = 0;
+    path[i].x = -317;  path[i].y = -241;  path[i++].z = 0;
+    path[i].x = -320;  path[i].y = -208;  path[i++].z = 0;
+    path[i].x = -317;  path[i].y = -189;  path[i++].z = 0;
+    path[i].x = -313;  path[i].y = -161;  path[i++].z = 0;
+    path[i].x = -335;  path[i].y = -145;  path[i++].z = 0;
+    path[i].x = -348;  path[i].y = -119;  path[i++].z = 0;
+    path[i].x = -347;  path[i].y = -101;  path[i++].z = 0;
+    path[i].x = -329;  path[i].y =  -85;  path[i++].z = 0;
+    path[i].x = -301;  path[i].y =  -65;  path[i++].z = 0;
+    path[i].x = -316;  path[i].y =  -28;  path[i++].z = 0;
+    path[i].x = -313;  path[i].y =   -1;  path[i++].z = 0;
+    path[i].x = -315;  path[i].y =   23;  path[i++].z = 0;
+    path[i].x = -318;  path[i].y =   55;  path[i++].z = 0;
+    path[i].x = -309;  path[i].y =   72;  path[i++].z = 0;
+    path[i].x = -295;  path[i].y =   94;  path[i++].z = 0;
+    path[i].x = -298;  path[i].y =  132;  path[i++].z = 0;
+    path[i].x = -301;  path[i].y =  190;  path[i++].z = 0;
+    path[i].x = -272;  path[i].y =  223;  path[i++].z = 0;
+    path[i].x = -238;  path[i].y =  228;  path[i++].z = 0;
+    path[i].x = -217;  path[i].y =  221;  path[i++].z = 0;
+    path[i].x = -196;  path[i].y =  225;  path[i++].z = 0;
+    path[i].x = -139;  path[i].y =  228;  path[i++].z = 0;
+    path[i].x =  -98;  path[i].y =  236;  path[i++].z = 0;
+    path[i].x =  -69;  path[i].y =  207;  path[i++].z = 0;
+    path[i].x =  -20;  path[i].y =  166;  path[i++].z = 0;
+    path[i].x =    1;  path[i].y =  134;  path[i++].z = 0;
+    path[i].x =   13;  path[i].y =  121;  path[i++].z = 0;
+    path[i].x =   28;  path[i].y =  103;  path[i++].z = 0;
+    if(mid == 3 or mid == 4)
+    {
+        path[i].x =   36;  path[i].y =   87;  path[i++].z = 0;
+        path[i].x =   49;  path[i].y =   51;  path[i++].z = 0;
+        path[i].x =   47;  path[i].y =   25;  path[i++].z = 0;
+        path[i].x =   46;  path[i].y =   11;  path[i++].z = 0;
+        path[i].x =   45;  path[i].y =    0;  path[i++].z = 0;
+        path[i].x =   44;  path[i].y =  -20;  path[i++].z = 0;
+    }
+    if(mid == 4)
+    {
+        path[i].x =   33;  path[i].y =  -28;  path[i++].z = 0;
+        path[i].x =   27;  path[i].y =  -41;  path[i++].z = 0;
+        path[i].x =   22;  path[i].y =  -58;  path[i++].z = 0;
+        path[i].x =   14;  path[i].y =  -74;  path[i++].z = 0;
+        path[i].x =    4;  path[i].y =  -87;  path[i++].z = 0;
+        path[i].x =  -23;  path[i].y = -121;  path[i++].z = 0;
+    }
+    if(mid == 5 or mid == 6)
+    {
+        path[i].x =  -35;  path[i].y =   59;  path[i++].z = 0;
+    }
+    if(mid == 5)
+    {
+        path[i].x =  -59;  path[i].y =   45;  path[i++].z = 0;
+        path[i].x =  -77;  path[i].y =   36;  path[i++].z = 0;
+        path[i].x =  -93;  path[i].y =   27;  path[i++].z = 0;
+        path[i].x = -109;  path[i].y =   16;  path[i++].z = 0;
+        path[i].x = -113;  path[i].y =    8;  path[i++].z = 0;
+    }
+
+    if(distance2d(position,hill) > 200)
+    {
+        for ( i=0 ; i < sizeof(path) ; i++ )
+        {
+            while(goto(path[i]) != 0)
+            {
+                while(guard() == false){}
+                wait(0.5);
+            }
+            while(guard() == false){}
+        }
+    }
+
+	i = 0;
+    if(mid == 3)
+    {
+        patrol[i].x =   44;  patrol[i].y =  -32;  patrol[i++].z = 0; // 1 - 1
+        patrol[i].x =   24;  patrol[i].y =  -76;  patrol[i++].z = 0; // 1 - 2
+    }
+    if(mid == 4)
+    {
+        patrol[i].x =  -33;  patrol[i].y = -116;  patrol[i++].z = 0; // 2 - 1
+    }
+    if(mid == 5)
+    {
+        patrol[i].x = -115;  patrol[i].y =   -3;  patrol[i++].z = 0; // 3 - 2
+        patrol[i].x =  -99;  patrol[i].y =  -69;  patrol[i++].z = 0; // 3 - 1
+    }
+    if(mid == 6)
+    {
+        patrol[i].x = -57;   patrol[i].y =   39;  patrol[i++].z = 0; // 4 - 1
+    }
+    
+    i = 0;
+    while(goto(patrol[i]) != 0)
+    {
+        while(guard() == false){}
+        wait(0.5);
+    }
+    while(true)
+    {
+        while(guard() == false){}
+        if(sizeof(patrol) > 1)
+        {
+            if(direction(patrol[i]) > 2 or direction(patrol[i]) < -2)
+            {
+                turn(direction(patrol[i]));
+            }
+            motor(1,1);
+            wait(0.5);
+            if(distance2d(position,patrol[i]) <= 4)
+            {
+                motor(0,0);
+                guard();
+                wait(0.5+rand()*1.5);
+                guard();
+                wait(0.5+rand()*1.5);
+                i = i + m;
+                if(i >= sizeof(patrol) - 1)
+                {
+                    m = -1;
+                }
+                else if(i == 0)
+                {
+                    m = 1;
+                }
+            }
+        }
+    }
+}
+
+
+bool object::guard()
+{
+	object item, sitem;
+    float h, o, angle;
+	int i = 0, m = -1;
+
+    errmode(0);
+	
+    item = radar(AlienAnt, 0, 360, 0, 40);
+    sitem = item;
+	if(item == null)
+	{
+        return true;
+		aim(0);
+	}
+	else
+    {
+		turn(direction(item.position));
+		h = distance(this.position, item.position);
+		o = item.position.z - this.position.z;
+		angle = asin(o/h);
+        if(angle > 20)
+        {
+            angle = 20;
+        }
+		aim(angle);
+		fire(0.1);
+        wait(0.25);
+        item = radar(AlienAnt, 0, 360, 0, 40);
+        while(item != null and item == sitem and direction(item.position) < 1 and direction(item.position) > -1)
+        {
+            item = radar(AlienAnt, 0, 360, 0, 40);
+            angle = angle + m;
+            if(angle > 20)
+            {
+                angle = 20;
+                m = -1;
+            }
+            else if(angle < -20)
+            {
+                angle = -20;
+                m = 1;
+            }
+            aim(angle);
+            fire(0.1);
+        }
+        return false;
+    }
+}

@@ -1,0 +1,19 @@
+extern void object::t2( )
+{
+        while(ismovie() == 1) { wait(0.1); };
+        move(5);
+        while(ismovie() == 0 and energyCell.energyLevel >= 0.1)
+        {
+            wait(2)+rand()*5;
+            if(rand() > 0.5)
+            {
+                move(5);
+                move(-5);
+            }
+            else
+            {
+                move(-5);
+                move(5);
+            }
+        }
+}

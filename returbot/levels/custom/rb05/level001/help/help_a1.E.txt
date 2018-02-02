@@ -1,0 +1,19 @@
+\b;From Mission Control
+We are close to complete our project of \l;nuclear plant\u object\nuclear; that you will actually be able to build yourself, therefore you should extract 8 pieces of \l;uranium ore\u object\uranore; from subsoil for your needs.
+
+As we know there are aliens in the deposit of \l;uranium ore\u object\uranore;. Satellite failed to determine their specific affiliation, but we are absolutely certain that these are \l;worms\u object\worm;, especially because deposit of \l;titanium ore\u object\titanore; is also there. We don't know what it could be concerned with, but it appears that \l;worms\u object\worm; on Saari are attracted to \l;titanium ore\u object\titanore;.
+
+You will not be able to start extraction while there are \l;worms\u object\worm; in the deposit, but you also will not be able to exterminate them while they reside underground. You will have to force them out of subsoil and a bot able to inflict powerful jolts to the ground which we call "\l;thumper\u object\bottump;" will help you in that case. If you will use it then these \l;worms\u object\worm; being sensitive to ground vibrations most certainly will leave subsoil and emerge on surface. After that you will be able to exterminate them with regular means.
+
+Before you take off take aboard a \l;grabber\u object\botgr; and a \l;thumper\u object\bottump;, we are certain that you will need the later in your following missions.
+
+\b;The worms
+You should be very cautious, because this kind spreads a dangerous virus in range up to 40 meters which also increases along with altitude relative to spreader. Though, should these insects be stunned by a \l;thumper\u object\bottump; they will leave subsoil and their abilities will become very confined. Besides, buildings and bots that are dead on power or aboard of a \l;space ship\u object\base; are relatively safe.
+
+\b;The virus
+This type tampers with critically important junction within power systems which turns any bot or building supplied with power disabled. If while you control a bot it becomes infected with it, you should stop it immediately, as soon as you get warning. The virus will be in power even after killing all the \l;worms\u object\worm; and the only way to "cure" the bot from it is to discharge it, i.e. take out it's \l;battery\u object\power; and wait a second. After that you could return the \l;battery\u object\power; to it's place and use the bot as usual. Of course, before doing that you should make sure that there are no \l;worms\u object\worm; left nearby.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

@@ -1,0 +1,13 @@
+extern void object::Create_Insect()
+{// Creates an object at this.position
+	// Uncomment the one you want
+	int type = nan;
+	//type = AlienQueen;
+	//type = AlienEgg;
+	//type = AlienAnt;
+	//type = AlienSpider;
+	//type = AlienWasp;
+	//type = AlienWorm;
+	//type = AlienNest;
+	PlaceBug(type);
+}

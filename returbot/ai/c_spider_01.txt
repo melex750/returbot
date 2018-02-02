@@ -1,0 +1,449 @@
+// ROAMER SCRIPT FOR SPIDERS, VER. 1.3A (CONTROLLABLE VERSION)
+// LAST UPDATED JANUARY 25TH
+extern void object::Roam( )
+{
+	int		list[], i;
+	object	target;
+    object  targets[];
+	point		lastPos = position, lastSafePos = position, lastUnsafePos, probSafePoint;
+    int         part = 0;
+    int         approach = 0;
+    float       safeDir;
+    float       absDetectRange = 10000;
+	float		r;
+    float       mp = 1, tp = 1;
+    float       wc = 8;
+    float       wcd0, wcd1, wcd2, wcd3, wcd4; // directions of primary water check for checking around
+    float       sfsmin = 8, sfsmax = 12; // distance of search for safe point, in case if current one is not as safe
+    float       ftime = abstime();
+    float       lastOri = orientation;
+    Roam_data rdata();
+    rdata.mid = cmdline(0);
+    rdata.status = -1;
+    rdata.appmin = 0;
+    rdata.pred = 0.5;
+    rdata.cgo = 0;
+
+	errmode(0);
+	while ( ismovie() != 0 )  wait(1);
+    
+    float       stime = abstime();
+
+	i = 0;
+	list[i++] = WingedGrabber;
+	list[i++] = TrackedGrabber;
+	list[i++] = WheeledGrabber;
+	list[i++] = LeggedGrabber;
+	list[i++] = WingedShooter;
+	list[i++] = TrackedShooter;
+	list[i++] = WheeledShooter;
+	list[i++] = LeggedShooter;
+	list[i++] = WingedOrgaShooter;
+	list[i++] = TrackedOrgaShooter;
+	list[i++] = WheeledOrgaShooter;
+	list[i++] = LeggedOrgaShooter;
+	list[i++] = WingedSniffer;
+	list[i++] = TrackedSniffer;
+	list[i++] = WheeledSniffer;
+	list[i++] = LeggedSniffer;
+	list[i++] = Thumper;
+	list[i++] = PhazerShooter;
+	list[i++] = Recycler;
+	list[i++] = Shielder;
+	list[i++] = Subber;
+	list[i++] = Me;
+	list[i++] = Derrick;
+	list[i++] = BotFactory;
+	list[i++] = PowerStation;
+	list[i++] = Converter;
+	list[i++] = RepairCenter;
+	list[i++] = DefenseTower;
+	list[i++] = ResearchCenter;
+	list[i++] = RadarStation;
+	list[i++] = ExchangePost;
+	list[i++] = PowerPlant;
+	list[i++] = AutoLab;
+	list[i++] = NuclearPlant;
+    
+	lastPos = position;
+	lastSafePos = position;
+    lastUnsafePos.x = 9999;
+    lastUnsafePos.y = 9999;
+    lastUnsafePos.z = 0;
+	// motor(1,1);
+    ftime = abstime();
+	while ( true )
+	{
+        Rdata_set(category, position, rdata);
+        if(distance2d(lastUnsafePos,position) > wc)
+        {
+            wcd0 = orientation;
+            wcd1 = orientation + 65;
+            wcd2 = orientation - 65;
+            wcd3 = orientation + 130;
+            wcd4 = orientation - 130;
+            if(wcd1 > 360){ wcd1 = wcd1 - 360; }
+            if(wcd2 < 0){ wcd2 = wcd2 + 360; }
+            if(wcd3 > 360){ wcd3 = wcd3 - 360; }
+            if(wcd4 < 0){ wcd4 = wcd4 + 360; }
+            if(CheckWater(position,wcd0,wc,0.5) > -1 or CheckWater(position,wcd1,wc,0.5) > -1 or CheckWater(position,wcd2,wc,0.5) > -1 or CheckWater(position,wcd3,wc,0.5) > -1 or CheckWater(position,wcd4,wc,0.5) > -1)
+            {
+                lastUnsafePos = position;
+            }
+            else
+            {
+                lastSafePos = position;
+            }
+        }
+        target = null;
+        targets = radarall(list);
+        i = 0;
+        // approach: 0 - continue choosing, 1 - will attack and move towards, greater - will attack, but won't move towards
+        approach = 1;
+        while(i < sizeof(targets))
+        {
+            // Detect enemy only if it is not underwater
+            if(targets[i].altitude + topo(targets[i].position) > -2.0)
+            {
+                // If enemy is near us
+                if(distance(targets[i].position,position) <= rdata.attackDist)
+                {
+                        target = targets[i];
+                        if(distance(targets[i].position,position) > rdata.frange)
+                        {
+                            approach = 1;
+                        }
+                }
+                // If we have home zone and enemy is near it
+                if(rdata.guardDist > 0 and distance(targets[i].position,rdata.center) <= rdata.guardDist + rdata.frange and distance(position,rdata.center) <= rdata.guardDist)
+                {
+                    target = targets[i];
+                    approach = 1;
+                }
+                // If we already can shoot at enemy, but we're going to come too close or get out of home zone (if there is one)
+                if(distance(targets[i].position,position) <= rdata.frange and (distance(targets[i].position,position) < rdata.appmin - rdata.pred or (rdata.cgo == 0 and rdata.guardDist > 0 and distance(rdata.center,position) > rdata.guardDist - rdata.pred and distance(rdata.center,target.position) > rdata.guardDist)))
+                {
+                    approach = 2;
+                }
+            }
+            if(approach > 0)
+            {
+                break;
+            }
+            else
+            {
+                target = null;
+            }
+            i++;
+        }
+        // if there is no enemy or (we are in danger of submersion and safe point isn't nearby already)
+		if (target == null or topo(position)<=-0.05 or (distance2d(lastUnsafePos,position) <= 2 and distance2d(lastSafePos,position) > 2))
+		{
+            // if we are in danger of submersion
+            if(topo(position)<-0.05 or (distance2d(lastUnsafePos,position) <= 2 and distance2d(lastSafePos,position) > 2))
+            {
+                if(distance(position,lastSafePos) > 1)
+                {
+                    turn(direction(lastSafePos));
+                }
+                while(distance(position,lastSafePos) > 1)
+                {
+                    motor (1, 1);
+                    wait(0.1);
+                }
+                if(target != null and distance(target.position,position) <= rdata.frange)
+                {
+                    motor (0, 0);
+                    turn(direction(target.position));
+                    fire();
+                }
+            }
+            // or if we have a home and we are outside of it
+            else if (rdata.roamDist > 0 and distance2d(position, rdata.center) > rdata.roamDist)
+			{
+                mp = 1;
+                if(rdata.roamDist > 0 and rdata.roamDist <= 5 and distance2d(position, rdata.center) < 9)
+                {
+                    mp = rdata.roamDist / 4;
+                }
+                if(direction(rdata.center) > 2)
+                {
+                    tp = direction(rdata.center) / 60;
+                    motor (mp-0.2*tp, mp+0.2*tp);
+                }
+                else if(direction(rdata.center) < -2)
+                {
+                    tp = -direction(rdata.center) / 60;
+                    motor (mp+0.2*tp, mp-0.2*tp);
+                }
+                else
+                {
+                    motor (mp, mp);
+                }
+                while(target != null and distance(target.position,position) <= rdata.frange)
+                {
+                    // motor (0, 0);
+                    fire();
+                }
+                // try to walk around if we got stuck
+				lastPos = position;
+                wait(0.5);
+                if(rdata.fp == 0)
+                {
+                    if (distance2d(lastPos, position) < 0.2)
+                    {
+                        turn(rand()*360-180);
+                        motor(mp,mp);
+                        wait(1);
+                        if(direction(rdata.center) > 2 or direction(rdata.center) < -2)
+                        {
+                            turn(direction(rdata.center));
+                        }
+                    }
+                }
+                rdata.fp = 0;
+			}
+            // if either we are homeless or we are at home already then we roam around
+			else if((rdata.roamDist >= 1.5 or rdata.roamDist == 0) and CheckWater(position,orientation,wc,0.5) == -1)
+			{
+                mp = 1;
+                if(rdata.roamDist > 0 and rdata.roamDist <= 9)
+                {
+                    mp = rdata.roamDist / 6;
+                }
+                if((rdata.roamDist <= 5 and rdata.roamDist != 0) or distance2d(position,lastUnsafePos) <= 2)
+                {
+                    if(rdata.roamDist > 5 or rdata.roamDist == 0)
+                    {
+                        mp = 0.45;
+                    }
+                    if(part <= 5)
+                    {
+                        mp = mp / 5 * part;
+                        if(rand()<0.1)
+                        {
+                            r = rand();
+                            if (r > 0.6)
+                            {
+                                motor(mp*(rand()/4),mp);
+                            }
+                            else if (r < 0.4)
+                            {
+                                motor(mp,mp*(rand()/4));
+                            }
+                            else
+                            {
+                                r = 10;
+                                while(r > 0)
+                                {
+                                    motor(mp/10*r,mp/10*r);
+                                    wait(0.1);
+                                    r = r - 1;
+                                }
+                                motor(0,0);
+                                wait(0.1);
+                                part = 6;
+                            }
+                            lastPos = position;
+                        }
+                        else
+                        {
+                            if(direction(rdata.center) < -20)
+                            {
+                                motor(mp,mp*rand());
+                            }
+                            else if(direction(rdata.center) > 20)
+                            {
+                                motor(mp*rand(),mp);
+                            }
+                            else
+                            {
+                                motor(mp,mp);
+                            }
+                            wait(0.25);
+                            lastPos = position;
+                        }
+                        if(part < 5)
+                        {
+                            part++;
+                        }
+                    }
+                    else if(part > 5)
+                    {
+                        motor(0,0);
+                        wait(0.3+rand()/3);
+                        part++;
+                        if(part > 13 or (part > 9 and rand() <= 0.1))
+                        {
+                            part = 0;
+                        }
+                    }
+                    if(part > 13)
+                    {
+                        part = 0;
+                    }
+                }
+                else
+                {
+                    if(part == 0)
+                    {
+                        if (distance2d(lastPos, position) < 0.2)
+                        {
+                            turn(rand()*360-180);
+                        }
+                        lastPos = position;
+                    }
+                    if(part == 1)
+                    {
+                        motor(mp,mp);
+                        wait(0.3);
+                        lastPos = position;
+                    }
+                    if(part == 2)
+                    {
+                        r = rand();
+                        if (r > 0.6)
+                        {
+                            motor (mp, mp*0.7);
+                            wait(rand()*1);
+                            motor (mp, mp);
+                        }
+                        if (r < 0.4)
+                        {
+                            motor (mp*0.7, mp);
+                            wait(rand()*1);
+                            motor (mp, mp);
+                        }
+                        wait(0.45);
+                        lastPos = position;
+                    }
+                    part++;
+                    if(part > 2)
+                    {
+                        part = 0;
+                    }
+                }
+			}
+            else
+            {
+                // I don't like to call CheckWater too often, so this is fine too
+                if(rdata.roamDist >= 1.5 or rdata.roamDist == 0)
+                {
+                    r = rand();
+                    if(rand() < 0.3)
+                    {
+                        motor(r,-r);
+                    }
+                    else if(rand() < 0.3)
+                    {
+                        motor(-r,r);
+                    }
+                    wait(0.45);
+                }
+                else
+                {
+                    r = rand() * 0.2;
+                    if(rand() < 0.2 and rand() < 0.2)
+                    {
+                        motor(r,-r);
+                    }
+                    else if(rand() < 0.2 and rand() < 0.2)
+                    {
+                        motor(-r,r);
+                    }
+                    else
+                    {
+                        motor(0,0);
+                    }
+                    wait(0.45);
+                }
+            }
+		}
+        // we have a target
+		else if(target != null)
+		{
+            part = 0;
+            if(target != null and distance(target.position,position) <= rdata.frange)
+            {
+                fire();
+            }
+            // come closer to target if it is farther than 10 meters
+            if(ismovie() == 0 and approach == 1 and target != null and topo(position)>=-0.5 and distance(position,lastUnsafePos) > 2 and CheckWater(position,orientation,wc,0.5) == -1 and target != null)
+            {
+                mp = 1;
+                if(direction(target.position) > 2)
+                {
+                    tp = direction(target.position) / 60;
+                    motor (mp-0.2*tp, mp+0.2*tp);
+                }
+                else if(direction(target.position) < -2)
+                {
+                    tp = -direction(target.position) / 60;
+                    motor (mp+0.2*tp, mp-0.2*tp);
+                }
+                else
+                {
+                    motor (mp, mp);
+                }
+                // try to walk around if we got stuck
+                lastPos = position;
+                wait(0.5);
+                if (distance2d(lastPos, position) < 0.2)
+                {
+                    turn(rand()*360-180);
+                    motor(1,1);
+                    wait(1);
+                    turn(direction(target.position));
+                }
+            }
+            else
+            {
+                motor(0,0);
+            }
+		}
+	}
+}
+
+float CheckWater(point pos, float ori, float i, float start)
+{
+	float orix,oriy,c;
+	point p;
+	if(ori < 180)
+	{
+		if(ori < 90)
+		{
+			orix = 1-(ori/90);
+			oriy = ori/90;
+		}
+		else
+		{
+			orix = -((ori-90)/90);
+			oriy = 1-(ori-90)/90;
+		}
+	}
+	else
+	{
+		if(ori < 270)
+		{
+			orix = -1+((ori-180)/90);
+			oriy = -((ori-180)/90);
+		}
+		else
+		{
+			orix = (ori-270)/90;
+			oriy = -1+(ori-270)/90;
+		}
+	}
+    c = start;
+    while(c <= i)
+    {
+        p.x = pos.x+(c*orix);
+        p.y = pos.y+(c*oriy);
+        if(topo(p) <= -0.05)
+        {
+            return c;
+        }
+        c = c + 2.5;
+    }
+    return -1;
+}

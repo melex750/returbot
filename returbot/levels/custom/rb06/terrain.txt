@@ -1,0 +1,2 @@
+// TerrainInitTextures image="terra" dx=1 dy=1 table=2
+TerrainInitTextures image="m_crys" dx=1 dy=1 table=2

@@ -1,0 +1,13 @@
+\b;From Mission Control
+We are close to complete our project of \l;nuclear plant\u object\nuclear; that you will actually be able to build yourself, therefore you should extract 10 pieces of \l;uranium ore\u object\uranore; from subsoil for your needs.
+
+Deposit of \l;uranium ore\u object\uranore; is located on the hill southward from your \l;space ship\u object\base;. You do not need to go all the way to the top of it though as you will most certainly find a place for a \l;derrick\u object\derrick; on the foot of the hill which your \l;wheeled grabbers\u object\botgr; should reach easily.
+
+As far as we know the hill is occupied by aliens. We provide you with a new way to deal with them: a bot we call "\l;thumper\u object\bottump;", schemes of which you will see in a \l;research center\u object\research;. This weapon will not kill these aliens, but it will neutralize them for a limited amount of time. We suggest you to take this time to install a \l;defense tower\u object\tower; right in the place, which will eliminate dangerous insects nearby. After that you will be able to begin with regular procedure of finding and extraction relatively safely.
+
+Before you take off take aboard a \l;grabber\u object\botgr; and a \l;thumper\u object\bottump;, we are certain that you will need the later in your following missions.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

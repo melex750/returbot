@@ -1,0 +1,368 @@
+// DEFAULT: 10 METERS
+
+// 3 - 1: EAST
+CreateObject pos=-309;315 dir=2 type=WayPoint
+CreateObject pos=-167;297 dir=2 type=WayPoint
+CreateObject pos=-47;304 dir=2 type=WayPoint
+CreateObject pos=44;267 dir=2 type=WayPoint
+CreateObject pos=124;173 dir=2 type=WayPoint
+CreateObject pos=138;119 dir=2 type=WayPoint
+CreateObject pos=123;51 dir=2 type=WayPoint
+CreateObject pos=123;4 dir=2 type=WayPoint
+CreateObject pos=88;-14 dir=2 type=WayPoint
+CreateObject pos=50;-21 dir=2 type=WayPoint
+CreateObject pos=23;-16 dir=2 type=WayPoint
+CreateObject pos=-30;-33 dir=2 type=WayPoint
+
+// 3 - 2: NORTH-EAST
+CreateObject pos=-309;316 dir=2 type=WayPoint
+CreateObject pos=-170;296 dir=2 type=WayPoint
+CreateObject pos=-73;244 dir=2 type=WayPoint
+CreateObject pos=3;217 dir=2 type=WayPoint
+CreateObject pos=49;184 dir=2 type=WayPoint
+CreateObject pos=102;159 dir=2 type=WayPoint
+CreateObject pos=124;122 dir=2 type=WayPoint
+CreateObject pos=92;75 dir=2 type=WayPoint
+CreateObject pos=59;48 dir=2 type=WayPoint
+CreateObject pos=13;10 dir=2 type=WayPoint
+CreateObject pos=-31;-31 dir=2 type=WayPoint
+
+// 3 - 3: NORTH
+CreateObject pos=-306;317 dir=2 type=WayPoint
+CreateObject pos=-179;293 dir=2 type=WayPoint
+CreateObject pos=-76;244 dir=2 type=WayPoint
+CreateObject pos=-71;186 dir=2 type=WayPoint
+CreateObject pos=-69;92 dir=2 type=WayPoint
+CreateObject pos=-61;50 dir=2 type=WayPoint
+CreateObject pos=-35;-32 dir=2 type=WayPoint
+
+// 3 - 4: NORTH-WEST
+CreateObject pos=-341;239 dir=2 type=WayPoint
+CreateObject pos=-272;191 dir=2 type=WayPoint
+CreateObject pos=-225;157 dir=2 type=WayPoint
+CreateObject pos=-156;82 dir=2 type=WayPoint
+CreateObject pos=-118;30 dir=2 type=WayPoint
+CreateObject pos=-92;12 dir=2 type=WayPoint
+CreateObject pos=-38;-32 dir=2 type=WayPoint
+
+// 3 - 5: WEST
+CreateObject pos=-338;234 dir=2 type=WayPoint
+CreateObject pos=-315;188 dir=2 type=WayPoint
+CreateObject pos=-282;117 dir=2 type=WayPoint
+CreateObject pos=-228;61 dir=2 type=WayPoint
+CreateObject pos=-194;25 dir=2 type=WayPoint
+CreateObject pos=-170;-11 dir=2 type=WayPoint
+CreateObject pos=-107;-24 dir=2 type=WayPoint
+CreateObject pos=-37;-35 dir=2 type=WayPoint
+
+// 4 - 1: NORTH
+CreateObject pos=-301;83 dir=2 type=WayPoint
+CreateObject pos=-280;114 dir=2 type=WayPoint
+CreateObject pos=-226;156 dir=2 type=WayPoint
+CreateObject pos=-151;188 dir=2 type=WayPoint
+CreateObject pos=-105;175 dir=2 type=WayPoint
+CreateObject pos=-77;99 dir=2 type=WayPoint
+CreateObject pos=-61;45 dir=2 type=WayPoint
+CreateObject pos=-37;-31 dir=2 type=WayPoint
+
+// 4 - 2: NORTH-WEST
+CreateObject pos=-301;83 dir=2 type=WayPoint
+CreateObject pos=-272;102 dir=2 type=WayPoint
+CreateObject pos=-230;69 dir=2 type=WayPoint
+CreateObject pos=-173;53 dir=2 type=WayPoint
+CreateObject pos=-92;12 dir=2 type=WayPoint
+CreateObject pos=-36;-33 dir=2 type=WayPoint
+
+// 4 - 3: WEST (N)
+CreateObject pos=-301;83 dir=2 type=WayPoint
+CreateObject pos=-271;101 dir=2 type=WayPoint
+CreateObject pos=-229;65 dir=2 type=WayPoint
+CreateObject pos=-207;34 dir=2 type=WayPoint
+CreateObject pos=-184;9 dir=2 type=WayPoint
+CreateObject pos=-168;-14 dir=2 type=WayPoint
+CreateObject pos=-108;-31 dir=2 type=WayPoint
+CreateObject pos=-37;-35 dir=2 type=WayPoint
+
+// 4 - 4: WEST (S)
+CreateObject pos=-301;83 dir=2 type=WayPoint
+CreateObject pos=-271;101 dir=2 type=WayPoint
+CreateObject pos=-229;65 dir=2 type=WayPoint
+CreateObject pos=-207;34 dir=2 type=WayPoint
+CreateObject pos=-184;9 dir=2 type=WayPoint
+CreateObject pos=-168;-14 dir=2 type=WayPoint
+CreateObject pos=-108;-31 dir=2 type=WayPoint
+CreateObject pos=-37;-35 dir=2 type=WayPoint
+CreateObject pos=-314;26 dir=2 type=WayPoint
+CreateObject pos=-309;11 dir=2 type=WayPoint
+CreateObject pos=-312;-26 dir=2 type=WayPoint
+CreateObject pos=-304;-44 dir=2 type=WayPoint
+CreateObject pos=-248;-62 dir=2 type=WayPoint
+CreateObject pos=-210;-68 dir=2 type=WayPoint
+CreateObject pos=-179;-64 dir=2 type=WayPoint
+CreateObject pos=-154;-58 dir=2 type=WayPoint
+CreateObject pos=-108;-46 dir=2 type=WayPoint
+CreateObject pos=-38;-37 dir=2 type=WayPoint
+
+// 4 - 4: SOUTH-WEST
+CreateObject pos=-314;26 dir=2 type=WayPoint
+CreateObject pos=-309;11 dir=2 type=WayPoint
+CreateObject pos=-312;-26 dir=2 type=WayPoint
+CreateObject pos=-304;-44 dir=2 type=WayPoint
+CreateObject pos=-278;-81 dir=2 type=WayPoint
+CreateObject pos=-229;-114 dir=2 type=WayPoint
+CreateObject pos=-173;-130 dir=2 type=WayPoint
+CreateObject pos=-136;-100 dir=2 type=WayPoint
+CreateObject pos=-101;-77 dir=2 type=WayPoint
+CreateObject pos=-37;-38 dir=2 type=WayPoint
+
+// 6 - 1: WEST (N)
+CreateObject pos=-342;-345 dir=2 type=WayPoint
+CreateObject pos=-288;-342 dir=2 type=WayPoint
+CreateObject pos=-275;-325 dir=2 type=WayPoint
+CreateObject pos=-321;-242 dir=2 type=WayPoint
+CreateObject pos=-325;-204 dir=2 type=WayPoint
+CreateObject pos=-306;-160 dir=2 type=WayPoint
+CreateObject pos=-281;-146 dir=2 type=WayPoint
+CreateObject pos=-253;-105 dir=2 type=WayPoint
+CreateObject pos=-217;-66 dir=2 type=WayPoint
+CreateObject pos=-184;-59 dir=2 type=WayPoint
+CreateObject pos=-144;-48 dir=2 type=WayPoint
+CreateObject pos=-105;-42 dir=2 type=WayPoint
+CreateObject pos=-37;-36 dir=2 type=WayPoint
+
+// 6 - 2: SOUTH-WEST
+CreateObject pos=-345;-347 dir=2 type=WayPoint
+CreateObject pos=-291;-342 dir=2 type=WayPoint
+CreateObject pos=-275;-325 dir=2 type=WayPoint
+CreateObject pos=-321;-242 dir=2 type=WayPoint
+CreateObject pos=-325;-204 dir=2 type=WayPoint
+CreateObject pos=-306;-160 dir=2 type=WayPoint
+CreateObject pos=-281;-146 dir=2 type=WayPoint
+CreateObject pos=-230;-133 dir=2 type=WayPoint
+CreateObject pos=-198;-133 dir=2 type=WayPoint
+CreateObject pos=-173;-130 dir=2 type=WayPoint
+CreateObject pos=-149;-119 dir=2 type=WayPoint
+CreateObject pos=-131;-101 dir=2 type=WayPoint
+CreateObject pos=-102;-70 dir=2 type=WayPoint
+CreateObject pos=-37;-37 dir=2 type=WayPoint
+
+// 6 - 3: SOUTH-WEST
+CreateObject pos=-343;-348 dir=2 type=WayPoint
+CreateObject pos=-289;-342 dir=2 type=WayPoint
+CreateObject pos=-247;-323 dir=2 type=WayPoint
+CreateObject pos=-231;-285 dir=2 type=WayPoint
+CreateObject pos=-240;-233 dir=2 type=WayPoint
+CreateObject pos=-200;-202 dir=2 type=WayPoint
+CreateObject pos=-173;-173 dir=2 type=WayPoint
+CreateObject pos=-143;-120 dir=2 type=WayPoint
+CreateObject pos=-103;-73 dir=2 type=WayPoint
+CreateObject pos=-38;-37 dir=2 type=WayPoint
+
+// 6 - 4: SOUTH
+CreateObject pos=-342;-346 dir=2 type=WayPoint
+CreateObject pos=-291;-341 dir=2 type=WayPoint
+CreateObject pos=-249;-320 dir=2 type=WayPoint
+CreateObject pos=-232;-283 dir=2 type=WayPoint
+CreateObject pos=-205;-274 dir=2 type=WayPoint
+CreateObject pos=-171;-274 dir=2 type=WayPoint
+CreateObject pos=-148;-216 dir=2 type=WayPoint
+CreateObject pos=-88;-206 dir=2 type=WayPoint
+CreateObject pos=-68;-186 dir=2 type=WayPoint
+CreateObject pos=-50;-147 dir=2 type=WayPoint
+CreateObject pos=-48;-102 dir=2 type=WayPoint
+CreateObject pos=-34;-39 dir=2 type=WayPoint
+
+// 6 - 5: SOUTH-EAST
+CreateObject pos=-343;-348 dir=2 type=WayPoint
+CreateObject pos=-285;-340 dir=2 type=WayPoint
+CreateObject pos=-247;-321 dir=2 type=WayPoint
+CreateObject pos=-229;-285 dir=2 type=WayPoint
+CreateObject pos=-203;-273 dir=2 type=WayPoint
+CreateObject pos=-171;-275 dir=2 type=WayPoint
+CreateObject pos=-151;-224 dir=2 type=WayPoint
+CreateObject pos=-107;-218 dir=2 type=WayPoint
+CreateObject pos=-34;-212 dir=2 type=WayPoint
+CreateObject pos=4;-201 dir=2 type=WayPoint
+CreateObject pos=39;-174 dir=2 type=WayPoint
+CreateObject pos=62;-138 dir=2 type=WayPoint
+CreateObject pos=16;-85 dir=2 type=WayPoint
+CreateObject pos=-31;-38 dir=2 type=WayPoint
+
+// 6 - 6: SOUTH
+CreateObject pos=-343;-347 dir=2 type=WayPoint
+CreateObject pos=-289;-341 dir=2 type=WayPoint
+CreateObject pos=-248;-322 dir=2 type=WayPoint
+CreateObject pos=-230;-283 dir=2 type=WayPoint
+CreateObject pos=-204;-274 dir=2 type=WayPoint
+CreateObject pos=-169;-275 dir=2 type=WayPoint
+CreateObject pos=-121;-338 dir=2 type=WayPoint
+CreateObject pos=-91;-344 dir=2 type=WayPoint
+CreateObject pos=-60;-328 dir=2 type=WayPoint
+CreateObject pos=-52;-273 dir=2 type=WayPoint
+CreateObject pos=-42;-204 dir=2 type=WayPoint
+CreateObject pos=-32;-154 dir=2 type=WayPoint
+CreateObject pos=-26;-115 dir=2 type=WayPoint
+CreateObject pos=-33;-40 dir=2 type=WayPoint
+
+// 6 - 7: SOUTH-EAST
+CreateObject pos=-344;-345 dir=2 type=WayPoint
+CreateObject pos=-288;-341 dir=2 type=WayPoint
+CreateObject pos=-247;-321 dir=2 type=WayPoint
+CreateObject pos=-230;-284 dir=2 type=WayPoint
+CreateObject pos=-204;-275 dir=2 type=WayPoint
+CreateObject pos=-170;-275 dir=2 type=WayPoint
+CreateObject pos=-117;-337 dir=2 type=WayPoint
+CreateObject pos=-96;-344 dir=2 type=WayPoint
+CreateObject pos=-59;-327 dir=2 type=WayPoint
+CreateObject pos=-49;-269 dir=2 type=WayPoint
+CreateObject pos=-1;-248 dir=2 type=WayPoint
+CreateObject pos=49;-202 dir=2 type=WayPoint
+CreateObject pos=65;-180 dir=2 type=WayPoint
+CreateObject pos=77;-151 dir=2 type=WayPoint
+CreateObject pos=12;-91 dir=2 type=WayPoint
+CreateObject pos=-32;-38 dir=2 type=WayPoint
+
+// 7 - 1: WEST (S)
+CreateObject pos=-191;-312 dir=2 type=WayPoint
+CreateObject pos=-170;-274 dir=2 type=WayPoint
+CreateObject pos=-168;-223 dir=2 type=WayPoint
+CreateObject pos=-176;-188 dir=2 type=WayPoint
+CreateObject pos=-207;-139 dir=2 type=WayPoint
+CreateObject pos=-214;-77 dir=2 type=WayPoint
+CreateObject pos=-184;-55 dir=2 type=WayPoint
+CreateObject pos=-106;-38 dir=2 type=WayPoint
+CreateObject pos=-38;-36 dir=2 type=WayPoint
+
+// 7 - 2: SOUTH-WEST
+CreateObject pos=-191;-312 dir=2 type=WayPoint
+CreateObject pos=-169;-273 dir=2 type=WayPoint
+CreateObject pos=-169;-222 dir=2 type=WayPoint
+CreateObject pos=-172;-182 dir=2 type=WayPoint
+CreateObject pos=-179;-135 dir=2 type=WayPoint
+CreateObject pos=-156;-109 dir=2 type=WayPoint
+CreateObject pos=-136;-88 dir=2 type=WayPoint
+CreateObject pos=-107;-64 dir=2 type=WayPoint
+CreateObject pos=-37;-37 dir=2 type=WayPoint
+
+// 7 - 3: SOUTH
+CreateObject pos=-191;-312 dir=2 type=WayPoint
+CreateObject pos=-169;-273 dir=2 type=WayPoint
+CreateObject pos=-116;-219 dir=2 type=WayPoint
+CreateObject pos=-81;-196 dir=2 type=WayPoint
+CreateObject pos=-35;-40 dir=2 type=WayPoint
+
+// 7  4: SOUTH
+CreateObject pos=-187;-314 dir=2 type=WayPoint
+CreateObject pos=-141;-325 dir=2 type=WayPoint
+CreateObject pos=-96;-345 dir=2 type=WayPoint
+CreateObject pos=-59;-325 dir=2 type=WayPoint
+CreateObject pos=-52;-271 dir=2 type=WayPoint
+CreateObject pos=-47;-205 dir=2 type=WayPoint
+CreateObject pos=-35;-41 dir=2 type=WayPoint
+
+// 7 - 5: SOUTH-EAST
+CreateObject pos=-185;-316 dir=2 type=WayPoint
+CreateObject pos=-140;-334 dir=2 type=WayPoint
+CreateObject pos=-92;-346 dir=2 type=WayPoint
+CreateObject pos=-57;-328 dir=2 type=WayPoint
+CreateObject pos=-51;-273 dir=2 type=WayPoint
+CreateObject pos=-3;-259 dir=2 type=WayPoint
+CreateObject pos=60;-232 dir=2 type=WayPoint
+CreateObject pos=78;-197 dir=2 type=WayPoint
+CreateObject pos=76;-158 dir=2 type=WayPoint
+CreateObject pos=69;-118 dir=2 type=WayPoint
+CreateObject pos=57;-98 dir=2 type=WayPoint
+CreateObject pos=-34;-37 dir=2 type=WayPoint
+
+// 9 - 1: SOUTH
+CreateObject pos=121;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=77;-346 dir=2 type=WayPoint
+CreateObject pos=13;-288 dir=2 type=WayPoint
+CreateObject pos=-26;-249 dir=2 type=WayPoint
+CreateObject pos=-48;-199 dir=2 type=WayPoint
+CreateObject pos=-36;-40 dir=2 type=WayPoint
+
+// 9 - 2: SOUTH-EAST
+CreateObject pos=121;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=162;-350 dir=2 type=WayPoint
+CreateObject pos=177;-309 dir=2 type=WayPoint
+CreateObject pos=111;-219 dir=2 type=WayPoint
+CreateObject pos=121;-166 dir=2 type=WayPoint
+CreateObject pos=-27;-40 dir=2 type=WayPoint
+
+// 9 - 2: EAST (S)
+CreateObject pos=121;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=162;-350 dir=2 type=WayPoint
+CreateObject pos=177;-309 dir=2 type=WayPoint
+CreateObject pos=203;-243 dir=2 type=WayPoint
+CreateObject pos=206;-124 dir=2 type=WayPoint
+CreateObject pos=113;-85 dir=2 type=WayPoint
+CreateObject pos=-28;-37 dir=2 type=WayPoint
+
+// 9 - 3: EAST (N)
+CreateObject pos=121;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=162;-350 dir=2 type=WayPoint
+CreateObject pos=203;-293 dir=2 type=WayPoint
+CreateObject pos=232;-167 dir=2 type=WayPoint
+CreateObject pos=215;-50 dir=2 type=WayPoint
+CreateObject pos=205;8 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=138;-6 dir=2 type=WayPoint
+CreateObject pos=-31;-30 dir=2 type=WayPoint
+
+// 10 - 1: SOUTH-EAST
+CreateObject pos=323;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=332;-342 dir=2 type=WayPoint
+CreateObject pos=326;-310 dir=2 type=WayPoint
+CreateObject pos=208;-248 dir=2 type=WayPoint
+CreateObject pos=119;-201 dir=2 type=WayPoint
+CreateObject pos=66;-155 dir=2 type=WayPoint
+CreateObject pos=-28;-39 dir=2 type=WayPoint
+
+// 10 - 2: SOUTH-EAST
+CreateObject pos=323;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=332;-342 dir=2 type=WayPoint
+CreateObject pos=326;-311 dir=2 type=WayPoint
+CreateObject pos=244;-234 dir=2 type=WayPoint
+CreateObject pos=178;-175 dir=2 type=WayPoint
+CreateObject pos=-29;-38 dir=2 type=WayPoint
+
+// 10-3: EAST (S)
+CreateObject pos=323;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=332;-342 dir=2 type=WayPoint
+CreateObject pos=326;-311 dir=2 type=WayPoint
+CreateObject pos=340;-245 dir=2 type=WayPoint
+CreateObject pos=317;-184 dir=2 type=WayPoint
+CreateObject pos=252;-123 dir=2 type=WayPoint
+CreateObject pos=179;-88 dir=2 type=WayPoint
+CreateObject pos=152;-97 dir=2 type=WayPoint
+CreateObject pos=122;-82 dir=2 type=WayPoint
+CreateObject pos=111;-56 dir=2 type=WayPoint
+CreateObject pos=-32;-35 dir=2 type=WayPoint
+
+// 10-4: EAST (N)
+CreateObject pos=323;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=332;-342 dir=2 type=WayPoint
+CreateObject pos=326;-312 dir=2 type=WayPoint
+CreateObject pos=339;-245 dir=2 type=WayPoint
+CreateObject pos=318;-183 dir=2 type=WayPoint
+CreateObject pos=289;-107 dir=2 type=WayPoint
+CreateObject pos=263;-34 dir=2 type=WayPoint
+CreateObject pos=203;12 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=103;21 dir=2 type=WayPoint
+CreateObject pos=-32;-36 dir=2 type=WayPoint
+
+// 10-5: NORTH-EAST
+CreateObject pos=323;-352 dir=2 type=WayPoint // 5 METERS
+CreateObject pos=333;-342 dir=2 type=WayPoint
+CreateObject pos=326;-311 dir=2 type=WayPoint
+CreateObject pos=341;-238 dir=2 type=WayPoint
+CreateObject pos=343;-166 dir=2 type=WayPoint
+CreateObject pos=298;-90 dir=2 type=WayPoint
+CreateObject pos=259;-38 dir=2 type=WayPoint
+CreateObject pos=192;16 dir=2 type=WayPoint
+CreateObject pos=144;44 dir=2 type=WayPoint
+CreateObject pos=75;56 dir=2 type=WayPoint
+CreateObject pos=48;47 dir=2 type=WayPoint
+CreateObject pos=-33;-36 dir=2 type=WayPoint
+
+

@@ -1,0 +1,255 @@
+public class Points
+{
+    point center, resp0, resp1, resp2, resp3, respwl, respwr;
+    point[] path, path0, path1, path2, path3;
+    int i;
+    
+    void Points()
+    {
+        resp0.x = -84.0829; resp0.y = 284.264; resp0.z = 0;
+
+        i = 0;
+        path0[i].x = -121.844; path0[i].y = 281.107; path0[i++].z = 0;
+        path0[i].x = -142.153; path0[i].y = 270.903; path0[i++].z = 0;
+        path0[i].x = -174.05; path0[i].y = 240.827; path0[i++].z = 0;
+
+        resp1.x = -164.769; resp1.y = 336.726; resp1.z = 0;
+
+        i = 0;
+        path1[i].x = -175.454; path1[i].y = 334.404; path1[i++].z = 0;
+        path1[i].x = -173.632; path1[i].y = 291.841; path1[i++].z = 0;
+        path1[i].x = -175.52; path1[i].y = 241.19; path1[i++].z = 0;
+
+        resp2.x = -290.279; resp2.y = 335.816; resp2.z = 0;
+
+        i = 0;
+        path2[i].x = -276.539; path2[i].y = 274.763; path2[i++].z = 0;
+        path2[i].x = -249.305; path2[i].y = 252.241; path2[i++].z = 0;
+        path2[i].x = -214.544; path2[i].y = 219.746; path2[i++].z = 0;
+        path2[i].x = -207.296; path2[i].y = 201.077; path2[i++].z = 0;
+        path2[i].x = -186.752; path2[i].y = 187.158; path2[i++].z = 0;
+
+        resp3.x = -276.985; resp3.y = 174.731; resp3.z = 0;
+        
+        i = 0;
+        path3[i].x = -277.665; path3[i].y = 144.43; path3[i++].z = 0;
+        path3[i].x = -243.785; path3[i].y = 131.002; path3[i++].z = 0;
+        path3[i].x = -219.378; path3[i].y = 140.235; path3[i++].z = 0;
+        path3[i].x = -181.051; path3[i].y = 178.561; path3[i++].z = 0;
+        
+        i = 0;
+        path[i].x = -156.38; path[i].y = 184.008; path[i++].z = 0;
+        path[i].x = -125.747; path[i].y = 135.63; path[i++].z = 0;
+        path[i].x = -72.9339; path[i].y = 73.1342; path[i++].z = 0;
+        path[i].x = -39.9465; path[i].y = 58.3294; path[i++].z = 0;
+        path[i].x = -16.1353; path[i].y = 51.3703; path[i++].z = 0;
+        path[i].x = 39.2078; path[i].y = 54.9619; path[i++].z = 0;
+        path[i].x = 71.5773; path[i].y = 63.4967; path[i++].z = 0;
+        path[i].x = 106.714; path[i].y = 82.2628; path[i++].z = 0;
+        path[i].x = 135.106; path[i].y = 168.167; path[i++].z = 0;
+        path[i].x = 132.011; path[i].y = 194.929; path[i++].z = 0;
+        path[i].x = 113.33; path[i].y = 226.487; path[i++].z = 0;
+        path[i].x = 94.7884; path[i].y = 243.177; path[i++].z = 0;
+        path[i].x = 70.7512; path[i].y = 243.932; path[i++].z = 0;
+        path[i].x = 45.2335; path[i].y = 243.184; path[i++].z = 0;
+        path[i].x = 24.5274; path[i].y = 236.834; path[i++].z = 0;
+        path[i].x = 14.642; path[i].y = 232.311; path[i++].z = 0;
+        
+        center.x = -24.31032; center.y = 150.388; center.z = 0;
+        
+        respwl.x = -308.87; respwl.y = -354.81; respwl.z = 0;
+        respwr.x =  307.13; respwr.y = -354.85; respwr.z = 0;
+    }
+}
+
+public int Spawn(int n)
+{
+	int		list[], i = 0, s = 0;
+    point   rp;
+    
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
+    Points resp();
+    
+    if(n == 0){ rp = resp.resp0; }
+    if(n == 1){ rp = resp.resp1; }
+    if(n == 2){ rp = resp.resp2; }
+    if(n == 3){ rp = resp.resp3; }
+    
+    if(search(list,rp) == null or distance2d(rp,search(list,rp).position) > 2)
+    {
+        s = 1;
+        produce(rp,360*rand(),AlienSpider,"c_spider_01.txt");
+    }
+    return s;
+}
+
+public int SpawnW()
+{
+	int		list[], i = 0, s = 0;
+    float   n;
+    point   rp;
+    
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
+    Points resp();
+    
+    n = rand();
+    if(n < 0.5){ rp = resp.respwl; }
+    if(n >= 0.5){ rp = resp.respwr; }
+    
+    if(search(list,rp) == null or distance2d(rp,search(list,rp).position) > 2)
+    {
+        s = 1;
+        produce(rp,270,AlienWasp,"m_wasp_01.txt");
+    }
+    return s;
+}
+
+public class Roam_data
+{
+    point center;
+    point path[];
+    float roamDist;
+    float guardDist;
+    float attackDist;
+    float frange;
+    float appmin;
+    float pred;
+    float cgo;
+    int mid;
+    int status;
+    int fp;
+    void Roam_data()
+    {
+        fp = 0;
+    }
+}
+
+public void Rdata_set(int cat, point pos, Roam_data rdata)
+{
+    Points resp();
+    int pl = 0;
+    float r;
+    if(rdata.mid == 0)
+    {
+        rdata.mid = 1;
+        rdata.status = 0;
+        rdata.center = pos;
+        rdata.roamDist = 20;
+        rdata.guardDist = 20;
+        rdata.cgo = 0;
+        if(cat == AlienAnt)
+        {
+            rdata.attackDist = 40;
+            rdata.frange = 40;
+        }
+        else
+        {
+            rdata.attackDist = 45;
+            rdata.frange = 8;
+        }
+        if(distance2d(pos,resp.resp0) < 10)
+        {
+            rdata.mid = 10;
+            rdata.path = resp.path0;
+        }
+        else if(distance2d(pos,resp.resp1) < 10)
+        {
+            rdata.mid = 11;
+            rdata.path = resp.path1;
+        }
+        else if(distance2d(pos,resp.resp2) < 10)
+        {
+            rdata.mid = 12;
+            rdata.path = resp.path2;
+        }
+        else if(distance2d(pos,resp.resp3) < 10)
+        {
+            rdata.mid = 13;
+            rdata.path = resp.path3;
+        }
+        rdata.roamDist = 4;
+        rdata.guardDist = 4;
+        rdata.center = rdata.path[rdata.status];
+    }
+    if(rdata.mid >= 10 and rdata.mid <= 13 and distance2d(pos,rdata.center) < 5)
+    {
+        if(rdata.status <= sizeof(rdata.path) + sizeof(resp.path))
+        {
+            rdata.status = rdata.status + 1;
+        }
+        if(rdata.status < sizeof(rdata.path))
+        {
+            rdata.center = rdata.path[rdata.status];
+            rdata.roamDist = 4;
+            rdata.guardDist = 4;
+        }
+        else if(rdata.status < sizeof(rdata.path) + sizeof(resp.path))
+        {
+            rdata.center = resp.path[rdata.status - sizeof(rdata.path)];
+            rdata.center.x = rdata.center.x - 6 + 12 * rand();
+            rdata.center.y = rdata.center.y - 6 + 12 * rand();
+            rdata.roamDist = 4;
+            rdata.guardDist = 4;
+        }
+        else
+        {
+            rdata.center = resp.center;
+            rdata.roamDist = 45;
+            rdata.guardDist = 45;
+        }
+        rdata.fp = 1;
+    }
+}
+
+extern void LvlCntlr_main()
+{
+    point wmpnt;
+    wmpnt.x = -359;
+    wmpnt.y = -359;
+    wmpnt.z = 0;
+    
+    boolean w = false;
+    
+    int list[], i;
+    float d = 20, d2 = 50, tl = 8000 + 3000 * rand(), tl2 = 7000 + 4000 * rand();
+    
+    i = 0;
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
+    while(true)
+    {
+        if(w == false and researched(ResearchOrgaShooter) == true)
+        {
+            produce(wmpnt,0,TitaniumOre,"");
+            w = true;
+        }
+        if(abstime() < tl and abstime() > d and (radar(AlienSpider) == null or sizeof(radarall(AlienSpider)) < 10))
+        {
+            if(Spawn(round(3.1*rand())) == 1)
+            {
+                d = abstime() + 60 / (abstime() + 1) + 50 + abstime() * 0.04 + abstime() * 0.06 * rand();
+            }
+        }
+        if(abstime() < tl2 and abstime() > d2 and (radar(AlienWasp) == null or sizeof(radarall(AlienWasp)) < 6 + 3))
+        {
+            if(SpawnW() == 1)
+            {
+                d2 = abstime() + 60 / (abstime() + 1) + 70 + abstime() * 0.15 + abstime() * 0.05 * rand();
+            }
+        }
+    }
+}

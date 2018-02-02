@@ -1,0 +1,792 @@
+public class Points
+{
+    point[] resp;
+    point[] path;
+    point center;    
+    int i;
+    
+    void Points()
+    {
+        i = 0;
+    
+        resp[i].x = -341.961; resp[i].y = 326.804; path[i++].z = 0;
+        resp[i].x = -346.209; resp[i].y = 310.63; path[i++].z = 0;
+        resp[i].x = -355.863; resp[i].y = 305.749; path[i++].z = 0;
+
+        resp[i].x = -315.824; resp[i].y = 52.9936; path[i++].z = 0;
+        resp[i].x = -322.449; resp[i].y = 49.267; path[i++].z = 0;
+        resp[i].x = -315.245; resp[i].y = 44.0112; path[i++].z = 0;
+
+        resp[i].x = -350.963; resp[i].y = -328.992; path[i++].z = 0;
+        resp[i].x = -343.752; resp[i].y = -332.506; path[i++].z = 0;
+        resp[i].x = -337.081; resp[i].y = -335.431; path[i++].z = 0;
+
+        resp[i].x = -182.243; resp[i].y = -355.51; path[i++].z = 0;
+        resp[i].x = -177.752; resp[i].y = -352.783; path[i++].z = 0;
+        resp[i].x = -169.552; resp[i].y = -354.509; path[i++].z = 0;
+
+        resp[i].x = 118.636; resp[i].y = -348.692; path[i++].z = 0;
+        resp[i].x = 130.361; resp[i].y = -354.39; path[i++].z = 0;
+        resp[i].x = 115.41; resp[i].y = -355.914; path[i++].z = 0;
+
+        resp[i].x = 319.181; resp[i].y = -347.903; path[i++].z = 0;
+        resp[i].x = 311.617; resp[i].y = -356.229; path[i++].z = 0;
+        resp[i].x = 319.363; resp[i].y = -358.706; path[i++].z = 0;
+    
+        i = 0;
+    
+        // 3 - 1: EAST
+        path[i].x = -309; path[i].y = 315; path[i++].z = 0;
+        path[i].x = -167; path[i].y = 297; path[i++].z = 0;
+        path[i].x = -47; path[i].y = 304; path[i++].z = 0;
+        path[i].x = 44; path[i].y = 267; path[i++].z = 0;
+        path[i].x = 124; path[i].y = 173; path[i++].z = 0;
+        path[i].x = 138; path[i].y = 119; path[i++].z = 0;
+        path[i].x = 123; path[i].y = 51; path[i++].z = 0;
+        path[i].x = 123; path[i].y = 4; path[i++].z = 0;
+        path[i].x = 88; path[i].y = -14; path[i++].z = 0;
+        path[i].x = 50; path[i].y = -21; path[i++].z = 0;
+        path[i].x = 23; path[i].y = -16; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 3 - 2: NORTH-EAST
+        path[i].x = -309; path[i].y = 316; path[i++].z = 0;
+        path[i].x = -170; path[i].y = 296; path[i++].z = 0;
+        path[i].x = -73; path[i].y = 244; path[i++].z = 0;
+        path[i].x = 3; path[i].y = 217; path[i++].z = 0;
+        path[i].x = 49; path[i].y = 184; path[i++].z = 0;
+        path[i].x = 102; path[i].y = 159; path[i++].z = 0;
+        path[i].x = 124; path[i].y = 122; path[i++].z = 0;
+        path[i].x = 92; path[i].y = 75; path[i++].z = 0;
+        path[i].x = 59; path[i].y = 48; path[i++].z = 0;
+        path[i].x = 13; path[i].y = 10; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 3 - 3: NORTH
+        path[i].x = -306; path[i].y = 317; path[i++].z = 0;
+        path[i].x = -179; path[i].y = 293; path[i++].z = 0;
+        path[i].x = -76; path[i].y = 244; path[i++].z = 0;
+        path[i].x = -71; path[i].y = 186; path[i++].z = 0;
+        path[i].x = -69; path[i].y = 92; path[i++].z = 0;
+        path[i].x = -61; path[i].y = 50; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 3 - 4: NORTH-WEST
+        path[i].x = -341; path[i].y = 239; path[i++].z = 0;
+        path[i].x = -272; path[i].y = 191; path[i++].z = 0;
+        path[i].x = -225; path[i].y = 157; path[i++].z = 0;
+        path[i].x = -156; path[i].y = 82; path[i++].z = 0;
+        path[i].x = -118; path[i].y = 30; path[i++].z = 0;
+        path[i].x = -92; path[i].y = 12; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 3 - 5: WEST
+        path[i].x = -338; path[i].y = 234; path[i++].z = 0;
+        path[i].x = -315; path[i].y = 188; path[i++].z = 0;
+        path[i].x = -282; path[i].y = 117; path[i++].z = 0;
+        path[i].x = -228; path[i].y = 61; path[i++].z = 0;
+        path[i].x = -194; path[i].y = 25; path[i++].z = 0;
+        path[i].x = -170; path[i].y = -11; path[i++].z = 0;
+        path[i].x = -107; path[i].y = -24; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 4 - 1: NORTH
+        path[i].x = -301; path[i].y = 83; path[i++].z = 0;
+        path[i].x = -280; path[i].y = 114; path[i++].z = 0;
+        path[i].x = -226; path[i].y = 156; path[i++].z = 0;
+        path[i].x = -151; path[i].y = 188; path[i++].z = 0;
+        path[i].x = -105; path[i].y = 175; path[i++].z = 0;
+        path[i].x = -77; path[i].y = 99; path[i++].z = 0;
+        path[i].x = -61; path[i].y = 45; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 4 - 2: NORTH-WEST
+        path[i].x = -301; path[i].y = 83; path[i++].z = 0;
+        path[i].x = -272; path[i].y = 102; path[i++].z = 0;
+        path[i].x = -230; path[i].y = 69; path[i++].z = 0;
+        path[i].x = -173; path[i].y = 53; path[i++].z = 0;
+        path[i].x = -92; path[i].y = 12; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 4 - 3: WEST (N)
+        path[i].x = -301; path[i].y = 83; path[i++].z = 0;
+        path[i].x = -271; path[i].y = 101; path[i++].z = 0;
+        path[i].x = -229; path[i].y = 65; path[i++].z = 0;
+        path[i].x = -207; path[i].y = 34; path[i++].z = 0;
+        path[i].x = -184; path[i].y = 9; path[i++].z = 0;
+        path[i].x = -168; path[i].y = -14; path[i++].z = 0;
+        path[i].x = -108; path[i].y = -31; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 4 - 4: WEST (S)
+        path[i].x = -301; path[i].y = 83; path[i++].z = 0;
+        path[i].x = -271; path[i].y = 101; path[i++].z = 0;
+        path[i].x = -229; path[i].y = 65; path[i++].z = 0;
+        path[i].x = -207; path[i].y = 34; path[i++].z = 0;
+        path[i].x = -184; path[i].y = 9; path[i++].z = 0;
+        path[i].x = -168; path[i].y = -14; path[i++].z = 0;
+        path[i].x = -108; path[i].y = -31; path[i++].z = 0;
+        path[i].x = -37; path[i].y = -35; path[i++].z = 0;
+        path[i].x = -314; path[i].y = 26; path[i++].z = 0;
+        path[i].x = -309; path[i].y = 11; path[i++].z = 0;
+        path[i].x = -312; path[i].y = -26; path[i++].z = 0;
+        path[i].x = -304; path[i].y = -44; path[i++].z = 0;
+        path[i].x = -248; path[i].y = -62; path[i++].z = 0;
+        path[i].x = -210; path[i].y = -68; path[i++].z = 0;
+        path[i].x = -179; path[i].y = -64; path[i++].z = 0;
+        path[i].x = -154; path[i].y = -58; path[i++].z = 0;
+        path[i].x = -108; path[i].y = -46; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 4 - 4: SOUTH-WEST
+        path[i].x = -314; path[i].y = 26; path[i++].z = 0;
+        path[i].x = -309; path[i].y = 11; path[i++].z = 0;
+        path[i].x = -312; path[i].y = -26; path[i++].z = 0;
+        path[i].x = -304; path[i].y = -44; path[i++].z = 0;
+        path[i].x = -278; path[i].y = -81; path[i++].z = 0;
+        path[i].x = -229; path[i].y = -114; path[i++].z = 0;
+        path[i].x = -173; path[i].y = -130; path[i++].z = 0;
+        path[i].x = -136; path[i].y = -100; path[i++].z = 0;
+        path[i].x = -101; path[i].y = -77; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 1: WEST (N)
+        path[i].x = -342; path[i].y = -345; path[i++].z = 0;
+        path[i].x = -288; path[i].y = -342; path[i++].z = 0;
+        path[i].x = -275; path[i].y = -325; path[i++].z = 0;
+        path[i].x = -321; path[i].y = -242; path[i++].z = 0;
+        path[i].x = -325; path[i].y = -204; path[i++].z = 0;
+        path[i].x = -306; path[i].y = -160; path[i++].z = 0;
+        path[i].x = -281; path[i].y = -146; path[i++].z = 0;
+        path[i].x = -253; path[i].y = -105; path[i++].z = 0;
+        path[i].x = -217; path[i].y = -66; path[i++].z = 0;
+        path[i].x = -184; path[i].y = -59; path[i++].z = 0;
+        path[i].x = -144; path[i].y = -48; path[i++].z = 0;
+        path[i].x = -105; path[i].y = -42; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 2: SOUTH-WEST
+        path[i].x = -345; path[i].y = -347; path[i++].z = 0;
+        path[i].x = -291; path[i].y = -342; path[i++].z = 0;
+        path[i].x = -275; path[i].y = -325; path[i++].z = 0;
+        path[i].x = -321; path[i].y = -242; path[i++].z = 0;
+        path[i].x = -325; path[i].y = -204; path[i++].z = 0;
+        path[i].x = -306; path[i].y = -160; path[i++].z = 0;
+        path[i].x = -281; path[i].y = -146; path[i++].z = 0;
+        path[i].x = -230; path[i].y = -133; path[i++].z = 0;
+        path[i].x = -198; path[i].y = -133; path[i++].z = 0;
+        path[i].x = -173; path[i].y = -130; path[i++].z = 0;
+        path[i].x = -149; path[i].y = -119; path[i++].z = 0;
+        path[i].x = -131; path[i].y = -101; path[i++].z = 0;
+        path[i].x = -102; path[i].y = -70; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 3: SOUTH-WEST
+        path[i].x = -343; path[i].y = -348; path[i++].z = 0;
+        path[i].x = -289; path[i].y = -342; path[i++].z = 0;
+        path[i].x = -247; path[i].y = -323; path[i++].z = 0;
+        path[i].x = -231; path[i].y = -285; path[i++].z = 0;
+        path[i].x = -240; path[i].y = -233; path[i++].z = 0;
+        path[i].x = -200; path[i].y = -202; path[i++].z = 0;
+        path[i].x = -173; path[i].y = -173; path[i++].z = 0;
+        path[i].x = -143; path[i].y = -120; path[i++].z = 0;
+        path[i].x = -103; path[i].y = -73; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 4: SOUTH
+        path[i].x = -342; path[i].y = -346; path[i++].z = 0;
+        path[i].x = -291; path[i].y = -341; path[i++].z = 0;
+        path[i].x = -249; path[i].y = -320; path[i++].z = 0;
+        path[i].x = -232; path[i].y = -283; path[i++].z = 0;
+        path[i].x = -205; path[i].y = -274; path[i++].z = 0;
+        path[i].x = -171; path[i].y = -274; path[i++].z = 0;
+        path[i].x = -148; path[i].y = -216; path[i++].z = 0;
+        path[i].x = -88; path[i].y = -206; path[i++].z = 0;
+        path[i].x = -68; path[i].y = -186; path[i++].z = 0;
+        path[i].x = -50; path[i].y = -147; path[i++].z = 0;
+        path[i].x = -48; path[i].y = -102; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 5: SOUTH-EAST
+        path[i].x = -343; path[i].y = -348; path[i++].z = 0;
+        path[i].x = -285; path[i].y = -340; path[i++].z = 0;
+        path[i].x = -247; path[i].y = -321; path[i++].z = 0;
+        path[i].x = -229; path[i].y = -285; path[i++].z = 0;
+        path[i].x = -203; path[i].y = -273; path[i++].z = 0;
+        path[i].x = -171; path[i].y = -275; path[i++].z = 0;
+        path[i].x = -151; path[i].y = -224; path[i++].z = 0;
+        path[i].x = -107; path[i].y = -218; path[i++].z = 0;
+        path[i].x = -34; path[i].y = -212; path[i++].z = 0;
+        path[i].x = 4; path[i].y = -201; path[i++].z = 0;
+        path[i].x = 39; path[i].y = -174; path[i++].z = 0;
+        path[i].x = 62; path[i].y = -138; path[i++].z = 0;
+        path[i].x = 16; path[i].y = -85; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 6: SOUTH
+        path[i].x = -343; path[i].y = -347; path[i++].z = 0;
+        path[i].x = -289; path[i].y = -341; path[i++].z = 0;
+        path[i].x = -248; path[i].y = -322; path[i++].z = 0;
+        path[i].x = -230; path[i].y = -283; path[i++].z = 0;
+        path[i].x = -204; path[i].y = -274; path[i++].z = 0;
+        path[i].x = -169; path[i].y = -275; path[i++].z = 0;
+        path[i].x = -121; path[i].y = -338; path[i++].z = 0;
+        path[i].x = -91; path[i].y = -344; path[i++].z = 0;
+        path[i].x = -60; path[i].y = -328; path[i++].z = 0;
+        path[i].x = -52; path[i].y = -273; path[i++].z = 0;
+        path[i].x = -42; path[i].y = -204; path[i++].z = 0;
+        path[i].x = -32; path[i].y = -154; path[i++].z = 0;
+        path[i].x = -26; path[i].y = -115; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 6 - 7: SOUTH-EAST
+        path[i].x = -344; path[i].y = -345; path[i++].z = 0;
+        path[i].x = -288; path[i].y = -341; path[i++].z = 0;
+        path[i].x = -247; path[i].y = -321; path[i++].z = 0;
+        path[i].x = -230; path[i].y = -284; path[i++].z = 0;
+        path[i].x = -204; path[i].y = -275; path[i++].z = 0;
+        path[i].x = -170; path[i].y = -275; path[i++].z = 0;
+        path[i].x = -117; path[i].y = -337; path[i++].z = 0;
+        path[i].x = -96; path[i].y = -344; path[i++].z = 0;
+        path[i].x = -59; path[i].y = -327; path[i++].z = 0;
+        path[i].x = -49; path[i].y = -269; path[i++].z = 0;
+        path[i].x = -1; path[i].y = -248; path[i++].z = 0;
+        path[i].x = 49; path[i].y = -202; path[i++].z = 0;
+        path[i].x = 65; path[i].y = -180; path[i++].z = 0;
+        path[i].x = 77; path[i].y = -151; path[i++].z = 0;
+        path[i].x = 12; path[i].y = -91; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 7 - 1: WEST (S)
+        path[i].x = -191; path[i].y = -312; path[i++].z = 0;
+        path[i].x = -170; path[i].y = -274; path[i++].z = 0;
+        path[i].x = -168; path[i].y = -223; path[i++].z = 0;
+        path[i].x = -176; path[i].y = -188; path[i++].z = 0;
+        path[i].x = -207; path[i].y = -139; path[i++].z = 0;
+        path[i].x = -214; path[i].y = -77; path[i++].z = 0;
+        path[i].x = -184; path[i].y = -55; path[i++].z = 0;
+        path[i].x = -106; path[i].y = -38; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 7 - 2: SOUTH-WEST
+        path[i].x = -191; path[i].y = -312; path[i++].z = 0;
+        path[i].x = -169; path[i].y = -273; path[i++].z = 0;
+        path[i].x = -169; path[i].y = -222; path[i++].z = 0;
+        path[i].x = -172; path[i].y = -182; path[i++].z = 0;
+        path[i].x = -179; path[i].y = -135; path[i++].z = 0;
+        path[i].x = -156; path[i].y = -109; path[i++].z = 0;
+        path[i].x = -136; path[i].y = -88; path[i++].z = 0;
+        path[i].x = -107; path[i].y = -64; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 7 - 3: SOUTH
+        path[i].x = -191; path[i].y = -312; path[i++].z = 0;
+        path[i].x = -169; path[i].y = -273; path[i++].z = 0;
+        path[i].x = -116; path[i].y = -219; path[i++].z = 0;
+        path[i].x = -81; path[i].y = -196; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 7 - 4: SOUTH
+        path[i].x = -187; path[i].y = -314; path[i++].z = 0;
+        path[i].x = -141; path[i].y = -325; path[i++].z = 0;
+        path[i].x = -96; path[i].y = -345; path[i++].z = 0;
+        path[i].x = -59; path[i].y = -325; path[i++].z = 0;
+        path[i].x = -52; path[i].y = -271; path[i++].z = 0;
+        path[i].x = -47; path[i].y = -205; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 7 - 5: SOUTH-EAST
+        path[i].x = -185; path[i].y = -316; path[i++].z = 0;
+        path[i].x = -140; path[i].y = -334; path[i++].z = 0;
+        path[i].x = -92; path[i].y = -346; path[i++].z = 0;
+        path[i].x = -57; path[i].y = -328; path[i++].z = 0;
+        path[i].x = -51; path[i].y = -273; path[i++].z = 0;
+        path[i].x = -3; path[i].y = -259; path[i++].z = 0;
+        path[i].x = 60; path[i].y = -232; path[i++].z = 0;
+        path[i].x = 78; path[i].y = -197; path[i++].z = 0;
+        path[i].x = 76; path[i].y = -158; path[i++].z = 0;
+        path[i].x = 69; path[i].y = -118; path[i++].z = 0;
+        path[i].x = 57; path[i].y = -98; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 9 - 1: SOUTH
+        path[i].x = 121; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 77; path[i].y = -346; path[i++].z = 0;
+        path[i].x = 13; path[i].y = -288; path[i++].z = 0;
+        path[i].x = -26; path[i].y = -249; path[i++].z = 0;
+        path[i].x = -48; path[i].y = -199; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 9 - 2: SOUTH-EAST
+        path[i].x = 121; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 162; path[i].y = -350; path[i++].z = 0;
+        path[i].x = 177; path[i].y = -309; path[i++].z = 0;
+        path[i].x = 111; path[i].y = -219; path[i++].z = 0;
+        path[i].x = 121; path[i].y = -166; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 9 - 2: EAST (S)
+        path[i].x = 121; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 162; path[i].y = -350; path[i++].z = 0;
+        path[i].x = 177; path[i].y = -309; path[i++].z = 0;
+        path[i].x = 203; path[i].y = -243; path[i++].z = 0;
+        path[i].x = 206; path[i].y = -124; path[i++].z = 0;
+        path[i].x = 113; path[i].y = -85; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 9 - 3: EAST (N)
+        path[i].x = 121; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 162; path[i].y = -350; path[i++].z = 0;
+        path[i].x = 203; path[i].y = -293; path[i++].z = 0;
+        path[i].x = 232; path[i].y = -167; path[i++].z = 0;
+        path[i].x = 215; path[i].y = -50; path[i++].z = 0;
+        path[i].x = 205; path[i].y = 8; path[i++].z = 0; // 5 METERS
+        path[i].x = 138; path[i].y = -6; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 10 - 1: SOUTH-EAST
+        path[i].x = 323; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 332; path[i].y = -342; path[i++].z = 0;
+        path[i].x = 326; path[i].y = -310; path[i++].z = 0;
+        path[i].x = 208; path[i].y = -248; path[i++].z = 0;
+        path[i].x = 119; path[i].y = -201; path[i++].z = 0;
+        path[i].x = 66; path[i].y = -155; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 10 - 2: SOUTH-EAST
+        path[i].x = 323; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 332; path[i].y = -342; path[i++].z = 0;
+        path[i].x = 326; path[i].y = -311; path[i++].z = 0;
+        path[i].x = 244; path[i].y = -234; path[i++].z = 0;
+        path[i].x = 178; path[i].y = -175; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 10-3: EAST (S)
+        path[i].x = 323; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 332; path[i].y = -342; path[i++].z = 0;
+        path[i].x = 326; path[i].y = -311; path[i++].z = 0;
+        path[i].x = 340; path[i].y = -245; path[i++].z = 0;
+        path[i].x = 317; path[i].y = -184; path[i++].z = 0;
+        path[i].x = 252; path[i].y = -123; path[i++].z = 0;
+        path[i].x = 179; path[i].y = -88; path[i++].z = 0;
+        path[i].x = 152; path[i].y = -97; path[i++].z = 0;
+        path[i].x = 122; path[i].y = -82; path[i++].z = 0;
+        path[i].x = 111; path[i].y = -56; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 10-4: EAST (N)
+        path[i].x = 323; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 332; path[i].y = -342; path[i++].z = 0;
+        path[i].x = 326; path[i].y = -312; path[i++].z = 0;
+        path[i].x = 339; path[i].y = -245; path[i++].z = 0;
+        path[i].x = 318; path[i].y = -183; path[i++].z = 0;
+        path[i].x = 289; path[i].y = -107; path[i++].z = 0;
+        path[i].x = 263; path[i].y = -34; path[i++].z = 0;
+        path[i].x = 203; path[i].y = 12; path[i++].z = 0; // 5 METERS
+        path[i].x = 103; path[i].y = 21; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+
+        // 10-5: NORTH-EAST
+        path[i].x = 323; path[i].y = -352; path[i++].z = 0; // 5 METERS
+        path[i].x = 333; path[i].y = -342; path[i++].z = 0;
+        path[i].x = 326; path[i].y = -311; path[i++].z = 0;
+        path[i].x = 341; path[i].y = -238; path[i++].z = 0;
+        path[i].x = 343; path[i].y = -166; path[i++].z = 0;
+        path[i].x = 298; path[i].y = -90; path[i++].z = 0;
+        path[i].x = 259; path[i].y = -38; path[i++].z = 0;
+        path[i].x = 192; path[i].y = 16; path[i++].z = 0;
+        path[i].x = 144; path[i].y = 44; path[i++].z = 0;
+        path[i].x = 75; path[i].y = 56; path[i++].z = 0;
+        path[i].x = 48; path[i].y = 47; path[i++].z = 0;
+        path[i].x = -33; path[i].y = -36; path[i++].z = 0;
+        
+        center.x = -33; center.y = -36; center.z = 0;
+    }
+}
+
+public int Spawn(int n, int ps)
+{
+	int		list[], i = 0, i2 = 0, p = 0, s = 0;
+    
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
+    Points resp();
+    p = n*3;
+    
+    if(rand() > 0.4)
+    {
+        i = 0;
+    }
+    else
+    {
+        i = -6;
+    }
+    while(p < sizeof(resp.resp) and p >= 0)
+    {
+        if(search(list,resp.resp[p]) != null and distance2d(resp.resp[p],search(list,resp.resp[p]).position) < 2)
+        {
+            p++;
+            i2++;
+            if(i2 == 3)
+            {
+                p = p + i;
+                i2 = 0;
+            }
+        }
+        else
+        {
+            s = 1;
+            produce(resp.resp[p],360*rand(),AlienAnt,"c_ant_01.txt");
+            break;
+        }
+    }
+    return s;
+}
+
+public class Roam_data
+{
+    point center;
+    float roamDist;
+    float guardDist;
+    float attackDist;
+    float frange;
+    float appmin;
+    float pred;
+    float cgo;
+    int mid;
+    int status;
+    int fp;
+    void Roam_data()
+    {
+        fp = 0;
+    }
+}
+
+public void Rdata_set(int cat, point pos, Roam_data rdata)
+{
+    Points resp();
+    int i;
+    float r;
+    if(rdata.mid == 0)
+    {
+        rdata.mid = 1;
+        rdata.center = pos;
+        rdata.roamDist = 40;
+        rdata.guardDist = 40;
+        if(cat == AlienAnt)
+        {
+            rdata.attackDist = 50;
+            rdata.frange = 40;
+        }
+        else
+        {
+            rdata.attackDist = 50;
+            rdata.frange = 8;
+        }
+        r = rand();
+        if(distance2d(pos,resp.resp[0]) < 10 or distance2d(pos,resp.resp[1]) < 10 or distance2d(pos,resp.resp[2]) < 10)
+        {
+            rdata.mid = 10;
+            if(r < 0.3)
+            {
+                rdata.status = 23; // 3 - 3: NORTH
+            }
+            else if(r < 0.7)
+            {
+                rdata.status = 30; // 3 - 4: NORTH-WEST
+            }
+            else
+            {
+                rdata.status = 37; // 3 - 5: WEST
+            }
+        }
+        else if(distance2d(pos,resp.resp[3]) < 10 or distance2d(pos,resp.resp[4]) < 10 or distance2d(pos,resp.resp[5]) < 10)
+        {
+            rdata.mid = 10;
+            if(r < 0.2)
+            {
+                rdata.status = 45; // 4 - 1: NORTH
+            }
+            else if(r < 0.4)
+            {
+                rdata.status = 53; // 4 - 2: NORTH-WEST
+            }
+            else if(r < 0.6)
+            {
+                rdata.status = 59; // 4 - 3: WEST (N)
+            }
+            else
+            {
+                rdata.status = 67; // 4 - 4: WEST (S)
+            }
+        }
+        else if(distance2d(pos,resp.resp[6]) < 10 or distance2d(pos,resp.resp[7]) < 10 or distance2d(pos,resp.resp[8]) < 10)
+        {
+            rdata.mid = 10;
+            if(r < 0.1)
+            {
+                rdata.status = 95; // 6 - 1: WEST (N)
+            }
+            else if(r < 0.3)
+            {
+                rdata.status = 108; // 6 - 2: SOUTH-WEST
+            }
+            else if(r < 0.4)
+            {
+                rdata.status = 122; // 6 - 3: SOUTH-WEST
+            }
+            else if(r < 0.6)
+            {
+                rdata.status = 132; // 6 - 4: SOUTH
+            }
+            else if(r < 0.7)
+            {
+                rdata.status = 144; // 6 - 5: SOUTH-EAST
+            }
+            else if(r < 0.8)
+            {
+                rdata.status = 158; // 6 - 6: SOUTH
+            }
+            else
+            {
+                rdata.status = 172; // 6 - 7: SOUTH-EAST
+            }
+        }
+        else if(distance2d(pos,resp.resp[9]) < 10 or distance2d(pos,resp.resp[10]) < 10 or distance2d(pos,resp.resp[11]) < 10)
+        {
+            rdata.mid = 10;
+            if(r < 0.1)
+            {
+                rdata.status = 188; // 7 - 1: WEST (S)
+            }
+            else if(r < 0.3)
+            {
+                rdata.status = 197; // 7 - 2: SOUTH-WEST
+            }
+            else if(r < 0.5)
+            {
+                rdata.status = 206; // 7 - 3: SOUTH
+            }
+            else if(r < 0.7)
+            {
+                rdata.status = 211; // 7 - 4: SOUTH
+            }
+            else
+            {
+                rdata.status = 218; // 7 - 5: SOUTH-EAST
+            }
+        }
+        else if(distance2d(pos,resp.resp[12]) < 10 or distance2d(pos,resp.resp[13]) < 10 or distance2d(pos,resp.resp[14]) < 10)
+        {
+            rdata.mid = 10;
+            if(r < 0.2)
+            {
+                rdata.status = 230; // 9 - 1: SOUTH
+            }
+            else if(r < 0.4)
+            {
+                rdata.status = 236; // 9 - 2: SOUTH-EAST
+            }
+            else if(r < 0.6)
+            {
+                rdata.status = 242; // 9 - 2: EAST (S)
+            }
+            else
+            {
+                rdata.status = 249; // 9 - 3: EAST (N)
+            }
+        }
+        else if(distance2d(pos,resp.resp[15]) < 10 or distance2d(pos,resp.resp[16]) < 10 or distance2d(pos,resp.resp[17]) < 10)
+        {
+            rdata.mid = 10;
+            if(r < 0.3)
+            {
+                rdata.status = 257; // 10 - 1: SOUTH-EAST
+            }
+            else if(r < 0.6)
+            {
+                rdata.status = 264; // 10 - 2: SOUTH-EAST
+            }
+            else
+            {
+                rdata.status = 270; // 10-3: EAST (S)
+            }
+        }
+        else
+        {
+            rdata.mid == 1;
+            rdata.center = pos;
+            rdata.status = 1;
+            rdata.roamDist = 40;
+            rdata.guardDist = 40;
+        }
+    }
+    if(rdata.mid == 10 and distance2d(pos,rdata.center) <= 5 and (rdata.center.x != resp.center.x or rdata.center.y != resp.center.y) and rdata.status < sizeof(resp.path) - 1)
+    {
+        i = rdata.status + 1;
+        
+        rdata.center = resp.path[i];
+        
+        rdata.status = i;
+        rdata.roamDist = 5;
+        rdata.guardDist = 5;
+        rdata.cgo = 1;
+        if(distance2d(rdata.center,resp.center) < 200 and rdata.status != 119 and rdata.status != 72 and rdata.status != 64 and rdata.status != 50 and rdata.status != 277)
+        {
+            rdata.center.x = rdata.center.x - 20 + (40 * rand());
+            rdata.center.y = rdata.center.y - 20 + (40 * rand());
+            rdata.roamDist = 10;
+            rdata.guardDist = 10;
+        }
+        
+        if(rdata.center.x == resp.center.x and rdata.center.y == resp.center.y)
+        {
+            rdata.roamDist = 45;
+            rdata.guardDist = 45;
+        }
+        rdata.fp = 1;
+    }
+}
+
+extern void LvlCntlr_main()
+{
+    int list[], i, v = 1, m = 0, a = 0, lull;
+    point w;
+    w.x = -350;
+    w.y = -330;
+    w.z = 0;
+    
+    i = 0;
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
+    point cent;
+    cent.x = -33;
+    cent.y = -36;
+    cent.z = 0;
+    
+    i = 0;
+    point[] resp;
+    
+    // delay before start
+    lull = 550;
+    
+    // CORNER
+    resp[i].x =  60; resp[i].y = 0; resp[i++].z = 1;
+    resp[i].x = 120; resp[i].y = 0; resp[i++].z = 1;
+    resp[i].x = 140; resp[i].y = 0; resp[i++].z = 1;
+    resp[i].x = 320; resp[i].y = 0; resp[i++].z = 1;
+    
+    // SIDE
+    resp[i].x =   0; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x =  20; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x =  70; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x = 100; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x = 110; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x = 200; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x = 260; resp[i].y = 1; resp[i++].z = 1;
+    resp[i].x = 500; resp[i].y = 1; resp[i++].z = 1;
+    
+    // CORNER
+    resp[i].x =  25; resp[i].y = 2; resp[i++].z = 1;
+    resp[i].x =  55; resp[i].y = 2; resp[i++].z = 1;
+    resp[i].x =  95; resp[i].y = 2; resp[i++].z = 1;
+    resp[i].x = 155; resp[i].y = 2; resp[i++].z = 1;
+    resp[i].x = 480; resp[i].y = 2; resp[i++].z = 1;
+    resp[i].x = 490; resp[i].y = 2; resp[i++].z = 1;
+    
+    // BOTTOM
+    resp[i].x =  30; resp[i].y = 3; resp[i++].z = 2;
+    resp[i].x = 100; resp[i].y = 3; resp[i++].z = 1;
+    resp[i].x = 190; resp[i].y = 3; resp[i++].z = 1;
+    resp[i].x = 310; resp[i].y = 3; resp[i++].z = 1;
+    resp[i].x = 400; resp[i].y = 3; resp[i++].z = 1;
+    resp[i].x = 420; resp[i].y = 3; resp[i++].z = 1;
+    resp[i].x = 510; resp[i].y = 3; resp[i++].z = 1;
+    
+    // BOTTOM
+    resp[i].x =  50; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x =  90; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 140; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 230; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 260; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 265; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 275; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 330; resp[i].y = 4; resp[i++].z = 1;
+    resp[i].x = 440; resp[i].y = 4; resp[i++].z = 1;
+    
+    // CORNER
+    resp[i].x =  50; resp[i].y = 5; resp[i++].z = 2;
+    resp[i].x = 150; resp[i].y = 5; resp[i++].z = 1;
+    resp[i].x = 190; resp[i].y = 5; resp[i++].z = 1;    
+    
+    while(true)
+    {
+        if(lull == 550 and abstime() <= 300 and (radar(PowerStation) != null or radar(PowerPlant) != null))
+        {
+            lull = lull - (300 - abstime());
+        }
+        if(m < 1)
+        {
+            if(a < sizeof(radarall(list)) - sizeof(radarall(AlienEgg)))
+            {
+                a = sizeof(radarall(list)) - sizeof(radarall(AlienEgg));
+            }
+            if(a > sizeof(radarall(list)) - sizeof(radarall(AlienEgg)))
+            {
+                if(radar(list) != null and distance2d(search(list,cent).position,cent) <= 200)
+                {
+                    playmusic("/music/Quite2.ogg",1);
+                    m = 1;
+                }
+                else
+                {
+                    a = sizeof(radarall(list)) - sizeof(radarall(AlienEgg));
+                }
+            }
+        }
+        if(abstime() > lull)
+        {
+            i = 0;
+            v = 0;
+            while(i < sizeof(resp))
+            {
+                if(resp[i].z != nan)
+                {
+                    v = 1;
+                    if(abstime() >= resp[i].x + lull)
+                    {
+                        if(Spawn(resp[i].y, resp[i].z) == 1)
+                        {
+                            resp[i].z = nan;
+                        }
+                    }
+                }
+                i++;
+                wait(0.02);
+            }
+        }
+        // if(v == 0 and (radar(list) == null or sizeof(radarall(list)) <= 1))
+        if(v == 0 and radar(AlienEgg) == null)
+        {
+            if(m < 2)
+            {
+                playmusic("/music/Lull.ogg",1);
+                m = 2;
+            }
+            if(radar(list) == null)
+            {
+                wait(20);
+                produce(w,0,OrgaMatter,"");
+                break;
+            }
+        }
+    }
+}

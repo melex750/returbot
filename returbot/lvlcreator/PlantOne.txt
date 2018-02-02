@@ -1,0 +1,24 @@
+extern void object::Plant_One_Tree()
+{
+	TreeTypes tt();
+
+	// Tree types range from:
+	// Greenery0 to Greenery19
+	// and Tree0 to Tree3
+
+	// Types are randomly chosen from this list.
+	int[] types;
+	int i = 0;
+	//types[i++] = tt.Tree0;
+	//types[i++] = tt.Tree1;
+	//types[i++] = tt.Tree2;
+	//types[i++] = tt.Tree3;
+    
+	types[i++] = tt.Greenery0;
+	types[i++] = tt.Greenery1;
+	types[i++] = tt.Greenery2;
+	types[i++] = tt.Greenery3;
+	types[i++] = tt.Greenery4;
+
+	PlantOneTree(types);
+}

@@ -36,6 +36,7 @@ CreateObject pos=24.1984;118.044 dir=1.227399 type=WheeledShooter magnifyDamage=
 
 CreateObject pos=66;13 dir=0.85 type=PowerSpot
 
+
 CreateObject pos=54.1073;100.861 dir=1.00109 type=RuinConvert
 CreateObject pos=24.1984;118.044 dir=0.227399 type=RuinBotFactory
 CreateObject pos=52.6814;134.257 dir=1.62572 type=WreckBott2

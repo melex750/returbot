@@ -587,17 +587,13 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
             {
                 rdata.status = 230; // 9 - 1: SOUTH
             }
-            else if(r < 0.4)
+            else if(r < 0.6)
             {
                 rdata.status = 236; // 9 - 2: SOUTH-EAST
             }
-            else if(r < 0.6)
-            {
-                rdata.status = 242; // 9 - 2: EAST (S)
-            }
             else
             {
-                rdata.status = 249; // 9 - 3: EAST (N)
+                rdata.status = 242; // 9 - 2: EAST (S)
             }
         }
         else if(distance2d(pos,resp.resp[15]) < 10 or distance2d(pos,resp.resp[16]) < 10 or distance2d(pos,resp.resp[17]) < 10)
@@ -773,8 +769,7 @@ extern void LvlCntlr_main()
                 wait(0.02);
             }
         }
-        // if(v == 0 and (radar(list) == null or sizeof(radarall(list)) <= 1))
-        if(v == 0 and radar(AlienEgg) == null)
+        if(v == 0 and radar(AlienEgg) == null and (radar(list) == null or sizeof(radarall(list)) <= 3))
         {
             if(m < 2)
             {

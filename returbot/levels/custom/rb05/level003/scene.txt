@@ -23,28 +23,28 @@ LevelController script="../../../../lvlcreator/Helper.txt"
 CreateObject pos=-196.75; 173.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false select=1
 CreateObject pos=-203.25; 173.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
 
-CreateObject pos= -200.00; 200.00 dir=0.0 type=SpaceShip run=1
-CreateObject pos=-196.75; 203.25 dir=0.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos=-203.25; 203.25 dir=0.5 type=Thumper power=0.15
-CreateObject pos=-203.75;197.80 dir=0.0 type=UraniumOre
-CreateObject pos=-202.50;197.80 dir=0.0 type=UraniumOre
-CreateObject pos=-200.625;197.80 dir=0.0 type=UraniumOre
-CreateObject pos=-199.325;197.80 dir=0.0 type=UraniumOre
-CreateObject pos=-197.50;197.80 dir=0.0 type=Titanium
-CreateObject pos=-196.25;197.80 dir=0.0 type=Titanium
+CreateObject pos= -180.00; 180.00 dir=0.0 type=SpaceShip run=1
+CreateObject pos=-176.75; 183.25 dir=0.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=-183.25; 183.25 dir=0.5 type=Thumper power=0.15
+CreateObject pos=-183.75;177.80 dir=0.0 type=UraniumOre
+CreateObject pos=-182.50;177.80 dir=0.0 type=UraniumOre
+CreateObject pos=-180.625;177.80 dir=0.0 type=UraniumOre
+CreateObject pos=-179.325;177.80 dir=0.0 type=UraniumOre
+CreateObject pos=-177.50;177.80 dir=0.0 type=Titanium
+CreateObject pos=-176.25;177.80 dir=0.0 type=Titanium
 
-CreateObject pos=-203.125;196.75 dir=0.0 type=UraniumOre
-CreateObject pos=-200.00;196.75 dir=0.0 type=UraniumOre
-CreateObject pos=-196.875;196.75 dir=0.0 type=Titanium
+CreateObject pos=-183.125;176.75 dir=0.0 type=UraniumOre
+CreateObject pos=-180.00;176.75 dir=0.0 type=UraniumOre
+CreateObject pos=-176.875;176.75 dir=0.0 type=Titanium
 
-CreateObject pos=-203.75;195.70 dir=0.0 type=UraniumOre
-CreateObject pos=-202.50;195.70 dir=0.0 type=UraniumOre
-CreateObject pos=-200.625;195.70 dir=0.0 type=UraniumOre
-CreateObject pos=-199.325;195.70 dir=0.0 type=UraniumOre
-CreateObject pos=-197.50;195.70 dir=0.0 type=PowerCell
-CreateObject pos=-196.25;195.70 dir=0.0 type=PowerCell
+CreateObject pos=-183.75;175.70 dir=0.0 type=UraniumOre
+CreateObject pos=-182.50;175.70 dir=0.0 type=UraniumOre
+CreateObject pos=-180.625;175.70 dir=0.0 type=UraniumOre
+CreateObject pos=-179.325;175.70 dir=0.0 type=UraniumOre
+CreateObject pos=-177.50;175.70 dir=0.0 type=PowerCell
+CreateObject pos=-176.25;175.70 dir=0.0 type=PowerCell
 
-CreateObject pos=-196.75;200.00 dir=0.0 type=BlackBox
+CreateObject pos=-176.75;180.00 dir=0.0 type=BlackBox
 
 CreateObject pos=-172.149;151.192 dir=1.0219006 type=RuinRadar
 CreateObject pos=-167.564;148.64 dir=0.686273 type=RuinSupport

@@ -2,8 +2,10 @@ Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large varie
 
 <h5>Status:</h5>
 Version in this repo has some changes made **after** 0.0.09c:
+<br>
 2018.02.04:
-1. Level 5-4 is changed so that ants will not attack PowerStation anymore.
+<br>
+1. Level 5-4 is changed so that PowerStation is not on the way of assaulting ants anymore.
 
 <h5>Installation:</h5>
 Simply put both /returbot/ and /returbot_music/ folders / archives either into "C:\Users\username\colobot\mods\" directory on Windows or into "/home/username/.local/share/colobot/mods/" directory on Linux.

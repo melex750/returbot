@@ -1,7 +1,7 @@
 \b;From Mission Control
 In several areas of this region marked with \l;red flags\u object\flag; some \l;explosives\u object\tnt; are left and your task is to retrieve them in amount of 4 devices. You should be very careful on your way: according to satellite report this area is a home for a great deal of inimical insects.
 
-Besides, it appears that your current equipment isn't sufficiently fit for local environment, but we hope that you will able to obtain resources you need for completion of the task if you will inspect remnants of the previous expedition.
+Besides, it appears that your current equipment isn't sufficiently fit for local environment, but we hope that you will able to obtain resources you need for completion of the task if you will inspect remnants of the previous expedition in this area.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

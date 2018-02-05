@@ -19,9 +19,10 @@ public class Roam_data
 
 public void Rdata_set(int cat, point pos, Roam_data rdata)
 {
-    point amb0_0, amb0_1, amb0_t;
+    point amb0_0, amb0_1, amb0_2, amb0_t;
     amb0_0.x = -57; amb0_0.y = -243; amb0_0.z = 0;
     amb0_1.x = -87; amb0_1.y = -217; amb0_1.z = 0;
+    amb0_2.x = -125; amb0_2.y = -232; amb0_2.z = 0;
     amb0_t.x = -130; amb0_t.y = -233; amb0_t.z = 0;
     if(rdata.status == -1)
     {
@@ -52,10 +53,12 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
             rdata.attackDist = rdata.attackDist / 2;
         }
     }
-    if(rdata.mid == 15 and rdata.status < 2)
+    if(rdata.mid == 15 and rdata.status < 3)
     {
         if(rdata.status == 0 and search(WheeledGrabber, amb0_t) != null and distance2d(search(WheeledGrabber, amb0_t).position,amb0_t) <= 18)
         {
+            rdata.roamDist = 3;
+            rdata.guardDist = 3;
             rdata.status = 1;
         }
         if(rdata.status == 1)
@@ -65,9 +68,24 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
                 rdata.status = 2;
                 rdata.center = amb0_1;
             }
-            else
+            else if(rdata.center != amb0_0)
             {
                 rdata.center = amb0_0;
+            }
+        }
+        if(rdata.status == 2)
+        {
+            if(distance2d(pos,amb0_1) <= 6)
+            {
+                rdata.roamDist = 20;
+                rdata.guardDist = 20;
+                rdata.status = 3;
+                rdata.center = amb0_2;
+                rdata.attackDist = rdata.attackDist * 2;
+            }
+            else if(rdata.center != amb0_0)
+            {
+                rdata.center = amb0_1;
             }
         }
     }

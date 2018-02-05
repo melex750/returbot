@@ -1,3 +1,78 @@
+public class Roam_data
+{
+    point center;
+    float roamDist;
+    float guardDist;
+    float attackDist;
+    float frange;
+    float appmin;
+    float pred;
+    float cgo;
+    int mid;
+    int status;
+    int fp;
+    void Roam_data()
+    {
+        fp = 0;
+    }
+}
+
+public void Rdata_set(int cat, point pos, Roam_data rdata)
+{
+    point amb0_0, amb0_1, amb0_t;
+    amb0_0.x = -57; amb0_0.y = -243; amb0_0.z = 0;
+    amb0_1.x = -87; amb0_1.y = -217; amb0_1.z = 0;
+    amb0_t.x = -130; amb0_t.y = -233; amb0_t.z = 0;
+    if(rdata.status == -1)
+    {
+        rdata.status = 0;
+        rdata.center = pos;
+        if(rdata.mid == 15)
+        {
+            rdata.roamDist = 10;
+            rdata.guardDist = 10;
+        }
+        else
+        {
+            rdata.roamDist = 20;
+            rdata.guardDist = 20;
+        }
+        if(cat == AlienAnt)
+        {
+            rdata.attackDist = 40;
+            rdata.frange = 40;
+        }
+        else
+        {
+            rdata.attackDist = 45;
+            rdata.frange = 8;
+        }
+        if(rdata.mid == 15)
+        {
+            rdata.attackDist = rdata.attackDist / 2;
+        }
+    }
+    if(rdata.mid == 15 and rdata.status < 2)
+    {
+        if(rdata.status == 0 and search(WheeledGrabber, amb0_t) != null and distance2d(search(WheeledGrabber, amb0_t).position,amb0_t) <= 18)
+        {
+            rdata.status = 1;
+        }
+        if(rdata.status == 1)
+        {
+            if(distance2d(pos,amb0_0) <= 6)
+            {
+                rdata.status = 2;
+                rdata.center = amb0_1;
+            }
+            else
+            {
+                rdata.center = amb0_0;
+            }
+        }
+    }
+}
+
 extern void LvlCntlr_main()
 {
     object item = retobject(0), item2 = retobject(0);

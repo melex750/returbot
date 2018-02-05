@@ -53,7 +53,7 @@ CreateObject pos=-131.75; -121.25 dir=0.0 type=PowerCell
 CreateObject pos=-133.631;-233.49 dir=1.96791 type=BotFactory proxyActivate=1 proxyDistance=24
 CreateObject pos=-112.257;-228.734 dir=0.839523 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=24
 CreateObject pos=-114.613;-230.042 dir=1.85629 type=TrackedGrabber power=0.375 proxyActivate=1 proxyDistance=0 script1="placedef2.txt" run=1
-CreateObject pos=-115.987;-230.677 dir=0.35629 type=NuclearCell power=0.0500
+CreateObject pos=-115.987;-230.677 dir=0.35629 type=NuclearCell power=0.0625
 CreateObject pos=-45.5089;-250.65 dir=0.118687 type=WreckBott2
 CreateObject pos=-73.6729;-222.064 dir=1.30051 type=WreckBotw1
 CreateObject pos=-83.094;-215.762 dir=0.527486 type=RuinRadar
@@ -143,11 +143,11 @@ CreateObject pos=-8.87617;34.6483 dir=1.97368 cmdline=1020 type=AlienSpider scri
 CreateObject pos=96.5485;-33.0757 dir=1.45283 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
 CreateObject pos=103.755;105.65 dir=1.93294 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
 CreateObject pos=-3.67055;-166.384 dir=0.775039 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=-19.5866;-178.477 dir=1.7074 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-19.5866;-178.477 dir=1.7074 cmdline=1010 type=AlienSpider script1="m_spider_01.txt" run=1
 CreateObject pos=37.186;-199.759 dir=0.981657 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
 CreateObject pos=2.43261;-12.1338 dir=1.51568 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
 
-// CreateObject pos=-35.0654;-182.197 dir=1.7074 cmdline=1003 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-14;-243 dir=1.7074 cmdline=15 type=AlienSpider script1="c_spider_01.txt" run=1
 
 // LevelController script="../../../../lvlcreator/Helper.txt"
 // CreateObject pos=-150;-120 dir=1.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false select=1

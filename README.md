@@ -5,7 +5,7 @@ Version in this repo has some important changes made **after** 0.0.09c:
 <br>
 2018.02.05
 <br>
-1. New version of level 4-4 is done. However, dynamic respawn AND ambushes on they way as well as relevant description in satcom are yet to be done.
+1. New version of level 4-4 is done. However, dynamic respawn and ambushes on they way are yet to be done.
 <br>
 And some minor changes, of course.
 <br>
@@ -21,4 +21,4 @@ Several expeditions consisting entirely of bots were sent to find a planet that 
 
 <br><br>
 
-More info available [here](https://colobot.info/forum/showthread.php?tid=949&pid=8033). Mind that description there was not updated since release of version 0.0.09c, though.
+More info available [here](https://colobot.info/forum/showthread.php?tid=949&pid=8033). Mind that description there was not updated since release of version 0.0.09c.

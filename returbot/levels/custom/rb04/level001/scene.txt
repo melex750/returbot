@@ -130,7 +130,7 @@ DoneResearch type=TOWER
 
 EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
 EndMissionTake pos=0.00; 0.00 dist=8.0 tool=Grabber min=2
-EndMissionTake pos=0.00; 0.00 dist=8.0 type=Titanium min=2
+EndMissionTake pos=0.00; 0.00 dist=8.0 type=Titanium min=4
 EndMissionTake pos=0.00; 0.00 dist=8.0 type=PowerCell min=10
 
 Camera eye=0.00;5.00;0.00 lookat=0.00;1.00;0.00 delay=0

@@ -1,5 +1,5 @@
 \b;From Mission Control
-We are close to complete our project of \l;nuclear plant\u object\nuclear; that you will actually be able to build yourself, therefore you should extract 10 pieces of \l;uranium ore\u object\uranore; from subsoil for your needs.
+We are close to complete our project of \l;nuclear plant\u object\nuclear; that you will actually be able to build yourself, therefore you should extract 8 pieces of \l;uranium ore\u object\uranore; from subsoil for your needs.
 
 As we know there are aliens in the deposit of \l;uranium ore\u object\uranore;. Satellite failed to determine their specific affiliation, but we are absolutely certain that these are \l;worms\u object\worm;, especially because deposit of \l;titanium ore\u object\titanore; is also there. We don't know what it could be concerned with, but it appears that \l;worms\u object\worm; on Saari are attracted to \l;titanium ore\u object\titanore;. Though, you don't have to worry too much, given that this threat is rather static.
 

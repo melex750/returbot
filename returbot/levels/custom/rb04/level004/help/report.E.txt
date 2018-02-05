@@ -9,7 +9,7 @@ Currently in a geo-stationary orbit of Volcano.
 \tab;Uranium ore:      none
 
 \s;-> SUBSOIL\c;
-\tab;Energy source:    everywhere
+\tab;Energy source:    almost everywhere
 \tab;Titanium ore:     no data available
 \tab;Uranium ore:      no data available
 

@@ -6,7 +6,7 @@ Normally there should be no problem with power or material supply on Volcano, si
 Your \l;space ship\u object\base; lands in one of few regions with atmospheric temperature remaining low for the time, thus you should restore your reserves now while you can.
 
 \b;Concretely
-Deliver aboard 2 \l;grabbers\u object\botgr;, 2 \l;titanium cubes\u object\titan; and 10 fully charged \l;power cells\u object\power;.
+Deliver aboard 2 \l;grabbers\u object\botgr;, 4 \l;titanium cubes\u object\titan; and 8 fully charged \l;power cells\u object\power;.
 
 To manufacture new \l;power cells\u object\power; and to recharge \l;power cells\u object\power; in your bots, you will need to build a \l;power plant\u object\energy; and a \l;power station\u object\station; on shore of lava lake nearby.
 

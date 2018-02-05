@@ -1,5 +1,5 @@
 \b;From Mission Control
-In several areas of this region marked with \l;red flags\u object\flag; some \l;explosives\u object\tnt; are left. Retrieve and take aboard 5 \l;explosive devices\u object\tnt;. You should exercise extreme caution near every \l;explosive device\u object\tnt; as they are very unstable and any incautious impact might make them detonate.
+In several areas of this region marked with \l;red flags\u object\flag; some \l;explosives\u object\tnt; are left. Retrieve and take aboard 4 \l;explosive devices\u object\tnt;. You should exercise extreme caution near every \l;explosive device\u object\tnt; as they are very unstable and any incautious impact might make them detonate.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

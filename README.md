@@ -3,6 +3,12 @@ Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large varie
 <h5>Status:</h5>
 Version in this repo has some changes made **after** 0.0.09c:
 <br>
+2018.02.05
+<br>
+1. New version of level 4-4 is done. However, dynamic respawn AND ambushes on they way as well as relevant description in satcom are yet to be done.
+<br>
+And some minor changes, of course.
+<br>
 2018.02.04:
 <br>
 1. Level 5-4 is changed so that PowerStation is not on the way of assaulting ants anymore.

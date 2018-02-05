@@ -1,38 +1,39 @@
-public class Roam_data
-{
-    float center;
-    float roamDist;
-    float guardDist;
-    float attackDist;
-    float frange;
-}
-
-public int Rdata_check(point pos, int rdk[])
-{
-    rdk[1] = 1;
-    rdk[2] = 1;
-    return rdk;
-}
-
-public Roam_data Rdata_return(point pos, int rdk[])
-{
-    Roam_data = rdata;
-    rdata.center[ci] = pos;
-    rdata.roamDist[ci] = 0;
-    rdata.guardDist[ci] = 0;
-    if(rdk[0] == 1)
-    {
-        rdata.attackDist[ci] = 40;
-        rdata.frange[ci] = 40;
-    }
-    else if(rdk[0] == 2)
-    {
-        rdata.attackDist[ci] = 45;
-        rdata.frange[ci] = 9;
-    }
-    return rdata;
-}
-
 extern void LvlCntlr_main()
 {
+    object item = retobject(0), item2 = retobject(0);
+    int i;
+    float dist = 9999;
+    i = 0;
+    while(item != null and retobject(i) != null)
+    {
+        item = retobject(i);
+        if(item.category == DefenseTower)
+        {
+            break;
+        }
+        i++;
+    }
+    i = 0;
+    while(item2 != null and item != null and retobject(i) != null)
+    {
+        if(retobject(i).category == TrackedGrabber and distance2d(retobject(i).position,item.position) < dist)
+        {
+            item2 = retobject(i);
+            dist = distance2d(item2.position,item.position);
+        }
+        i++;
+    }
+    while(item != null)
+    {
+        if(item.energyCell != null)
+        {
+            if(item2 != null)
+            {
+                wait(0.5);
+                delete(item2.id,0);
+            }
+            break;
+        }
+        wait(1);
+    }
 }

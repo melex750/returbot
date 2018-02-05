@@ -10,8 +10,8 @@ Currently in a geo-stationary orbit of Volcano.
 
 \s;-> SUBSOIL\c;
 \tab;Energy source:    everywhere
-\tab;Titanium ore:     no data available
-\tab;Uranium ore:      no data available
+\tab;Titanium ore:     not detected
+\tab;Uranium ore:      not detected
 
 \s;-> ADDITIONAL INFORMATION\c;
 \tab;Detected:         reusable derelicts

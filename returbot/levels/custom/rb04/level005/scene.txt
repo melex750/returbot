@@ -32,19 +32,17 @@ CreateObject pos=-154;-38 dir=1.5 type=WingedGrabber power=900 range=0.0 magnify
 CreateObject pos=-1500.00;-1500.00 dir=1.5 type=RadarStation proxyActivate=1 proxyDistance=0
 
 CreateObject pos=-180.00;-30.00 dir=0.0 type=SpaceShip run=1
-CreateObject pos=-183.25;-33.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos=-176.75;-33.25 dir=1.5 type=WheeledGrabber power=1.0 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=-180.00;-33.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
 
 CreateObject pos=-183.875;-27.50 dir=1.5 type=Titanium
 CreateObject pos=-182.625;-27.50 dir=1.5 type=Titanium
 CreateObject pos=-183.875;-26.25 dir=1.5 type=PowerCell
 CreateObject pos=-182.625;-26.25 dir=1.5 type=PowerCell
 
-CreateObject pos=-176.75;-26.75 dir=1.5 type=TNT
-CreateObject pos=-176.125;-25.70 dir=1.5 type=TNT
-CreateObject pos=-177.375;-27.80 dir=1.5 type=TNT
-CreateObject pos=-176.125;-27.80 dir=1.5 type=TNT
-CreateObject pos=-177.375;-25.70 dir=1.5 type=TNT
+CreateObject pos=-177.375;-27.50 dir=1.5 type=TNT
+CreateObject pos=-176.125;-27.50 dir=1.5 type=TNT
+CreateObject pos=-177.375;-26.25 dir=1.5 type=TNT
+CreateObject pos=-176.125;-26.25 dir=1.5 type=TNT
 
 CreateObject pos=-105.69;273.46 cmdline=1000 dir=1.2 type=AlienSpider script1="m_spider_01.txt" run=1
 CreateObject pos=-127.08;278.88 cmdline=1000 dir=1.2 type=AlienSpider script1="m_spider_01.txt" run=1

@@ -5,7 +5,7 @@ Version in this repo has some important changes made **after** 0.0.09c:
 <br>
 2018.02.05
 <br>
-1. New version of level 4-4 is done. However, dynamic respawn and ambushes on they way are yet to be done.
+1. New version of level 4-4 is done. However, respawn is yet to be done.
 <br>
 And some minor changes, of course.
 <br>

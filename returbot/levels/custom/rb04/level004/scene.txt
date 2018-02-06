@@ -149,6 +149,7 @@ CreateObject pos=2.43261;-12.1338 dir=1.51568 cmdline=1020 type=AlienSpider scri
 
 CreateObject pos=-34.38;-174.43 dir=1.51568 cmdline=1003;1000;1003;1060 type=AlienSpider script1="m_spider_01.txt" run=1
 
+// The one above is better than this one
 // CreateObject pos=-14;-243 dir=1.7074 cmdline=15 type=AlienSpider script1="c_spider_01.txt" run=1
 
 // LevelController script="../../../../lvlcreator/Helper.txt"

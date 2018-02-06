@@ -1,3 +1,83 @@
+public class Camps
+{
+    point[] camps, resp0, resp1, resp2, resp3, resp4;
+    float[] awd;
+    int i;
+    
+    void Camps()
+    {
+        i = 0;
+        camps[i].x = -160.09; camps[i].y = 9.69802; camps[i++].z = 0;
+        camps[i].x = -169.342; camps[i].y = 90.0963; camps[i++].z = 0;
+        camps[i].x = -138.376; camps[i].y = 141.723; camps[i++].z = 0;
+        camps[i].x = -8.62029; camps[i].y = 178.623; camps[i++].z = 0;
+        camps[i].x = 25.4252; camps[i].y = 28.4389; camps[i++].z = 0;
+        i = 0;
+        resp0[i].x = -350.602; resp0[i].y = 84.2715; resp0[i++].z = 0;
+        resp0[i].x = -93.498; resp0[i].y = 0.0418458; resp0[i++].z = 0;
+        resp0[i].x = -107.561; resp0[i].y = 44.8057; resp0[i++].z = 0;
+        i = 0;
+        resp1[i].x = -116.498; resp1[i].y = 75.3255; resp1[i++].z = 0;
+        resp1[i].x = -321.713; resp1[i].y = 144.735; resp1[i++].z = 0;
+        i = 0;
+        resp2[i].x = -112.648; resp2[i].y = 117.156; resp2[i++].z = 0;
+        resp2[i].x = -181.894; resp2[i].y = 156.12; resp2[i++].z = 0;
+        i = 0;
+        resp3[i].x = 207.222; resp3[i].y = 225.837; resp3[i++].z = 0;
+        resp3[i].x = 107.624; resp3[i].y = 356.806; resp3[i++].z = 0;
+        resp3[i].x = -2.72068; resp3[i].y = 351.422; resp3[i++].z = 0;
+        i = 0;
+        resp4[i].x = 195.726; resp4[i].y = 354.882; resp4[i++].z = 0;
+        resp4[i].x = 202.471; resp4[i].y = 232.146; resp4[i++].z = 0;
+        i = 0;
+        awd[i++] = 40;
+        awd[i++] = 40;
+        awd[i++] = 40;
+        awd[i++] = 40;
+        awd[i++] = 60;
+        i = 0;
+    }
+}
+
+public class Campers
+{
+    void Campers()
+    {
+    }
+}
+
+public int Spawn(int n)
+{
+	int		list[], i = 0, s = 0;
+    point   rp[];
+    
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
+    Camps camps();
+    
+    if(n == 0){ rp = camps.resp0; }
+    if(n == 1){ rp = camps.resp1; }
+    if(n == 2){ rp = camps.resp2; }
+    if(n == 3){ rp = camps.resp3; }
+    if(n == 3){ rp = camps.resp4; }
+    
+    i = 0;
+    while(i < sizeof(rp))
+    {
+        if(search(list,rp[i]) == null or distance2d(rp[i],search(list,rp[i]).position) > 2)
+        {
+            s = 1;
+            produce(rp[i],360*rand(),AlienSpider,"c_spider_01.txt");
+            break;
+        }
+    }
+    return s;
+}
+
 public class Roam_data
 {
     point center;
@@ -11,9 +91,11 @@ public class Roam_data
     int mid;
     int status;
     int fp;
+    int hc;
     void Roam_data()
     {
         fp = 0;
+        hc =-1;
     }
 }
 
@@ -24,6 +106,11 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
     amb0_1.x = -87; amb0_1.y = -217; amb0_1.z = 0;
     amb0_2.x = -125; amb0_2.y = -232; amb0_2.z = 0;
     amb0_t.x = -130; amb0_t.y = -233; amb0_t.z = 0;
+    
+    int i;
+    
+    Camps camps();
+    
     if(rdata.status == -1)
     {
         rdata.status = 0;
@@ -52,8 +139,66 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
         {
             rdata.attackDist = rdata.attackDist / 2;
         }
+        else
+        {
+            i = 0;
+            while(rdata.hc == -1 and i < sizeof(camps.resp0))
+            {
+                if(distance2d(pos,camps.resp0[i]) < 6)
+                {
+                    rdata.hc = 0;
+                    break;
+                }
+                i++;
+            }
+            i = 0;
+            while(rdata.hc == -1 and i < sizeof(camps.resp1))
+            {
+                if(distance2d(pos,camps.resp1[i]) < 6)
+                {
+                    rdata.hc = 1;
+                    break;
+                }
+                i++;
+            }
+            i = 0;
+            while(rdata.hc == -1 and i < sizeof(camps.resp2))
+            {
+                if(distance2d(pos,camps.resp2[i]) < 6)
+                {
+                    rdata.hc = 2;
+                    break;
+                }
+                i++;
+            }
+            i = 0;
+            while(rdata.hc == -1 and i < sizeof(camps.resp3))
+            {
+                if(distance2d(pos,camps.resp3[i]) < 6)
+                {
+                    rdata.hc = 3;
+                    break;
+                }
+                i++;
+            }
+            i = 0;
+            while(rdata.hc == -1 and i < sizeof(camps.resp4))
+            {
+                if(distance2d(pos,camps.resp4[i]) < 6)
+                {
+                    rdata.hc = 4;
+                    break;
+                }
+                i++;
+            }
+            if(rdata.hc != -1)
+            {
+                rdata.mid = 30;
+                rdata.center = camps.camps[rdata.hc];
+            }
+        }
     }
-    if(rdata.mid == 15 and rdata.status < 3)
+    if(rdata.mid == 15 and rdata.status < 3 and abstime() > 0)
     {
         if(rdata.status == 0 and search(WheeledGrabber, amb0_t) != null and distance2d(search(WheeledGrabber, amb0_t).position,amb0_t) <= 18)
         {
@@ -93,9 +238,23 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
 
 extern void LvlCntlr_main()
 {
+    int i, list[];
+    
+    Camps camps();
+    Campers campers();
+    
+    i = 0;
+	list[i++] = AlienEgg;
+	list[i++] = AlienAnt;
+	list[i++] = AlienSpider;
+	list[i++] = AlienWorm;
+	list[i++] = AlienWasp;
+    
     object item = retobject(0), item2 = retobject(0);
-    int i;
     float dist = 9999;
+    
+    while(abstime() <= 0) {wait(0.5);}
+    
     i = 0;
     while(item != null and retobject(i) != null)
     {
@@ -116,7 +275,7 @@ extern void LvlCntlr_main()
         }
         i++;
     }
-    while(item != null)
+    while(item != null and abstime() < 30)
     {
         if(item.energyCell != null)
         {
@@ -128,5 +287,29 @@ extern void LvlCntlr_main()
             break;
         }
         wait(1);
+    }
+    while(true)
+    {
+        i = 0;
+        while(i < sizeof(camps.awd))
+        {
+            if(camps.awd[i] > 0)
+            {
+                if(search(list,camps.camps[i]) == null or distance2d(search(list,camps.camps[i]).position,camps.camps[i]) > camps.awd[i])
+                {
+                    camps.awd[i] = -1;
+                }
+            }
+            i++;
+        }
+        i = 0;
+        while(i < sizeof(camps.camps))
+        {
+            if(i >= sizeof(camps.awd) or camps.awd[i] < 0)
+            {
+                
+            }
+            i++;
+        }
     }
 }

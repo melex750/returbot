@@ -1,7 +1,7 @@
-Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large variety of levels, just like original story mode. There is no astronaut and all the levels are intended to be passable for those who want to use only programming. Complexity of useful programming becomes wider with every chapter, although this is not a straight programming course but rather just a game with various challenges. Creation of this mod is still near beginning as number of version hints, not even half of levels is done yet (around twenty of fully playable levels right now) and no programs for bots were written at all.
+Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large variety of levels, just like original story mode. There is no astronaut and all the levels are intended to be passable for those who want to use only programming. Complexity of useful programming becomes wider with every chapter, although this is not a straight programming course but rather just a game with various challenges. Creation of this mod is still near beginning as number of version hints, not even half of levels is done yet and no programs for bots were written at all.
 
 <h5>Status:</h5>
-Version in this repo has some important changes made **after** 0.0.09c:
+This mod already contains fully playable levels, even full chapters. Version in this repo has some important changes made **after** 0.0.09c:
 <br>
 2018.02.05
 <br>
@@ -21,4 +21,4 @@ Several expeditions consisting entirely of bots were sent to find a planet that 
 
 <br><br>
 
-More info available [here](https://colobot.info/forum/showthread.php?tid=949&pid=8033). Mind that description there was not updated since release of version 0.0.09c.
+More info available [here](https://colobot.info/forum/showthread.php?tid=949&pid=8033). Mind that description there inevitably goes out of date.

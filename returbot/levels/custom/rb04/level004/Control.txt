@@ -16,13 +16,13 @@ public class Camps
         camps[i].x = 30.2652; camps[i].y = 50.2889; camps[i++].z = 0;
         i = 0;
         resp0[i].x = -350.602; resp0[i].y = 84.2715; resp0[i++].z = 0;
-        resp0[i].x = -93.498; resp0[i].y = 0.0418458; resp0[i++].z = 0;
-        resp0[i].x = -107.561; resp0[i].y = 44.8057; resp0[i++].z = 0;
+        // resp0[i].x = -93.498; resp0[i].y = 0.0418458; resp0[i++].z = 0;
+        // resp0[i].x = -107.561; resp0[i].y = 44.8057; resp0[i++].z = 0;
         i = 0;
-        resp1[i].x = -116.498; resp1[i].y = 75.3255; resp1[i++].z = 0;
+        // resp1[i].x = -116.498; resp1[i].y = 75.3255; resp1[i++].z = 0;
         resp1[i].x = -321.713; resp1[i].y = 144.735; resp1[i++].z = 0;
         i = 0;
-        resp2[i].x = -112.648; resp2[i].y = 117.156; resp2[i++].z = 0;
+        // resp2[i].x = -112.648; resp2[i].y = 117.156; resp2[i++].z = 0;
         resp2[i].x = -181.894; resp2[i].y = 156.12; resp2[i++].z = 0;
         i = 0;
         resp3[i].x = 207.222; resp3[i].y = 225.837; resp3[i++].z = 0;

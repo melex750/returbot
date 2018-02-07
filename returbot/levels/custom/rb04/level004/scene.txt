@@ -50,8 +50,8 @@ CreateObject pos=-134.325; -121.25 dir=0.0 type=PowerCell
 CreateObject pos=-131.75; -122.50 dir=0.0 type=PowerCell
 CreateObject pos=-131.75; -121.25 dir=0.0 type=PowerCell
 
-CreateObject pos=-133.631;-233.49 dir=1.96791 type=BotFactory proxyActivate=1 proxyDistance=24
-CreateObject pos=-112.257;-228.734 dir=0.839523 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=24
+CreateObject pos=-133.631;-233.49 dir=1.96791 type=BotFactory proxyActivate=1 proxyDistance=18
+CreateObject pos=-112.257;-228.734 dir=0.839523 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=18
 CreateObject pos=-114.613;-230.042 dir=1.85629 type=TrackedGrabber power=0.375 proxyActivate=1 proxyDistance=0 script1="placedef2.txt" run=1
 CreateObject pos=-115.987;-230.677 dir=0.35629 type=NuclearCell power=0.0625
 CreateObject pos=-45.5089;-250.65 dir=0.118687 type=WreckBott2

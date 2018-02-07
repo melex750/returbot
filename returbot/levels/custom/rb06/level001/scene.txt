@@ -79,16 +79,23 @@ CreateObject pos= 3.25;141.25 dir=1.5 type=WheeledGrabber power=1.0 script1="/%l
 
 CreateObject pos=-3.75; 147.50 dir=0.0 type=Titanium
 CreateObject pos=-2.50; 147.50 dir=0.0 type=Titanium
-CreateObject pos=-0.625; 147.50 dir=0.0 type=Titanium
-CreateObject pos= 0.625; 147.50 dir=0.0 type=Titanium
+// CreateObject pos=-0.625; 147.50 dir=0.0 type=Titanium
+// CreateObject pos= 0.625; 147.50 dir=0.0 type=Titanium
 CreateObject pos= 2.50; 147.50 dir=0.0 type=PowerCell
 CreateObject pos= 3.75; 147.50 dir=0.0 type=PowerCell
 CreateObject pos=-3.75; 148.75 dir=0.0 type=Titanium
 CreateObject pos=-2.50; 148.75 dir=0.0 type=Titanium
-CreateObject pos=-0.625; 148.75 dir=0.0 type=Titanium
-CreateObject pos= 0.625; 148.75 dir=0.0 type=Titanium
+// CreateObject pos=-0.625; 148.75 dir=0.0 type=Titanium
+// CreateObject pos= 0.625; 148.75 dir=0.0 type=Titanium
 CreateObject pos= 2.50; 148.75 dir=0.0 type=PowerCell
 CreateObject pos= 3.75; 148.75 dir=0.0 type=PowerCell
+
+CreateObject pos=-1.05; 148.75 dir=0.0 type=Titanium
+CreateObject pos= 1.05; 147.50 dir=0.0 type=Titanium
+CreateObject pos= 0.00; 148.75 dir=0.0 type=Titanium
+CreateObject pos= 0.00; 147.50 dir=0.0 type=Titanium
+CreateObject pos= 1.05; 148.75 dir=0.0 type=Titanium
+CreateObject pos=-1.05; 147.50 dir=0.0 type=Titanium
 
 // CreateObject pos= 0.00; 147.50 dir=0.0 type=Titanium
 // CreateObject pos= 0.00; 148.75 dir=0.0 type=Titanium

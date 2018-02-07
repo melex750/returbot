@@ -3,7 +3,7 @@ We were performing scan of this region in normal mode, not really reckoning to d
 
 Destruction of this installation by aliens is only a matter of time - and we already spotted a population of \l;giant ants\u object\ant; that will soon migrate through this area from south-west to north-east; on their way they most certainly will be attracted to the \l;radar station\u object\radar; and obliterate it.
 
-However, we also discovered few bots near \l;the station\u object\radar;, including \l;shooters\u object\botfr;. We give control over local infrastructure, or rather what remained of it, to you: we want you to utilize local resources in order to hold out incoming inroad. Later we will readjust this \l;radar station\u object\radar; in order to conjugate it with others as well as reinforce this whole object.
+However, we also discovered few bots near \l;the station\u object\radar;, including \l;shooters\u object\botfr;. We give control over local infrastructure, or rather what remained of it, to you: we want you to utilize local resources in order to hold out incoming inroad. Later we will readjust this \l;radar station\u object\radar; as well as reinforce this whole object.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

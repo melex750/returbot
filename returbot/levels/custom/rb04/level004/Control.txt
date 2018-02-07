@@ -13,7 +13,7 @@ public class Camps
         camps[i].x = -169.342; camps[i].y = 90.0963; camps[i++].z = 0;
         camps[i].x = -138.376; camps[i].y = 141.723; camps[i++].z = 0;
         camps[i].x = -8.62029; camps[i].y = 178.623; camps[i++].z = 0;
-        camps[i].x = 25.4252; camps[i].y = 28.4389; camps[i++].z = 0;
+        camps[i].x = 30.2652; camps[i].y = 50.2889; camps[i++].z = 0;
         i = 0;
         resp0[i].x = -350.602; resp0[i].y = 84.2715; resp0[i++].z = 0;
         resp0[i].x = -93.498; resp0[i].y = 0.0418458; resp0[i++].z = 0;
@@ -162,8 +162,8 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
         if(rdata.hc == 0){ camps.out0[rdata.hcs] = abstime() + 20 + 65 * rand(); }
         if(rdata.hc == 1){ camps.out1[rdata.hcs] = abstime() + 20 + 65 * rand(); }
         if(rdata.hc == 2){ camps.out2[rdata.hcs] = abstime() + 20 + 65 * rand(); }
-        if(rdata.hc == 3){ camps.out3[rdata.hcs] = abstime() + 20 + 65 * rand(); }
-        if(rdata.hc == 4){ camps.out4[rdata.hcs] = abstime() + 20 + 65 * rand(); }
+        if(rdata.hc == 3){ camps.out3[rdata.hcs] = abstime() + 15 + 35 * rand(); }
+        if(rdata.hc == 4){ camps.out4[rdata.hcs] = abstime() + 15 + 45 * rand(); }
     }
 }
 

@@ -6,7 +6,7 @@ Creation of this mod is still near beginning as number of version hints, not eve
 <h5>Installation:</h5>
 Simply put both /returbot/ and /returbot_music/ folders / archives either into "C:\Users\username\colobot\mods\" directory on Windows or into "/home/username/.local/share/colobot/mods/" directory on Linux.
 
-<h5>Troubles:<h5>
+<h5>Troubles:</h5>
 As for today there might be troubles in certain levels if you will load your saved games made in them, such as level controller throwing error or even crashing the game. This is related to imperfections in [Colobot](https://github.com/colobot/colobot) itself, not this modification, given that the game is still in the state of active development.
 
 <h5>Plot:</h5>

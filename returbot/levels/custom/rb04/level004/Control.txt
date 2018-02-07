@@ -3,7 +3,8 @@ public class Camps
     point[] camps, resp0, resp1, resp2, resp3, resp4;
     float[] awd;
     int i;
-    static float[] out0, out1, out2, out3, out4;
+    static float[] out0 = {1,1,1}, out1 = {1,1}, out2 = {1,1}, out3 = {1,1}, out4 = {1,1};
+    static int lim0 = 16, lim1 = 12, lim2 = 9, lim3 = 12, lim4 = 9;
     
     void Camps()
     {
@@ -36,29 +37,6 @@ public class Camps
         awd[i++] = 40;
         awd[i++] = 40;
         awd[i++] = 60;
-        
-        
-        i = 0;
-        out0[i++] = -1;
-        out0[i++] = -1;
-        out0[i++] = -1;
-        
-        i = 0;
-        out1[i++] = -1;
-        out1[i++] = -1;
-        
-        i = 0;
-        out2[i++] = -1;
-        out2[i++] = -1;
-        
-        i = 0;
-        out3[i++] = -1;
-        out3[i++] = -1;
-        
-        i = 0;
-        out4[i++] = -1;
-        out4[i++] = -1;
-        
         i = 0;
     }
 }
@@ -110,23 +88,17 @@ public class Roam_data
     int status;
     int fp;
     int hc;
-    int hc2;
+    int hcs;
     void Roam_data()
     {
         fp = 0;
-        hc =-1;
-        hc2 = -1;
+        hc = -1;
+        hcs = -1;
     }
 }
 
 public void Rdata_set(int cat, point pos, Roam_data rdata)
 {
-    point amb0_0, amb0_1, amb0_2, amb0_t;
-    amb0_0.x = -57; amb0_0.y = -243; amb0_0.z = 0;
-    amb0_1.x = -87; amb0_1.y = -217; amb0_1.z = 0;
-    amb0_2.x = -125; amb0_2.y = -232; amb0_2.z = 0;
-    amb0_t.x = -130; amb0_t.y = -233; amb0_t.z = 0;
-    
     point rp[];
     float out[];
     
@@ -138,16 +110,8 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
     {
         rdata.status = 0;
         rdata.center = pos;
-        if(rdata.mid == 15)
-        {
-            rdata.roamDist = 10;
-            rdata.guardDist = 10;
-        }
-        else
-        {
-            rdata.roamDist = 20;
-            rdata.guardDist = 20;
-        }
+        rdata.roamDist = 20;
+        rdata.guardDist = 20;
         if(cat == AlienAnt)
         {
             rdata.attackDist = 40;
@@ -158,114 +122,60 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
             rdata.attackDist = 45;
             rdata.frange = 8;
         }
-        if(rdata.mid == 15)
+        i = 0;
+        while(rdata.hc == -1 and i <= 4)
         {
-            rdata.attackDist = rdata.attackDist / 2;
-        }
-        else
-        {
+            if(i == 0){ rp = camps.resp0; }
+            if(i == 1){ rp = camps.resp1; }
+            if(i == 2){ rp = camps.resp2; }
+            if(i == 3){ rp = camps.resp3; }
+            if(i == 4){ rp = camps.resp4; }
             i2 = 0;
-            while(rdata.hc == -1 and i2 < 5)
+            while(rdata.hc == -1 and i2 < sizeof(rp))
             {
-                if(i2 == 0){ rp = camps.resp0; }
-                if(i2 == 1){ rp = camps.resp1; }
-                if(i2 == 2){ rp = camps.resp2; }
-                if(i2 == 3){ rp = camps.resp3; }
-                if(i2 == 4){ rp = camps.resp4; }
-                i = 0;
-                while(rdata.hc == -1 and i < sizeof(rp))
+                if(distance2d(pos,rp[i2]) < 6)
                 {
-                    if(distance2d(pos,rp[i]) < 6)
-                    {
-                        rdata.hc = i2;
-                        break;
-                    }
-                    i++;
+                    rdata.hc = i;
                 }
                 i2++;
             }
-            if(rdata.hc != -1)
-            {
-                rdata.mid = 30;
-                rdata.center = camps.camps[rdata.hc];
-                if(rdata.hc == 0){ out = camps.out0; }
-                if(rdata.hc == 1){ out = camps.out1; }
-                if(rdata.hc == 2){ out = camps.out2; }
-                if(rdata.hc == 3){ out = camps.out3; }
-                if(rdata.hc == 4){ out = camps.out4; }
-                i = 0;
-                while(rdata.hc2 == -1 and i < sizeof(out))
-                {
-                    if(out[i] <= abstime())
-                    {
-                        // message("app   "+i);
-                        rdata.hc2 = i;
-                        out[i] = abstime() + 15;
-                        if(rdata.hc == 0){ camps.out0[rdata.hc2] = abstime() + 15; }
-                        if(rdata.hc == 1){ camps.out1[rdata.hc2] = abstime() + 15; }
-                        if(rdata.hc == 2){ camps.out2[rdata.hc2] = abstime() + 15; }
-                        if(rdata.hc == 3){ camps.out3[rdata.hc2] = abstime() + 15; }
-                        if(rdata.hc == 4){ camps.out4[rdata.hc2] = abstime() + 15; }
-                        break;
-                    }
-                    i++;
-                }
-            }
+            i++;
         }
-    }
-    if(rdata.mid == 15 and rdata.status < 3 and abstime() > 0)
-    {
-        if(rdata.status == 0 and search(WheeledGrabber, amb0_t) != null and distance2d(search(WheeledGrabber, amb0_t).position,amb0_t) <= 18)
-        {
-            rdata.roamDist = 3;
-            rdata.guardDist = 3;
-            rdata.status = 1;
-        }
-        if(rdata.status == 1)
-        {
-            if(distance2d(pos,amb0_0) <= 6)
-            {
-                rdata.status = 2;
-                rdata.center = amb0_1;
-            }
-            else if(rdata.center != amb0_0)
-            {
-                rdata.center = amb0_0;
-            }
-        }
-        if(rdata.status == 2)
-        {
-            if(distance2d(pos,amb0_1) <= 6)
-            {
-                rdata.roamDist = 20;
-                rdata.guardDist = 20;
-                rdata.status = 3;
-                rdata.center = amb0_2;
-                rdata.attackDist = rdata.attackDist * 2;
-            }
-            else if(rdata.center != amb0_0)
-            {
-                rdata.center = amb0_1;
-            }
-        }
-    }
-    else
-    {
         if(rdata.hc != -1)
         {
-            message(rdata.hc+"   "+rdata.hc2);
-            if(rdata.hc == 0){ camps.out0[rdata.hc2] = abstime() + 15 + 70 * rand(); }
-            if(rdata.hc == 1){ camps.out1[rdata.hc2] = abstime() + 15 + 70 * rand(); }
-            if(rdata.hc == 2){ camps.out2[rdata.hc2] = abstime() + 15 + 70 * rand(); }
-            if(rdata.hc == 3){ camps.out3[rdata.hc2] = abstime() + 15 + 70 * rand(); }
-            if(rdata.hc == 4){ camps.out4[rdata.hc2] = abstime() + 15 + 70 * rand(); }
+            rdata.mid = 30;
+            rdata.center = camps.camps[rdata.hc];
+            if(rdata.hc == 0){ out = camps.out0; }
+            if(rdata.hc == 1){ out = camps.out1; }
+            if(rdata.hc == 2){ out = camps.out2; }
+            if(rdata.hc == 3){ out = camps.out3; }
+            if(rdata.hc == 4){ out = camps.out4; }
+            i = 0;
+            while(rdata.hcs == -1 and i < sizeof(out))
+            {
+                if(out[i] <= abstime() + 10)
+                {
+                    rdata.hcs = i;
+                    out[i] = abstime() + 15;
+                    break;
+                }
+                i++;
+            }
         }
+    }
+    if(rdata.hc != -1 and rdata.hcs != -1)
+    {
+        if(rdata.hc == 0){ camps.out0[rdata.hcs] = abstime() + 15 + 70 * rand(); }
+        if(rdata.hc == 1){ camps.out1[rdata.hcs] = abstime() + 15 + 70 * rand(); }
+        if(rdata.hc == 2){ camps.out2[rdata.hcs] = abstime() + 15 + 70 * rand(); }
+        if(rdata.hc == 3){ camps.out3[rdata.hcs] = abstime() + 15 + 70 * rand(); }
+        if(rdata.hc == 4){ camps.out4[rdata.hcs] = abstime() + 15 + 70 * rand(); }
     }
 }
 
 extern void LvlCntlr_main()
 {
-    int i, i2, list[];
+    int i, i2, list[], lim;
     float out[];
     
     Camps camps();
@@ -315,8 +225,9 @@ extern void LvlCntlr_main()
         }
         wait(1);
     }
-    // Can't make this shit work properly
-    while(false)
+    
+    // Respawn of aliens: it's not perfect, but it works
+    while(true)
     {
         i = 0;
         while(i < sizeof(camps.awd))
@@ -326,7 +237,6 @@ extern void LvlCntlr_main()
                 if(search(list,camps.camps[i]) == null or distance2d(search(list,camps.camps[i]).position,camps.camps[i]) > camps.awd[i])
                 {
                     camps.awd[i] = -1;
-                    // message("test");
                 }
             }
             i++;
@@ -336,20 +246,22 @@ extern void LvlCntlr_main()
         {
             if(i >= sizeof(camps.awd) or camps.awd[i] < 0)
             {
-                if(i == 0){ out = camps.out0; }
-                if(i == 1){ out = camps.out1; }
-                if(i == 2){ out = camps.out2; }
-                if(i == 3){ out = camps.out3; }
-                if(i == 4){ out = camps.out4; }
+                if(i == 0){ out = camps.out0; lim = camps.lim0; }
+                if(i == 1){ out = camps.out1; lim = camps.lim1; }
+                if(i == 2){ out = camps.out2; lim = camps.lim2; }
+                if(i == 3){ out = camps.out3; lim = camps.lim3; }
+                if(i == 4){ out = camps.out4; lim = camps.lim4; }
                 if(i > 4){ break; }
                 i2 = 0;
-                while(i2 < sizeof(out))
+                while(lim > 0 and i2 < sizeof(out))
                 {
                     if(out[i2] <= abstime())
                     {
                         if(Spawn(i) == 1)
                         {
-                            out[i] = abstime() + 15;
+                            out[i2] = abstime() + 15;
+                            lim = lim - 1;
+                            wait(0.1);
                         }
                     }
                     i2++;

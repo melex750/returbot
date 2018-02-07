@@ -16,5 +16,5 @@ Currently in a geo-stationary orbit of Centaury.
 \s;-> ADDITIONAL INFORMATION\c;
 \tab;Detected:         derelicts of no particular use
 \tab;Detected:         giant spiders
-\tab;  - Threat:       passive
+\tab;  - Threat:       yes, passive
 \n;

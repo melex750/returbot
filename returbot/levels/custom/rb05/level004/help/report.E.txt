@@ -16,5 +16,5 @@ Currently in a geo-stationary orbit of Saari.
 \s;-> ADDITIONAL INFORMATION\c;
 \tab;Detected:         reusable derelicts
 \tab;Detected:         giant ants
-\tab;  - Threat:       active (south-west)
+\tab;  - Threat:       yes, active (south-west)
 \n;

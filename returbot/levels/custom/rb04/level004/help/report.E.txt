@@ -17,5 +17,5 @@ Currently in a geo-stationary orbit of Volcano.
 \tab;Detected:         inactive objects
 \tab;Detected:         reusable derelicts
 \tab;Detected:         giant spiders
-\tab;  - Threat:       passive
+\tab;  - Threat:       yes, passive
 \n;

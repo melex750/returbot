@@ -3,6 +3,10 @@ Returbot is a usermod for Colobot Gold 0.1.11+ which aims to contain large varie
 <h5>Status:</h5>
 This mod already contains fully playable levels, even full chapters. Version in this repo has some important changes made **after** 0.0.09c:
 <br>
+2018.02.07
+<br>
+1. Respawn in level 4-4 is now implemented.
+<br>
 2018.02.05
 <br>
 1. New version of level 4-4 is done. However, respawn is yet to be done.

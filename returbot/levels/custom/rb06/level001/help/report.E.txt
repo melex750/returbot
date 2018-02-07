@@ -15,7 +15,7 @@ Currently in a geo-stationary orbit of Crystalium.
 
 \s;-> ADDITIONAL INFORMATION\c;
 \tab;Detected:         giant spiders
-\tab;  - Threat:       active
+\tab;  - Threat:       yes, active
 \tab;Detected:         undetermined flying organisms
 \tab;  - Threat:       ?
 \tab;It is strongly advised to use \l;radar station\u object\radar; to determine threat if it is possible.

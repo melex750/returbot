@@ -17,7 +17,7 @@ Currently in a geo-stationary orbit of Centaury.
 \tab;Detected:         inactive objects
 \tab;Detected:         reusable derelicts
 \tab;Detected:         giant spiders
-\tab;  - Threat:       passive
+\tab;  - Threat:       yes, passive
 \tab;Detected:         undetermined organisms
 \tab;  - Threat:       ?
 \tab;It is strongly advised to use \l;radar station\u object\radar; to determine threat if it is possible.

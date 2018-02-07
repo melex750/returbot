@@ -1,11 +1,11 @@
 Title.E text="Distraction"
 Title.R text="Отвлечение"
-Resume.E text="ATTENTION: This level will be deprecated with next release. Hold out under attack of enemy until black box will be delivered."
-Resume.R text="ВНИМАНИЕ: Этот уровень будет отброшен в следующем выпуске. Продержитесь под атакой врага, пока чёрный ящик не будет доставлен."
+Resume.E text="ATTENTION: This level will be deprecated soon. Hold out under attack of enemy until black box will be delivered."
+Resume.R text="ВНИМАНИЕ: Этот уровень скоро будет отброшен. Продержитесь под атакой врага, пока чёрный ящик не будет доставлен."
 Instructions name="%lvl%/help/help.%lng%.txt"
 Satellite name="%lvl%/help/report.%lng%.txt"
 // Loading name="programs/7_CollectTitanium3.txt"
-// SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+SoluceFile name="%lvl%/help/soluce.%lng%.txt"
 HelpFile name="cbot.txt"
 EndingFile win=-1 lost=0
 

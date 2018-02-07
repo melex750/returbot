@@ -1,0 +1,29 @@
+\b;Программы, отправленные Хьюстоном
+Ниже приведен текст программы, написанной одним из наших инженеров. Она инструктирует \l;сборщика\u object\botgr; следовать за \l;стрелком\u object\botfr;.
+\c;
+\s;extern void object::StickToShooter()
+\s;{
+\s; object item;
+\s; int list[], i;
+\s;
+\s;	i = 0;
+\s;	list[i++] = WheeledShooter;
+\s;	list[i++] = TrackedShooter;
+\s;	while(true)
+\s;	{
+\s;		item = radar(list);
+\s;		if(distance(position,item.position) > 5)
+\s;		{
+\s;			if(direction(item.position) > 5 or direction(item.position) < -5)
+\s;			{
+\s;				turn(direction(item.position));
+\s;			}
+\s;			motor(1,1);
+\s;		}
+\s;		else
+\s;		{
+\s;			motor(0,0);
+\s;		}
+\s; }
+\s;}
+\n;

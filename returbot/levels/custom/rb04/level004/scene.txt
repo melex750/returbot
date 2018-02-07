@@ -4,8 +4,8 @@ Resume.E text="Protect your transport on the way to abandoned explosive devices 
 Resume.R text="Защитите свой транспорт на пути к оставленным взрывным устройствам и обратно."
 Instructions name="%lvl%/help/help.%lng%.txt"
 Satellite name="%lvl%/help/report.%lng%.txt"
-// Loading name="programs/7_CollectTitanium3.txt"
-// SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+Loading name="programs/m_100_StickToShooter1.txt"
+SoluceFile name="%lvl%/help/soluce.%lng%.txt"
 HelpFile name="cbot.txt"
 EndingFile win=-1 lost=0
 

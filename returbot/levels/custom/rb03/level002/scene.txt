@@ -8,8 +8,8 @@ Resume.R text="Столкнитесь с враждебными формами �
 
 Instructions name="%lvl%/help/help.%lng%.txt"
 Satellite name="%lvl%/help/report.%lng%.txt"
-//Loading name="programs/9_terranova.txt"
-//SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+// Loading name="programs/9_terranova.txt"
+SoluceFile name="%lvl%/help/soluce.%lng%.txt"
 HelpFile name="cbot.txt"
 EndingFile win=-1 lost=0
 

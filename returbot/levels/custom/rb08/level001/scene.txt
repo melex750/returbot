@@ -4,8 +4,8 @@ Title.R      text="\\\Холодный Приём"
 Resume.R     text="Этот уровень пока как бы просто макет."
 ScriptName.E text="Program"
 
-Instructions name="%lvl%/help/help.%lng%.txt"
-// SoluceFile name="%lvl%/soluce.%lng%.txt"
+Instructions name="%lvl%/help/help.%lng%.txt
+SoluceFile name="%lvl%/help/soluce.%lng%.txt"
 Satellite name="%lvl%/help/report.%lng%.txt"
 HelpFile name="cbot.txt"
 EndingFile   win=-1 lost=0

@@ -3,8 +3,8 @@ public class Camps
     int i;
     point[] camps, resp0, resp1, resp2, resp3, resp4;
     static float[] awd = {40, 40, 40, 40, 60};
-    static float[] out0 = {1,1,1}, out1 = {1,1}, out2 = {1,1}, out3 = {1,1}, out4 = {1,1};
-    static int lim0 = 16, lim1 = 12, lim2 = 9, lim3 = 12, lim4 = 9;
+    static float[] out0 = {1,1}, out1 = {1,1}, out2 = {1,1}, out3 = {1,1}, out4 = {1,1};
+    static int lim0 = 12, lim1 = 12, lim2 = 9, lim3 = 12, lim4 = 9;
     
     void Camps()
     {
@@ -16,14 +16,13 @@ public class Camps
         camps[i].x = 30.2652; camps[i].y = 50.2889; camps[i++].z = 0;
         i = 0;
         resp0[i].x = -350.602; resp0[i].y = 84.2715; resp0[i++].z = 0;
-        // resp0[i].x = -93.498; resp0[i].y = 0.0418458; resp0[i++].z = 0;
-        // resp0[i].x = -107.561; resp0[i].y = 44.8057; resp0[i++].z = 0;
+        resp0[i].x = -337.051; resp0[i].y = -68.506; resp0[i++].z = 0;
         i = 0;
-        // resp1[i].x = -116.498; resp1[i].y = 75.3255; resp1[i++].z = 0;
         resp1[i].x = -321.713; resp1[i].y = 144.735; resp1[i++].z = 0;
+        resp1[i].x = -333.848; resp1[i].y = 141.365; resp1[i++].z = 0;
         i = 0;
-        // resp2[i].x = -112.648; resp2[i].y = 117.156; resp2[i++].z = 0;
         resp2[i].x = -181.894; resp2[i].y = 156.12; resp2[i++].z = 0;
+        resp2[i].x = -181.621; resp2[i].y = 165.214; resp2[i++].z = 0;
         i = 0;
         resp3[i].x = 207.222; resp3[i].y = 225.837; resp3[i++].z = 0;
         resp3[i].x = 107.624; resp3[i].y = 356.806; resp3[i++].z = 0;
@@ -159,11 +158,11 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
     }
     if(rdata.hc != -1 and rdata.hcs != -1)
     {
-        if(rdata.hc == 0){ camps.out0[rdata.hcs] = abstime() + 20 + 125 * rand(); }
-        if(rdata.hc == 1){ camps.out1[rdata.hcs] = abstime() + 20 + 125 * rand(); }
-        if(rdata.hc == 2){ camps.out2[rdata.hcs] = abstime() + 20 + 125 * rand(); }
-        if(rdata.hc == 3){ camps.out3[rdata.hcs] = abstime() + 15 + 95 * rand(); }
-        if(rdata.hc == 4){ camps.out4[rdata.hcs] = abstime() + 15 + 105 * rand(); }
+        if(rdata.hc == 0){ camps.out0[rdata.hcs] = abstime() + 20 + 100 * rand(); }
+        if(rdata.hc == 1){ camps.out1[rdata.hcs] = abstime() + 20 + 100 * rand(); }
+        if(rdata.hc == 2){ camps.out2[rdata.hcs] = abstime() + 20 + 100 * rand(); }
+        if(rdata.hc == 3){ camps.out3[rdata.hcs] = abstime() + 15 + 90 * rand(); }
+        if(rdata.hc == 4){ camps.out4[rdata.hcs] = abstime() + 15 + 100 * rand(); }
     }
 }
 

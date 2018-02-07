@@ -143,6 +143,16 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
             if(rdata.hc == 2){ out = camps.out2; }
             if(rdata.hc == 3){ out = camps.out3; }
             if(rdata.hc == 4){ out = camps.out4; }
+            if(rdata.hc == 4)
+            {
+                rdata.roamDist = 20;
+                rdata.guardDist = 20;
+            }
+            else
+            {
+                rdata.roamDist = 30;
+                rdata.guardDist = 30;
+            }
             i = 0;
             while(rdata.hcs == -1 and i < sizeof(out))
             {

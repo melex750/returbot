@@ -127,7 +127,7 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
             i2 = 0;
             while(rdata.hc == -1 and i2 < sizeof(rp))
             {
-                if(distance2d(pos,rp[i2]) < 6)
+                if(distance2d(pos,rp[i2]) < 2)
                 {
                     rdata.hc = i;
                 }

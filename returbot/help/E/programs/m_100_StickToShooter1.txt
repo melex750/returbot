@@ -1,5 +1,5 @@
 \b;Programs dispatched by Houston
-Below is one of the programs that has been developed by one of our engineers. It instructs a \l;grabber\u object\botgr; to follow a \l;shooter\u object\botfr;.
+Below is one of the programs that have been developed by one of our engineers. It instructs a \l;grabber\u object\botgr; to follow a \l;shooter\u object\botfr;.
 \c;
 \s;extern void object::StickToShooter()
 \s;{

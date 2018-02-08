@@ -1,7 +1,7 @@
 \b;From Mission Control
 Unfortunately, your \l;space ship\u object\base; suffered a shipwreck. That's quite strange, but as it appears one of bots from your expedition survived it; usually all the equipment, especially such as bots, is being fully destroyed during a shipwreck. Perhaps, that's because reactors of your \l;ship\u object\base; fully went down at a fairly low attitude. As a whole, shipwrecks aren't uncommon on Tropica.
 
-You need to reach neighbour area, because according to our data somewhere there one of previous expeditions left a functioning \l;space ship\u object\base;. We managed to decode data from the black box that contained data about jet engines, now you will only need to launch a program in a \l;research center\u object\research;. As you will get working \l;winged grabber\u object\botgj;, send it along the river receding to the north to move into neightbor area.
+You need to reach neighbour area, because according to our data somewhere there one of previous expeditions left a functioning \l;space ship\u object\base;. We managed to decode data from the black box that contained data about jet engines, now you will only need to launch a program in a \l;research center\u object\research;. As you will get working \l;winged grabber\u object\botgj;, send it along the river receding to the north to move into neightbour area.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

@@ -12,7 +12,7 @@ EndingFile win=-1 lost=0
 Audio filename="music006.ogg"
 
 #Include file="%chap%/planet.txt"
-TerrainRelief image="m_relief_07.png" factor=1.0
+TerrainRelief image="m_relief_22.png" factor=1.0
 TerrainResource image="m_resae.png"
 TerrainWater image="lava05.png" level=8 moveX=2.0 moveY=1.0 air=TO water=TO color=1.000;0.502;0.000;
 TerrainLava mode=1

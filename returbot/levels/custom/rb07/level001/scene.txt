@@ -1,0 +1,204 @@
+// Chapter: 7
+//   Level: 1
+
+Title.E text="\\\Salvaging"
+Title.R text="\\\Утилизация"
+Resume.E text="LEVEL IS YET IN THE PROCESS."
+Resume.R text="УРОВЕНЬ ЕЩЁ В ПРОЦЕССЕ."
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+// Loading name="programs/3_Recharge2.txt"
+SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="music003.ogg"
+
+#Include file="%chap%/planet.txt"
+TerrainRelief image="m_relief_207.png" factor=1.0
+TerrainResource image="m_nores.png"
+TerrainWater image="water16.png" level=30.0 moveX=1.0 moveY=0.3 color=0.000;0.941;0.392;0.000 brightness=0.2
+#Include file="%chap%/terrain.txt"
+TerrainCreate
+
+GroundSpot color=0.000;1.000;0.000 min=-100 max=31.25 smooth=10
+GroundSpot pos= 80; -65 radius=50 color=0.392;0.784;0.902 // vaisseau
+GroundSpot pos=150; 25 radius=60 color=1.000;1.000;0.000 // lac
+GroundSpot pos=-10;-150 radius=40 color=0.627;0.902;0.902 // colinne
+GroundSpot pos=-60;-100 radius=40 color=1.000;1.000;0.588 // colinne
+GroundSpot pos= 5; 40 radius=99 color=0.824;0.647;0.529 // montagne
+
+BeginObject
+
+CreateObject pos=80.00;-65.00 dir=0.0 type=RuinBaseCamp
+CreateObject pos=75;-90 dir=0.607168 type=WheeledGrabber power=0.975 shield=0.4 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+
+// CreateObject pos=80.00;-65.00 dir=0.0 type=SpaceShip run=1
+// CreateObject pos=80.00;-68.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+// CreateObject pos=76.88;-61.88 dir=0.0 type=Titanium
+// CreateObject pos=82.50;-62.50 dir=0.0 type=PowerCell
+// CreateObject pos=83.75;-62.50 dir=0.0 type=PowerCell
+// CreateObject pos=82.50;-61.25 dir=0.0 type=PowerCell
+// CreateObject pos=83.75;-61.25 dir=0.0 type=PowerCell
+
+// CreateObject pos=46.00;-69.00 dir=0.0 type=TitaniumOre
+// CreateObject pos=43.75;-67.65 dir=1.4 type=TitaniumOre
+// CreateObject pos=42.20;-73.25 dir=0.4 type=TitaniumOre
+// CreateObject pos=41.25;-70.40 dir=0.6 type=TitaniumOre
+// CreateObject pos=40.60;-74.00 dir=1.0 type=TitaniumOre
+// CreateObject pos=39.50;-74.90 dir=1.5 type=TitaniumOre
+// CreateObject pos=38.40;-70.00 dir=1.5 type=TitaniumOre
+// CreateObject pos=38.40;-73.70 dir=0.7 type=TitaniumOre
+
+CreateObject pos=121.45;0.50 dir=0.0 type=PowerCell power=0.9
+//CreateObject pos=127.45;-8.50 dir=0.0 type=Subber
+
+
+LevelController script="../../../../lvlcreator/Helper.txt"
+CreateObject pos=-16.75; 33.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
+CreateObject pos=-13.25; 33.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
+
+
+CreateObject pos=117.00;30.00 dir=0.5 type=MegaStalk2
+CreateObject pos=110.75;15.00 dir=0.0 type=MegaStalk3
+
+CreateObject pos=154.25; -1.25 dir=0.0 type=MegaStalk0
+CreateObject pos=173.00; -4.50 dir=0.8 type=MegaStalk4
+CreateObject pos=141.50; -8.00 dir=0.1 type=MegaStalk2
+CreateObject pos=163.00;-16.25 dir=0.3 type=MegaStalk4
+CreateObject pos=150.00;-16.00 dir=0.0 type=MegaStalk1
+CreateObject pos=150.00; -7.50 dir=0.0 type=MegaStalk3
+
+CreateObject pos=180.00;27.75 dir=0.0 type=MegaStalk0
+CreateObject pos=178.75;21.25 dir=0.0 type=MegaStalk2
+CreateObject pos=181.25;43.00 dir=0.0 type=MegaStalk1
+CreateObject pos=187.50;18.75 dir=0.9 type=MegaStalk4
+
+CreateObject pos=110.00;-20.00 dir=0.2 type=MegaStalk0
+CreateObject pos=105.00; -5.00 dir=0.0 type=MegaStalk2
+CreateObject pos=102.75; 3.00 dir=0.0 type=MegaStalk4
+CreateObject pos=111.00; -8.50 dir=0.4 type=MegaStalk0
+CreateObject pos=100.75; -8.25 dir=0.0 type=MegaStalk1
+CreateObject pos=105.00; 10.25 dir=0.0 type=MegaStalk3
+CreateObject pos= 93.50; 0.00 dir=0.7 type=MegaStalk2
+
+CreateObject pos=150.00; 25.00 dir=0.0 type=BlackBox
+CreateObject pos= 12.50;-137.50 dir=1.0 type=WreckBotw1
+CreateObject pos= 15.00;-140.50 dir=1.0 type=MegaStalk0
+CreateObject pos= 20.00;-135.50 dir=0.0 type=MegaStalk1
+CreateObject pos=-25.00; -62.50 dir=1.0 type=WreckBott1
+CreateObject pos= 76.00;-107.00 dir=1.0 type=WreckBotr1
+CreateObject pos=129.00; -16.70 dir=0.0 type=WreckBotw2
+CreateObject pos=145.00; -12.50 dir=0.2 type=WreckBotw1
+CreateObject pos=137.50; -20.00 dir=0.0 type=WreckBott1 h=-2.0
+CreateObject pos=150.00; -25.00 dir=0.3 type=WreckBotr1 h=-1.0
+CreateObject pos=152.50; -26.25 dir=1.6 type=WreckBotw1 h=-1.0
+CreateObject pos=130.00; -1.25 dir=1.3 type=WreckBott2
+CreateObject pos=137.50; 12.50 dir=0.4 type=WreckBotr2 h=-2.0
+CreateObject pos=147.50; 22.50 dir=1.0 type=WreckBotw1
+CreateObject pos=121.00; -52.00 dir=0.3 type=MegaStalk0
+
+CreateObject pos=90.00;-35.00 dir=1.0 type=RuinBotFactory
+CreateObject pos=87.00;-40.00 dir=0.2 type=MegaStalk0
+CreateObject pos=89.50;-24.25 dir=0.0 type=MegaStalk4
+CreateObject pos=87.00;-35.00 dir=1.9 type=WreckBotw1 h=-1.0
+CreateObject pos=93.75;-42.50 dir=0.7 type=WreckBott1 h=-1.0
+CreateObject pos=81.00;-37.50 dir=0.3 type=RuinSupport
+
+CreateObject pos=145.00;75.00 dir=0.0 type=RuinBaseCamp h=-9.0
+CreateObject pos=140.00;95.00 dir=0.1 type=RuinHeadCamp
+CreateObject pos=180.00;65.00 dir=1.0 type=RuinBotFactory
+CreateObject pos=175.00;62.50 dir=0.3 type=WreckBott1 h=-0.5
+CreateObject pos=170.00;67.50 dir=0.3 type=RuinConvert
+CreateObject pos=180.00;69.00 dir=0.3 type=MegaStalk4
+CreateObject pos=187.50;62.50 dir=0.3 type=MegaStalk1
+
+CreateObject pos=17.00;-61.50 dir=0.5 type=MegaStalk4
+
+CreateObject pos= 0.00;-80.00 dir=1.0 type=RuinBotFactory h=-5.0
+CreateObject pos=10.00;-75.00 dir=0.3 type=RuinDoor
+CreateObject pos=12.50;-80.00 dir=0.0 type=RuinSupport
+CreateObject pos=13.75;-87.50 dir=1.1 type=RuinRadar
+CreateObject pos=22.00;-93.00 dir=0.0 type=RuinConvert
+
+// Colline nord
+CreateObject pos=-25.00;170.00 dir=0.2 type=RuinBotFactory
+CreateObject pos=-12.50;150.00 dir=0.9 type=WreckBotr2 h=-2.0
+CreateObject pos= 10.00;137.50 dir=0.3 type=RuinRadar
+CreateObject pos= 5.00;136.25 dir=1.2 type=RuinSupport
+CreateObject pos=-17.00;173.00 dir=0.3 type=MegaStalk0 h=-2.0
+CreateObject pos= 11.00;156.00 dir=0.6 type=MegaStalk1
+
+// Ouest
+CreateObject pos=-118.00;-65.00 dir=0.1 type=MegaStalk0
+CreateObject pos=-114.00;-44.00 dir=0.5 type=MegaStalk1
+CreateObject pos=-149.00; -4.00 dir=1.2 type=MegaStalk2
+CreateObject pos=-177.00;-25.00 dir=0.0 type=MegaStalk3
+CreateObject pos=-250.00;-80.00 dir=0.6 type=MegaStalk4
+
+// Sud
+CreateObject pos= 49.00;-214.00 dir=0.2 type=MegaStalk3
+CreateObject pos= 65.00;-219.00 dir=0.0 type=MegaStalk2
+CreateObject pos=176.00;-185.00 dir=0.5 type=MegaStalk4
+CreateObject pos=188.00;-149.00 dir=0.9 type=MegaStalk1
+CreateObject pos=240.00;-185.00 dir=0.1 type=MegaStalk0
+CreateObject pos=282.00; -93.00 dir=1.3 type=MegaStalk1
+CreateObject pos=295.00; -97.00 dir=0.4 type=MegaStalk4
+CreateObject pos=318.00; -83.00 dir=0.7 type=MegaStalk3
+CreateObject pos=326.00; -45.00 dir=0.2 type=MegaStalk2
+CreateObject pos=344.00; -23.00 dir=0.5 type=MegaStalk1
+CreateObject pos=304.00; 29.00 dir=0.2 type=MegaStalk0
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+WaterColor color=-0.6;-0.1;-0.6
+
+MapColor floor=0.647;0.557;0.420 water=0.604;0.922;1.000
+MapZoom factor=2
+
+EnableBuild type=Flag
+EnableBuild type=FlatGround
+EnableBuild type=BotFactory
+EnableBuild type=ExchangePost
+EnableBuild type=RepairCenter
+EnableBuild type=DefenseTower
+// EnableBuild type=Converter
+// EnableBuild type=PowerStation
+// EnableBuild type=PowerPlant
+EnableBuild type=RadarStation
+// EnableBuild type=Derrick
+EnableBuild type=ResearchCenter
+// EnableBuild type=NuclearPlant
+// EnableBuild type=AutoLab
+
+EnableResearch type=TRACKER
+EnableResearch type=WINGER
+EnableResearch type=SHOOTER
+EnableResearch type=TOWER
+EnableResearch type=SUBBER
+EnableResearch type=SNIFFER
+EnableResearch type=RECYCLER
+EnableResearch type=THUMPER
+EnableResearch type=ATOMIC
+EnableResearch type=iGUN
+
+DoneResearch type=TRACKER
+// DoneResearch type=WINGER
+DoneResearch type=SHOOTER
+DoneResearch type=TOWER
+DoneResearch type=SUBBER
+DoneResearch type=SNIFFER
+DoneResearch type=RECYCLER
+DoneResearch type=THUMPER
+DoneResearch type=ATOMIC
+DoneResearch type=iGUN
+
+EndMissionTake pos=0.00;0.00 dist=25000.00 tool=Grabber lost=0
+EndMissionTake pos=80.00;-65.00 dist=8.0 type=BlackBox min=1
+
+Camera eye=78.2076;2.5;-80.8355 lookat=75;1;-90 delay=3

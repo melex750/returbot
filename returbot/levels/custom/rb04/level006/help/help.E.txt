@@ -1,9 +1,0 @@
-\b;From Mission Control
-We've just disclosed serious difficulties with connection on your side. We're going fix it now by readjusting radar site installed on Volcano, but for this we will need some precise data contained in the \l;black box\u object\bbox; left in this region. Until the moment your \l;space ship\u object\base; will take off and reach stratosphere again you can rely only on the single \l;radar station\u object\radar; installed in this region as it will still allow you to maintain connection with your group.
-
-This land will fully submerge into lava soon and almost all of the infrastructure left by previous expedition already went under lava, which almost made us believe that we're too late with retrieval of \l;black box\u object\bbox;. Fortunately, they providently left it on the highest point, eastward from where your \l;space ship\u object\base; will have to land. You should deliver it aboard and take off from this planet.
-
-\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
-
-\t;See also
-\l;Controls\u command; and \l;CBOT Language\u cbot;

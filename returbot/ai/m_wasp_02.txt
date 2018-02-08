@@ -1,9 +1,9 @@
 extern void object::Attack( )
 {
-	int		list[], buildings[], i;
+	int		list[], buildings[], i, merror = 0;
 	object	p, ps[];
-	point	dest, orig;
-    float       mp = 1, tp = 1, gd;
+	point	dest, orig, lastPos = position;
+    float       mp = 1, tp = 1, gd = 0, mdel = abstime() + 15;
 
 	errmode(0);
 	while ( ismovie() != 0 )  wait(1);
@@ -67,7 +67,15 @@ extern void object::Attack( )
     
 	while ( ismovie() == 0 )
 	{
-		if ( load == null )
+        if ( merror != 0 )
+        {
+            merror = 0;
+            turn(rand()*360-180);
+            jet(1);
+            motor(1,1);
+            wait(1);
+        }
+		else if ( load == null )
 		{
                 p = search(OrgaMatter, orig);
                 if ( p == null )
@@ -92,7 +100,7 @@ extern void object::Attack( )
                     {
                         jet(-1);
                         while ( altitude > 0 );
-                        grab();
+                        if( grab() != 0 and p != null ){ merror = 1; }
                     }
                 }
 		}
@@ -161,6 +169,12 @@ extern void object::Attack( )
                             motor (mp, mp);
                         }
                         wait(0.1);
+                        if(abstime() > mdel)
+                        {
+                            mdel = abstime() + 3;
+                            if (distance2d(lastPos, position) < 0.2){ merror = 1; }
+                            lastPos = position;
+                        }
                     }
                 }
 			}
@@ -208,6 +222,12 @@ extern void object::Attack( )
                     motor (mp, mp);
                 }
                 wait(0.1);
+                if(abstime() > mdel)
+                {
+                    mdel = abstime() + 3;
+                    if (distance2d(lastPos, position) < 0.2){ merror = 1; }
+                    lastPos = position;
+                }
             }
 		}
 	}

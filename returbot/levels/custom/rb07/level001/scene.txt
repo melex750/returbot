@@ -31,32 +31,20 @@ GroundSpot pos= 5; 40 radius=99 color=0.824;0.647;0.529 // montagne
 BeginObject
 
 CreateObject pos=80.00;-65.00 dir=0.0 type=RuinBaseCamp
-CreateObject pos=75;-90 dir=0.607168 type=WheeledGrabber power=0.975 shield=0.4 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-
-// CreateObject pos=80.00;-65.00 dir=0.0 type=SpaceShip run=1
-// CreateObject pos=80.00;-68.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-// CreateObject pos=76.88;-61.88 dir=0.0 type=Titanium
-// CreateObject pos=82.50;-62.50 dir=0.0 type=PowerCell
-// CreateObject pos=83.75;-62.50 dir=0.0 type=PowerCell
-// CreateObject pos=82.50;-61.25 dir=0.0 type=PowerCell
-// CreateObject pos=83.75;-61.25 dir=0.0 type=PowerCell
-
-// CreateObject pos=46.00;-69.00 dir=0.0 type=TitaniumOre
-// CreateObject pos=43.75;-67.65 dir=1.4 type=TitaniumOre
-// CreateObject pos=42.20;-73.25 dir=0.4 type=TitaniumOre
-// CreateObject pos=41.25;-70.40 dir=0.6 type=TitaniumOre
-// CreateObject pos=40.60;-74.00 dir=1.0 type=TitaniumOre
-// CreateObject pos=39.50;-74.90 dir=1.5 type=TitaniumOre
-// CreateObject pos=38.40;-70.00 dir=1.5 type=TitaniumOre
-// CreateObject pos=38.40;-73.70 dir=0.7 type=TitaniumOre
+CreateObject pos=70.45;-93.35 dir=0.75 type=WheeledGrabber power=0.975 shield=0.4 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
 
 CreateObject pos=121.45;0.50 dir=0.0 type=PowerCell power=0.9
-//CreateObject pos=127.45;-8.50 dir=0.0 type=Subber
+
+CreateObject pos=22.1343;-182.464 dir=1.92102 type=AlienAnt cmdline=43.5925;-140.712;1040;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=24.4368;-183.977 dir=0.81291 type=AlienAnt cmdline=20.0865;-141.869;1040;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=143.658;-188.501 dir=1.26484 type=AlienAnt cmdline=126.011;-166.397;1040;1000;1000 script1="m_ant_01.txt" run=1
+
+CreateObject pos=7.93631;-29.591 dir=0.769674 type=AlienAnt cmdline=22.0881;-69.1079;1050;1000;1000 script1="m_ant_01.txt" run=1
 
 
 LevelController script="../../../../lvlcreator/Helper.txt"
-CreateObject pos=-16.75; 33.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
-CreateObject pos=-13.25; 33.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
+CreateObject pos=250;15 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
+CreateObject pos=240;15 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
 
 
 CreateObject pos=117.00;30.00 dir=0.5 type=MegaStalk2
@@ -201,4 +189,4 @@ DoneResearch type=iGUN
 EndMissionTake pos=0.00;0.00 dist=25000.00 tool=Grabber lost=0
 EndMissionTake pos=80.00;-65.00 dist=8.0 type=BlackBox min=1
 
-Camera eye=78.2076;2.5;-80.8355 lookat=75;1;-90 delay=3
+Camera eye=75.45;1.5;-88.35 lookat=70.45;1;-93.35 delay=3

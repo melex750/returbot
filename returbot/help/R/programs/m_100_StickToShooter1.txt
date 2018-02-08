@@ -3,15 +3,17 @@
 \c;
 \s;extern void object::StickToShooter()
 \s;{
-\s; object item;
-\s; int list[], i;
-\s;
+\s;	object item;
+\s;	int list[], i;
+\s;	
 \s;	i = 0;
 \s;	list[i++] = WheeledShooter;
 \s;	list[i++] = TrackedShooter;
+\s;	
+\s;	item = radar(list);
+\s;	
 \s;	while(true)
 \s;	{
-\s;		item = radar(list);
 \s;		if(distance(position,item.position) > 5)
 \s;		{
 \s;			if(direction(item.position) > 5 or direction(item.position) < -5)
@@ -24,6 +26,6 @@
 \s;		{
 \s;			motor(0,0);
 \s;		}
-\s; }
+\s;	}
 \s;}
 \n;

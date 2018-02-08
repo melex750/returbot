@@ -2,7 +2,7 @@ public class Camps
 {
     int i;
     point[] camps, resp0, resp1, resp2, resp3, resp4;
-    static float[] awd = {50, 40, 40, 40, 40};
+    static float[] awd = {40, 40, 40, 40, 40};
     static float[] out0 = {1,1}, out1 = {1,1}, out2 = {1,1}, out3 = {1,1}, out4 = {1,1};
     static int lim0 = 12, lim1 = 12, lim2 = 9, lim3 = 12, lim4 = 9;
     
@@ -16,7 +16,7 @@ public class Camps
         camps[i].x = 30.2652; camps[i].y = 50.2889; camps[i++].z = 0;
         i = 0;
         resp0[i].x = -350.602; resp0[i].y = 84.2715; resp0[i++].z = 0;
-        resp0[i].x = -337.051; resp0[i].y = -68.506; resp0[i++].z = 0;
+        resp0[i].x = -345.931; resp0[i].y = -84.621; resp0[i++].z = 0;
         i = 0;
         resp1[i].x = -321.713; resp1[i].y = 144.735; resp1[i++].z = 0;
         resp1[i].x = -333.848; resp1[i].y = 141.365; resp1[i++].z = 0;

@@ -51,8 +51,8 @@ Planet pos=5.30;0.30 dim=0.08 image="effect01.png" uv1=0.00;0.50 uv2=0.25;0.75
 
 TerrainGenerate     vision=400.00 depth=1 hard=0.7
 TerrainWind     speed=0.0;0.0
-TerrainRelief   image="o_relief_01.png" factor=1.0
-TerrainResource image="o_res_01.png"
+TerrainRelief   image="m_relief_00.png" factor=1.0
+TerrainResource image="m_res_00.png"
 TerrainWater        image="lava04.png" level=8.0 moveX=1.0 moveY=0.3 water=TO color=100;200;255;0
 TerrainInitTextures image="m_crys" dx=1 dy=1 table=2
 

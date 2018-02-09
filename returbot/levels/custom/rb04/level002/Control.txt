@@ -1,0 +1,45 @@
+extern void LvlCntlr_main()
+{
+    int i;
+    
+    i = 0;
+    
+    object item = retobject(0), item2 = retobject(0);
+    float dist = 9999;
+    
+    while(abstime() <= 0) {wait(0.5);}
+    
+    i = 0;
+    while(item != null and retobject(i) != null)
+    {
+        item = retobject(i);
+        if(item.category == DefenseTower)
+        {
+            break;
+        }
+        i++;
+    }
+    i = 0;
+    while(item2 != null and item != null and retobject(i) != null)
+    {
+        if(retobject(i).category == TrackedGrabber and distance2d(retobject(i).position,item.position) < dist)
+        {
+            item2 = retobject(i);
+            dist = distance2d(item2.position,item.position);
+        }
+        i++;
+    }
+    while(item != null and abstime() < 30)
+    {
+        if(item.energyCell != null)
+        {
+            if(item2 != null)
+            {
+                wait(0.5);
+                delete(item2.id,0);
+            }
+            break;
+        }
+        wait(1);
+    }
+}

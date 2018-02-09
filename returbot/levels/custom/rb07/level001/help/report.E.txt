@@ -16,5 +16,5 @@ Currently in a geo-stationary orbit of Tropica.
 \s;-> ADDITIONAL INFORMATION\c;
 \tab;Detected:         scattered derelicts
 \tab;Detected:         giant ants
-\tab;  - Threat:       yes, undetermined
+\tab;  - Threat:       yes, undeterminable
 \n;

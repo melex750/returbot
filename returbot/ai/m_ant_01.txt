@@ -1,5 +1,5 @@
-// ROAMER SCRIPT FOR ANTS, VER. 1.3A
-// LAST UPDATED JANUARY 25TH
+// ROAMER SCRIPT FOR ANTS, VER. 1.3B
+
 extern void object::Roam( )
 {
 	int		list[], i;
@@ -211,9 +211,17 @@ extern void object::Roam( )
         {
             ftime = abstime();
         }
-        if(ci < sizeof(center) - 1 and abstime() > waiter[ci] + stime and ((roamDist[ci] != 0 and distance2d(position,center[ci]) <= roamDist[ci]) or distance2d(position,center[ci]) <= 5 or (roamDist[ci] == 0 and waiter[ci] != 0)))
+        if((ci < sizeof(center) - 1 or (sizeof(center) > 2 and ci == sizeof(center) - 1 and waiter[ci] > 0)) and abstime() > waiter[ci] + stime and ((roamDist[ci] != 0 and distance2d(position,center[ci]) <= roamDist[ci]) or distance2d(position,center[ci]) <= 5 or (roamDist[ci] == 0 and waiter[ci] != 0)))
         {
-            ci++;
+            if(ci == sizeof(center) - 1 and waiter[ci] > 0)
+            {
+                ci = 0;
+                stime = abstime();
+            }
+            else
+            {
+                ci++;
+            }
             if(roamDist[ci] - 1 > 1.5)
             {
                 turn(rand()*360-180);

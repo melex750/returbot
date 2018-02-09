@@ -17,7 +17,7 @@ Audio filename="music003.ogg"
 #Include file="%chap%/planet.txt"
 TerrainRelief image="m_relief_207.png" factor=1.0
 TerrainResource image="m_nores.png"
-TerrainWater image="water16.png" level=30.0 moveX=1.0 moveY=0.3 color=0.000;0.941;0.392;0.000 brightness=0.2
+TerrainWater image="water16.png" level=29.75 moveX=1.0 moveY=0.3 color=0.000;0.941;0.392;0.000 brightness=0.2
 #Include file="%chap%/terrain.txt"
 TerrainCreate
 
@@ -41,6 +41,9 @@ CreateObject pos=143.658;-188.501 dir=1.26484 type=AlienAnt cmdline=126.011;-166
 
 CreateObject pos=7.93631;-29.591 dir=0.769674 type=AlienAnt cmdline=22.0881;-69.1079;1050;1000;1000 script1="m_ant_01.txt" run=1
 
+// CreateObject pos=-25.3591;-166.4 dir=0.251713 type=AlienAnt  cmdline=1020;1100;-18.3719;-105.562;1020;1000;1000 script1="m_ant_01.txt" run=1
+
+CreateObject pos=183.224;253.051 dir=1.808 type=AlienAnt cmdline=240.131;258.807;200.131;258.807;1000;1001 script1="m_ant_01.txt" run=1
 
 LevelController script="../../../../lvlcreator/Helper.txt"
 CreateObject pos=250;15 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
@@ -70,7 +73,6 @@ CreateObject pos=100.75; -8.25 dir=0.0 type=MegaStalk1
 CreateObject pos=105.00; 10.25 dir=0.0 type=MegaStalk3
 CreateObject pos= 93.50; 0.00 dir=0.7 type=MegaStalk2
 
-CreateObject pos=150.00; 25.00 dir=0.0 type=BlackBox
 CreateObject pos= 12.50;-137.50 dir=1.0 type=WreckBotw1
 CreateObject pos= 15.00;-140.50 dir=1.0 type=MegaStalk0
 CreateObject pos= 20.00;-135.50 dir=0.0 type=MegaStalk1

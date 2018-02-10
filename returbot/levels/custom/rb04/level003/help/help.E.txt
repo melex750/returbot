@@ -1,5 +1,5 @@
 \b;From Mission Control
-This is yet another shooting range left by previous expedition which offers you opportunity to practice in shooting mobile \l;targets\u object\bottarg; some of which are hiding behind obstacles. This is not a part of your mission, neverthless, we would really want you to get through it. Take your \l;tracked shooter\u object\botfc; to the range, shoot all the \l;targets\u object\bottarg; and then take off.
+This is yet another shooting range left by a previous expedition which offers you an opportunity to practice in shooting mobile \l;targets\u object\bottarg;. Take your \l;tracked shooter\u object\botfc; to the range, shoot all the \l;targets\u object\bottarg; and then take off.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

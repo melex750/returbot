@@ -51,6 +51,7 @@ CreateObject pos=-50.0; 185.0 dir=0.0 type=BlackBox
 CreateObject pos=-46;185 dir=1 type=KeyB
 CreateObject pos=-50;189 dir=2 type=KeyD
 CreateObject pos=-50;181 dir=0.5 type=KeyC
+CreateObject pos=-25.0; -30.0 dir=0.0 type=PowerCell power=1.0
 
 CreateObject pos=-31.6326;153.957 dir=0.326648 type=WreckBotw1
 

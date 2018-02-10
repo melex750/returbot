@@ -1,0 +1,23 @@
+extern void LvlCntlr_main()
+{
+    object item;
+    point pos;
+    pos.x = 105;
+    pos.y = 175;
+    while(radar(TargetBot) != null and distance2d(search(TargetBot,pos).position,pos) < 75)
+    {
+        wait(0.5);
+    }
+    pos.x = 78.8284;
+    pos.y = 171.672;
+    produce(pos,45,KeyA,"");
+    pos.x = 73.1716;
+    pos.y = 177.328;
+    produce(pos,45,KeyB,"");
+    pos.x = 78.8284;
+    pos.y = 177.328;
+    produce(pos,45,KeyC,"");
+    pos.x = 73.1716;
+    pos.y = 171.672;
+    produce(pos,45,KeyD,"");
+}

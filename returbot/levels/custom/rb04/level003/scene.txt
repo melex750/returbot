@@ -44,7 +44,7 @@ CreateObject pos=33.125; 58.75 dir=0.0 type=PowerCell
 CreateObject pos=35.75; 57.50 dir=0.0 type=PowerCell
 CreateObject pos=35.75; 58.75 dir=0.0 type=PowerCell
 
-// CreateObject pos=-33;-28 dir=0.0 type=RadarStation selectable=0
+CreateObject pos=-33;-28 dir=0.0 type=RadarStation selectable=0
 // CreateObject pos=-40;30 dir=0.0 type=PowerStation power=1.0 selectable=0
 
 CreateObject pos=-95.0;05.0 dir=1.5 type=Barricade1

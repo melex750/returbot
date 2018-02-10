@@ -3,6 +3,7 @@ extern void object::Build()
 	int type = nan;
 	// Uncomment below the one you want:
 	// type = BotFactory;
+	// type = Converter;
 	// type = RadarStation;
 	// type = ExchangePost;
 	

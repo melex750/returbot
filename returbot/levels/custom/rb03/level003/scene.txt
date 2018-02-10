@@ -28,7 +28,7 @@ TerrainCreate
 MaxFlyingHeight max=51
 
 BeginObject
-// LevelController script="%lvl%/Control.txt"
+LevelController script="%lvl%/Control.txt"
 
 // LevelController script="../../../../lvlcreator/Helper.txt"
 // CreateObject pos=-13;-39 dir=1.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false select=1
@@ -201,7 +201,7 @@ CreateObject pos=61;27 dir=1.0 type=WheeledGrabber power=0.5
 // CreateObject pos=-39.8015;-138.1664 dir=0.492127 type=WheeledGrabber power=0.25
 CreateObject pos=83.0;151.0 dir=2 type=WheeledShooter power=1
 CreateObject pos=83.0;198.0 dir=0.5 type=WheeledShooter power=1
-CreateObject pos=73.1716;179.339 dir=0.5 type=WheeledGrabber power=0.75 selectable=0 script1="%lvl%/ai/keyer.txt" run=1
+// CreateObject pos=73.1716;179.339 dir=0.5 type=WheeledGrabber power=0.75 selectable=0 script1="%lvl%/ai/keyer.txt" run=1
 
 CreateObject pos=81.9614;132.557 dir=1.99924 type=TargetBot power=0.001
 CreateObject pos=102.029;132.604 dir=1.99924 type=TargetBot power=0.001
@@ -221,10 +221,10 @@ CreateObject pos=41.5176;27.1095 dir=1.86152 type=TargetBot power=0.1
 // CreateObject pos=-183.537;240.053 dir=1.54074 type=TargetBot power=0.4
 // CreateObject pos=-135.185;138.849 dir=1.97817 type=TargetBot power=0.65
 
-CreateObject pos=78.8284;171.672 dir=1.25 type=KeyA
-CreateObject pos=73.1716;180.413 dir=0.5 type=KeyB
-CreateObject pos=78.8284;177.328 dir=1.75 type=KeyC
-CreateObject pos=73.1716;171.672 dir=1.25 type=KeyD
+// CreateObject pos=78.8284;171.672 dir=1.25 type=KeyA
+// // CreateObject pos=73.1716;180.413 dir=0.5 type=KeyB
+// CreateObject pos=78.8284;177.328 dir=1.75 type=KeyC
+// CreateObject pos=73.1716;171.672 dir=1.25 type=KeyD
 
 // CreateObject pos=176.231;-236.49 dir=0.73242 cmdline=1030 type=AlienAnt script1="m_ant_01.txt" run=1
 // CreateObject pos=207.093;-275.74 dir=0.469368 cmdline=1030 type=AlienAnt script1="m_ant_01.txt" run=1

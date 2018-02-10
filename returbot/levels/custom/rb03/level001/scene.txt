@@ -1,9 +1,9 @@
 // Chapter: 3
 //   Level: 1
 
-Title.E text="Inspection"
+Title.E text="Ambush"
 Resume.E text="Inspect area of shipwreck for any kind of useful data."
-Title.R text="Разведка"
+Title.R text="Засада"
 Resume.R text="Разведайте место кораблекрушения на предмет любой полезной информации."
 
 Instructions name="%lvl%/help/help.%lng%.txt"
@@ -20,7 +20,7 @@ Planet mode=1 pos=4.1;0.1 dim=0.05 speed=0.0 dir=0.3 image="planet01.png" uv1=0.
 
 #Include file="%chap%/planet.txt"
 TerrainWind     speed=0.0;0.0
-TerrainRelief   image="m_relief_09.png" factor=1.0
+TerrainRelief   image="m_relief_23.png" factor=1.0
 TerrainResource image="m_nores.png"
 #Include file="%chap%/terrain.txt"
 TerrainCreate
@@ -28,407 +28,198 @@ TerrainCreate
 BeginObject
 LevelController script="/%lvl%/Control.txt"
 
-CreateObject pos=0;0 dir=0.0 type=SpaceShip run=11
-CreateObject pos=-3.25;-3.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos= 3.25;-3.25 dir=1.5 type=WheeledGrabber power=1.0 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=200;-200 dir=0.0 type=SpaceShip run=11
+CreateObject pos=196.75;-203.25 dir=1.5 type=WheeledGrabber power=1.0 magnifyDamage=1.2 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=203.25;-203.25 dir=1.5 type=TrackedGrabber power=1.0 magnifyDamage=1.2 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+// CreateObject pos=200.625;-196.75 dir=0.0 type=PowerCell
+// CreateObject pos=199.325;-196.75 dir=0.0 type=PowerCell
 
-CreateObject pos= 0.625; 3.25 dir=0.0 type=PowerCell
-CreateObject pos=-0.625; 3.25 dir=0.0 type=PowerCell
+CreateObject pos=15.054;13.1059 dir=0.249355 type=RuinHeadCamp
+CreateObject pos=0;0 dir=0.527133 type=RuinBaseCamp h=-5
+CreateObject pos=-1.79;-2.3 dir=1.7978 type=WreckBotr2 h=26
+CreateObject pos=-1.019;3.0739 dir=1.9978 type=WreckBott1 h=24.5
+CreateObject pos=10.95;7.3739 dir=1.3 type=WreckBotw2
+CreateObject pos=14.1721;-2.82294 dir=1.54139 type=Titanium
+CreateObject pos=13.3637;1.26492 dir=1.47655 type=Titanium
+CreateObject pos=12.1085;-3.76278 dir=1.64753 type=Titanium
+// CreateObject pos=8.28;14.0339 dir=0.756862 type=BlackBox
 
-// CreateObject pos=13.76;135.12 dir=0.8 type=WreckBotw1
-// CreateObject pos=15.67;135.09 dir=0.8 type=PowerCell power=0.35
+CreateObject pos=50.2072;1.95434 dir=1.03401 type=RuinConvert
 
-CreateObject pos=165.122;196.192 dir=1.0 type=Vault selectable=0
-CreateObject pos=210.808;130.884 dir=1.08904 type=Vault selectable=0
+CreateObject pos=233.736;230.533 dir=1.4682 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=200.836;268.555 dir=1.26903 cmdline=1020 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-228.739;139.322 dir=0.271566 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-215.755;95.821 dir=0.957553 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-194.993;2.57451 dir=0.398654 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-276.229;57.186 dir=1.40906 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-211.033;-219.632 dir=0.146674  cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-192.899;-253.215 dir=0.517217 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-227.078;-259.426 dir=1.16792 cmdline=1020 type=AlienAnt script1="m_ant_01.txt" run=1
+CreateObject pos=-25.2594;131.668 dir=0.0758301 cmdline=1010 type=AlienAnt script1="m_ant_01.txt" run=1
 
-CreateObject pos=163.974;-116.368 dir=0.249355 type=RuinHeadCamp
-CreateObject pos=148.92;-129.474 dir=0.527133 type=RuinBaseCamp
+CreateObject pos=36.2806;-28.1867 dir=2 type=TitaniumOre
+CreateObject pos=33.2404;-30.0446 dir=2 type=TitaniumOre
+CreateObject pos=-63.8849;-63.4774 dir=2 type=TitaniumOre
+CreateObject pos=-45.0646;-100.232 dir=2 type=TitaniumOre
+CreateObject pos=-64.8744;-97.1295 dir=2 type=TitaniumOre
+CreateObject pos=-103.372;14.5535 dir=2 type=TitaniumOre
+CreateObject pos=-113.843;45.4789 dir=2 type=TitaniumOre
+CreateObject pos=-131.031;29.7124 dir=2 type=TitaniumOre
+CreateObject pos=-133.963;26.8264 dir=2 type=TitaniumOre
+CreateObject pos=-125.501;88.836 dir=2 type=TitaniumOre
+CreateObject pos=-125.482;87.0603 dir=2 type=TitaniumOre
+CreateObject pos=-69.7171;82.455 dir=2 type=TitaniumOre
+CreateObject pos=-56.7519;98.6283 dir=2 type=TitaniumOre
+CreateObject pos=-60.4368;101.815 dir=2 type=TitaniumOre
+CreateObject pos=-71.288;121.491 dir=2 type=TitaniumOre
+CreateObject pos=111.374;200.135 dir=2 type=TitaniumOre
+CreateObject pos=105.446;195.434 dir=2 type=TitaniumOre
+CreateObject pos=105.108;202.391 dir=2 type=TitaniumOre
+CreateObject pos=134.267;219.555 dir=2 type=TitaniumOre
+CreateObject pos=93.3413;208.835 dir=2 type=TitaniumOre
+CreateObject pos=108.577;206.972 dir=2 type=TitaniumOre
+CreateObject pos=99.9832;204.038 dir=2 type=TitaniumOre
+CreateObject pos=93.3305;188.526 dir=2 type=TitaniumOre
+CreateObject pos=113.86;174.752 dir=2 type=TitaniumOre
+CreateObject pos=115.231;168.561 dir=2 type=TitaniumOre
+CreateObject pos=131.782;268.311 dir=2 type=TitaniumOre
 
-CreateObject pos=147.12;-131.774 dir=1.7978 type=WreckBotr2 h=31
-CreateObject pos=147.9;-126.4 dir=1.9978 type=WreckBott1 h=29.5
-CreateObject pos=159.87;-122.1 dir=1.3 type=WreckBotw2
+CreateObject pos=252.488;-162.239 dir=0.82246 type=Tree1
+CreateObject pos=245.541;-128.461 dir=1.64194 type=Tree2
+CreateObject pos=138.14;-263.616 dir=1.37357 type=Tree1
+CreateObject pos=65.8821;-309.4 dir=0.0585882 type=Tree2
+CreateObject pos=106.857;-60.9098 dir=1.33572 type=Tree3
+CreateObject pos=266.695;91.9939 dir=1.43404 type=Tree1
+CreateObject pos=327.986;61.3039 dir=1.43663 type=Tree3
+CreateObject pos=119.413;121.547 dir=0.506109 type=Tree2
+CreateObject pos=103.888;68.7661 dir=1.35316 type=Tree3
+CreateObject pos=39.3707;-12.7568 dir=1.9102 type=Tree2
+CreateObject pos=22.2577;-45.4753 dir=0.337481 type=Tree3
+CreateObject pos=-38.5645;-3.74585 dir=1.97437 type=Tree1
+CreateObject pos=-127.172;38.4746 dir=0.544468 type=Tree3
+CreateObject pos=19.4125;99.472 dir=1.25196 type=Tree3
+CreateObject pos=-146.122;188.202 dir=0.42468 type=Tree0
+CreateObject pos=49.617;292.132 dir=1.36175 type=Tree2
 
-// CreateObject pos=170.198;-134.535 dir=1.36092 type=RuinSupport
-// CreateObject pos=143.933;-99.9464 dir=1.87978 type=WreckBotw1
-// CreateObject pos=159.728;-107.122 dir=1.49817 type=WreckBotw2
-CreateObject pos=157.2;-114.44 dir=0.756862 type=BlackBox
+CreateObject pos=103.586;53.6926 dir=0.524403 type=Greenery4
+CreateObject pos=89.0774;108.749 dir=1.43409 type=Greenery0
+CreateObject pos=52.8719;148.251 dir=0.662091 type=Greenery1
+CreateObject pos=47.8944;160.905 dir=0.554703 type=Greenery2
+CreateObject pos=-43.4554;-105.328 dir=0.399701 type=Greenery0
+CreateObject pos=-62.3132;-108.253 dir=0.224868 type=Greenery3
+CreateObject pos=-57.2876;-87.1177 dir=0.835677 type=Greenery0
+CreateObject pos=-68.6576;-62.5429 dir=1.2231 type=Greenery0
+CreateObject pos=-97.3655;-72.1196 dir=0.786748 type=Greenery3
+CreateObject pos=-134.094;-66.2206 dir=0.741814 type=Greenery3
+CreateObject pos=-98.6466;-107.822 dir=1.99433 type=Greenery1
+CreateObject pos=-265.27;10.3362 dir=0.347467 type=Greenery2
+CreateObject pos=-279.179;32.3647 dir=1.25776 type=Greenery3
+CreateObject pos=-287.224;66.7681 dir=1.40533 type=Greenery4
+CreateObject pos=100.807;-55.5556 dir=1.83307 type=Greenery2
+CreateObject pos=78.339;-81.2873 dir=1.48231 type=Greenery3
+CreateObject pos=43.3399;-98.6201 dir=0.380577 type=Greenery2
+CreateObject pos=13.8505;-187.386 dir=1.38945 type=Greenery2
+CreateObject pos=33.1917;-218.433 dir=1.32646 type=Greenery3
+CreateObject pos=41.1277;-224.887 dir=0.594213 type=Greenery4
+CreateObject pos=124.647;-273.962 dir=1.3618 type=Greenery4
+CreateObject pos=133.711;-272.091 dir=0.0761247 type=Greenery4
+CreateObject pos=257.146;-244.132 dir=0.99742 type=Greenery4
+CreateObject pos=230.282;-325.151 dir=1.04233 type=Greenery4
+CreateObject pos=262.008;-138.354 dir=0.830472 type=Greenery1
 
-// CreateObject pos=111.57;-190.89 dir=0 type=BlueFlag
+CreateObject pos=160.671;-140.369 dir=0.269994 type=Greenery4
+CreateObject pos=169.791;-132.307 dir=1.26087 type=Greenery0
+CreateObject pos=154.439;-102.42 dir=1.84634 type=Greenery0
+CreateObject pos=151.695;-82.1665 dir=1.53098 type=Greenery1
+CreateObject pos=164.577;-63.2183 dir=1.7602 type=Greenery3
+CreateObject pos=181.304;-78.3712 dir=0.611948 type=Greenery4
+CreateObject pos=181.309;-38.739 dir=1.60589 type=Greenery1
+CreateObject pos=209.742;-43.8603 dir=0.306942 type=Greenery2
+CreateObject pos=216.831;-49.4353 dir=0.30475 type=Greenery2
+CreateObject pos=228.075;-11.1653 dir=1.32052 type=Greenery2
+CreateObject pos=246.929;8.32811 dir=1.92929 type=Greenery1
+CreateObject pos=239.285;66.013 dir=0.894325 type=Greenery1
+CreateObject pos=181.179;121.968 dir=0.244804 type=Greenery1
+CreateObject pos=152.172;76.0036 dir=0.500252 type=Greenery1
+CreateObject pos=154.365;48.1554 dir=0.353976 type=Greenery3
+CreateObject pos=131.448;46.7293 dir=1.62381 type=Greenery0
+CreateObject pos=106.887;9.99965 dir=0.815457 type=Greenery3
+CreateObject pos=155.886;131.793 dir=1.71814 type=Greenery2
 
-// CreateObject pos=111.57;-187.77 dir=0.5 type=WreckBott2
-// CreateObject pos=188.401;-238.354 dir=1.11644 type=WreckBott2
-
-CreateObject pos=165.545715;-124.396645 dir=0.429 type=Titanium
-CreateObject pos=161.67984;-130.178101 dir=0.90 type=Titanium
-CreateObject pos=162.249115;-133.259872 dir=0.105 type=Titanium
-CreateObject pos=162.269958;-122.682426 dir=0.385 type=Titanium
-CreateObject pos=161.789215;-134.609161 dir=0.2 type=PowerCell power=1.0
-CreateObject pos=160.940109;-131.512924 dir=0.1 type=PowerCell power=1.0
-
-CreateObject pos=135.059;-117.623 dir=1.5376 cmdline=1005 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=159.39;-116.79 dir=0.969411 cmdline=1001 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=-194.977;-186.735 dir=0.969411 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=-218.742;-77.7669 dir=1.38667 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=-85.71;216.97 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=-126.98;222.23 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
-CreateObject pos=-128.93;198.95 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
-
-CreateObject pos=20.2468;81.6698 dir=0.00514442 type=RuinRadar
-CreateObject pos=-102.781;-42.8449 dir=0.520814 type=RuinRadar
-CreateObject pos=181.903;-3.50249 dir=1.52846 type=RuinRadar
-CreateObject pos=-11.90;297.37 dir=0.508898 type=RuinRadar
-
-// CreateObject pos=-212.742;128.805 dir=0.49439 type=RuinBotFactory
-
-CreateObject pos=160.206;191.84 dir=0.282032 type=Mine
-CreateObject pos=169.781;190.979 dir=1.75781 type=Mine
-CreateObject pos=169.993;200.64 dir=1.24706 type=Mine
-CreateObject pos=160.56;201.088 dir=0.770207 type=Mine
-CreateObject pos=155.292;196.011 dir=0.000175137 type=Mine
-CreateObject pos=155.748;189.879 dir=0.399102 type=Mine
-CreateObject pos=151.756;191.888 dir=1.91254 type=Mine
-CreateObject pos=151.588;196.112 dir=1.53656 type=Mine
-CreateObject pos=153.635;200.439 dir=1.84685 type=Mine
-CreateObject pos=157.957;203.413 dir=1.62176 type=Mine
-CreateObject pos=161.813;205.25 dir=1.70182 type=Mine
-CreateObject pos=167.496;204.484 dir=1.88227 type=Mine
-CreateObject pos=171.712;206.539 dir=1.76518 type=Mine
-CreateObject pos=167.653;208.629 dir=1.1443 type=Mine
-CreateObject pos=166.304;213.243 dir=1.31915 type=Mine
-CreateObject pos=163.644;210.854 dir=0.512586 type=Mine
-CreateObject pos=158.801;209.167 dir=0.965855 type=Mine
-CreateObject pos=158.073;214.773 dir=1.74901 type=Mine
-CreateObject pos=153.173;211.675 dir=0.635144 type=Mine
-CreateObject pos=149.145;207.895 dir=0.6485 type=Mine
-CreateObject pos=147.03;202.153 dir=0.566656 type=Mine
-CreateObject pos=146.335;196.85 dir=0.533295 type=Mine
-CreateObject pos=147.131;191.286 dir=0.389267 type=Mine
-CreateObject pos=150.804;186.74 dir=0.166727 type=Mine
-CreateObject pos=156;184.658 dir=0.00582411 type=Mine
-CreateObject pos=161.172;185.024 dir=1.91968 type=Mine
-CreateObject pos=167.25;184.947 dir=1.9453 type=Mine
-CreateObject pos=173.225;187.07 dir=1.75111 type=Mine
-CreateObject pos=175.674;191.531 dir=1.49608 type=Mine
-CreateObject pos=174.824;197.15 dir=1.50074 type=Mine
-CreateObject pos=176.41;203.221 dir=1.58165 type=Mine
-CreateObject pos=179.314;199.332 dir=0.58109 type=Mine
-CreateObject pos=179.333;194.368 dir=0.492583 type=Mine
-CreateObject pos=177.735;187.277 dir=0.752196 type=Mine
-CreateObject pos=171.806;183.296 dir=0.946355 type=Mine
-CreateObject pos=164.75;181.812 dir=0.926933 type=Mine
-CreateObject pos=159.486;181.653 dir=0.882921 type=Mine
-CreateObject pos=153.336;181.068 dir=1.10615 type=Mine
-CreateObject pos=147.986;183.829 dir=1.29286 type=Mine
-CreateObject pos=144.654;188.558 dir=1.41608 type=Mine
-CreateObject pos=143.374;194.133 dir=1.38839 type=Mine
-CreateObject pos=142.777;202.366 dir=1.4397 type=Mine
-CreateObject pos=144.67;208.39 dir=1.65605 type=Mine
-CreateObject pos=149.13;213.42 dir=1.76364 type=Mine
-CreateObject pos=153.702;217.612 dir=1.76898 type=Mine
-CreateObject pos=160.104;219.001 dir=0.0110006 type=Mine
-CreateObject pos=166.257;217.699 dir=0.135921 type=Mine
-CreateObject pos=170.871;214.984 dir=0.236763 type=Mine
-CreateObject pos=175.691;210.549 dir=0.236763 type=Mine
-CreateObject pos=181.15;203.843 dir=0.23898 type=Mine
-CreateObject pos=183.784;197.102 dir=0.530833 type=Mine
-CreateObject pos=182.2;191.74 dir=0.541016 type=Mine
-CreateObject pos=180.945;186.393 dir=0.638507 type=Mine
-CreateObject pos=177.451;183.083 dir=0.833935 type=Mine
-CreateObject pos=173.328;180.417 dir=0.810373 type=Mine
-CreateObject pos=168.04;179.323 dir=0.733568 type=Mine
-CreateObject pos=152.859;222.588 dir=1.00224 type=Mine
-CreateObject pos=147.216;220.764 dir=0.755672 type=Mine
-CreateObject pos=141.575;217.046 dir=0.908833 type=Mine
-CreateObject pos=138.465;213.094 dir=0.691716 type=Mine
-CreateObject pos=135.231;206.315 dir=0.487695 type=Mine
-CreateObject pos=134.64;197.721 dir=0.534489 type=Mine
-CreateObject pos=138.626;203.132 dir=1.72357 type=Mine
-CreateObject pos=138.405;196.102 dir=0.587262 type=Mine
-CreateObject pos=133.92;189.664 dir=0.666893 type=Mine
-CreateObject pos=133.763;183.257 dir=0.422667 type=Mine
-CreateObject pos=136.997;186.342 dir=1.52743 type=Mine
-CreateObject pos=139.746;189.393 dir=1.92017 type=Mine
-CreateObject pos=142.445;184.725 dir=0.723006 type=Mine
-CreateObject pos=138.752;182.483 dir=0.839919 type=Mine
-CreateObject pos=134.088;179.649 dir=0.702878 type=Mine
-CreateObject pos=134.673;175.261 dir=0.300214 type=Mine
-CreateObject pos=137.873;177.07 dir=1.72751 type=Mine
-CreateObject pos=142.084;180.572 dir=1.82307 type=Mine
-CreateObject pos=147.287;180.337 dir=0.281639 type=Mine
-CreateObject pos=144.478;175.912 dir=0.972785 type=Mine
-CreateObject pos=139.878;174.323 dir=0.804808 type=Mine
-CreateObject pos=143.628;170.785 dir=1.70185 type=Mine
-CreateObject pos=146.469;173.099 dir=1.71824 type=Mine
-CreateObject pos=148.742;176.229 dir=1.81437 type=Mine
-CreateObject pos=152.751;177.29 dir=1.89814 type=Mine
-CreateObject pos=156.456;174.666 dir=0.337514 type=Mine
-CreateObject pos=151.765;172.153 dir=1.09159 type=Mine
-CreateObject pos=148.414;169.721 dir=0.882931 type=Mine
-CreateObject pos=147.233;166.18 dir=0.117176 type=Mine
-CreateObject pos=152.829;168.344 dir=1.85937 type=Mine
-CreateObject pos=158.919;169.974 dir=0.131814 type=Mine
-CreateObject pos=157.195;164.257 dir=0.832213 type=Mine
-CreateObject pos=151.922;162.94 dir=0.812713 type=Mine
-CreateObject pos=148.472;159.273 dir=0.711045 type=Mine
-CreateObject pos=151.71;155.018 dir=0.0583672 type=Mine
-CreateObject pos=154.455;158.193 dir=1.71408 type=Mine
-CreateObject pos=159.791;160.664 dir=1.89453 type=Mine
-CreateObject pos=162.454;164.981 dir=1.49864 type=Mine
-CreateObject pos=167;167.271 dir=0.0488056 type=Mine
-CreateObject pos=172.516;169.148 dir=1.70126 type=Mine
-CreateObject pos=173.769;173.851 dir=1.44835 type=Mine
-CreateObject pos=176.103;177.672 dir=1.77572 type=Mine
-CreateObject pos=180.226;181.117 dir=1.83178 type=Mine
-CreateObject pos=185.297;180.964 dir=0.30507 type=Mine
-CreateObject pos=183.108;176.687 dir=0.815859 type=Mine
-CreateObject pos=179.086;173.115 dir=0.674056 type=Mine
-CreateObject pos=177.319;167.465 dir=0.780174 type=Mine
-CreateObject pos=168.214;163.338 dir=0.781046 type=Mine
-CreateObject pos=164.326;159.855 dir=0.766978 type=Mine
-CreateObject pos=159.697;156.339 dir=0.855272 type=Mine
-CreateObject pos=155.704;153.272 dir=0.735613 type=Mine
-CreateObject pos=152.158;149.367 dir=0.0468487 type=Mine
-CreateObject pos=158.413;149.648 dir=1.84954 type=Mine
-CreateObject pos=163.381;153.405 dir=1.84549 type=Mine
-CreateObject pos=169.651;155.68 dir=0.0336212 type=Mine
-CreateObject pos=167.098;150.505 dir=0.833847 type=Mine
-CreateObject pos=162.906;147.214 dir=0.74604 type=Mine
-CreateObject pos=158.572;143.292 dir=0.883087 type=Mine
-CreateObject pos=153.646;143.277 dir=1.33277 type=Mine
-CreateObject pos=147.818;147.139 dir=1.15011 type=Mine
-CreateObject pos=148.812;141.423 dir=0.27782 type=Mine
-CreateObject pos=153.908;136.541 dir=0.0644414 type=Mine
-CreateObject pos=160.528;138.429 dir=1.88161 type=Mine
-CreateObject pos=165.249;142.914 dir=1.77735 type=Mine
-CreateObject pos=168.692;146.104 dir=1.70885 type=Mine
-CreateObject pos=171.498;151.224 dir=1.65752 type=Mine
-CreateObject pos=180.363;152.975 dir=0.293223 type=Mine
-CreateObject pos=174.887;154.472 dir=1.94044 type=Mine
-CreateObject pos=176.154;148.065 dir=0.606454 type=Mine
-CreateObject pos=172.302;143.607 dir=0.714032 type=Mine
-CreateObject pos=167.777;139.058 dir=0.780174 type=Mine
-CreateObject pos=163.653;135.105 dir=0.594956 type=Mine
-CreateObject pos=173.734;138.81 dir=1.80642 type=Mine
-CreateObject pos=177.389;142.22 dir=1.74569 type=Mine
-CreateObject pos=180.704;145.911 dir=1.72858 type=Mine
-CreateObject pos=185.026;146.621 dir=0.119483 type=Mine
-CreateObject pos=183.967;141.731 dir=0.856387 type=Mine
-CreateObject pos=180.872;137.459 dir=0.569211 type=Mine
-CreateObject pos=182.786;131.512 dir=0.187413 type=Mine
-CreateObject pos=187.07;135.587 dir=1.47108 type=Mine
-CreateObject pos=187.964;141.075 dir=1.61275 type=Mine
-CreateObject pos=189.965;146.444 dir=1.63612 type=Mine
-CreateObject pos=195.621;146.595 dir=0.207487 type=Mine
-CreateObject pos=193.88;141.441 dir=0.703723 type=Mine
-CreateObject pos=191.943;134.958 dir=0.486639 type=Mine
-CreateObject pos=188.693;130.69 dir=0.808519 type=Mine
-CreateObject pos=184.826;128.036 dir=0.808519 type=Mine
-CreateObject pos=180.751;124.066 dir=0.82328 type=Mine
-CreateObject pos=179.057;120.387 dir=0.492483 type=Mine
-CreateObject pos=182.973;116.415 dir=0.129023 type=Mine
-CreateObject pos=186.037;121.632 dir=1.53381 type=Mine
-CreateObject pos=189.18;124.813 dir=1.82318 type=Mine
-CreateObject pos=193.029;121.786 dir=0.41243 type=Mine
-CreateObject pos=190.027;117.504 dir=0.883848 type=Mine
-CreateObject pos=186.656;112.099 dir=0.447893 type=Mine
-CreateObject pos=193.555;108.488 dir=0.0621685 type=Mine
-CreateObject pos=205.76;111.178 dir=1.39396 type=Mine
-CreateObject pos=208.463;116.574 dir=1.76442 type=Mine
-CreateObject pos=201.175;118.564 dir=1.08604 type=Mine
-CreateObject pos=198.519;124.103 dir=1.43686 type=Mine
-CreateObject pos=197.354;130.272 dir=1.373 type=Mine
-CreateObject pos=213.732;110.395 dir=0.36872 type=Mine
-CreateObject pos=210.117;103.895 dir=0.70412 type=Mine
-CreateObject pos=216.927;105.43 dir=1.75459 type=Mine
-CreateObject pos=222.064;111.572 dir=1.62409 type=Mine
-CreateObject pos=225.896;115.866 dir=1.77086 type=Mine
-CreateObject pos=228.074;120.638 dir=1.58414 type=Mine
-CreateObject pos=230.898;125.664 dir=1.70783 type=Mine
-CreateObject pos=229.056;132.99 dir=1.25997 type=Mine
-CreateObject pos=224.741;135.84 dir=1.27241 type=Mine
-CreateObject pos=220.628;140.582 dir=1.27083 type=Mine
-CreateObject pos=214.53;143.771 dir=0.987105 type=Mine
-CreateObject pos=221.962;130.715 dir=0.320381 type=Mine
-CreateObject pos=219.306;120.954 dir=0.693394 type=Mine
-CreateObject pos=212.378;120.416 dir=1.22979 type=Mine
-CreateObject pos=222.212;125.7 dir=0.00365482 type=Mine
-CreateObject pos=232.544;137.107 dir=1.5767 type=Mine
-CreateObject pos=229.395;140.934 dir=1.10183 type=Mine
-CreateObject pos=221.959;145.351 dir=1.20961 type=Mine
-CreateObject pos=207.189;139.661 dir=0.920046 type=Mine
-CreateObject pos=201.349;137.686 dir=0.941862 type=Mine
-CreateObject pos=201.752;144.138 dir=1.82109 type=Mine
-CreateObject pos=206.983;145.918 dir=1.77767 type=Mine
-CreateObject pos=206.21;152.429 dir=1.13968 type=Mine
-CreateObject pos=196.003;157.155 dir=1.13802 type=Mine
-CreateObject pos=189.226;160.469 dir=1.24788 type=Mine
-CreateObject pos=197.037;161.888 dir=0.0266346 type=Mine
-CreateObject pos=190.244;164.898 dir=1.0787 type=Mine
-CreateObject pos=186.112;169.052 dir=1.1634 type=Mine
-CreateObject pos=180.986;162.219 dir=0.602153 type=Mine
-CreateObject pos=187.073;173.883 dir=1.71898 type=Mine
-CreateObject pos=190.298;180.61 dir=1.57165 type=Mine
-CreateObject pos=188.256;187.183 dir=1.37112 type=Mine
-CreateObject pos=188.369;193.29 dir=1.36401 type=Mine
-CreateObject pos=186.904;199.335 dir=1.48421 type=Mine
-CreateObject pos=184.339;206.995 dir=1.38942 type=Mine
-CreateObject pos=180.203;213.687 dir=1.18647 type=Mine
-CreateObject pos=173.02;219.293 dir=1.21349 type=Mine
-CreateObject pos=164.826;223.151 dir=1.12148 type=Mine
-CreateObject pos=155.971;226.314 dir=1.10904 type=Mine
-CreateObject pos=147.383;225.204 dir=0.999035 type=Mine
-CreateObject pos=142.145;223.391 dir=1.93575 type=Mine
-CreateObject pos=172.219;126.558 dir=1.06314 type=Mine
-CreateObject pos=170.206;126.405 dir=1.00437 type=Mine
-
-CreateObject pos=25.2668;-105.685 dir=0.15297 type=Tree0
-CreateObject pos=-41.7352;-79.7206 dir=0.581118 type=Tree2
-CreateObject pos=-77.7004;15.8593 dir=1.77355 type=Tree1
-CreateObject pos=-56.1233;154.827 dir=0.0204817 type=Tree1
-CreateObject pos=-27.3728;176.795 dir=0.567016 type=Tree0
-CreateObject pos=10.9973;177.522 dir=1.06042 type=Tree2
-CreateObject pos=9.78593;172.238 dir=1.54929 type=Tree3
-CreateObject pos=9.71916;184.991 dir=1.97857 type=Tree2
-CreateObject pos=75.7242;196.126 dir=1.02742 type=Tree1
-CreateObject pos=12.8296;136.656 dir=1.29347 type=Tree1
-CreateObject pos=-41.0312;80.6339 dir=1.34376 type=Tree2
-CreateObject pos=-46.5354;52.8856 dir=1.97865 type=Tree2
-CreateObject pos=118.265;35.4297 dir=1.42292 type=Tree3
-CreateObject pos=56.015;98.0413 dir=0.0781048 type=Tree0
-CreateObject pos=174.329;144.562 dir=0.110984 type=Tree3
-CreateObject pos=173.568;198.863 dir=1.61369 type=Tree2
-CreateObject pos=167.019;210.905 dir=0.371826 type=Tree2
-CreateObject pos=217.524;190.684 dir=0.880817 type=Tree2
-CreateObject pos=312.128;250.534 dir=1.38889 type=Tree0
-CreateObject pos=271.795;129.228 dir=1.93969 type=Tree2
-CreateObject pos=283.748;61.2338 dir=0.339064 type=Tree1
-CreateObject pos=280.529;-20.6511 dir=0.39481 type=Tree1
-CreateObject pos=201.657;-197.769 dir=1.01573 type=Tree1
-CreateObject pos=193.834;-131.573 dir=0.62561 type=Tree0
-CreateObject pos=182.51;-112.204 dir=0.800618 type=Tree0
-CreateObject pos=163.141;-97.6056 dir=0.899799 type=Tree1
-CreateObject pos=147.244;-102.575 dir=1.88551 type=Tree3
-CreateObject pos=23.606;-271.049 dir=1.68301 type=Tree1
-CreateObject pos=-92.4099;-267.424 dir=1.13216 type=Tree2
-CreateObject pos=-257.611;-278.994 dir=0.551578 type=Tree2
-CreateObject pos=-318.479;-218.123 dir=0.601943 type=Tree2
-CreateObject pos=-306.803;-214.843 dir=1.61268 type=Tree3
-CreateObject pos=-308.333;-49.6583 dir=0.300531 type=Tree2
-CreateObject pos=-202.034;1.81027 dir=0.602072 type=Tree0
-CreateObject pos=-188.466;38.6365 dir=0.000482856 type=Tree0
-CreateObject pos=-310.694;106.475 dir=0.123684 type=Tree1
-CreateObject pos=-219.128;126.639 dir=1.1205 type=Tree1
-CreateObject pos=-198.482;141.61 dir=1.45294 type=Tree2
-CreateObject pos=-134.322;162.085 dir=1.01408 type=Tree3
-CreateObject pos=-168.58;287.861 dir=0.993942 type=Tree1
-CreateObject pos=-217.39;329.497 dir=0.540546 type=Tree2
-CreateObject pos=-57.5872;302.39 dir=1.2102 type=Tree3
-CreateObject pos=107.988;302.271 dir=0.789571 type=Tree0
-CreateObject pos=222.25;326.672 dir=1.64316 type=Tree0
-CreateObject pos=24.5292;12.4053 dir=0.959128 type=Tree3
-CreateObject pos=39.9072;-17.1809 dir=0.736919 type=Tree2
-CreateObject pos=7.06571;-22.6147 dir=0.60234 type=Greenery0
-CreateObject pos=66.5236;34.2374 dir=1.38054 type=Greenery4
-CreateObject pos=94.2409;63.3315 dir=1.09758 type=Tree0
-CreateObject pos=98.4899;154.924 dir=1.37711 type=Tree1
-CreateObject pos=85.4766;115.162 dir=0.314998 type=Tree3
-
-CreateObject pos=4.61004;26.7761 dir=1.44047 type=Greenery1
-CreateObject pos=43.6043;-20.2237 dir=1.04957 type=Greenery4
-CreateObject pos=95.6164;99.1955 dir=0.52912 type=Greenery4
-CreateObject pos=87.7906;80.0303 dir=1.95655 type=Greenery0
-CreateObject pos=51.9579;-55.9829 dir=1.14421 type=Greenery4
-CreateObject pos=97.1014;-0.631364 dir=0.877815 type=Greenery2
-CreateObject pos=125.22;-9.23707 dir=1.88364 type=Greenery4
-CreateObject pos=152.493;1.5405 dir=1.35366 type=Greenery2
-CreateObject pos=116.103;-40.8872 dir=0.170538 type=Greenery0
-CreateObject pos=-62.0665;63.8556 dir=0.861723 type=Greenery4
-CreateObject pos=-66.2491;51.1041 dir=1.15037 type=Greenery2
-CreateObject pos=-39.9194;93.4844 dir=0.520622 type=Greenery2
-CreateObject pos=116.765;172.462 dir=1.83055 type=Greenery1
-CreateObject pos=120.841;168.624 dir=1.59204 type=Greenery3
-CreateObject pos=151.308;166.756 dir=1.87764 type=Greenery4
-CreateObject pos=168.851;128.72 dir=1.31445 type=Greenery3
-CreateObject pos=164.77;149.738 dir=0.461771 type=Greenery2
-CreateObject pos=177.957;177.081 dir=0.577611 type=Greenery3
-CreateObject pos=194.922;152.763 dir=0.784956 type=Greenery2
-CreateObject pos=216.57;140.476 dir=1.30057 type=Greenery3
-CreateObject pos=207.062;114.313 dir=1.5305 type=Greenery3
-CreateObject pos=229.541;192.993 dir=1.43917 type=Greenery0
-CreateObject pos=231.62;32.0907 dir=1.61319 type=Greenery2
-CreateObject pos=221.302;-7.82833 dir=1.89157 type=Greenery1
-CreateObject pos=222.785;-28.7269 dir=1.63706 type=Greenery3
-CreateObject pos=214.201;-52.4239 dir=0.886352 type=Greenery1
-CreateObject pos=234.686;-65.8214 dir=0.648851 type=Greenery4
-CreateObject pos=168.427;-89.2781 dir=1.96988 type=Greenery0
-CreateObject pos=148.964;-102.024 dir=0.0385573 type=Greenery3
-CreateObject pos=240.909;-161.863 dir=1.42007 type=Greenery1
-CreateObject pos=278.037;-163.988 dir=0.339798 type=Greenery4
-CreateObject pos=98.0096;-131.381 dir=1.63834 type=Greenery1
-CreateObject pos=99.383;-149.223 dir=0.400197 type=Greenery4
-CreateObject pos=81.538;-180.903 dir=1.72321 type=Greenery1
-CreateObject pos=92.8477;-222.075 dir=1.98046 type=Greenery4
-CreateObject pos=103.927;-251.536 dir=0.00900642 type=Greenery1
-CreateObject pos=33.8769;-159.175 dir=1.96936 type=Greenery2
-CreateObject pos=-15.8618;-217.832 dir=0.987926 type=Greenery0
-CreateObject pos=-7.89151;-179.74 dir=1.80932 type=Greenery4
-CreateObject pos=3.33012;-177.822 dir=0.936416 type=Greenery3
-CreateObject pos=-1.76697;-188.478 dir=0.833865 type=Greenery0
-CreateObject pos=-7.78385;-166.152 dir=0.67102 type=Greenery4
-CreateObject pos=-16.9148;-147.301 dir=0.105597 type=Greenery4
-CreateObject pos=-29.8908;-139.382 dir=0.376307 type=Greenery0
-CreateObject pos=-69.0381;-119.63 dir=0.0710963 type=Greenery3
-CreateObject pos=-102.209;-101.66 dir=1.79439 type=Greenery0
-CreateObject pos=-121.949;-105.732 dir=0.213472 type=Greenery2
-CreateObject pos=-145.143;-91.8699 dir=1.54392 type=Greenery4
-CreateObject pos=-148.485;-57.0505 dir=0.23778 type=Greenery0
-CreateObject pos=-161.255;-18.5344 dir=0.110244 type=Greenery1
-CreateObject pos=-182.332;-123.404 dir=0.44708 type=Greenery1
-CreateObject pos=-189.762;-172.005 dir=0.160229 type=Greenery3
-CreateObject pos=-237.597;-176.512 dir=0.649763 type=Greenery2
-CreateObject pos=-286.903;-190.174 dir=0.425797 type=Greenery4
-CreateObject pos=-225.862;-211.4 dir=0.57924 type=Greenery1
-CreateObject pos=-190.158;-255.283 dir=0.198393 type=Greenery1
-CreateObject pos=-226.674;-140.216 dir=0.868811 type=Greenery4
-CreateObject pos=-290.684;-56.4694 dir=1.16708 type=Greenery3
-CreateObject pos=-284.223;-48.6383 dir=0.538687 type=Greenery1
-CreateObject pos=-244.027;-27.2999 dir=0.717178 type=Greenery3
-CreateObject pos=-241.65;-94.5173 dir=0.0287126 type=Greenery3
-CreateObject pos=-211.803;-79.6047 dir=1.06659 type=Greenery1
-CreateObject pos=-234.579;-0.860623 dir=0.591806 type=Greenery1
-CreateObject pos=-246.714;37.8806 dir=0.0749856 type=Greenery1
-CreateObject pos=-212.838;95.8705 dir=0.667185 type=Greenery2
-CreateObject pos=-191.815;147.488 dir=0.914375 type=Greenery0
-CreateObject pos=-208.927;139.636 dir=0.175809 type=Greenery0
-CreateObject pos=-176.684;159.417 dir=0.29768 type=Greenery4
-CreateObject pos=-146.707;130.23 dir=0.268834 type=Greenery0
-CreateObject pos=-101.819;159.767 dir=1.32812 type=Greenery4
-CreateObject pos=-165.36;261.988 dir=0.0120109 type=Greenery0
-CreateObject pos=-155.764;267.173 dir=0.307878 type=Greenery0
-CreateObject pos=-101.685;286.193 dir=1.28072 type=Greenery2
-CreateObject pos=-99.0931;292.752 dir=1.34321 type=Greenery2
-CreateObject pos=-143.596;304.6 dir=1.97124 type=Greenery3
-CreateObject pos=-166.447;343.996 dir=1.4829 type=Greenery1
-CreateObject pos=-66.1083;311.276 dir=1.50258 type=Greenery1
-CreateObject pos=-7.6159;300.435 dir=0.147047 type=Greenery1
-CreateObject pos=112.531;314.801 dir=0.933491 type=Greenery1
-CreateObject pos=-68.0346;257.168 dir=1.8725 type=Greenery3
-CreateObject pos=-0.589236;257.083 dir=1.8058 type=Greenery4
-CreateObject pos=143.305;229.215 dir=1.45218 type=Greenery3
-CreateObject pos=159.163;243.073 dir=0.251353 type=Greenery2
-CreateObject pos=316.285;258.026 dir=1.03491 type=Greenery4
-CreateObject pos=264.166;236.472 dir=1.36797 type=Greenery0
-CreateObject pos=300.059;151.316 dir=1.05245 type=Greenery1
-CreateObject pos=288.882;98.6211 dir=1.48642 type=Greenery3
-CreateObject pos=115.318;27.4001 dir=0.387678 type=Greenery4
-CreateObject pos=-90.6047;10.6099 dir=0.420397 type=Greenery4
-CreateObject pos=-53.7317;-57.1116 dir=1.7705 type=Greenery0
-CreateObject pos=-47.0188;-77.3296 dir=1.49162 type=Greenery4
-CreateObject pos=-284.568;-268.504 dir=0.824602 type=Greenery1
-CreateObject pos=-304.492;-219.02 dir=1.20136 type=Greenery4
-CreateObject pos=260.594;315.475 dir=1.78233 type=Greenery1
-CreateObject pos=245.094;303.625 dir=1.59915 type=Greenery0
-CreateObject pos=204.965;231.062 dir=1.08477 type=Greenery3
+CreateFog pos=217.544;272.109 height=6 dim=50 delay=5.0 type=4
+CreateFog pos=234.674;223.598 height=6 dim=50 delay=6.0 type=5
+CreateFog pos=-41.7604;266.562 height=6 dim=50 delay=5.0 type=4
+CreateFog pos=-211.275;99.9322 height=6 dim=50 delay=5.0 type=5
+CreateFog pos=-195.662;0.657017 height=6 dim=50 delay=5.0 type=4
+CreateFog pos=-230.924;-218.136 height=6 dim=50 delay=5.0 type=5
+CreateFog pos=-202.224;-274.761 height=6 dim=50 delay=4.0 type=4
+CreateFog pos=288.723;-285.5 height=6 dim=50 delay=5.0 type=5
+CreateFog pos=235.257;-280.74 height=6 dim=50 delay=5.0 type=4
+CreateFog pos=169.628;-122.06 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=184.354;-86.7777 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=150.287;-80.9495 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=192.719;-55.9404 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=232.481;-7.8555 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=224.545;-49.8206 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=191.818;-33.5173 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=241.227;180.911 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=216.751;210.254 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=263.164;221.912 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=234.641;257.506 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=198.465;286.929 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=227.708;295.373 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=62.7184;150.172 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=-68.0262;257.061 height=4 dim=25 delay=6.0 type=4
+CreateFog pos=-15.1756;281.573 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=-246.718;279.621 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=-291.269;269.613 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=-298.151;245.925 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=-262.521;218.328 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=-239.354;189.36 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=-228.07;135.889 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=-203.63;137.675 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=-145.886;144.379 height=4 dim=25 delay=6.0 type=4
+CreateFog pos=-201.665;32.1827 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=-240.582;-30.9339 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=-266.873;-41.6074 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=-177.141;-86.1589 height=4 dim=25 delay=6.0 type=5
+CreateFog pos=-184.004;-135.687 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=-223.165;-176.586 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=-58.464;-172.857 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=-20.7371;-190.129 height=4 dim=25 delay=5.0 type=5
+CreateFog pos=0.682281;-149.825 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=51.2391;-158.039 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=91.7412;-163.445 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=101.183;-203.036 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=143.009;-220.918 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=137.516;-157.912 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=153.741;48.9087 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=157.838;83.0181 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=154.741;183.391 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=-66.5124;77.9732 height=4 dim=25 delay=5.0 type=4
+CreateFog pos=-65.9418;113.41 height=4 dim=25 delay=4.0 type=5
+CreateFog pos=-136.083;83.6746 height=4 dim=25 delay=4.0 type=4
+CreateFog pos=-58.5236;-74.6025 height=-7 dim=8 delay=4.0 type=4
+CreateFog pos=-54.366;-178.605 height=-5 dim=12 delay=5.0 type=5
+CreateFog pos=-27.5198;-177.495 height=-7 dim=9 delay=4.0 type=4
+CreateFog pos=31.6574;-159.68 height=-4 dim=13 delay=5.0 type=4
+CreateFog pos=102.694;-164.424 height=-5 dim=10 delay=4.0 type=4
+CreateFog pos=120.406;-133.005 height=-7 dim=8 delay=5.0 type=5
+CreateFog pos=101.299;-140.31 height=-8 dim=7 delay=4.0 type=4
+CreateFog pos=198.582;-61.1041 height=-9 dim=10 delay=4.0 type=5
+CreateFog pos=116.52;51.2996 height=-5 dim=11 delay=5.0 type=5
+CreateFog pos=96.9882;122.907 height=-6 dim=10 delay=4.0 type=4
+CreateFog pos=249.105;223.895 height=-8 dim=12 delay=4.0 type=5
+CreateFog pos=245.426;283.015 height=-9 dim=9 delay=5.0 type=4
+CreateFog pos=-240.627;288.772 height=-4 dim=10 delay=5.0 type=4
+CreateFog pos=-277.796;226.338 height=-5 dim=8 delay=5.0 type=5
+CreateFog pos=-216.256;117.423 height=-6 dim=8 delay=5.0 type=5
+CreateFog pos=-205.603;47.0323 height=-7 dim=11 delay=4.0 type=4
+CreateFog pos=-196.477;21.069 height=-8 dim=10 delay=5.0 type=5
+CreateFog pos=-176.728;-92.0225 height=-9 dim=8 delay=4.0 type=4
+CreateFog pos=-196.841;-268.086 height=-8 dim=9 delay=4.0 type=5
+CreateFog pos=282.537;-293.715 height=-7 dim=10 delay=5.0 type=4
+CreateFog pos=311.392;-269.447 height=-6 dim=10 delay=5.0 type=4
 
 CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
 CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
@@ -446,6 +237,7 @@ MapZoom factor=2
 EnableBuild type=Flag
 EnableBuild type=FlatGround
 EnableBuild type=BotFactory
+EnableBuild type=Converter
 EnableBuild type=RadarStation
 EnableBuild type=ExchangePost
 // EnableBuild type=ResearchCenter
@@ -462,11 +254,7 @@ DoneResearch type=RECYCLER
 
 
 EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
-EndMissionTake pos=0;0 dist=1000 type=Mine lost=199
-EndMissionTake pos=0;0 dist=8 tool=Grabber min=1
-// EndMissionTake pos=0;0 dist=8 type=BlackBox min=1
-// EndMissionTake pos=0;0 dist=1000 tool=Grabber min=1 max=1
-// EndMissionTake pos=0;0 dist=1000 type=Mine min=200
-EndMissionTake pos=0.00; 0.00; dist=100000 type=AlienSpider min=0 max=6
+EndMissionTake pos=200;-200 dist=8 tool=Grabber min=1
+EndMissionTake pos=0.00; 0.00; dist=1000 tool=Grabber min=0 max=1
 
 Camera eye=-200;10;-270.00 lookat=-200;20;-220 delay=3

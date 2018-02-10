@@ -1,15 +1,116 @@
+public class Spawns
+{
+    point[] spawns;
+    int i;
+    void Spawns()
+    {
+        i = 0;
+        spawns[i].x = 106.513; spawns[i].y = 12.0028; spawns[i++].z = 0;
+        spawns[i].x = 86.4674; spawns[i].y = 79.1123; spawns[i++].z = 0;
+        // spawns[i].x = 51.4769; spawns[i].y = -84.7969; spawns[i++].z = 0;
+        spawns[i].x = 44.1887; spawns[i].y = -87.8908; spawns[i++].z = 0;
+        // spawns[i].x = -100.363; spawns[i].y = 10.7755; spawns[i++].z = 0;
+        spawns[i].x = -100.986; spawns[i].y = 17.1607; spawns[i++].z = 0;
+        // spawns[i].x = -24.6662; spawns[i].y = 44.4388; spawns[i++].z = 0;
+        spawns[i].x = -59.6901; spawns[i].y = 50.186; spawns[i++].z = 0;
+        // spawns[i].x = -15.3118; spawns[i].y = -81.5021; spawns[i++].z = 0;
+        spawns[i].x = -40.5466; spawns[i].y = -35.0338; spawns[i++].z = 0;
+        // spawns[i].x = -21.0796; spawns[i].y = 98.9724; spawns[i++].z = 0;
+        spawns[i].x = -6.47496; spawns[i].y = 126.965; spawns[i++].z = 0;
+    }
+}
+
+public class Roam_data
+{
+    point center;
+    float roamDist;
+    float guardDist;
+    float attackDist;
+    float frange;
+    float appmin;
+    float pred;
+    float cgo;
+    int mid;
+    int status;
+    int fp;
+    void Roam_data()
+    {
+        fp = 0;
+    }
+}
+
+
+public void Rdata_set(int cat, point pos, Roam_data rdata)
+{
+    point amb;
+    amb.x = 0;
+    amb.y = 0;
+    amb.z = 0;
+    
+    if(rdata.status == -1)
+    {
+        rdata.status = 0;
+        rdata.center = amb;
+        rdata.roamDist = 60;
+        rdata.guardDist = 140;
+        if(cat == AlienAnt)
+        {
+            rdata.attackDist = 40;
+            rdata.frange = 40;
+        }
+        else
+        {
+            rdata.attackDist = 45;
+            rdata.frange = 8;
+        }
+    }
+}
+
 extern void LvlCntlr_main()
 {
+    int grabbers[], aliens[], i, s = 1;
+    float ambdist;
+    point amb;
+    Spawns spawns();    
+    
+    ambdist = 26;
+    amb.x = 0;
+    amb.y = 0;
+    amb.z = 0;
+    
+    i = 0;
+	grabbers[i++] = WheeledGrabber;
+	grabbers[i++] = TrackedGrabber;
+    
+    i = 0;
+	aliens[i++] = AlienAnt;
+	aliens[i++] = AlienSpider;
+	aliens[i++] = AlienWasp;
+	aliens[i++] = AlienWorm;
+    
     while(true)
     {
         wait(0.2);
-        if(sizeof(radarall(WheeledGrabber)) < 2)
+//         if(sizeof(radarall(grabbers)) < 2 and s == 1)
+//         {
+//             wait(1);
+//             message("Stream error: connection lost", DisplayWarning);
+//             wait(1);
+//             message("End of transmission", DisplayWarning);
+//             s = 0;
+//         }
+        if(radar(grabbers) != null and distance2d(search(grabbers,amb).position,amb) <= ambdist)
         {
-            wait(1);
-            message("Stream error: connection lost", DisplayWarning);
-            wait(1);
-            message("End of transmission", DisplayWarning);
-            break;
+            ambdist = -1;
+            i = 0;
+            while(i < sizeof(spawns.spawns))
+            {
+                if(radar(aliens) == null or distance2d(spawns.spawns[i],search(aliens,spawns.spawns[i]).position) > 2)
+                {
+                    produce(spawns.spawns[i],360*rand(),AlienAnt,"c_ant_01.txt");
+                }
+                i++;
+            }
         }
     }
 }

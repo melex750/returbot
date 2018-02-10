@@ -1,0 +1,15 @@
+extern void LvlCntlr_main()
+{
+    while(true)
+    {
+        wait(0.2);
+        if(sizeof(radarall(WheeledGrabber)) < 2)
+        {
+            wait(1);
+            message("Stream error: connection lost", DisplayWarning);
+            wait(1);
+            message("End of transmission", DisplayWarning);
+            break;
+        }
+    }
+}

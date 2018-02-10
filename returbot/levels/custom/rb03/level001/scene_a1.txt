@@ -26,21 +26,14 @@ TerrainResource image="m_nores.png"
 TerrainCreate
 
 BeginObject
-CreateObject pos=0;0 dir=0.0 type=SpaceShip run=11
-CreateObject pos=0.0;-3.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+LevelController script="/%lvl%/Control.txt"
 
-// CreateObject pos=-3.75; 2.50 dir=0.0 type=PowerCell
-// CreateObject pos=-2.50; 2.50 dir=0.0 type=PowerCell
-CreateObject pos=-0.625; 2.50 dir=0.0 type=PowerCell
-CreateObject pos= 0.625; 2.50 dir=0.0 type=PowerCell
-// // CreateObject pos= 2.50; 2.50 dir=0.0 type=PowerCell
-// CreateObject pos= 3.75; 2.50 dir=0.0 type=Titanium
-// CreateObject pos=-3.75; 3.75 dir=0.0 type=PowerCell
-// CreateObject pos=-2.50; 3.75 dir=0.0 type=PowerCell
-CreateObject pos=-0.625; 3.75 dir=0.0 type=PowerCell
-CreateObject pos= 0.625; 3.75 dir=0.0 type=PowerCell
-// // CreateObject pos= 2.50; 3.75 dir=0.0 type=PowerCell
-// CreateObject pos= 3.75; 3.75 dir=0.0 type=Titanium
+CreateObject pos=0;0 dir=0.0 type=SpaceShip run=11
+CreateObject pos=-3.25;-3.25 dir=1.5 type=WheeledGrabber power=1.0 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 3.25;-3.25 dir=1.5 type=WheeledGrabber power=1.0 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+
+CreateObject pos= 0.625; 3.25 dir=0.0 type=PowerCell
+CreateObject pos=-0.625; 3.25 dir=0.0 type=PowerCell
 
 // CreateObject pos=13.76;135.12 dir=0.8 type=WreckBotw1
 // CreateObject pos=15.67;135.09 dir=0.8 type=PowerCell power=0.35
@@ -72,20 +65,20 @@ CreateObject pos=162.269958;-122.682426 dir=0.385 type=Titanium
 CreateObject pos=161.789215;-134.609161 dir=0.2 type=PowerCell power=1.0
 CreateObject pos=160.940109;-131.512924 dir=0.1 type=PowerCell power=1.0
 
-// CreateObject pos=135.059;-117.623 dir=1.5376 cmdline=1005 type=AlienSpider script1="m_spider_01.txt" run=1
-// CreateObject pos=159.39;-116.79 dir=0.969411 cmdline=1001 type=AlienSpider script1="m_spider_01.txt" run=1
-// CreateObject pos=-194.977;-186.735 dir=0.969411 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
-// CreateObject pos=-218.742;-77.7669 dir=1.38667 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
-// CreateObject pos=-85.71;216.97 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
-// CreateObject pos=-126.98;222.23 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
-// CreateObject pos=-128.93;198.95 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=135.059;-117.623 dir=1.5376 cmdline=1005 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=159.39;-116.79 dir=0.969411 cmdline=1001 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-194.977;-186.735 dir=0.969411 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-218.742;-77.7669 dir=1.38667 cmdline=1015 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-85.71;216.97 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-126.98;222.23 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
+CreateObject pos=-128.93;198.95 dir=1.5 cmdline=1025 type=AlienSpider script1="m_spider_01.txt" run=1
 
 CreateObject pos=20.2468;81.6698 dir=0.00514442 type=RuinRadar
 CreateObject pos=-102.781;-42.8449 dir=0.520814 type=RuinRadar
 CreateObject pos=181.903;-3.50249 dir=1.52846 type=RuinRadar
 CreateObject pos=-11.90;297.37 dir=0.508898 type=RuinRadar
 
-CreateObject pos=-212.742;128.805 dir=0.49439 type=RuinBotFactory
+// CreateObject pos=-212.742;128.805 dir=0.49439 type=RuinBotFactory
 
 CreateObject pos=160.206;191.84 dir=0.282032 type=Mine
 CreateObject pos=169.781;190.979 dir=1.75781 type=Mine
@@ -460,20 +453,20 @@ EnableBuild type=ExchangePost
 // EnableBuild type=Converter
 
 EnableResearch type=TRACKER
-EnableResearch type=SNIFFER
+// EnableResearch type=SNIFFER
 EnableResearch type=RECYCLER
 
 DoneResearch type=TRACKER
-DoneResearch type=SNIFFER
+// DoneResearch type=SNIFFER
 DoneResearch type=RECYCLER
 
 
 EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
-// EndMissionTake pos=0;0 dist=1000 type=Mine lost=199
+EndMissionTake pos=0;0 dist=1000 type=Mine lost=199
 EndMissionTake pos=0;0 dist=8 tool=Grabber min=1
-EndMissionTake pos=0;0 dist=8 type=BlackBox min=1
+// EndMissionTake pos=0;0 dist=8 type=BlackBox min=1
 // EndMissionTake pos=0;0 dist=1000 tool=Grabber min=1 max=1
 // EndMissionTake pos=0;0 dist=1000 type=Mine min=200
-// EndMissionTake pos=0.00; 0.00; dist=100000 type=AlienSpider min=0 max=6
+EndMissionTake pos=0.00; 0.00; dist=100000 type=AlienSpider min=0 max=6
 
 Camera eye=-200;10;-270.00 lookat=-200;20;-220 delay=3

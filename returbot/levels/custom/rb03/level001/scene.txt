@@ -1,9 +1,9 @@
 // Chapter: 3
 //   Level: 1
 
-Title.E text="Ambush"
+Title.E text="Inspection"
 Resume.E text="Inspect area of shipwreck for any kind of useful data."
-Title.R text="Засада"
+Title.R text="Разведка"
 Resume.R text="Разведайте место кораблекрушения на предмет любой полезной информации."
 
 Instructions name="%lvl%/help/help.%lng%.txt"

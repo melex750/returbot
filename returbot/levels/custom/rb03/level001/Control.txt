@@ -115,7 +115,7 @@ extern void LvlCntlr_main()
                 }
                 i++;
             }
-            mwdelay = abstime() + 30;
+            mwdelay = abstime() + 40;
         }
         if(mwdelay >= 0 and abstime() >= mwdelay or radar(grabbers) == null or sizeof(radarall(grabbers)) <= 1)
         {

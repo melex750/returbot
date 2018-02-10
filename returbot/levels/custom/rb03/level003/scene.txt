@@ -35,7 +35,7 @@ LevelController script="%lvl%/Control.txt"
 // CreateObject pos=-10;-39.0 dir=1.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
 
 CreateObject pos= 0.00; 0.00 dir=1.5 type=SpaceShip run=1
-CreateObject pos= 0.00;-3.25 dir=1.5 type=WheeledGrabber power=0.7 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 0.00;-3.25 dir=1.5 type=WheeledGrabber power=0.55 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
 CreateObject pos=-3.25; 0.00 dir=1.5 type=BlackBox
 
 CreateObject pos=-52.6319;230.934 dir=0.520856 type=RuinRadar

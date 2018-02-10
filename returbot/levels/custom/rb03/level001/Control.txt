@@ -7,15 +7,10 @@ public class Spawns
         i = 0;
         spawns[i].x = 106.513; spawns[i].y = 12.0028; spawns[i++].z = 0;
         spawns[i].x = 86.4674; spawns[i].y = 79.1123; spawns[i++].z = 0;
-        // spawns[i].x = 51.4769; spawns[i].y = -84.7969; spawns[i++].z = 0;
         spawns[i].x = 44.1887; spawns[i].y = -87.8908; spawns[i++].z = 0;
-        // spawns[i].x = -100.363; spawns[i].y = 10.7755; spawns[i++].z = 0;
-        spawns[i].x = -100.986; spawns[i].y = 17.1607; spawns[i++].z = 0;
-        // spawns[i].x = -24.6662; spawns[i].y = 44.4388; spawns[i++].z = 0;
+        // spawns[i].x = -100.986; spawns[i].y = 17.1607; spawns[i++].z = 0;
         spawns[i].x = -59.6901; spawns[i].y = 50.186; spawns[i++].z = 0;
-        // spawns[i].x = -15.3118; spawns[i].y = -81.5021; spawns[i++].z = 0;
         spawns[i].x = -40.5466; spawns[i].y = -35.0338; spawns[i++].z = 0;
-        // spawns[i].x = -21.0796; spawns[i].y = 98.9724; spawns[i++].z = 0;
         spawns[i].x = -6.47496; spawns[i].y = 126.965; spawns[i++].z = 0;
     }
 }

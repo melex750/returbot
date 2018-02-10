@@ -1,0 +1,9 @@
+\b;From Mission Control
+We have no more doubts on that: alien life forms inhabiting this planet are directly responsible for destruction of many installations on it. In some realms of this region of the planet giant insects are very rare or absent at all, but in others, on the contrary, their quantity and activity are high. Expedition which installed radar site on Centaury did not take this factor into account when it was choosing location for it and thus it was destroyed by alien life forms. In the near future you will have to install new radar site and you most certainly will have to face hostile life forms multiple times again. Previous expeditions have had large variety of tools for dealing with them and you will soon have to retrieve one of them in order to examine it's construction.
+
+However, before that, you must retrieve \l;black box\u object\bbox;, which amongst other things contains access codes for controllable objects on Centaury. This \l;black box\u object\bbox; must be located strictly northward from your \l;space ship\u object\base;.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

@@ -5,7 +5,7 @@ Currently in a geo-stationary orbit of Centaury.
 \tab;Temperature:      23.4C
 \tab;Atmosphere:       oxygen, nitrogen, ammonia
 \tab;Wind:             1.2 mps
-\tab;Titanium ore:     some
+\tab;Titanium ore:     none
 \tab;Uranium ore:      none
 
 \s;-> SUBSOIL\c;

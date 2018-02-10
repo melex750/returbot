@@ -6,7 +6,7 @@ extern void object::Create_Building()
 	//type = BotFactory;
 	//type = PowerStation;
 	//type = Converter;
-	//type = RepairStation;
+	//type = RepairCenter;
 	//type = DefenseTower;
 	//type = ResearchCenter;
 	//type = RadarStation;

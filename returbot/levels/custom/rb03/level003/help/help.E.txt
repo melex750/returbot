@@ -1,5 +1,5 @@
 \b;From Mission Control
-You need to take one of \l;shooter bots\u object\botfr; from the range, and for this you will have to complete shooting drill. Be accurate and don't waste all of the power of the \l;shooters\u object\botfr; before you shoot all the \l;targets\u object\bottarg;. If you control \l;shooter\u object\botfr; manually, move your mouse to hit with one burst as many \l;targets\u object\bottarg; as possible, or, if you use a program, use instruction \c;\l;fire\u cbot\fire;\n; with value less than 1.
+You need to take one of \l;shooter bots\u object\botfr; from the range, and for this you will have to complete the shooting drill. Be accurate and don't waste all of the power of the \l;shooters\u object\botfr; before you shoot all the \l;targets\u object\bottarg;. If you control \l;shooter\u object\botfr; manually, move your mouse to hit with one burst as many \l;targets\u object\bottarg; as possible, or, if you use a program, use instruction \c;\l;fire\u cbot\fire;\n; with value less than 1.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

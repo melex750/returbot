@@ -15,5 +15,5 @@ Currently in a geo-stationary orbit of Centaury.
 
 \s;-> ADDITIONAL INFORMATION\c;
 \tab;Detected:         destroyed spaceship
-\tab;Detected:         undetermined organisms
+\tab;Detected:         unknown organisms
 \n;

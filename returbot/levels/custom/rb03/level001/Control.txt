@@ -69,14 +69,18 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
 extern void LvlCntlr_main()
 {
     int grabbers[], aliens[], i, s = 1;
-    float ambdist;
-    point amb;
-    Spawns spawns();    
+    float ambdist, mwdelay = -1;
+    point amb, mwp;
+    Spawns spawns();
     
     ambdist = 26;
     amb.x = 0;
     amb.y = 0;
     amb.z = 0;
+    
+    mwp.x = -310;
+    mwp.y = 305;
+    mwp.z = 0;
     
     i = 0;
 	grabbers[i++] = WheeledGrabber;
@@ -111,6 +115,12 @@ extern void LvlCntlr_main()
                 }
                 i++;
             }
+            mwdelay = abstime() + 30;
+        }
+        if(mwdelay >= 0 and abstime() >= mwdelay or radar(grabbers) == null or sizeof(radarall(grabbers)) <= 1)
+        {
+            mwdelay = -2;
+            produce(mwp,0,TitaniumOre,"");
         }
     }
 }

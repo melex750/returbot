@@ -255,6 +255,7 @@ DoneResearch type=RECYCLER
 
 EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
 EndMissionTake pos=200;-200 dist=8 tool=Grabber min=1
-EndMissionTake pos=0.00; 0.00; dist=1000 tool=Grabber min=0 max=1
+// EndMissionTake pos=0.00; 0.00; dist=1000 tool=Grabber min=0 max=1
+EndMissionTake pos=-310;305 dist=2 type=TitaniumOre min=1
 
 Camera eye=-200;10;-270.00 lookat=-200;20;-220 delay=3

@@ -23,8 +23,7 @@ BeginObject
 LevelController script="%lvl%/Control.txt"
 
 CreateObject pos=0.00;-20.00 dir=0.0 type=SpaceShip run=1
-CreateObject pos=-3.25;-23.40 dir=1.5 type=WheeledGrabber select=1 // script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos= 3.25;-23.40 dir=1.5 type=WheeledGrabber // script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=0.00;-23.40 dir=1.5 type=WheeledGrabber select=1 // script1="/%lvl%/Build.txt" scriptReadOnly1=false
 
 CreateObject pos=-3.75;-17.50 dir=0.0 type=Titanium
 CreateObject pos=-2.50;-17.50 dir=0.0 type=Titanium

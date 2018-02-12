@@ -20,7 +20,7 @@ TerrainLava mode=1
 TerrainCreate
 
 BeginObject
-LevelController script="%lvl%/Control.txt"
+// LevelController script="%lvl%/Control.txt"
 
 CreateObject pos=0.00;-20.00 dir=0.0 type=SpaceShip run=1
 CreateObject pos=0.00;-23.40 dir=1.5 type=WheeledGrabber select=1 // script1="/%lvl%/Build.txt" scriptReadOnly1=false
@@ -95,15 +95,15 @@ CreateObject pos=192.284;-77.2225 dir=0.956949 type=PowerStation proxyActivate=1
 // CreateObject pos=183.63;-92.80 dir=1.356949 type=PowerPlant proxyActivate=1 proxyDistance=24
 // CreateObject pos=190.922;-72.4567 dir=1.26121 type=PowerCell power=0.2
 // CreateObject pos=192.364;-70.237 dir=0.727328 type=PowerCell power=0.0
-CreateObject pos=168.785;-57.1966 dir=0.404034 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=24
-CreateObject pos=169.719;-60.0406 dir=1.38776 type=TrackedGrabber power=0.625 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
+// CreateObject pos=168.785;-57.1966 dir=0.404034 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=24
+// CreateObject pos=169.719;-60.0406 dir=1.38776 type=TrackedGrabber power=0.625 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
 
 // CreateObject pos=-193.19;226.98 dir=0.6 type=TrackedGrabber power=0.35 proxyActivate=1 proxyDistance=15
-// CreateObject pos=169.971;-62.2287 dir=1.40846 type=TrackedShooter power=0.13 proxyActivate=1 proxyDistance=24
+CreateObject pos=169.971;-62.2287 dir=1.40846 type=TrackedShooter power=0.13 proxyActivate=1 proxyDistance=24
 // CreateObject pos=-11.7364;169.185 dir=0.131939 type=TrackedGrabber power=0.60 proxyActivate=1 proxyDistance=15
 // CreateObject pos=56.5326;156.222 dir=1.05 type=WheeledOrgaShooter power=0.1 proxyActivate=1 proxyDistance=10
 
-CreateObject pos=31.736;159.022 dir=1.0691 type=TrackedShooter power=0.13 proxyActivate=1 proxyDistance=18
+// CreateObject pos=31.736;159.022 dir=1.0691 type=TrackedShooter power=0.13 proxyActivate=1 proxyDistance=18
 
 CreateObject pos=163.165;48.0289 dir=1.58103 type=TitaniumOre
 CreateObject pos=167.523;50.556 dir=1.96954 type=TitaniumOre

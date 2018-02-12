@@ -1,5 +1,5 @@
 \b;From Mission Control
-Abandoned \l;space ship\u object\base; must be located at the north on this area. As usual, be cautious on the way and don't waste all of your power before you reach \l;the ship\u object\base;.
+Abandoned \l;space ship\u object\base; must be located in the north on this area. As usual, be cautious on the way and don't waste all of your power before you reach \l;the ship\u object\base;.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

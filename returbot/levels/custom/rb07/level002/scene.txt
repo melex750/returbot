@@ -2,7 +2,7 @@
 //   Level: 2
 
 Title.E text="Gravity"
-Title.R text="Гравитация"
+Title.R text="Притяжение"
 Resume.E text="Deal with all the possible obstacles on the way to the space ship."
 Resume.R text="Разберитесь со всеми возможными препятствиями на пути к космическому кораблю."
 Instructions name="%lvl%/help/help.%lng%.txt"
@@ -206,6 +206,8 @@ CreateObject pos=-148.087;-5.26281 dir=2 type=TitaniumOre
 CreateObject pos=-147.016;7.87749 dir=2 type=TitaniumOre
 CreateObject pos=-136.492;57.8893 dir=2 type=TitaniumOre
 CreateObject pos=-139.401;65.1353 dir=2 type=TitaniumOre
+CreateObject pos=-170.567;34.4282 dir=2 type=TitaniumOre
+CreateObject pos=-169.605;36.2997 dir=2 type=TitaniumOre
 CreateObject pos=-154.07;5.61364 dir=1.14253 type=MegaStalk5
 CreateObject pos=-133.973;58.7716 dir=1.4737 type=Greenery0
 CreateObject pos=-160.681;50.8307 dir=0.245921 type=Greenery3
@@ -305,6 +307,14 @@ CreateObject pos=175.456;167.86 dir=2 type=TitaniumOre
 CreateObject pos=150.124;159.09 dir=2 type=TitaniumOre
 CreateObject pos=136.738;115.856 dir=2 type=TitaniumOre
 CreateObject pos=130.968;116.468 dir=2 type=TitaniumOre
+CreateObject pos=113.799;121.218 dir=2 type=TitaniumOre
+CreateObject pos=123.818;140.188 dir=2 type=TitaniumOre
+CreateObject pos=209.719;212.112 dir=2 type=TitaniumOre
+CreateObject pos=206.254;207.505 dir=2 type=TitaniumOre
+CreateObject pos=207.043;207.056 dir=2 type=TitaniumOre
+CreateObject pos=211.215;203.816 dir=2 type=TitaniumOre
+CreateObject pos=206.092;215.483 dir=2 type=TitaniumOre
+CreateObject pos=199.477;261.965 dir=2 type=TitaniumOre
 // CreateObject pos=188.666;259.429 dir=0.695382 type=MegaStalk5
 CreateObject pos=207.812;244.414 dir=1.20184 type=MegaStalk5 h=-5
 CreateObject pos=142.818;147.441 dir=1.71991 type=MegaStalk0

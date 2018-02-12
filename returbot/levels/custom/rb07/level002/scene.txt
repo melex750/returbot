@@ -1,0 +1,465 @@
+// Chapter: 7
+//   Level: 2
+
+Title.E text="Gravity"
+Title.R text="Гравитация"
+Resume.E text="Deal with all the possible obstacles on the way to the space ship."
+Resume.R text="Разберитесь со всеми возможными препятствиями на пути к космическому кораблю."
+Instructions name="%lvl%/help/help.%lng%.txt"
+Satellite name="%lvl%/help/report.%lng%.txt"
+// Loading name="programs/3_Recharge2.txt"
+SoluceFile name="%lvl%/help/soluce.%lng%.txt"
+HelpFile name="cbot.txt"
+EndingFile win=-1 lost=0
+
+Audio filename="music003.ogg"
+
+#Include file="%chap%/planet.txt"
+TerrainRelief image="m_relief_25.png" factor=1.0
+TerrainResource image="m_resae.png"
+TerrainWater image="water16.png" level=17.75 moveX=1.0 moveY=0.3 color=0.000;0.941;0.392;0.000 brightness=0.2
+#Include file="%chap%/terrain.txt"
+TerrainCreate
+
+GroundSpot color=0.000;1.000;0.000 min=-100 max=19.00 smooth=10 // Water
+GroundSpot pos= -249;-249 radius=90 color=0.392;0.784;0.902 // Arrival
+GroundSpot pos= -242;-144 radius=30 color=0.392;0.784;0.902 // Entrance
+GroundSpot pos= -71;-197 radius=60 color=0.392;0.784;0.902 // Entrance
+GroundSpot pos=150; 25 radius=60 color=1.000;1.000;0.000 // Eastern coast
+GroundSpot pos=-125; 30 radius=60 color=1.000;1.000;0.000 // Western coast
+GroundSpot pos= 2;14 radius=60 color=0.824;0.447;0.329 // Islet
+GroundSpot pos= 100;280 radius=70 color=1.000;1.000;0.000 // Entrance to spaceship
+GroundSpot pos= -112;260 radius=60 color=1.000;1.000;0.588 // Spaceship
+
+
+
+MaxFlyingHeight max=37.5
+
+BeginObject
+CreateObject pos=-236;-252 dir=1.0 type=WingedGrabber power=0.925 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos=-108; 262 dir=1.0 type=SpaceShip run=0 proxyActivate=1 proxyDistance=60
+
+// Ants
+CreateObject pos=-126.172;-272.574 dir=1.23657 type=AlienAnt cmdline=-155.826;-254.239;-236.912;-252.392;1010;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-139.949;-268.756 dir=1.30077 type=AlienAnt cmdline=-159.1;-259.823;-238.001;-240.821;1010;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-241;-146 dir=1.5 type=AlienAnt cmdline=1010;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-14.2337;-144.887 dir=1.56104 type=AlienAnt cmdline=1010;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=128.673;129.895 dir=0.925244 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=190.379;178.365 dir=0.76737 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=161.741;11.2981 dir=1.98436 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=187.021;18.244 dir=0.0741225 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=167.625;-37.3453 dir=1.10623 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-143.864;-9.61863 dir=1.16704 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-170.297;50.2966 dir=0.00996755 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-132.731;47.8857 dir=1.90967 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+// CreateObject pos=173.388;270.044 dir=0.249845 type=AlienAnt cmdline=1010;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=108.918;281.317 dir=0.791861 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=94.2928;267.448 dir=0.676292 type=AlienAnt cmdline=1020;1000;1000 script1="m_ant_01.txt" run=1
+// CreateObject pos=10.1869;281.259 dir=0.831686 type=AlienAnt cmdline=1010;1000;1000 script1="m_ant_01.txt" run=1
+CreateObject pos=-78.06;273.99 dir=1.15422 type=AlienAnt cmdline=1010;1000;1000 script1="m_ant_01.txt" run=1
+
+// LevelController script="../../../../lvlcreator/Helper.txt"
+// CreateObject pos=10;15 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
+// CreateObject pos=15;15 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
+
+// Arrival
+CreateObject pos=-176.007;-254.729 dir=2 type=PowerCell power=0.09
+CreateObject pos=-177.158;-252.844 dir=0.992351 type=WreckBott1 h=-2.2
+CreateObject pos=-283.085;-275.506 dir=1.15195 type=WreckBotw1 h=-3.5
+CreateObject pos=-286.014;-273.351 dir=0.717154 type=Titanium
+CreateObject pos=-138.222;-230.035 dir=0.0968996 type=MegaStalk5
+CreateObject pos=-117.544;-246.834 dir=1.21654 type=MegaStalk3
+CreateObject pos=-149.184;-268.419 dir=0.953956 type=MegaStalk2
+CreateObject pos=-160.886;-246.565 dir=1.22916 type=MegaStalk3
+CreateObject pos=-127.969;-283.828 dir=0.360112 type=MegaStalk4
+CreateObject pos=-209.913;-326.129 dir=1.16809 type=MegaStalk3
+CreateObject pos=-189.001;-342.036 dir=1.75982 type=MegaStalk2
+CreateObject pos=-279.274;-282.638 dir=1.19969 type=MegaStalk4
+CreateObject pos=-289.161;-260.146 dir=0.466369 type=MegaStalk2
+CreateObject pos=-249.847;-273.334 dir=1.66568 type=MegaStalk2
+CreateObject pos=-268.908;-233.377 dir=1.62932 type=MegaStalk2
+CreateObject pos=-240.48;-236.717 dir=0.21493 type=MegaStalk1
+CreateObject pos=-241.532;-178.333 dir=1.52927 type=MegaStalk1
+CreateObject pos=-254.228;-206.968 dir=0.451238 type=MegaStalk1
+CreateObject pos=-323.888;-290.592 dir=1.24649 type=MegaStalk3
+CreateObject pos=-313.27;-215.361 dir=1.34499 type=MegaStalk3
+CreateObject pos=-310.256;-320.015 dir=0.842362 type=MegaStalk1
+CreateObject pos=-317.223;-292.789 dir=0.818909 type=MegaStalk3
+CreateObject pos=-254.495;-274.157 dir=0.564223 type=MegaStalk3
+CreateObject pos=-251.094;-277.076 dir=0.183494 type=MegaStalk3
+CreateObject pos=-271.292;-259.338 dir=1.36371 type=MegaStalk0
+CreateObject pos=-272.622;-256.205 dir=1.63797 type=MegaStalk3
+CreateObject pos=-281.982;-272.373 dir=0.223901 type=MegaStalk1
+// CreateObject pos=-249;-249 dir=0.1 type=MegaStalk5
+CreateObject pos=-238.391;-258.524 dir=1.31759 type=Greenery7
+CreateObject pos=-249.52;-264.91 dir=0.406274 type=Greenery7
+CreateObject pos=-266.403;-238.372 dir=1.01648 type=Greenery6
+CreateObject pos=-246.911;-227.265 dir=1.6762 type=Greenery7
+CreateObject pos=-238.928;-232.524 dir=0.207193 type=Greenery5
+CreateObject pos=-241.474;-277.025 dir=1.2067 type=Greenery7
+CreateObject pos=-246.018;-282.579 dir=0.805449 type=Greenery6
+CreateObject pos=-271.098;-283.31 dir=1.34083 type=Greenery7
+CreateObject pos=-288.643;-269.679 dir=0.590028 type=Greenery7
+CreateObject pos=-286.842;-262.89 dir=0.559844 type=Greenery5
+CreateObject pos=-253.616;-246.444 dir=0.29721 type=Greenery7
+// CreateObject pos=-259.225;-253.844 dir=0.425438 type=Greenery6
+CreateObject pos=-254.452;-219.809 dir=1.2925 type=Greenery6
+CreateObject pos=-42.4773;-185.341 dir=1.59881 type=Greenery5
+CreateObject pos=-51.5595;-185.742 dir=1.79869 type=Greenery5
+CreateObject pos=-55.9235;-193.683 dir=1.38669 type=Greenery6
+CreateObject pos=-70.4399;-208.421 dir=1.51777 type=Greenery6
+CreateObject pos=-86.9504;-198.98 dir=1.71088 type=Greenery7
+CreateObject pos=-87.8847;-183.37 dir=0.0273309 type=Greenery7
+CreateObject pos=-39.2403;-179.674 dir=1.34866 type=Greenery5
+CreateObject pos=-16.2194;-161.598 dir=1.75694 type=Greenery7
+CreateObject pos=-14.2968;-154.703 dir=1.84695 type=Greenery5
+CreateObject pos=-19.7538;-146.225 dir=0.463416 type=Greenery7
+CreateObject pos=-7.79069;-143.932 dir=0.0900469 type=Greenery6
+CreateObject pos=-72.609;-192.096 dir=0.869855 type=Greenery6
+
+// Islet
+CreateObject pos=1.67;23.67 dir=1.0 type=MegaStalk5
+CreateObject pos=38.2019;20.4714 dir=1.57339 type=MegaStalk1
+CreateObject pos=20.0793;30.6382 dir=1.36781 type=MegaStalk3
+CreateObject pos=-2.07157;40.545 dir=1.14306 type=MegaStalk2
+CreateObject pos=-13.9357;50.9357 dir=0.0733553 type=MegaStalk1
+CreateObject pos=-17.1728;16.7707 dir=0.246116 type=MegaStalk3
+CreateObject pos=8.71087;-12.1642 dir=0.150689 type=MegaStalk1
+CreateObject pos=31.6482;-11.8334 dir=0.0871492 type=MegaStalk0
+CreateObject pos=61.0478;-11.4842 dir=0.327402 type=MegaStalk3
+CreateObject pos=53.79;-0.807124 dir=1.15169 type=MegaStalk0
+CreateObject pos=-20.935;9.56547 dir=1.431 type=MegaStalk2
+CreateObject pos=-25.7258;18.2245 dir=1.21296 type=MegaStalk1
+CreateObject pos=12.6183;59.827 dir=0.369807 type=MegaStalk2
+CreateObject pos=29.1887;49.4783 dir=0.955324 type=MegaStalk0
+CreateObject pos=5.58306;-29.3714 dir=1.12845 type=MegaStalk4
+CreateObject pos=58.5724;-1.26405 dir=0.1761 type=Greenery6
+CreateObject pos=57.9904;-16.0337 dir=1.95697 type=Greenery6
+CreateObject pos=13.6919;-22.5342 dir=0.154907 type=Greenery5
+CreateObject pos=-7.7812;-13.1013 dir=1.0411 type=Greenery5
+CreateObject pos=-12.4539;-11.8682 dir=1.45262 type=Greenery6
+CreateObject pos=-13.4091;-9.24776 dir=1.69698 type=Greenery6
+CreateObject pos=-28.6286;22.9512 dir=1.20038 type=Greenery7
+CreateObject pos=-18.5237;48.7442 dir=0.291697 type=Greenery6
+CreateObject pos=-10.734;32.825 dir=1.44007 type=Greenery5
+CreateObject pos=19.2582;21.1121 dir=1.16927 type=Greenery5
+CreateObject pos=38.9504;29.7959 dir=0.514432 type=Greenery5
+CreateObject pos=32.2778;1.75058 dir=1.94608 type=Greenery5
+CreateObject pos=7.58029;-8.38014 dir=0.75952 type=Greenery5
+CreateObject pos=3.91096;-32.6328 dir=0.13377 type=Greenery7
+CreateObject pos=-5.10807;-29.0769 dir=1.86553 type=Greenery5
+
+// Entrance
+CreateObject pos=-223.359;-129.318 dir=1.77502 type=MegaStalk3
+CreateObject pos=-244.94;-138.752 dir=0.929053 type=MegaStalk1
+CreateObject pos=-259.851;-85.1014 dir=0.980236 type=MegaStalk1
+CreateObject pos=-269.327;-134.288 dir=0.448282 type=MegaStalk3
+CreateObject pos=-211.663;-160.033 dir=0.194082 type=MegaStalk0
+CreateObject pos=-180.26;-149.982 dir=1.95737 type=MegaStalk3
+CreateObject pos=-171.181;-119.505 dir=0.0941798 type=MegaStalk2
+CreateObject pos=-162.248;-177.256 dir=0.515052 type=MegaStalk1
+CreateObject pos=-152.915;-195.909 dir=0.755895 type=MegaStalk3
+CreateObject pos=-92.9336;-238.204 dir=0.301109 type=MegaStalk1
+CreateObject pos=-60.3189;-212.121 dir=1.52699 type=MegaStalk2
+CreateObject pos=-84.0252;-207.107 dir=1.12416 type=MegaStalk1
+CreateObject pos=-85.3501;-186.076 dir=1.73095 type=MegaStalk1
+CreateObject pos=-73.5788;-181.279 dir=1.95422 type=MegaStalk2
+CreateObject pos=-51.9701;-206.895 dir=0.603552 type=MegaStalk3
+CreateObject pos=-107.675;-168.003 dir=1.21636 type=MegaStalk3
+CreateObject pos=-89.6721;-187.585 dir=0.906893 type=MegaStalk1
+CreateObject pos=-38.0925;-181.676 dir=1.8092 type=MegaStalk0
+CreateObject pos=-127.486;-192.322 dir=0.544009 type=MegaStalk3
+CreateObject pos=-17.14;-155.064 dir=1.62281 type=MegaStalk1
+CreateObject pos=3.21201;-204.437 dir=0.814252 type=MegaStalk3
+CreateObject pos=-16.3126;-156.921 dir=2 type=TitaniumOre
+
+// Eastern coast
+CreateObject pos=163.494;-52.9037 dir=2 type=TitaniumOre
+CreateObject pos=156.319;-42.2516 dir=2 type=TitaniumOre
+CreateObject pos=172.22;-27.8561 dir=2 type=TitaniumOre
+CreateObject pos=164.488;28.4426 dir=2 type=TitaniumOre
+CreateObject pos=166.278;23.0996 dir=2 type=TitaniumOre
+CreateObject pos=194.704;8.38862 dir=2 type=TitaniumOre
+CreateObject pos=187.425;12.8189 dir=1.02334 type=Greenery3
+CreateObject pos=183.626;3.54615 dir=1.63752 type=Greenery1
+CreateObject pos=185.314;-15.9607 dir=1.2044 type=Greenery4
+CreateObject pos=168.196;-26.6898 dir=0.748684 type=Greenery4
+CreateObject pos=149.129;-28.1259 dir=1.31997 type=Greenery1
+CreateObject pos=150.802;-24.6662 dir=1.47113 type=Greenery0
+CreateObject pos=162.438;3.68952 dir=1.02561 type=Greenery4
+CreateObject pos=169.415;35.3278 dir=1.25309 type=Greenery1
+CreateObject pos=146.535;-70.5891 dir=1.58841 type=Greenery1
+CreateObject pos=151.119;9.39416 dir=0.291594 type=Greenery6
+CreateObject pos=140.822;-40.1628 dir=0.28298 type=Greenery5
+CreateObject pos=128.313;-51.3126 dir=0.639112 type=Greenery7
+CreateObject pos=160.499;-59.7994 dir=0.750712 type=Greenery6
+CreateObject pos=165.22;-28.8456 dir=1.63213 type=Greenery5
+CreateObject pos=151.544;38.1851 dir=1.05245 type=Greenery5
+CreateObject pos=151.063;41.935 dir=0.949482 type=Greenery6
+CreateObject pos=169.804;23.0642 dir=0.810686 type=Greenery5
+CreateObject pos=184.006;-11.2147 dir=0.361841 type=Greenery6
+
+// Western coast
+CreateObject pos=-154.784;-5.7114 dir=2 type=TitaniumOre
+CreateObject pos=-153.022;-8.66363 dir=2 type=TitaniumOre
+CreateObject pos=-148.087;-5.26281 dir=2 type=TitaniumOre
+CreateObject pos=-147.016;7.87749 dir=2 type=TitaniumOre
+CreateObject pos=-136.492;57.8893 dir=2 type=TitaniumOre
+CreateObject pos=-139.401;65.1353 dir=2 type=TitaniumOre
+CreateObject pos=-154.07;5.61364 dir=1.14253 type=MegaStalk5
+CreateObject pos=-133.973;58.7716 dir=1.4737 type=Greenery0
+CreateObject pos=-160.681;50.8307 dir=0.245921 type=Greenery3
+CreateObject pos=-173.694;35.7252 dir=0.676497 type=Greenery2
+CreateObject pos=-170.895;30.4244 dir=0.68025 type=Greenery4
+CreateObject pos=-143.781;31.1361 dir=1.50041 type=Greenery2
+CreateObject pos=-140.925;31.3707 dir=0.00639784 type=Greenery2
+CreateObject pos=-138.784;1.40486 dir=1.64419 type=Greenery1
+CreateObject pos=-151.462;-2.68806 dir=1.98098 type=Greenery2
+CreateObject pos=-134.527;-18.1089 dir=0.436037 type=Greenery4
+CreateObject pos=-203.562;29.5815 dir=1.20928 type=Greenery3
+CreateObject pos=-182.863;97.8956 dir=0.0461026 type=Greenery4
+CreateObject pos=-116.57;168.588 dir=0.612449 type=Greenery4
+CreateObject pos=-79.4191;118.521 dir=0.407874 type=Greenery4
+CreateObject pos=-252.274;58.9013 dir=0.0578474 type=Greenery2
+CreateObject pos=-193.499;-32.3736 dir=1.73075 type=Greenery4
+CreateObject pos=-186.843;-29.0678 dir=1.66999 type=Greenery3
+CreateObject pos=-184.264;-31.6635 dir=1.86313 type=Greenery1
+CreateObject pos=-127.19;4.68848 dir=0.110881 type=Greenery5
+CreateObject pos=-120.103;54.436 dir=1.85605 type=Greenery7
+CreateObject pos=-128.052;58.5332 dir=0.772076 type=Greenery7
+CreateObject pos=-155.726;49.6755 dir=1.22959 type=Greenery6
+CreateObject pos=-173.221;31.9246 dir=1.57551 type=Greenery7
+CreateObject pos=-139.257;7.17009 dir=1.74427 type=Greenery5
+CreateObject pos=-137.751;4.6105 dir=1.85578 type=Greenery6
+CreateObject pos=-135.668;34.4879 dir=0.00807563 type=Greenery7
+CreateObject pos=-112.337;98.7362 dir=1.64158 type=Greenery5
+CreateObject pos=-50.6794;140.514 dir=0.976137 type=Greenery6
+CreateObject pos=-43.7709;143.615 dir=1.4323 type=Greenery7
+
+// Megastalks at east-southern side
+CreateObject pos=142.917;-45.8848 dir=1.08451 type=MegaStalk4
+CreateObject pos=118.304;-95.691 dir=0.0616511 type=MegaStalk1
+CreateObject pos=113.853;-137.852 dir=0.738742 type=MegaStalk0
+CreateObject pos=74.0733;-143.022 dir=1.93888 type=MegaStalk0
+CreateObject pos=41.2008;-124.622 dir=1.42845 type=MegaStalk2
+CreateObject pos=175.555;-122.247 dir=1.95583 type=MegaStalk0
+CreateObject pos=206.723;-81.7809 dir=1.4398 type=MegaStalk3
+CreateObject pos=256.902;-13.9231 dir=0.994394 type=MegaStalk1
+CreateObject pos=202.941;-13.1699 dir=1.25424 type=MegaStalk2
+CreateObject pos=156.701;24.0222 dir=1.61112 type=MegaStalk1
+CreateObject pos=153.739;-3.30298 dir=0.829061 type=MegaStalk3
+CreateObject pos=217.957;-64.3985 dir=0.795508 type=MegaStalk3
+CreateObject pos=182.96;-8.49973 dir=1.80768 type=MegaStalk3
+CreateObject pos=189.593;-1.25336 dir=0.0203718 type=MegaStalk1
+CreateObject pos=183.608;-1.2449 dir=0.240759 type=MegaStalk2
+CreateObject pos=120.325;-136.563 dir=0.503083 type=MegaStalk3
+CreateObject pos=117.33;-143.276 dir=0.823651 type=MegaStalk2
+CreateObject pos=158.534;38.1274 dir=1.44787 type=MegaStalk3
+CreateObject pos=154.085;63.0956 dir=1.79604 type=MegaStalk1
+CreateObject pos=164.254;69.2608 dir=1.76839 type=MegaStalk1
+CreateObject pos=173.851;69.1072 dir=0.391259 type=MegaStalk2
+CreateObject pos=166.668;77.6653 dir=1.93608 type=MegaStalk1
+CreateObject pos=212.893;64.8759 dir=0.076935 type=MegaStalk3
+CreateObject pos=209.95;94.6403 dir=1.76566 type=MegaStalk2
+CreateObject pos=244.454;61.862 dir=1.90988 type=MegaStalk2
+CreateObject pos=227.255;110.396 dir=1.42816 type=MegaStalk1
+CreateObject pos=153.428;87.1451 dir=1.83538 type=MegaStalk1
+CreateObject pos=135.597;103.197 dir=1.34509 type=MegaStalk4
+
+// Megastalks at western and northern sides
+CreateObject pos=-71.9258;-131.726 dir=1.32321 type=MegaStalk3
+CreateObject pos=-93.2881;-104.287 dir=0.614033 type=MegaStalk0
+CreateObject pos=-154.465;-44.2008 dir=1.06847 type=MegaStalk3
+CreateObject pos=-154.71;-14.0532 dir=0.035918 type=MegaStalk3
+CreateObject pos=-144.172;-0.609814 dir=1.49262 type=MegaStalk1
+CreateObject pos=-151.42;12.0732 dir=1.26452 type=MegaStalk3
+CreateObject pos=-157.065;14.7842 dir=0.984501 type=MegaStalk2
+CreateObject pos=-169.159;23.799 dir=1.21268 type=MegaStalk2
+CreateObject pos=-200.647;24.1282 dir=1.09005 type=MegaStalk2
+CreateObject pos=-177.985;42.6937 dir=1.725 type=MegaStalk3
+CreateObject pos=-132.7;64.4875 dir=0.0296555 type=MegaStalk2
+CreateObject pos=-182.664;111.065 dir=1.48166 type=MegaStalk2
+CreateObject pos=-186.996;147.653 dir=1.49368 type=MegaStalk4
+CreateObject pos=-240.011;110.571 dir=0.503564 type=MegaStalk3
+CreateObject pos=-137.598;95.7422 dir=0.0469555 type=MegaStalk2
+CreateObject pos=-107.661;115.787 dir=1.71843 type=MegaStalk0
+CreateObject pos=-92.6094;108.349 dir=1.47757 type=MegaStalk2
+CreateObject pos=-82.7642;130.186 dir=1.72735 type=MegaStalk2
+CreateObject pos=-79.2303;133.298 dir=1.75387 type=MegaStalk0
+CreateObject pos=-94.7243;164.246 dir=1.29915 type=MegaStalk3
+CreateObject pos=-53.2434;142.88 dir=0.994498 type=MegaStalk3
+CreateObject pos=-27.4882;168.84 dir=1.92121 type=MegaStalk4 h=-5
+CreateObject pos=-5.71371;165.433 dir=1.47606 type=MegaStalk0
+CreateObject pos=-15.9056;154.087 dir=0.940099 type=MegaStalk1
+CreateObject pos=0.810171;167.858 dir=1.25578 type=MegaStalk1
+CreateObject pos=70.716;175.454 dir=1.63302 type=MegaStalk4 h=-8
+CreateObject pos=87.8494;169.607 dir=0.318522 type=MegaStalk2
+CreateObject pos=107.658;194.431 dir=1.59331 type=MegaStalk1 h=-5
+CreateObject pos=111.199;178.196 dir=0.63044 type=MegaStalk1
+CreateObject pos=14.2744;214.351 dir=1.22237 type=MegaStalk2
+
+// Exit
+CreateObject pos=130.623;108.509 dir=2 type=TitaniumOre
+CreateObject pos=174.907;165.049 dir=2 type=TitaniumOre
+CreateObject pos=175.456;167.86 dir=2 type=TitaniumOre
+CreateObject pos=150.124;159.09 dir=2 type=TitaniumOre
+CreateObject pos=136.738;115.856 dir=2 type=TitaniumOre
+CreateObject pos=130.968;116.468 dir=2 type=TitaniumOre
+// CreateObject pos=188.666;259.429 dir=0.695382 type=MegaStalk5
+CreateObject pos=207.812;244.414 dir=1.20184 type=MegaStalk5 h=-5
+CreateObject pos=142.818;147.441 dir=1.71991 type=MegaStalk0
+CreateObject pos=162.016;165.489 dir=1.97184 type=MegaStalk1
+CreateObject pos=184.006;167.479 dir=1.96867 type=MegaStalk1
+CreateObject pos=193.617;141.075 dir=0.682828 type=MegaStalk1
+CreateObject pos=173.214;140.489 dir=1.26643 type=MegaStalk4 h=-5
+CreateObject pos=206.71;194.614 dir=1.77497 type=MegaStalk0
+CreateObject pos=210.917;218.148 dir=1.45827 type=MegaStalk3
+CreateObject pos=285.922;269.346 dir=1.99309 type=MegaStalk3
+CreateObject pos=298.841;257.796 dir=0.456021 type=MegaStalk3
+CreateObject pos=297.301;235.386 dir=0.613842 type=MegaStalk1
+CreateObject pos=299.771;214.156 dir=0.339833 type=MegaStalk3
+CreateObject pos=298.963;232.673 dir=0.910598 type=MegaStalk3
+CreateObject pos=303.302;193.443 dir=0.177669 type=MegaStalk3
+CreateObject pos=282.104;181.459 dir=1.75255 type=MegaStalk2
+CreateObject pos=285.699;193.136 dir=1.42189 type=MegaStalk2
+CreateObject pos=201.936;308.136 dir=1.21289 type=MegaStalk4
+CreateObject pos=238.991;326.084 dir=0.170456 type=MegaStalk3
+CreateObject pos=289.378;155.321 dir=0.425487 type=MegaStalk2
+CreateObject pos=242.352;243.789 dir=1.42301 type=MegaStalk3 h=-5
+CreateObject pos=322.945;240.475 dir=1.53376 type=MegaStalk1
+CreateObject pos=317.875;252.989 dir=1.36796 type=MegaStalk4
+CreateObject pos=308.336;271.843 dir=1.36704 type=MegaStalk1
+CreateObject pos=300.03;287.755 dir=1.32497 type=MegaStalk0
+CreateObject pos=275.9;307.702 dir=1.63074 type=MegaStalk3
+CreateObject pos=276.982;320.943 dir=1.44622 type=MegaStalk2
+CreateObject pos=139.845;194.457 dir=1.71798 type=MegaStalk4
+CreateObject pos=154.945;199.377 dir=1.69263 type=MegaStalk1
+CreateObject pos=150.986;192.555 dir=1.51633 type=MegaStalk2
+CreateObject pos=145.985;224.725 dir=1.0617 type=MegaStalk1
+
+// Entrance to spaceship
+CreateObject pos=123.1;287.475 dir=2 type=TitaniumOre
+CreateObject pos=108.046;297.743 dir=2 type=TitaniumOre
+CreateObject pos=108.605;287.887 dir=2 type=TitaniumOre
+CreateObject pos=94.4694;294.035 dir=2 type=TitaniumOre
+CreateObject pos=81.729;274.274 dir=2 type=TitaniumOre
+CreateObject pos=49.123;279.756 dir=2 type=TitaniumOre
+CreateObject pos=15.3376;280.813 dir=2 type=TitaniumOre
+CreateObject pos=0.51037;284.365 dir=0.463119 type=MegaStalk5
+CreateObject pos=180.531;269.848 dir=0.094946 type=MegaStalk2
+CreateObject pos=156.574;275.678 dir=0.138698 type=MegaStalk4
+CreateObject pos=181.311;313.93 dir=1.56138 type=MegaStalk3
+CreateObject pos=160.637;347.326 dir=0.56102 type=MegaStalk4
+CreateObject pos=120.661;350.308 dir=0.420353 type=MegaStalk2
+CreateObject pos=83.2757;336.93 dir=0.384051 type=MegaStalk3
+CreateObject pos=58.3303;309.476 dir=0.377065 type=MegaStalk2
+CreateObject pos=102.91;299.821 dir=1.35975 type=MegaStalk0
+CreateObject pos=119.344;274.691 dir=0.616333 type=MegaStalk4
+CreateObject pos=87.4057;286.638 dir=0.9416 type=MegaStalk3
+CreateObject pos=102.354;252.845 dir=0.594335 type=MegaStalk1
+CreateObject pos=77.6257;254.001 dir=1.34123 type=MegaStalk2
+CreateObject pos=51.9064;267.403 dir=1.19705 type=MegaStalk0
+CreateObject pos=40.8854;288.564 dir=1.46196 type=MegaStalk4
+CreateObject pos=95.2259;251.729 dir=0.798171 type=Greenery17
+CreateObject pos=74.5084;259.751 dir=1.73875 type=Greenery19
+CreateObject pos=100.878;238.543 dir=0.309838 type=Greenery15
+CreateObject pos=70.6737;243.283 dir=0.17614 type=Greenery16
+CreateObject pos=84.2424;278.846 dir=1.43174 type=Greenery17
+CreateObject pos=98.006;271.495 dir=0.915878 type=Greenery19
+CreateObject pos=113.701;268.397 dir=1.3581 type=Greenery15
+CreateObject pos=97.2181;297.714 dir=1.34893 type=Greenery18
+CreateObject pos=130.391;289.477 dir=0.310749 type=Greenery15
+CreateObject pos=49.6632;276.637 dir=1.91234 type=Greenery16
+CreateObject pos=21.5743;280.647 dir=1.18465 type=Greenery16
+CreateObject pos=27.6496;288.624 dir=1.32432 type=Greenery18
+
+// Spaceship
+CreateObject pos=-45.0351;281.696 dir=2 type=TitaniumOre
+CreateObject pos=-62.2525;269.722 dir=2 type=TitaniumOre
+CreateObject pos=-80.7318;291.808 dir=2 type=TitaniumOre
+CreateObject pos=-85.0537;289.742 dir=2 type=TitaniumOre
+CreateObject pos=-83.0364;253.534 dir=2 type=TitaniumOre
+CreateObject pos=-106.63;235.004 dir=2 type=TitaniumOre
+CreateObject pos=-128.849;238.762 dir=2 type=TitaniumOre
+CreateObject pos=-129.13;240.743 dir=2 type=TitaniumOre
+CreateObject pos=-129.972;241.622 dir=2 type=TitaniumOre
+CreateObject pos=-132.073;271.982 dir=2 type=TitaniumOre
+CreateObject pos=-90.4712;274.52 dir=2 type=TitaniumOre
+CreateObject pos=-25.7766;333.645 dir=0.0208159 type=MegaStalk1
+CreateObject pos=-72.671;344.048 dir=0.983006 type=MegaStalk1
+CreateObject pos=-38.2305;226.323 dir=0.575833 type=MegaStalk2
+CreateObject pos=-86.8526;238.032 dir=1.07424 type=MegaStalk1
+CreateObject pos=-122.12;226.533 dir=1.11482 type=MegaStalk0
+CreateObject pos=-180.882;275.327 dir=1.4501 type=MegaStalk2
+CreateObject pos=-126.849;280.834 dir=1.92744 type=MegaStalk0
+CreateObject pos=-87.6373;297.684 dir=1.04047 type=MegaStalk4
+CreateObject pos=-42.119;276.901 dir=0.966051 type=MegaStalk1
+CreateObject pos=-123.329;189.045 dir=0.625459 type=MegaStalk3
+CreateObject pos=-130.15;330.578 dir=0.952438 type=MegaStalk1
+CreateObject pos=-51.0179;284.744 dir=1.32713 type=Greenery1
+CreateObject pos=-76.7687;286.114 dir=0.202598 type=Greenery1
+CreateObject pos=-91.0304;288.144 dir=1.73072 type=Greenery0
+CreateObject pos=-85.0471;258.57 dir=1.91696 type=Greenery3
+CreateObject pos=-84.2476;245.074 dir=1.37642 type=Greenery4
+CreateObject pos=-119.174;231.872 dir=0.902142 type=Greenery2
+CreateObject pos=-138.012;230.977 dir=0.854909 type=Greenery4
+CreateObject pos=-120.629;285.105 dir=1.19075 type=Greenery0
+CreateObject pos=-117.327;286.569 dir=1.98111 type=Greenery4
+CreateObject pos=-174.717;277.427 dir=0.114032 type=Greenery4
+CreateObject pos=-187.227;279.082 dir=1.841 type=Greenery2
+CreateObject pos=-196.177;263.45 dir=1.68306 type=Greenery1
+CreateObject pos=-216.637;289.56 dir=1.88167 type=Greenery4
+
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+WaterColor color=-0.6;-0.1;-0.6
+
+MapColor floor=0.647;0.557;0.420 water=0.604;0.922;1.000
+MapZoom factor=2
+
+EnableBuild type=Flag
+EnableBuild type=FlatGround
+EnableBuild type=BotFactory
+EnableBuild type=ExchangePost
+EnableBuild type=RepairCenter
+EnableBuild type=DefenseTower
+EnableBuild type=Converter
+EnableBuild type=PowerStation
+EnableBuild type=PowerPlant
+EnableBuild type=RadarStation
+// EnableBuild type=Derrick
+// EnableBuild type=ResearchCenter
+// EnableBuild type=NuclearPlant
+// EnableBuild type=AutoLab
+
+EnableResearch type=TRACKER
+EnableResearch type=WINGER
+EnableResearch type=SHOOTER
+EnableResearch type=TOWER
+EnableResearch type=SUBBER
+EnableResearch type=SNIFFER
+EnableResearch type=RECYCLER
+EnableResearch type=THUMPER
+EnableResearch type=ATOMIC
+EnableResearch type=iGUN
+
+DoneResearch type=TRACKER
+DoneResearch type=WINGER
+DoneResearch type=SHOOTER
+DoneResearch type=TOWER
+DoneResearch type=SUBBER
+DoneResearch type=SNIFFER
+DoneResearch type=RECYCLER
+DoneResearch type=THUMPER
+DoneResearch type=ATOMIC
+DoneResearch type=iGUN
+
+EndMissionTake pos=0.00;0.00 dist=25000.00 tool=Grabber lost=0
+EndMissionTake pos=-108; 262 dist=8.0 tool=Grabber min=1
+
+Camera eye=-226;1.5;-252 lookat=-233;1.5;-252 delay=1

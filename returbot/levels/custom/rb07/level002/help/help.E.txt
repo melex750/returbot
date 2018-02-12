@@ -1,0 +1,7 @@
+\b;From Mission Control
+Abandoned \l;space ship\u object\base; must be located at the north on this area. As usual, be cautious on the way and don't waste all of your power before you reach \l;the ship\u object\base;.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

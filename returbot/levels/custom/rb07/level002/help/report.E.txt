@@ -1,0 +1,20 @@
+\b;Satellite Report
+Currently in a geo-stationary orbit of Tropica.
+\c;
+\s;-> SURFACE\c;
+\tab;Temperature:      29.4C
+\tab;Atmosphere:       helium, oxygen
+\tab;Wind:             0.3 mps
+\tab;Titanium ore:     some
+\tab;Uranium ore:      none
+
+\s;-> SUBSOIL\c;
+\tab;Energy source:    almost everywhere
+\tab;Titanium ore:     not detected
+\tab;Uranium ore:      not detected
+
+\s;-> ADDITIONAL INFORMATION\c;
+\tab;Замечено:         spaceship (-108; 262)
+\tab;Detected:         giant ants
+\tab;  - Threat:       yes, undeterminable
+\n;

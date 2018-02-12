@@ -21,7 +21,7 @@ TerrainWater image="water16.png" level=29.75 moveX=1.0 moveY=0.3 color=0.000;0.9
 #Include file="%chap%/terrain.txt"
 TerrainCreate
 
-GroundSpot color=0.000;1.000;0.000 min=-100 max=31.25 smooth=10
+GroundSpot color=0.000;1.000;0.000 min=-100 max=31.00 smooth=10
 GroundSpot pos= 80; -65 radius=50 color=0.392;0.784;0.902 // vaisseau
 GroundSpot pos=150; 25 radius=60 color=1.000;1.000;0.000 // lac
 GroundSpot pos=-10;-150 radius=40 color=0.627;0.902;0.902 // colinne

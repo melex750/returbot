@@ -3,7 +3,7 @@
 
 Title.E text="Gravity"
 Title.R text="Притяжение"
-Resume.E text="ATTENTION: This level yet will be reworked from scratch (this is not what I really wanted). Deal with all the possible obstacles on the way to the space ship."
+Resume.E text="ATTENTION: This level is yet to be reworked from scratch (this is not what I really wanted). Deal with all the possible obstacles on the way to the space ship."
 Resume.R text="ВНИМАНИЕ: Этот уровень ещё будет переделан с нуля (это не то, что я реально хотел). Разберитесь со всеми возможными препятствиями на пути к космическому кораблю."
 Instructions name="%lvl%/help/help.%lng%.txt"
 Satellite name="%lvl%/help/report.%lng%.txt"

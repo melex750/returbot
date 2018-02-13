@@ -1,0 +1,9 @@
+\b;From Mission Control
+Satellite discovered large amounts of \l;organic matter\u object\bullet; in the south of this region which amongst all was used for creation of \l;orga-shooters\u object\botor; discovered by you before. Your task is to retrive a piece of \l;organic matter\u object\bullet; and to use it for completion of related research program in an \l;autolab\u object\labo;.
+
+You will have to traverse water masses to reach areas with \l;alien nests\u object\nest;. Regular bots can move only through shallow water that does not reach level of their slots for \l;power cell\u object\power;, therefore you will have to use a \l;subber\u object\botsub;, plans of which we already sent to you. Please, take into accout that essential deficiency of \l;subber\u object\botsub; is it's claws - these could only pick up and put down objects on the ground, therefore if it's power will exhaust before it will return to your base then you will not be able to replace it's \l;power cell\u object\power; with reserve.
+
+\key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
+
+\t;See also
+\l;Controls\u command; and \l;CBOT Language\u cbot;

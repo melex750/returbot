@@ -1,5 +1,5 @@
-Title.E text="\\\Expedition"
-Title.R text="\\\Экспедиция"
+Title.E text="\\\Range #3"
+Title.R text="\\\Полигон #3"
 Resume.E text="LEVEL IS YET IN THE PROCESS."
 Resume.R text="УРОВЕНЬ ЕЩЁ В ПРОЦЕССЕ."
 Instructions name="%lvl%/help/help.%lng%.txt"
@@ -12,69 +12,57 @@ EndingFile win=-1 lost=0
 Audio filename="music005.ogg"
 
 #Include file="%chap%/planet.txt"
-TerrainRelief image="m_relief_203.png" factor=1.0
+TerrainRelief image="m_relief_210.png" factor=1.0
 TerrainResource image="m_nores.png"
 #Include file="%chap%/terrain.txt"
 TerrainCreate
 
+GroundSpot pos= 0;0 radius=20 color=0.5;0.3;0.0
+
 BeginObject
+CreateObject pos= 0.00; -130.00 dir=0.0 type=SpaceShip run=1
+CreateObject pos=-3.25;-133.25 dir=1.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 3.25;-133.25 dir=1.5 type=Thumper power=0.15
+
+CreateObject pos= 3.75;-125.70 dir=0.0 type=UraniumOre
+CreateObject pos= 2.50;-125.70 dir=0.0 type=UraniumOre
+// CreateObject pos= 0.625;-125.70 dir=0.0 type=UraniumOre
+// CreateObject pos=-0.625;-125.70 dir=0.0 type=UraniumOre
+CreateObject pos=-2.50;-125.70 dir=0.0 type=PowerCell
+CreateObject pos=-3.75;-125.70 dir=0.0 type=PowerCell
+
+CreateObject pos= 3.125;-126.75 dir=0.0 type=UraniumOre
+// CreateObject pos= 0.00;-126.75 dir=0.0 type=UraniumOre
+CreateObject pos=-3.125;-126.75 dir=0.0 type=Titanium
+
+CreateObject pos= 3.75;-127.80 dir=0.0 type=UraniumOre
+CreateObject pos= 2.50;-127.80 dir=0.0 type=UraniumOre
+// CreateObject pos= 0.625;-127.80 dir=0.0 type=UraniumOre
+// CreateObject pos=-0.625;-127.80 dir=0.0 type=UraniumOre
+CreateObject pos=-2.50;-127.80 dir=0.0 type=Titanium
+CreateObject pos=-3.75;-127.80 dir=0.0 type=Titanium
+
+
+CreateObject pos= 0.625;-127.50 dir=0.0 type=UraniumOre
+CreateObject pos=-0.625;-127.50 dir=0.0 type=UraniumOre
+CreateObject pos= 0.00;-126.25 dir=0.0 type=UraniumOre
+
+CreateObject pos= 0; 0 dir=0.0 type=ExchangePost proxyActivate=1 proxyDistance=30
+CreateObject pos= -3; 0 dir=1.5 type=WheeledShooter power=1 proxyActivate=1 proxyDistance=30
+CreateObject pos= 0; 6.35 dir=0.0 type=Barrier1
+CreateObject pos= 0;-6.35 dir=1.0 type=Barrier1
+CreateObject pos= 6.35; 0 dir=0.5 type=Barrier1
+CreateObject pos=-6.35; 0 dir=1.5 type=Barrier1
+CreateObject pos= 4.5; 4.5 dir=0.25 type=Barrier1
+CreateObject pos= 4.5;-4.5 dir=0.75 type=Barrier1
+CreateObject pos=-4.5;-4.5 dir=1.25 type=Barrier1
+CreateObject pos=-4.5; 4.5 dir=1.75 type=Barrier1
+
 
 LevelController script="../../../../lvlcreator/Helper.txt"
-CreateObject pos=-196.75; 173.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false select=1
-CreateObject pos=-203.25; 173.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
+CreateObject pos=-16.75; -113.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
+CreateObject pos=-23.25; -113.25 dir=0.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
 
-CreateObject pos= -180.00; 180.00 dir=0.0 type=SpaceShip run=1
-CreateObject pos=-176.75; 183.25 dir=0.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos=-183.25; 183.25 dir=0.5 type=Thumper power=0.15
-CreateObject pos=-183.75;177.80 dir=0.0 type=UraniumOre
-CreateObject pos=-182.50;177.80 dir=0.0 type=UraniumOre
-// CreateObject pos=-180.625;177.80 dir=0.0 type=UraniumOre
-// CreateObject pos=-179.325;177.80 dir=0.0 type=UraniumOre
-CreateObject pos=-177.50;177.80 dir=0.0 type=Titanium
-CreateObject pos=-176.25;177.80 dir=0.0 type=Titanium
-
-CreateObject pos=-183.125;176.75 dir=0.0 type=UraniumOre
-// CreateObject pos=-180.00;176.75 dir=0.0 type=UraniumOre
-CreateObject pos=-176.875;176.75 dir=0.0 type=Titanium
-
-CreateObject pos=-183.75;175.70 dir=0.0 type=UraniumOre
-CreateObject pos=-182.50;175.70 dir=0.0 type=UraniumOre
-// CreateObject pos=-180.625;175.70 dir=0.0 type=UraniumOre
-// CreateObject pos=-179.325;175.70 dir=0.0 type=UraniumOre
-CreateObject pos=-177.50;175.70 dir=0.0 type=PowerCell
-CreateObject pos=-176.25;175.70 dir=0.0 type=PowerCell
-
-CreateObject pos=-180.625;177.50 dir=0.0 type=UraniumOre
-CreateObject pos=-179.325;177.50 dir=0.0 type=UraniumOre
-CreateObject pos=-180.00;176.25 dir=0.0 type=UraniumOre
-
-CreateObject pos=-176.75;180.00 dir=0.0 type=BlackBox
-
-CreateObject pos=-172.149;151.192 dir=1.0219006 type=RuinRadar
-CreateObject pos=-167.564;148.64 dir=0.686273 type=RuinSupport
-
-// Closer
-// CreateObject pos=39.2279;39.5091 dir=0.307306 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=35.1582;-39.8466 dir=0.843383 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=11.1926;-51.0166 dir=1.55573 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-42.8552;14.1682 dir=0.768879 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-66.7148;40.799 dir=0.639913 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=39;12 dir=1.0 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-27.47;-37.13 dir=1.5 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-37;27 dir=0.5 cmdline=1100 type=AlienAnt script1="m_ant_01.txt" run=1
-
-// Farther
-// CreateObject pos=-12.89;-81.52 dir=0.806617 cmdline=-25.9748;-114.457;1040 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-113.739;-94.568 dir=1.05425 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-87.87;-13.65 dir=1.20454 cmdline=-126.649;-27.1138;1015 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-45.99;79.23 dir=1.28839 cmdline=-98.3635;137.48;1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-134.275;124.893 dir=1.09048 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-94.8256;191.783 dir=1.75416 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=10.871;193.386 dir=0.104062 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=75.9738;135.1 dir=0.606633 cmdline=1015 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=73.6622;80.8785 dir=0.41291 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=122.722;28.2134 dir=0.385739 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
-// CreateObject pos=-213.35;-72.42 dir=0.0 cmdline=1050 type=AlienAnt script1="m_ant_01.txt" run=1
 
 CreateObject pos=-162.449;42.2223 dir=0.499488 type=Greenery3
 CreateObject pos=-172.507;54.5956 dir=1.31382 type=Greenery2
@@ -141,4 +129,4 @@ EndMissionTake pos=0.00; 0.00; dist=8 type=BlackBox min=1
 EndMissionTake pos=0.00; 0.00; dist=8 tool=Grabber min=1
 EndMissionTake pos=0.00; 0.00; dist=8 type=Thumper min=1
 
-Camera eye=0.00;5.00;0.00 lookat=0.00;1.00;0.00 delay=0
+Camera eye=0.00;5.00;-130.00 lookat=0.00;1.00;-120.00 delay=0

@@ -1,9 +1,9 @@
 // Chapter: 3
 //   Level: 3
 
-Title.E text="Range"
+Title.E text="Range #1"
 Resume.E text="Practice in shooting from fireball cannon and take aboard one of bots equipped with it."
-Title.R text="Стрельбище"
+Title.R text="Полигон #1"
 Resume.R text="Потренируйтесь в стрельбе из пушки, стреляющей огненными шарами, и заберите на борт одного из ботов, оснащённых ей."
 
 Instructions name="%lvl%/help/help.%lng%.txt"

@@ -221,7 +221,7 @@ extern void LvlCntlr_main()
     boolean w = false;
     
     int list[], i;
-    float d = 20, d2 = 50, tl = 8000 + 3000 * rand(), tl2 = 7000 + 4000 * rand();
+    float d = 20, d2 = 50, tl = 6000 + 3000 * rand(), tl2 = 5000 + 4000 * rand();
     
     i = 0;
 	list[i++] = AlienEgg;

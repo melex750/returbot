@@ -107,8 +107,6 @@ CreateObject pos=-1.05; 147.50 dir=0.0 type=Titanium
 // CreateObject pos=-0.625; 149.30 dir=0.0 type=PowerCell
 // CreateObject pos= 0.625; 149.30 dir=0.0 type=PowerCell
 
-CreateObject pos= 3.25; 145.00 dir=0.0 type=OrgaMatter
-
 // CreateObject pos=-43;195 dir=1.2 type=TitaniumOre
 // CreateObject pos=-49;188 dir=1.2 type=TitaniumOre
 // CreateObject pos=-56;165 dir=1.2 type=TitaniumOre
@@ -351,7 +349,7 @@ DoneResearch type=ATOMIC
 
 
 EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
-EndMissionTake pos=0.00;145.00 dist=8 type=OrgaMatter min=1
+// EndMissionTake pos=0.00;145.00 dist=8 type=OrgaMatter min=1
 // EndMissionTake pos=0.00;145.00 dist=8 tool=OrgaShooter min=1
 EndMissionTake pos=0.00;145.00 dist=8 tool=Grabber min=1
 // EndMissionTake pos=0.00;145.00 dist=8 type=Subber min=1

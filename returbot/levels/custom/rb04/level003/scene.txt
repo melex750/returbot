@@ -1,5 +1,5 @@
-Title.E text="Range"
-Title.R text="Стрельбище"
+Title.E text="Range #2"
+Title.R text="Полигон #2"
 Resume.E text="Practice in shooting mobile targets."
 Resume.R text="Попрактикуйтесь в стрельбе по подвижным целям."
 Instructions name="%lvl%/help/help.%lng%.txt"

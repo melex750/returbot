@@ -190,10 +190,10 @@ CreateObject pos=-27.0;55.0 dir=1.0 type=TargetBot power=1.0 script1="%lvl%/ai/t
 CreateObject pos=-81.0;15.0 dir=1.5 type=TargetBot power=1.0 script1="%lvl%/ai/t4.txt" run=1
 CreateObject pos=-69.0;15.0 dir=1.5 type=TargetBot power=1.0 script1="%lvl%/ai/t4.txt" run=1
 
-CreateObject pos=-78.5;45.0 dir=0.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
-CreateObject pos=-66.5;45.0 dir=0.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
-CreateObject pos=-78.5;15.0 dir=1.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
-CreateObject pos=-66.5;15.0 dir=1.5 type=WheeledGrabber power=1.0 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-78.5;45.0 dir=0.5 type=WheeledGrabber power=1.0 trainer=1 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-66.5;45.0 dir=0.5 type=WheeledGrabber power=1.0 trainer=1 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-78.5;15.0 dir=1.5 type=WheeledGrabber power=1.0 trainer=1 selectable=0 script1="%lvl%/ai/t5.txt" run=1
+CreateObject pos=-66.5;15.0 dir=1.5 type=WheeledGrabber power=1.0 trainer=1 selectable=0 script1="%lvl%/ai/t5.txt" run=1
 
 // Some spiders in background
 // CreateObject pos=283.06;32.6638 cmdline=1020 dir=1.61098 type=AlienSpider script1="m_spider_01.txt" run=1

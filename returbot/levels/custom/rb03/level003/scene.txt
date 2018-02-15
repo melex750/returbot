@@ -36,7 +36,7 @@ LevelController script="%lvl%/Control.txt"
 
 CreateObject pos= 0.00; 0.00 dir=1.5 type=SpaceShip run=1
 CreateObject pos= 0.00;-3.25 dir=1.5 type=WheeledGrabber power=0.55 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos=-3.25; 0.00 dir=1.5 type=BlackBox
+// CreateObject pos=-3.25; 0.00 dir=1.5 type=BlackBox
 
 CreateObject pos=-52.6319;230.934 dir=0.520856 type=RuinRadar
 CreateObject pos=-81.4179;209.692 dir=0.221924 type=RuinConvert

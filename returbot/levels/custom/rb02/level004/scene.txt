@@ -50,16 +50,18 @@ CreateObject pos=-147.708;-131.61 dir=2 type=RedFlag
 CreateObject pos=-1.38235;151.18 dir=2 type=BlueFlag
 CreateObject pos=-47.8104;-228.441 dir=2 type=BlueFlag
 
+// Wrecks for titanium. Some might be commented because too much of titanium is available otherwise.
 CreateObject pos=11.0556;55.8552 dir=1.0 type=RuinBotFactory
 CreateObject pos=11.0556;55.8552 dir=0.0 type=WreckBotw2
 CreateObject pos=19.318;41.2627 dir=0.0226974 type=WreckBott2
 CreateObject pos=-14.8803;57.8303 dir=0.199979 type=RuinSupport
 CreateObject pos=-25.8044;88.5204 dir=0.467454 type=RuinRadar
 CreateObject pos=0.657433;63.7619 dir=0.648288 type=RuinDoor
-CreateObject pos=-6.50094;70.4705 dir=1.26103 type=WreckBotw1
+// CreateObject pos=-6.50094;70.4705 dir=1.26103 type=WreckBotw1
 CreateObject pos=10.4326;107.067 dir=1.79716 type=WreckBotw1
 CreateObject pos=-25.361;92.068 dir=0.676974 type=RuinSupport
 
+// All the other wrecks
 CreateObject pos=-155.131;-155.169 dir=1.55604 type=RuinBotFactory
 CreateObject pos=-143.483;-115.082 dir=0.98904 type=RuinConvert
 CreateObject pos=-142.514;-109.197 dir=1.93174 type=RuinDoor

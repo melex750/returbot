@@ -24,7 +24,7 @@ Several expeditions consisting entirely of bots were sent to find a planet that 
 
 <h5>List of levels:</h5>
 
-* Either nonexistent, dummy or scrapped.
+* Either nonexistent, dummy, scrapped or is a chapter.
 * *Under development or reconstruction.*
 * ***Playable, but still undone.***
 * **Fully playable.**
@@ -40,28 +40,30 @@ Several expeditions consisting entirely of bots were sent to find a planet that 
 * (3) On Centaury
   * **3-1. Incident**
   * **3-2. Collision**
-  * **3-3. Range**
+  * **3-3. Range #1**
   * **3-4. Hunting**
   * **3-5. Searching**
   * **3-6. Attraction**
 * (4) On Volcano
   * **4-1. Production**
   * **4-2. Scavenging**
-  * **4-3. Range**
+  * **4-3. Range #2**
   * **4-4. Explosives**
   * 4-5. Routing
 * (5) On Saari
   * **5-1. Concussion**
   * **5-2. Ants hill**
-  * 5-3. Expedition
-  * ***5-4. All round***
-  * 5-5. Sandstorm
+  * *5-3. Range #3*
+  * 5-4. Expedition
+  * ***5-5. All round***
+  * 5-6. Sandstorm
 * (6) On Crystallium
   * **6-1. Beyond reach**
   * 6-2. Power chain 
-  * 6-3. Dead signal
-  * 6-4. Intel hijack
-  * 6-5. Superheat
+  * 6-3. Range #4
+  * 6-4. Dead signal
+  * 6-5. Intel hijack
+  * 6-6. Superheat
 * (7) On Tropica
   * 7-1. Salvaging.
   * **7-2. Gravity.**

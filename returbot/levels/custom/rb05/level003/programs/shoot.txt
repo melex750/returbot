@@ -1,0 +1,5 @@
+extern void object::Shoot( )
+{
+        aim(0,0);
+        fire(0.2);
+}

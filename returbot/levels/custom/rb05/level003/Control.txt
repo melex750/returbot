@@ -1,0 +1,29 @@
+extern void LvlCntlr_main()
+{
+    int i;
+    
+    i = 0;
+    
+    object item = retobject(0), items[];
+    
+    while(abstime() <= 0) {wait(0.5);}
+    
+    wait(4);
+    i = 0;
+    while(retobject(i) != null)
+    {
+        item = retobject(i);
+        if(item.category == TrackedGrabber and item.energyCell == null)
+        {
+            items[sizeof(items)] = item;
+        }
+        i++;
+    }
+    i = 0;
+    while(i < sizeof(items))
+    {
+        delete(items[i].id,0);
+        i++;
+        wait(0.05);
+    }
+}

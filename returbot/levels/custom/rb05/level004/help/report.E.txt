@@ -14,7 +14,8 @@ Currently in a geo-stationary orbit of Saari.
 \tab;Uranium ore:      not detected
 
 \s;-> ADDITIONAL INFORMATION\c;
-\tab;Detected:         abandoned derelicts
 \tab;Detected:         giant ants
+\tab;  - Threat:       yes, passive
+\tab;Detected:         giant worms
 \tab;  - Threat:       yes, passive
 \n;

@@ -38,8 +38,8 @@ Several expeditions consisting entirely of bots were sent to find a planet that 
   * **2-3. Retrieval**
   * **2-4. Sheltering**
 * (3) On Centaury
-  * **3-1. Incident**
-  * **3-2. Collision**
+  * **3-1. Inspection**
+  * **3-2. Hindrance**
   * **3-3. Range #1**
   * **3-4. Hunting**
   * **3-5. Searching**

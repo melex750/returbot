@@ -1,0 +1,17 @@
+extern void object::Score()
+{
+	int s, l, i;
+	
+	s = 0;
+	l = 3;
+	
+	wait(5);
+	message("We begin...", DisplayInfo);
+	wait(1);
+	for(i = 20; i > 0; i = i - 1)
+	{
+		message(i, DisplayWarning);
+		wait(1);
+	}
+	message("NOW!!!", DisplayInfo);
+}

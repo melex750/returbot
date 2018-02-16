@@ -156,15 +156,15 @@ CreateObject pos=-198.447;-94.9176 dir=1.98074 type=DefenseTower power=-1 proxyA
 CreateObject pos=-263.883;60.8461 dir=0.0162769 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
 CreateObject pos=-132.717;131.961 dir=0.502414 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
 CreateObject pos=-36.1251;92.6952 dir=1.75911 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=76.305;76.7268 dir=1.76496 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=71.8796;-31.9224 dir=0.146103 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=8.32549;-58.9379 dir=1.10903 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-121.791;-170.033 dir=1.78236 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-195.456;-94.9487 dir=1.00949 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-261.169;61.1843 dir=0.904781 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-132.431;129.188 dir=1.43436 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-34.0899;94.5678 dir=0.7571 type=TrackedGrabber power=0.875 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-143.779;-100.56 dir=0.998028 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
+CreateObject pos=76.305;76.7268 dir=1.76496 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=71.8796;-31.9224 dir=0.146103 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=8.32549;-58.9379 dir=1.10903 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-121.791;-170.033 dir=1.78236 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-195.456;-94.9487 dir=1.00949 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-261.169;61.1843 dir=0.904781 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-132.431;129.188 dir=1.43436 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-34.0899;94.5678 dir=0.7571 type=TrackedGrabber power=0.875 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-143.779;-100.56 dir=0.998028 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
 CreateObject pos=77.7773;-34.4503 dir=2 type=PowerCell power=0.125
 CreateObject pos=69.6386;-34.4496 dir=2 type=PowerCell power=0.0
 // CreateObject pos=7.87625;-56.308 dir=2 type=PowerCell power=0.125

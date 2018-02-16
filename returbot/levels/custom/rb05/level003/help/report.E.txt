@@ -9,8 +9,8 @@ Currently in a geo-stationary orbit of Saari.
 \tab;Uranium ore:      none
 
 \s;-> SUBSOIL\c;
-\tab;Energy source:    not detected
-\tab;Titanium ore:     not detected
+\tab;Energy source:    in some places (probe needed)
+\tab;Titanium ore:     in some places (probe needed)
 \tab;Uranium ore:      not detected
 
 \s;-> ADDITIONAL INFORMATION\c;

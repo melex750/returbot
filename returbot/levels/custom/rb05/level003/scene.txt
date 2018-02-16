@@ -13,7 +13,7 @@ Audio filename="music005.ogg"
 
 #Include file="%chap%/planet.txt"
 TerrainRelief image="m_relief_210.png" factor=1.0
-TerrainResource image="m_nores.png"
+TerrainResource image="m_res_210.png"
 #Include file="%chap%/terrain.txt"
 TerrainCreate
 
@@ -42,13 +42,43 @@ CreateObject pos= 3.75;3.75 dir=0.0 type=UraniumOre
 // The base  |
 //           V
 
-// CreateObject pos=78.4538;78.6686 dir=0.757946 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-// CreateObject pos=76.305;76.7268 dir=1.76496 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
+CreateObject pos=-39.3173;-145.887 dir=1.84872 type=TrackedGrabber power=0.85 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=17.2507;-122.798 dir=0.84962 type=TrackedGrabber power=0.73 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=-0.528155;-109.521 dir=0.500196 type=Converter selectable=0
+CreateObject pos=2.88001;-105.587 dir=1.39489 type=Titanium
+CreateObject pos=2.98829;-107.583 dir=1.57224 type=Titanium
+CreateObject pos=-6.35821;-111.754 dir=1.10332 type=Titanium
+CreateObject pos=-5.75123;-123.905 dir=0.377042 type=Titanium
+CreateObject pos=19.9992;-128.409 dir=1.01023 type=BotFactory selectable=0
+CreateObject pos=2.39685;-142.226 dir=1.4952 type=RepairCenter selectable=0
+CreateObject pos=-2.41994;-127.655 dir=1.99777 type=ExchangePost selectable=0
+CreateObject pos=-24.9459;-131.709 dir=0.0093 type=PowerStation power=1.0 selectable=0
+CreateObject pos=-28.3304;-128.434 dir=2 type=PowerCell power=1.0
+CreateObject pos=-29.2642;-135.498 dir=2 type=PowerCell power=1.0
+CreateObject pos=-27.6712;-136.066 dir=2 type=PowerCell power=1.0
+CreateObject pos=16.8069;-133.32 dir=2 type=PowerCell power=0.15
+CreateObject pos=-62.0827;-128.553 dir=1.99403 type=DefenseTower power=-1 selectable=0
+CreateObject pos=-59.0934;-128.606 dir=1.00322 type=WheeledGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=74.9062;-89.7143 dir=0.833498 type=DefenseTower power=-1 selectable=0
+CreateObject pos=23.7292;-190.259 dir=0.453185 type=TrackedGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=24.0301;-193.153 dir=1.47285 type=DefenseTower power=-1 selectable=0
+CreateObject pos=72.3643;-91.2208 dir=1.81705 type=TrackedGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=18.23;-117.16 dir=1.4951 type=TrackedShooter power=0.77 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=-150.315;-71.0324 dir=1.43747 type=TrackedShooter power=0.82 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=-174.359;52.849 dir=0.0439868 type=TrackedShooter power=0.67 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=-22.777;34.6244 dir=0.421574 type=TrackedShooter power=0.73 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=-74.5623;-66.1969 dir=1.63261 type=TrackedShooter power=0.93 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=150.694;-113.476 dir=1.64513 type=TrackedSniffer power=0.45 selectable=0 script1="m_wait.txt" run=1
+CreateObject pos=155.941;-121.172 dir=1.06454 type=Derrick selectable=0
+CreateObject pos=154.227;-120.82 dir=1.06454 type=TitaniumOre
+CreateObject pos=163.606;-123.692 dir=1.08198 type=DefenseTower power=-1 selectable=0
+CreateObject pos=160.95;-122.964 dir=0.0784775 type=WheeledGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
 
 // The range |
 //           V
 
- CreateObject pos= -105; -7 dir=0.0 type=ExchangePost
+// CreateObject pos= -105; -7 dir=0.0 type=ExchangePost
+CreateObject pos=-105; -7 dir=1.5 type=WheeledGrabber power=1 trainer=1 selectable=1 script1="%lvl%/programs/score.txt" scriptReadOnly1=false // when done with, set selectable to 0 and remove this comment
 CreateObject pos=-105; 3 dir=1.5 type=WheeledShooter power=1 script1="%lvl%/programs/shoot.txt" scriptReadOnly1=false
 CreateObject pos= -105;-0.65 dir=0.0 type=Barricade1
 CreateObject pos= -105;-13.35 dir=1.0 type=Barricade1

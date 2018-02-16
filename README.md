@@ -53,7 +53,7 @@ Several expeditions consisting entirely of bots were sent to find a planet that 
 * (5) On Saari
   * **5-1. Concussion**
   * **5-2. Ants hill**
-  * *5-3. Range #3*
+  * 5-3. Range #3
   * 5-4. Expedition
   * ***5-5. All round***
   * 5-6. Sandstorm

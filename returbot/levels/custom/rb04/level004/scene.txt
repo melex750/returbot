@@ -81,13 +81,15 @@ CreateObject pos=151.672;-193.358 dir=1.01245 type=WreckBott1
 CreateObject pos=183.993;-196.202 dir=1.24357 type=RuinSupport
 CreateObject pos=180.291;-176.749 dir=1.7104 type=RuinSupport
 CreateObject pos=196.514;-205.631 dir=0.702577 type=WreckBott1
+CreateObject pos=197.62;-203.79 dir=0.7124 type=NuclearCell power=0.175
 CreateObject pos=195.265;-198.349 dir=1.45862 type=WreckBott2
 CreateObject pos=203.979;-204.372 dir=1.14546 type=WreckBotr2
+CreateObject pos=205.97;-205.68 dir=1.14173 type=NuclearCell power=0.725
 CreateObject pos=178.873;-185.119 dir=0.71333 type=WreckBott2
 CreateObject pos=191.787;-187.871 dir=0.995049 type=RuinRadar
-CreateObject pos=195.751;-202.438 dir=0.348944 type=Titanium // power=0.15
+// CreateObject pos=195.751;-202.438 dir=0.348944 type=Titanium // power=0.15
 CreateObject pos=196.399;-192.974 dir=0.350973 type=Titanium // power=0.4
-// CreateObject pos=198.821;-189.578 dir=0.338927 type=Titanium // power=0.3
+CreateObject pos=198.821;-189.578 dir=0.338927 type=Titanium // power=0.3
 CreateObject pos=202.668;-197.299 dir=0.578726 type=Titanium // power=0.6
 CreateObject pos=198.246;-188.507 dir=0.254505 type=Titanium // power=0.1
 // CreateObject pos=195.667;-172.569 dir=0.346546 type=Titanium // power=0.2
@@ -100,6 +102,7 @@ CreateObject pos=121.575;58.3906 dir=0.462161 type=NuclearCell power=0.60
 CreateObject pos=123.134;67.6185 dir=0.721836 type=NuclearCell power=0.65
 CreateObject pos=85.4687;-1.70995 dir=1.95328 type=RuinSupport
 CreateObject pos=81.3799;-1.19783 dir=1.76576 type=WreckBotw1
+CreateObject pos=79.98;-2.62 dir=0.7163 type=NuclearCell power=0.625
 CreateObject pos=94.4733;1.8534 dir=0.484347 type=WreckBotw2
 CreateObject pos=109.194;-49.2608 dir=0.305002 type=WreckBott2
 CreateObject pos=81.336;-3.54528 dir=0.00563422 type=RuinSupport

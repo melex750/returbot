@@ -17,230 +17,58 @@ TerrainResource image="m_nores.png"
 #Include file="%chap%/terrain.txt"
 TerrainCreate
 
-GroundSpot pos= 0;0 radius=20 color=0.5;0.3;0.0
+// GroundSpot pos= 0;0 radius=20 color=0.5;0.3;0.0
 
 BeginObject
-LevelController script="/%lvl%/Control.txt"
-CreateObject pos= 0.00; -130.00 dir=0.0 type=SpaceShip run=1
-CreateObject pos=-3.25;-133.25 dir=1.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
-CreateObject pos= 3.25;-133.25 dir=1.5 type=Thumper power=0.15
+// LevelController script="/%lvl%/Control.txt"
+CreateObject pos= 0.00; 0.00 dir=1.0 type=SpaceShip run=1
+CreateObject pos=-3.25;-3.25 dir=1.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
+CreateObject pos= 3.25;-3.25 dir=1.5 type=Thumper power=0.15
 
-CreateObject pos=-3.75;-127.50 dir=0.0 type=Titanium
-CreateObject pos=-2.50;-127.50 dir=0.0 type=Titanium
-CreateObject pos=-0.62;-127.50 dir=0.0 type=UraniumOre
-CreateObject pos= 0.63;-127.50 dir=0.0 type=UraniumOre
-CreateObject pos= 2.50;-127.50 dir=0.0 type=UraniumOre
-CreateObject pos= 3.75;-127.50 dir=0.0 type=UraniumOre
-CreateObject pos=-3.75;-126.25 dir=0.0 type=PowerCell
-CreateObject pos=-2.50;-126.25 dir=0.0 type=PowerCell
-CreateObject pos=-0.62;-126.25 dir=0.0 type=UraniumOre
-CreateObject pos= 0.63;-126.25 dir=0.0 type=UraniumOre
-CreateObject pos= 2.50;-126.25 dir=0.0 type=UraniumOre
-CreateObject pos= 3.75;-126.25 dir=0.0 type=UraniumOre
+CreateObject pos=-3.75;2.50 dir=0.0 type=Titanium
+CreateObject pos=-2.50;2.50 dir=0.0 type=Titanium
+CreateObject pos=-0.62;2.50 dir=0.0 type=UraniumOre
+CreateObject pos= 0.63;2.50 dir=0.0 type=UraniumOre
+CreateObject pos= 2.50;2.50 dir=0.0 type=UraniumOre
+CreateObject pos= 3.75;2.50 dir=0.0 type=UraniumOre
+CreateObject pos=-3.75;3.75 dir=0.0 type=PowerCell
+CreateObject pos=-2.50;3.75 dir=0.0 type=PowerCell
+CreateObject pos=-0.62;3.75 dir=0.0 type=UraniumOre
+CreateObject pos= 0.63;3.75 dir=0.0 type=UraniumOre
+CreateObject pos= 2.50;3.75 dir=0.0 type=UraniumOre
+CreateObject pos= 3.75;3.75 dir=0.0 type=UraniumOre
 
-// CreateObject pos= 3.75;-125.70 dir=0.0 type=UraniumOre
-// CreateObject pos= 2.50;-125.70 dir=0.0 type=UraniumOre
-// // CreateObject pos= 0.625;-125.70 dir=0.0 type=UraniumOre
-// // CreateObject pos=-0.625;-125.70 dir=0.0 type=UraniumOre
-// CreateObject pos=-2.50;-125.70 dir=0.0 type=PowerCell
-// CreateObject pos=-3.75;-125.70 dir=0.0 type=PowerCell
-
-// CreateObject pos= 3.125;-126.75 dir=0.0 type=UraniumOre
-// // CreateObject pos= 0.00;-126.75 dir=0.0 type=UraniumOre
-// CreateObject pos=-3.125;-126.75 dir=0.0 type=Titanium
-
-// CreateObject pos= 3.75;-127.80 dir=0.0 type=UraniumOre
-// CreateObject pos= 2.50;-127.80 dir=0.0 type=UraniumOre
-// // CreateObject pos= 0.625;-127.80 dir=0.0 type=UraniumOre
-// // CreateObject pos=-0.625;-127.80 dir=0.0 type=UraniumOre
-// CreateObject pos=-2.50;-127.80 dir=0.0 type=Titanium
-// CreateObject pos=-3.75;-127.80 dir=0.0 type=Titanium
-
-
-// CreateObject pos= 0.625;-127.50 dir=0.0 type=UraniumOre
-// CreateObject pos=-0.625;-127.50 dir=0.0 type=UraniumOre
-// CreateObject pos= 0.00;-126.25 dir=0.0 type=UraniumOre
 
 // The base  |
 //           V
 
-CreateObject pos=-148.05;-69.9359 dir=0.75 type=Vault proxyActivate=1 proxyDistance=48
-CreateObject pos=-156.177;-78.959 dir=0.75 type=Vault proxyActivate=1 proxyDistance=48
-CreateObject pos=-134.488;-121.467 dir=1.5066 type=BotFactory proxyActivate=1 proxyDistance=48
-CreateObject pos=-124.392;-100.74 dir=1.01201 type=RepairCenter proxyActivate=1 proxyDistance=48
-CreateObject pos=-134.297;-92.7525 dir=1.01705 type=ExchangePost proxyActivate=1 proxyDistance=48
-CreateObject pos=-147.412;-100.562 dir=1.99622 type=ResearchCenter power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-135;-70 dir=0.5 type=GoalArea proxyActivate=1 proxyDistance=48
-CreateObject pos=-130;-70 dir=0.5 type=GoalArea proxyActivate=1 proxyDistance=48
-CreateObject pos=-147.171;-106.047 dir=2 type=PowerCell power=1.0
-CreateObject pos=-148.552;-104.486 dir=2 type=PowerCell power=0.0
-CreateObject pos=-145.223;-103.438 dir=2 type=PowerCell power=1.0
-CreateObject pos=-149.106;-109.728 dir=2 type=PowerCell power=1.0
-CreateObject pos=-144.696;-102.611 dir=2 type=PowerCell power=1.0
-CreateObject pos=-123.486;-107.191 dir=2 type=PowerCell power=1.0
-CreateObject pos=-129.295;-108.721 dir=2 type=PowerCell power=0.6
-CreateObject pos=-129.842;-121.490 dir=2 type=PowerCell power=0.15
-CreateObject pos=-129.622;-120.353 dir=2 type=PowerCell power=0.30
-CreateObject pos=-121.139;-92.3565 dir=2 type=PowerCell power=1.0
-CreateObject pos=-121.956;-90.6127 dir=2 type=PowerCell power=1.0
-CreateObject pos=-122.435;-91.5568 dir=2 type=PowerCell power=1.0
-
-// CreateObject pos=-36.5233;-39.3371 dir=1.77015 type=WheeledGrabber power=0.77 proxyActivate=1 proxyDistance=48
-CreateObject pos=-97.8424;-1.35744 dir=1.87824 type=WheeledGrabber power=0.55 proxyActivate=1 proxyDistance=48
-CreateObject pos=-130.741;-96.4878 dir=1.6827 type=TrackedGrabber power=0.86 proxyActivate=1 proxyDistance=48
-CreateObject pos=46.0275;-37.9194 dir=0.620933 type=TrackedGrabber power=0.65 proxyActivate=1 proxyDistance=48
-CreateObject pos=-133.301;127.498 dir=1.56283 type=TrackedGrabber power=0.91 proxyActivate=1 proxyDistance=48
-CreateObject pos=-190.902;-95.588 dir=1.27712 type=TrackedGrabber power=0.67 proxyActivate=1 proxyDistance=48
-// CreateObject pos=-120.041;-162.452 dir=1.36127 type=TrackedGrabber power=0.61 proxyActivate=1 proxyDistance=48
-
-// CreateObject pos=-156.723;85.5985 dir=0.504257 type=BotFactory proxyActivate=1 proxyDistance=48
-CreateObject pos=-148.023;85.5625 dir=0.504718 type=BotFactory proxyActivate=1 proxyDistance=48
-CreateObject pos=-138.77;85.5833 dir=0.509153 type=BotFactory proxyActivate=1 proxyDistance=48
-CreateObject pos=-132.887;41.8863 dir=0.502221 type=ExchangePost proxyActivate=1 proxyDistance=48
-// CreateObject pos=-120.912;59.8111 dir=1.49887 type=RepairCenter proxyActivate=1 proxyDistance=48
-CreateObject pos=-169.666;21.0067 dir=0.00209 type=Vault proxyActivate=1 proxyDistance=48
-CreateObject pos=-157.153;21.1316 dir=0.00375 type=Vault proxyActivate=1 proxyDistance=48
-CreateObject pos=-144.249;21.0849 dir=0.00375 type=Vault proxyActivate=1 proxyDistance=48
-// CreateObject pos=-112.862;65.1313 dir=0.02686 type=Vault proxyActivate=1 proxyDistance=48
-
-CreateObject pos=-161.142;21.4298 dir=0.02375 type=KeyA
-CreateObject pos=-153.164;20.8334 dir=1.02375 type=KeyB
-CreateObject pos=-157.451;17.1427 dir=0.52375 type=KeyC
-CreateObject pos=-156.855;25.1205 dir=0.02375 type=KeyD
-
-CreateObject pos=-157.153;21.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-157.153;20.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-158.153;21.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-156.153;21.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-158.153;20.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-156.153;22.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-156.153;20.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-157.153;19.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-159.153;21.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-158.153;19.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-159.153;20.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-156.153;19.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-155.153;20.1316 dir=2 type=PowerCell power=1.0
-CreateObject pos=-155.153;21.1316 dir=2 type=PowerCell power=1.0
-
-
-CreateObject pos=-162.216;85.2806 dir=2 type=PowerCell power=0.64
-CreateObject pos=-161.772;83.5223 dir=2 type=PowerCell power=0.65
-CreateObject pos=-166.062;86.8704 dir=2 type=PowerCell power=0.0
-CreateObject pos=-169.761;87.732 dir=2 type=PowerCell power=0.45
-CreateObject pos=-169.251;89.0876 dir=2 type=PowerCell power=0.3
-CreateObject pos=-182.517;82.7266 dir=2 type=PowerCell power=0.1
-CreateObject pos=-187.857;93.3673 dir=2 type=PowerCell power=0.15
-CreateObject pos=-133.488;46.3842 dir=2 type=PowerCell power=0.2
-
-CreateObject pos=-178.311;26.3793 dir=1.17839 type=Titanium
-CreateObject pos=-176.365;28.6739 dir=0.787404 type=Titanium
-CreateObject pos=-180.882;35.6843 dir=0.958805 type=Titanium
-CreateObject pos=-173.53;27.3672 dir=0.564247 type=Titanium
-CreateObject pos=-172.717;30.1365 dir=0.651994 type=Titanium
-CreateObject pos=-153.839;29.6661 dir=0.094163 type=Titanium
-CreateObject pos=-132.893;76.3089 dir=1.48153 type=Titanium
-
-CreateObject pos=-5.39348;5.13006 dir=2 type=PowerCell power=0.1
-CreateObject pos=-1.63573;8.26358 dir=2 type=PowerCell power=0.6
-CreateObject pos=-1.08909;7.34743 dir=2 type=PowerCell power=0.3
-CreateObject pos=3.19689;10.0649 dir=2 type=PowerCell power=0.0
-CreateObject pos=10.2906;-32.5998 dir=2 type=PowerCell power=0.0
-CreateObject pos=15.4429;-34.5789 dir=2 type=PowerCell power=0.5
-
-CreateObject pos=78.4538;78.6686 dir=0.757946 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=74.5918;-33.3777 dir=1.15838 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=5.51799;-58.147 dir=0.0709261 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-119.146;-168.917 dir=0.987898 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-198.447;-94.9176 dir=1.98074 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-263.883;60.8461 dir=0.0162769 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-132.717;131.961 dir=0.502414 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-36.1251;92.6952 dir=1.75911 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
-CreateObject pos=76.305;76.7268 dir=1.76496 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=71.8796;-31.9224 dir=0.146103 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=8.32549;-58.9379 dir=1.10903 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-121.791;-170.033 dir=1.78236 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-195.456;-94.9487 dir=1.00949 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-261.169;61.1843 dir=0.904781 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-132.431;129.188 dir=1.43436 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-34.0899;94.5678 dir=0.7571 type=TrackedGrabber power=0.875 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=-143.779;-100.56 dir=0.998028 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
-CreateObject pos=77.7773;-34.4503 dir=2 type=PowerCell power=0.125
-CreateObject pos=69.6386;-34.4496 dir=2 type=PowerCell power=0.0
-// CreateObject pos=7.87625;-56.308 dir=2 type=PowerCell power=0.125
-CreateObject pos=81.6814;76.9435 dir=2 type=PowerCell power=0.0
+// CreateObject pos=78.4538;78.6686 dir=0.757946 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=48
+// CreateObject pos=76.305;76.7268 dir=1.76496 type=TrackedGrabber power=1 proxyActivate=1 proxyDistance=0 script1="placedef1.txt" run=1
 
 // The range |
 //           V
 
-// CreateObject pos=27.0;27.0 dir=0.25 type=Barricade1
-// CreateObject pos=-27.0;-27.0 dir=1.25 type=Barricade1
-// CreateObject pos=-36.032;-24.6679 dir=1.02655 type=Mine
-// CreateObject pos=-33.9153;-24.8449 dir=1.02655 type=Mine
-// CreateObject pos=-31.6235;-24.9715 dir=1.01631 type=Mine
-// CreateObject pos=-29.7432;-25.0679 dir=1.01631 type=Mine
-// CreateObject pos=-24.9892;-29.7426 dir=0.506395 type=Mine
-// CreateObject pos=-25.0385;-31.5908 dir=0.506395 type=Mine
-// CreateObject pos=-25.0806;-33.6852 dir=0.506395 type=Mine
-// CreateObject pos=-25.1865;-35.7189 dir=0.517808 type=Mine
-// CreateObject pos=-28.0;-28.0 dir=1.25 type=PowerCell
-// CreateObject pos=-27.0;-29.0 dir=1.25 type=PowerCell
-// CreateObject pos=-29.0;-27.0 dir=1.25 type=PowerCell
-// CreateObject pos=-29.0;-29.0 dir=1.25 type=PowerCell
-// CreateObject pos=-28.0;-30.0 dir=1.25 type=PowerCell
-// CreateObject pos=-30.0;-28.0 dir=1.25 type=PowerCell
+ CreateObject pos= -105; -7 dir=0.0 type=ExchangePost
+CreateObject pos=-105; 3 dir=1.5 type=WheeledShooter power=1 script1="%lvl%/programs/shoot.txt" scriptReadOnly1=false
+CreateObject pos= -105;-0.65 dir=0.0 type=Barricade1
+CreateObject pos= -105;-13.35 dir=1.0 type=Barricade1
+CreateObject pos= -98.65;-7 dir=0.5 type=Barricade1
+CreateObject pos=-111.35;-7 dir=1.5 type=Barricade1
+CreateObject pos=-100.5;-2.5 dir=0.25 type=Barricade1
+CreateObject pos=-100.5;-11.5 dir=0.75 type=Barricade1
+CreateObject pos=-109.5;-11.5 dir=1.25 type=Barricade1
+CreateObject pos=-109.5;-2.5 dir=1.75 type=Barricade1
 
-// CreateObject pos= 0; 0 dir=0.0 type=ExchangePost proxyActivate=1 proxyDistance=48
-// CreateObject pos= 0; 0 dir=1.5 type=TargetBot power=1 proxyActivate=1 proxyDistance=48
-CreateObject pos= 0; 0 dir=0.25 type=Barricade1
-CreateObject pos= 0; 0 dir=0.75 type=Barricade1
-CreateObject pos=-3.5; 0 dir=1.5 type=WheeledShooter power=1 script1="%lvl%/programs/shoot.txt" scriptReadOnly1=false proxyActivate=1 proxyDistance=48
-CreateObject pos= 0; 6.35 dir=0.0 type=Barrier1
-// CreateObject pos= 0;-6.35 dir=1.0 type=Barrier1
-CreateObject pos= 6.35; 0 dir=0.5 type=Barrier1
-CreateObject pos=-6.35; 0 dir=1.5 type=Barrier1
-CreateObject pos= 4.5; 4.5 dir=0.25 type=Barrier1
-CreateObject pos= 4.5;-4.5 dir=0.75 type=Barrier1
-CreateObject pos=-4.5;-4.5 dir=1.25 type=Barrier1
-CreateObject pos=-4.5; 4.5 dir=1.75 type=Barrier1
-CreateObject pos= 0;-6.35 dir=1.0 type=Mine
-CreateObject pos= 2;-6.35 dir=1.0 type=Mine
-CreateObject pos=-2;-6.35 dir=1.0 type=Mine
-
-CreateObject pos=-33.749;8.38088 dir=1.62565 type=Barricade1
-CreateObject pos=-31.0195;12.4456 dir=1.73199 type=Barricade1
-CreateObject pos=-19.6641;19.8713 dir=1.82936 type=Barricade1
-CreateObject pos=-3.67871;26.1128 dir=0.0145849 type=Barricade1
-CreateObject pos=10.109;22.772 dir=0.180223 type=Barricade1
-CreateObject pos=12.9729;19.0256 dir=0.395455 type=Barricade1
-CreateObject pos=17.2913;5.81082 dir=0.488364 type=Barricade1
-CreateObject pos=11.0401;-12.4154 dir=0.87413 type=Barricade1
-CreateObject pos=-7.56811;-14.6594 dir=1.17938 type=Barricade1
-CreateObject pos=-15.4053;1.73482 dir=1.62814 type=Barricade1
-CreateObject pos=-0.797302;14.6288 dir=0.0217955 type=Barricade1
-CreateObject pos=24.2569;-2.91957 dir=1.05971 type=Barricade1
-CreateObject pos=4.24212;-20.5021 dir=1.36959 type=Barricade1
-CreateObject pos=-6.40746;24.0473 dir=1.55276 type=Barricade1
-CreateObject pos=-27.5986;-6.98642 dir=1.93209 type=Barricade1
-CreateObject pos=-23.2183;-24.941 dir=1.26274 type=Barricade1
-
-CreateObject pos=-136.867;37.559 dir=0.358492 type=WheeledShooter power=0.95 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-143.402;31.2753 dir=0.140933 type=WheeledShooter power=0.96 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-153.895;43.0819 dir=0.187688 type=WheeledShooter power=0.96 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-148.249;47.9556 dir=0.316174 type=WheeledShooter power=0.96 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-146.608;52.3541 dir=0.370391 type=WheeledShooter power=0.95 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-138.032;48.7164 dir=0.497815 type=WheeledShooter power=0.96 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-135.318;59.1361 dir=0.532927 type=WheeledShooter power=0.97 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-135.24;71.8499 dir=0.295475 type=WheeledShooter power=0.97 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-148.154;68.6261 dir=0.419993 type=WheeledShooter power=0.97 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-153.083;77.6773 dir=0.0117496 type=WheeledShooter power=0.94 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-126.385;66.594 dir=0.188054 type=WheeledShooter power=0.95 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
-CreateObject pos=-124.523;60.8385 dir=0.933367 type=WheeledShooter power=0.97 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
+// CreateObject pos=-136.867;37.559 dir=0.358492 type=WheeledShooter power=0.95 selectable=0 trainer=1 proxyActivate=1 proxyDistance=48
 
 // Other stuff |
 //             V
 
 // CreateObject pos= -170; 60.00 dir=0.0 type=SpaceShip run=0 // Just to see how much space should be free
+
+LevelController script="../../../../lvlcreator/Helper.txt"
+CreateObject pos=-196.75;-173.25 dir=1.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/PlantTrees.txt" script2="../../../../lvlcreator/PlantOne.txt" script3="../../../../lvlcreator/ReportPos.txt" script4="../../../../lvlcreator/Rotate.txt" script5="../../../../lvlcreator/PlaceBot.txt" script6="../../../../lvlcreator/PlaceRes.txt" script7="../../../../lvlcreator/PlaceBldg.txt" script8="../../../../lvlcreator/PlaceBug.txt" script9="../../../../lvlcreator/PlaceRuin.txt" script10="../../../../lvlcreator/PlaceWreck.txt" script11="../../../../lvlcreator/DelObject.txt" script12="../../../../lvlcreator/DelTree.txt" script13="../../../../lvlcreator/DelTrees.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false scriptReadOnly10=false scriptReadOnly13=false
+CreateObject pos=-203.25;-173.25 dir=1.5 type=WingedSniffer power=900 range=0.0 magnifyDamage=0 script1="../../../../lvlcreator/SaveTrees.txt" script2="../../../../lvlcreator/SaveBots.txt" script3="../../../../lvlcreator/SaveBldgs.txt" script4="../../../../lvlcreator/SaveRsrcs.txt" script5="../../../../lvlcreator/SaveWrecks.txt" script6="../../../../lvlcreator/SaveBugs.txt" script7="../../../../lvlcreator/SaveOther.txt" script8="../../../../lvlcreator/SaveAll.txt" script9="../../../../lvlcreator/SaveOne.txt" scriptReadOnly1=false scriptReadOnly2=false scriptReadOnly3=false scriptReadOnly4=false scriptReadOnly5=false scriptReadOnly6=false scriptReadOnly7=false scriptReadOnly8=false scriptReadOnly9=false
 
 // Lights and conditions |
 //                       V

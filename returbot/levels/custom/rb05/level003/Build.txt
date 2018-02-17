@@ -4,10 +4,12 @@ extern void object::Build()
 	// Uncomment below the one you want:
 	// type = BotFactory;
 	// type = Converter;
+	// type = PowerStation;
 	// type = RadarStation;
 	// type = RepairCenter;
 	// type = ExchangePost;
 	// type = DefenseTower;
+	// type = PowerPlant;
 	// type = Derrick;
 	
 	if(type == nan)

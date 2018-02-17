@@ -5,7 +5,7 @@ As we know there are aliens in the deposit of \l;uranium ore\u object\uranore;. 
 
 You will not be able to start extraction while there are \l;worms\u object\worm; in the deposit, but you also will not be able to exterminate them while they reside underground. You will have to force them out of subsoil and a bot able to inflict powerful jolts to the ground which we call "\l;thumper\u object\bottump;" will help you in that case. If you will use it then these \l;worms\u object\worm; being sensitive to ground vibrations most certainly will leave subsoil and emerge on surface. After that you will be able to exterminate them with regular means.
 
-Before you take off take aboard a \l;grabber\u object\botgr; and a \l;thumper\u object\bottump;, we are certain that you will need the later in your following missions.
+Before you take off take aboard a \l;thumper\u object\bottump;, we are certain that you will need it in your following missions.
 
 \b;The worms
 You should be very cautious, because this kind spreads a dangerous virus in range up to 40 meters which also increases along with altitude relative to spreader. Though, should these insects be stunned by a \l;thumper\u object\bottump; they will leave subsoil and their abilities will become very confined. Besides, buildings and bots that are dead on power or aboard of a \l;space ship\u object\base; are relatively safe.

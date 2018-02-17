@@ -23,41 +23,18 @@ CreateObject pos= 0.00; 0.00 dir=0.5 type=SpaceShip run=1
 CreateObject pos= 3.25; 3.25 dir=0.5 type=WheeledGrabber power=1 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
 CreateObject pos=-3.25; 3.25 dir=0.5 type=Thumper power=1
 
-CreateObject pos=3.75;-2.50 dir=0.0 type=Titanium
-CreateObject pos=2.50;-2.50 dir=0.0 type=Titanium
-CreateObject pos=0.625;-2.50 dir=0.0 type=UraniumOre
-CreateObject pos=-0.625;-2.50 dir=0.0 type=UraniumOre
+CreateObject pos=3.75;-2.50 dir=0.0 type=UraniumOre
+CreateObject pos=2.50;-2.50 dir=0.0 type=UraniumOre
+// CreateObject pos=0.625;-2.50 dir=0.0 type=UraniumOre
+// CreateObject pos=-0.625;-2.50 dir=0.0 type=UraniumOre
 CreateObject pos=-2.50;-2.50 dir=0.0 type=UraniumOre
 CreateObject pos=-3.75;-2.50 dir=0.0 type=UraniumOre
-CreateObject pos=3.75;-3.75 dir=0.0 type=PowerCell
-CreateObject pos=2.50;-3.75 dir=0.0 type=PowerCell
-CreateObject pos=0.625;-3.75 dir=0.0 type=UraniumOre
-CreateObject pos=-0.625;-3.75 dir=0.0 type=UraniumOre
+CreateObject pos=3.75;-3.75 dir=0.0 type=UraniumOre
+CreateObject pos=2.50;-3.75 dir=0.0 type=UraniumOre
+// CreateObject pos=0.625;-3.75 dir=0.0 type=UraniumOre
+// CreateObject pos=-0.625;-3.75 dir=0.0 type=UraniumOre
 CreateObject pos=-2.50;-3.75 dir=0.0 type=UraniumOre
 CreateObject pos=-3.75;-3.75 dir=0.0 type=UraniumOre
-
-// CreateObject pos=-3.75;-4.30 dir=0.0 type=UraniumOre
-// CreateObject pos=-2.50;-4.30 dir=0.0 type=UraniumOre
-// // CreateObject pos=-0.625;-4.30 dir=0.0 type=UraniumOre
-// // CreateObject pos= 0.625;-4.30 dir=0.0 type=UraniumOre
-// CreateObject pos= 2.50;-4.30 dir=0.0 type=PowerCell
-// CreateObject pos= 3.75;-4.30 dir=0.0 type=PowerCell
-
-// CreateObject pos=-3.125;-3.25 dir=0.0 type=UraniumOre
-// // CreateObject pos= 0.00;-3.25 dir=0.0 type=UraniumOre
-// CreateObject pos= 3.125;-3.25 dir=0.0 type=Titanium
-
-// CreateObject pos=-3.75;-2.20 dir=0.0 type=UraniumOre
-// CreateObject pos=-2.50;-2.20 dir=0.0 type=UraniumOre
-// // CreateObject pos=-0.625;-2.20 dir=0.0 type=UraniumOre
-// // CreateObject pos= 0.625;-2.20 dir=0.0 type=UraniumOre
-// CreateObject pos= 2.50;-2.20 dir=0.0 type=Titanium
-// CreateObject pos= 3.75;-2.20 dir=0.0 type=Titanium
-
-
-// CreateObject pos=-0.625;-2.50 dir=0.0 type=UraniumOre
-// CreateObject pos= 0.625;-2.50 dir=0.0 type=UraniumOre
-// CreateObject pos= 0.00;-3.75 dir=0.0 type=UraniumOre
 
 
 CreateObject pos=42.2389;-59.4169 dir=0.99479 type=RuinBaseCamp

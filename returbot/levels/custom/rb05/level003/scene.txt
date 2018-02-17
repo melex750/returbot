@@ -25,16 +25,16 @@ CreateObject pos= 0.00; 0.00 dir=1.0 type=SpaceShip run=1
 CreateObject pos=-3.25;-3.25 dir=1.5 type=WheeledGrabber power=0.45 select=1 script1="/%lvl%/Build.txt" scriptReadOnly1=false
 CreateObject pos= 3.25;-3.25 dir=1.5 type=Thumper power=0.15
 
-CreateObject pos=-3.75;2.50 dir=0.0 type=Titanium
-CreateObject pos=-2.50;2.50 dir=0.0 type=Titanium
-CreateObject pos=-0.62;2.50 dir=0.0 type=UraniumOre
-CreateObject pos= 0.63;2.50 dir=0.0 type=UraniumOre
+CreateObject pos=-3.75;2.50 dir=0.0 type=UraniumOre
+CreateObject pos=-2.50;2.50 dir=0.0 type=UraniumOre
+// CreateObject pos=-0.62;2.50 dir=0.0 type=UraniumOre
+// CreateObject pos= 0.63;2.50 dir=0.0 type=UraniumOre
 CreateObject pos= 2.50;2.50 dir=0.0 type=UraniumOre
 CreateObject pos= 3.75;2.50 dir=0.0 type=UraniumOre
-CreateObject pos=-3.75;3.75 dir=0.0 type=PowerCell
-CreateObject pos=-2.50;3.75 dir=0.0 type=PowerCell
-CreateObject pos=-0.62;3.75 dir=0.0 type=UraniumOre
-CreateObject pos= 0.63;3.75 dir=0.0 type=UraniumOre
+CreateObject pos=-3.75;3.75 dir=0.0 type=UraniumOre
+CreateObject pos=-2.50;3.75 dir=0.0 type=UraniumOre
+// CreateObject pos=-0.62;3.75 dir=0.0 type=UraniumOre
+// CreateObject pos= 0.63;3.75 dir=0.0 type=UraniumOre
 CreateObject pos= 2.50;3.75 dir=0.0 type=UraniumOre
 CreateObject pos= 3.75;3.75 dir=0.0 type=UraniumOre
 
@@ -58,6 +58,9 @@ CreateObject pos=-28.3304;-128.434 dir=2 type=PowerCell power=1.0
 CreateObject pos=-29.2642;-135.498 dir=2 type=PowerCell power=1.0
 CreateObject pos=-27.6712;-136.066 dir=2 type=PowerCell power=1.0
 CreateObject pos=16.8069;-133.32 dir=2 type=PowerCell power=0.15
+CreateObject pos=24.6573;-121.554 dir=2 type=PowerCell power=0.23
+CreateObject pos=23.2076;-119.878 dir=2 type=PowerCell power=0.31
+CreateObject pos=20.1083;-122.857 dir=2 type=PowerCell power=0.32
 CreateObject pos=-62.0827;-128.553 dir=1.99403 type=DefenseTower power=-1 selectable=0
 CreateObject pos=-59.0934;-128.606 dir=1.00322 type=TrackedGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
 CreateObject pos=74.9062;-89.7143 dir=0.833498 type=DefenseTower power=-1 selectable=0
@@ -79,7 +82,7 @@ CreateObject pos=160.95;-122.964 dir=0.0784775 type=TrackedGrabber power=1 selec
 //           V
 
 // CreateObject pos= -105; -7 dir=0.0 type=ExchangePost
-CreateObject pos=-105; -7 dir=1.5 type=WheeledGrabber power=1 selectable=1 script1="%lvl%/ai/score.txt" scriptReadOnly1=false // when done with, set selectable to 0 and remove this comment
+CreateObject pos=-105; -7 dir=1.5 type=WheeledGrabber power=1 selectable=1 script1="%lvl%/ai/score.txt" scriptReadOnly1=false run=0
 CreateObject pos=-105; 3 dir=1.5 type=WheeledShooter power=1 script1="%lvl%/programs/shoot.txt" scriptReadOnly1=false
 CreateObject pos= -105;-0.65 dir=0.0 type=Barricade1
 CreateObject pos= -105;-13.35 dir=1.0 type=Barricade1

@@ -36,28 +36,6 @@ CreateObject pos=-180.625; 176.25 dir=0.0 type=UraniumOre
 CreateObject pos=-182.50; 176.25 dir=0.0 type=UraniumOre
 CreateObject pos=-183.75; 176.25 dir=0.0 type=UraniumOre
 
-// CreateObject pos=-183.75;177.80 dir=0.0 type=UraniumOre
-// CreateObject pos=-182.50;177.80 dir=0.0 type=UraniumOre
-// // CreateObject pos=-180.625;177.80 dir=0.0 type=UraniumOre
-// // CreateObject pos=-179.325;177.80 dir=0.0 type=UraniumOre
-// CreateObject pos=-177.50;177.80 dir=0.0 type=Titanium
-// CreateObject pos=-176.25;177.80 dir=0.0 type=Titanium
-
-// CreateObject pos=-183.125;176.75 dir=0.0 type=UraniumOre
-// // CreateObject pos=-180.00;176.75 dir=0.0 type=UraniumOre
-// CreateObject pos=-176.875;176.75 dir=0.0 type=Titanium
-
-// CreateObject pos=-183.75;175.70 dir=0.0 type=UraniumOre
-// CreateObject pos=-182.50;175.70 dir=0.0 type=UraniumOre
-// // CreateObject pos=-180.625;175.70 dir=0.0 type=UraniumOre
-// // CreateObject pos=-179.325;175.70 dir=0.0 type=UraniumOre
-// CreateObject pos=-177.50;175.70 dir=0.0 type=PowerCell
-// CreateObject pos=-176.25;175.70 dir=0.0 type=PowerCell
-
-// CreateObject pos=-180.625;177.50 dir=0.0 type=UraniumOre
-// CreateObject pos=-179.325;177.50 dir=0.0 type=UraniumOre
-// CreateObject pos=-180.00;176.25 dir=0.0 type=UraniumOre
-
 CreateObject pos=-176.75;180.00 dir=0.0 type=BlackBox
 
 CreateObject pos=-172.149;151.192 dir=1.0219006 type=RuinRadar

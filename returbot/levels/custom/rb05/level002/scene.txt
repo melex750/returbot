@@ -190,7 +190,7 @@ MapZoom factor=2
 
 EnableBuild type=BotFactory
 EnableBuild type=Converter
-// EnableBuild type=RadarStation
+EnableBuild type=RadarStation
 EnableBuild type=RepairCenter
 EnableBuild type=ExchangePost
 EnableBuild type=DefenseTower

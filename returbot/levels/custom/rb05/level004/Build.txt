@@ -4,6 +4,7 @@ extern void object::Build()
 	// Uncomment below the one you want:
 	// type = ResearchCenter;
 	// type = BotFactory;
+	// type = Converter;
 	// type = RadarStation;
 	// type = RepairCenter;
 	// type = ExchangePost;

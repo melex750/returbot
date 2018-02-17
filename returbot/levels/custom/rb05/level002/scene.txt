@@ -189,12 +189,12 @@ MapColor floor=0.706;0.616;0.282 water=0.604;0.922;1.000
 MapZoom factor=2
 
 EnableBuild type=BotFactory
-EnableBuild type=Converter
+// EnableBuild type=Converter
 EnableBuild type=RadarStation
 EnableBuild type=RepairCenter
 EnableBuild type=ExchangePost
 EnableBuild type=DefenseTower
-EnableBuild type=Derrick
+// EnableBuild type=Derrick
 // EnableBuild type=NuclearPlant
 EnableBuild type=FlatGround
 EnableBuild type=Flag

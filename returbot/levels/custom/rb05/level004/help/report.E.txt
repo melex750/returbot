@@ -5,7 +5,7 @@ Currently in a geo-stationary orbit of Saari.
 \tab;Temperature:      38.4C
 \tab;Atmosphere:       CO2, oxygen, nitrogen
 \tab;Wind:             1.4 mps
-\tab;Titanium ore:     none
+\tab;Titanium ore:     some
 \tab;Uranium ore:      none
 
 \s;-> SUBSOIL\c;

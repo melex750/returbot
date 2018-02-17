@@ -12,7 +12,4 @@ Currently in a geo-stationary orbit of Saari.
 \tab;Energy source:    in some places (probe needed)
 \tab;Titanium ore:     in some places (probe needed)
 \tab;Uranium ore:      not detected
-
-\s;-> ADDITIONAL INFORMATION\c;
-\tab;Detected:         inactive objects
 \n;

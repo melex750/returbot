@@ -51,14 +51,15 @@ CreateObject pos=-6.35821;-111.754 dir=1.10332 type=Titanium
 CreateObject pos=-5.75123;-123.905 dir=0.377042 type=Titanium
 CreateObject pos=19.9992;-128.409 dir=1.01023 type=BotFactory selectable=0
 CreateObject pos=2.39685;-142.226 dir=1.4952 type=RepairCenter selectable=0
-CreateObject pos=-2.41994;-127.655 dir=1.99777 type=ExchangePost selectable=0
+CreateObject pos=12.6524;-143.003 dir=1.49698 type=RadarStation selectable=0
+CreateObject pos=-52.1509;-129.084 dir=0.51008 type=ExchangePost selectable=0
 CreateObject pos=-24.9459;-131.709 dir=0.0093 type=PowerStation power=1.0 selectable=0
 CreateObject pos=-28.3304;-128.434 dir=2 type=PowerCell power=1.0
 CreateObject pos=-29.2642;-135.498 dir=2 type=PowerCell power=1.0
 CreateObject pos=-27.6712;-136.066 dir=2 type=PowerCell power=1.0
 CreateObject pos=16.8069;-133.32 dir=2 type=PowerCell power=0.15
 CreateObject pos=-62.0827;-128.553 dir=1.99403 type=DefenseTower power=-1 selectable=0
-CreateObject pos=-59.0934;-128.606 dir=1.00322 type=WheeledGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=-59.0934;-128.606 dir=1.00322 type=TrackedGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
 CreateObject pos=74.9062;-89.7143 dir=0.833498 type=DefenseTower power=-1 selectable=0
 CreateObject pos=23.7292;-190.259 dir=0.453185 type=TrackedGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
 CreateObject pos=24.0301;-193.153 dir=1.47285 type=DefenseTower power=-1 selectable=0
@@ -78,7 +79,7 @@ CreateObject pos=160.95;-122.964 dir=0.0784775 type=WheeledGrabber power=1 selec
 //           V
 
 // CreateObject pos= -105; -7 dir=0.0 type=ExchangePost
-CreateObject pos=-105; -7 dir=1.5 type=WheeledGrabber power=1 trainer=1 selectable=1 script1="%lvl%/programs/score.txt" scriptReadOnly1=false // when done with, set selectable to 0 and remove this comment
+CreateObject pos=-105; -7 dir=1.5 type=WheeledGrabber power=1 selectable=1 script1="%lvl%/ai/score.txt" scriptReadOnly1=false // when done with, set selectable to 0 and remove this comment
 CreateObject pos=-105; 3 dir=1.5 type=WheeledShooter power=1 script1="%lvl%/programs/shoot.txt" scriptReadOnly1=false
 CreateObject pos= -105;-0.65 dir=0.0 type=Barricade1
 CreateObject pos= -105;-13.35 dir=1.0 type=Barricade1

@@ -73,7 +73,7 @@ CreateObject pos=150.694;-113.476 dir=1.64513 type=TrackedSniffer power=0.45 sel
 CreateObject pos=155.941;-121.172 dir=1.06454 type=Derrick selectable=0
 CreateObject pos=154.227;-120.82 dir=1.06454 type=TitaniumOre
 CreateObject pos=163.606;-123.692 dir=1.08198 type=DefenseTower power=-1 selectable=0
-CreateObject pos=160.95;-122.964 dir=0.0784775 type=WheeledGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
+CreateObject pos=160.95;-122.964 dir=0.0784775 type=TrackedGrabber power=1 selectable=0 proxyActivate=1 proxyDistance=0 script1="m_placedef1.txt" run=1
 
 // The range |
 //           V

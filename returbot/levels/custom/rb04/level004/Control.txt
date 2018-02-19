@@ -169,6 +169,7 @@ public void Rdata_set(int cat, point pos, Roam_data rdata)
         if(rdata.hc == 3){ camps.out3[rdata.hcs] = abstime() + 15 + 90 * rand(); }
         if(rdata.hc == 4){ camps.out4[rdata.hcs] = abstime() + 15 + 100 * rand(); }
     }
+    camps = null;
 }
 
 extern void LvlCntlr_main()

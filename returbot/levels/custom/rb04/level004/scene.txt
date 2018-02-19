@@ -36,19 +36,19 @@ CreateObject pos=-138.25; -121.25 dir=0.0 type=Titanium
 
 // CreateObject pos=-138.75; -122.50 dir=0.0 type=Titanium
 // CreateObject pos=-137.50; -122.50 dir=0.0 type=PowerCell
-CreateObject pos=-135.625; -122.50 dir=0.0 type=PowerCell
-CreateObject pos=-134.325; -122.50 dir=0.0 type=PowerCell
-// CreateObject pos=-132.50; -122.50 dir=0.0 type=PowerCell
-// CreateObject pos=-131.25; -122.50 dir=0.0 type=PowerCell
+// CreateObject pos=-135.625; -122.50 dir=0.0 type=PowerCell
+// CreateObject pos=-134.325; -122.50 dir=0.0 type=PowerCell
+CreateObject pos=-132.50; -122.50 dir=0.0 type=PowerCell
+CreateObject pos=-131.25; -122.50 dir=0.0 type=PowerCell
 // CreateObject pos=-138.75; -121.25 dir=0.0 type=Titanium
 // CreateObject pos=-137.50; -121.25 dir=0.0 type=PowerCell
-CreateObject pos=-135.625; -121.25 dir=0.0 type=PowerCell
-CreateObject pos=-134.325; -121.25 dir=0.0 type=PowerCell
-// CreateObject pos=-132.50; -121.25 dir=0.0 type=PowerCell
-// CreateObject pos=-131.25; -121.25 dir=0.0 type=PowerCell
+// CreateObject pos=-135.625; -121.25 dir=0.0 type=PowerCell
+// CreateObject pos=-134.325; -121.25 dir=0.0 type=PowerCell
+CreateObject pos=-132.50; -121.25 dir=0.0 type=PowerCell
+CreateObject pos=-131.25; -121.25 dir=0.0 type=PowerCell
 
-CreateObject pos=-131.75; -122.50 dir=0.0 type=PowerCell
-CreateObject pos=-131.75; -121.25 dir=0.0 type=PowerCell
+// CreateObject pos=-131.75; -122.50 dir=0.0 type=PowerCell
+// CreateObject pos=-131.75; -121.25 dir=0.0 type=PowerCell
 
 CreateObject pos=-133.631;-233.49 dir=1.96791 type=BotFactory proxyActivate=1 proxyDistance=18
 CreateObject pos=-112.257;-228.734 dir=0.839523 type=DefenseTower power=-1 proxyActivate=1 proxyDistance=18

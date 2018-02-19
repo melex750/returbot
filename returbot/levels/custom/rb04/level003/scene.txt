@@ -30,19 +30,19 @@ CreateObject pos=29.25; 58.75 dir=0.0 type=Titanium
 
 // CreateObject pos=28.75; 57.50 dir=0.0 type=PowerCell
 // CreateObject pos=30.00; 57.50 dir=0.0 type=PowerCell
-CreateObject pos=31.875; 57.50 dir=0.0 type=PowerCell
-CreateObject pos=33.125; 57.50 dir=0.0 type=PowerCell
-// CreateObject pos= 35.00; 57.50 dir=0.0 type=PowerCell
-// CreateObject pos= 36.25; 57.50 dir=0.0 type=PowerCell
+// CreateObject pos=31.875; 57.50 dir=0.0 type=PowerCell
+// CreateObject pos=33.125; 57.50 dir=0.0 type=PowerCell
+CreateObject pos= 35.00; 57.50 dir=0.0 type=PowerCell
+CreateObject pos= 36.25; 57.50 dir=0.0 type=PowerCell
 // CreateObject pos=28.75; 58.75 dir=0.0 type=PowerCell
 // CreateObject pos=30.00; 58.75 dir=0.0 type=PowerCell
-CreateObject pos=31.875; 58.75 dir=0.0 type=PowerCell
-CreateObject pos=33.125; 58.75 dir=0.0 type=PowerCell
-// CreateObject pos=35.00; 58.75 dir=0.0 type=PowerCell
-// CreateObject pos=36.25; 58.75 dir=0.0 type=PowerCell
+// CreateObject pos=31.875; 58.75 dir=0.0 type=PowerCell
+// CreateObject pos=33.125; 58.75 dir=0.0 type=PowerCell
+CreateObject pos=35.00; 58.75 dir=0.0 type=PowerCell
+ CreateObject pos=36.25; 58.75 dir=0.0 type=PowerCell
 
-CreateObject pos=35.75; 57.50 dir=0.0 type=PowerCell
-CreateObject pos=35.75; 58.75 dir=0.0 type=PowerCell
+// CreateObject pos=35.75; 57.50 dir=0.0 type=PowerCell
+// CreateObject pos=35.75; 58.75 dir=0.0 type=PowerCell
 
 CreateObject pos=-33;-28 dir=0.0 type=RadarStation selectable=0
 // CreateObject pos=-40;30 dir=0.0 type=PowerStation power=1.0 selectable=0

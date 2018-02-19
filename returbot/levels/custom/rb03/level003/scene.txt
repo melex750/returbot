@@ -203,18 +203,18 @@ CreateObject pos=83.0;151.0 dir=2 type=WheeledShooter power=1
 CreateObject pos=83.0;198.0 dir=0.5 type=WheeledShooter power=1
 // CreateObject pos=73.1716;179.339 dir=0.5 type=WheeledGrabber power=0.75 selectable=0 script1="%lvl%/ai/keyer.txt" run=1
 
-CreateObject pos=81.9614;132.557 dir=1.99924 type=TargetBot power=0.001
-CreateObject pos=102.029;132.604 dir=1.99924 type=TargetBot power=0.001
-CreateObject pos=122.19;132.652 dir=1.99924 type=TargetBot power=0.001
-CreateObject pos=147.281;156.931 dir=1.51226 type=TargetBot power=0.001
-CreateObject pos=147.519;176.875 dir=1.50142 type=TargetBot power=0.001
-CreateObject pos=147.606;196.504 dir=1.50142 type=TargetBot power=0.001
-CreateObject pos=123.092;212.568 dir=1.00517 type=TargetBot power=0.001
-CreateObject pos=103.645;212.092 dir=1.00098 type=TargetBot power=0.001
-CreateObject pos=82.7286;212.333 dir=1.00149 type=TargetBot power=0.001
-// CreateObject pos=67.674;198.201 dir=0.524104 type=TargetBot power=0.001
-// CreateObject pos=67.3982;158.179 dir=0.533553 type=TargetBot power=0.001
-CreateObject pos=104.60;174.39 dir=0.988701 type=TargetBot power=0.001
+CreateObject pos=81.9614;132.557 dir=1.99924 type=TargetBot power=0.0001
+CreateObject pos=102.029;132.604 dir=1.99924 type=TargetBot power=0.0001
+CreateObject pos=122.19;132.652 dir=1.99924 type=TargetBot power=0.0001
+CreateObject pos=147.281;156.931 dir=1.51226 type=TargetBot power=0.0001
+CreateObject pos=147.519;176.875 dir=1.50142 type=TargetBot power=0.0001
+CreateObject pos=147.606;196.504 dir=1.50142 type=TargetBot power=0.0001
+CreateObject pos=123.092;212.568 dir=1.00517 type=TargetBot power=0.0001
+CreateObject pos=103.645;212.092 dir=1.00098 type=TargetBot power=0.0001
+CreateObject pos=82.7286;212.333 dir=1.00149 type=TargetBot power=0.0001
+// CreateObject pos=67.674;198.201 dir=0.524104 type=TargetBot power=0.0001
+// CreateObject pos=67.3982;158.179 dir=0.533553 type=TargetBot power=0.0001
+CreateObject pos=104.60;174.39 dir=0.988701 type=TargetBot power=0.0001
 
 CreateObject pos=41.5176;27.1095 dir=1.86152 type=TargetBot power=0.1
 // CreateObject pos=-32.7224;110.077 dir=0.317642 type=TargetBot power=0.3

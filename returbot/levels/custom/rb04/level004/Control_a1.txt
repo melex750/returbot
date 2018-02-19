@@ -1,31 +1,36 @@
 public class Camps
 {
-    static point[] camps, resp0, resp1, resp2, resp3, resp4;
+    int i;
+    point[] camps, resp0, resp1, resp2, resp3, resp4;
     static float[] awd = {40, 40, 40, 40, 40};
     static float[] out0 = {1,1}, out1 = {1,1}, out2 = {1,1}, out3 = {1,1}, out4 = {1,1};
     static int lim0 = 12, lim1 = 12, lim2 = 9, lim3 = 12, lim4 = 9;
     
     void Camps()
     {
-        if(camps == null)
-        {
-            camps[0].x = -160.09; camps[0].y = 9.69802; camps[0].z = 0;
-            camps[1].x = -169.342; camps[1].y = 90.0963; camps[1].z = 0;
-            camps[2].x = -138.376; camps[2].y = 141.723; camps[2].z = 0;
-            camps[3].x = -8.62029; camps[3].y = 178.623; camps[3].z = 0;
-            camps[4].x = 30.2652; camps[4].y = 50.2889; camps[4].z = 0;
-            resp0[0].x = -350.602; resp0[0].y = 84.2715; resp0[0].z = 0;
-            resp0[1].x = -345.931; resp0[1].y = -84.621; resp0[1].z = 0;
-            resp1[0].x = -321.713; resp1[0].y = 144.735; resp1[0].z = 0;
-            resp1[1].x = -333.848; resp1[1].y = 141.365; resp1[1].z = 0;
-            resp2[0].x = -181.894; resp2[0].y = 156.12; resp2[0].z = 0;
-            resp2[1].x = -181.621; resp2[1].y = 165.214; resp2[1].z = 0;
-            resp3[0].x = 202.222; resp3[0].y = 244.837; resp3[0].z = 0;
-            resp3[1].x = 107.624; resp3[1].y = 356.806; resp3[1].z = 0;
-            resp3[2].x = -2.72068; resp3[2].y = 351.422; resp3[2].z = 0;
-            resp4[0].x = 195.726; resp4[0].y = 354.882; resp4[0].z = 0;
-            resp4[1].x = 202.471; resp4[1].y = 232.146; resp4[1].z = 0;
-        }
+        i = 0;
+        camps[i].x = -160.09; camps[i].y = 9.69802; camps[i++].z = 0;
+        camps[i].x = -169.342; camps[i].y = 90.0963; camps[i++].z = 0;
+        camps[i].x = -138.376; camps[i].y = 141.723; camps[i++].z = 0;
+        camps[i].x = -8.62029; camps[i].y = 178.623; camps[i++].z = 0;
+        camps[i].x = 30.2652; camps[i].y = 50.2889; camps[i++].z = 0;
+        i = 0;
+        resp0[i].x = -350.602; resp0[i].y = 84.2715; resp0[i++].z = 0;
+        resp0[i].x = -345.931; resp0[i].y = -84.621; resp0[i++].z = 0;
+        i = 0;
+        resp1[i].x = -321.713; resp1[i].y = 144.735; resp1[i++].z = 0;
+        resp1[i].x = -333.848; resp1[i].y = 141.365; resp1[i++].z = 0;
+        i = 0;
+        resp2[i].x = -181.894; resp2[i].y = 156.12; resp2[i++].z = 0;
+        resp2[i].x = -181.621; resp2[i].y = 165.214; resp2[i++].z = 0;
+        i = 0;
+        resp3[i].x = 202.222; resp3[i].y = 244.837; resp3[i++].z = 0;
+        resp3[i].x = 107.624; resp3[i].y = 356.806; resp3[i++].z = 0;
+        resp3[i].x = -2.72068; resp3[i].y = 351.422; resp3[i++].z = 0;
+        i = 0;
+        resp4[i].x = 195.726; resp4[i].y = 354.882; resp4[i++].z = 0;
+        resp4[i].x = 202.471; resp4[i].y = 232.146; resp4[i++].z = 0;
+        i = 0;
     }
 }
 
@@ -232,8 +237,7 @@ extern void LvlCntlr_main()
         {
             if(camps.awd[i] > 0)
             {
-                item = search(list,camps.camps[i]);
-                if(item == null or distance2d(item.position,camps.camps[i]) > camps.awd[i])
+                if(search(list,camps.camps[i]) == null or distance2d(search(list,camps.camps[i]).position,camps.camps[i]) > camps.awd[i])
                 {
                     camps.awd[i] = -1;
                 }

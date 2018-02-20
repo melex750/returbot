@@ -3,8 +3,10 @@ public class Camps
     static point[] camps, resp0, resp1, resp2, resp3, resp4;
     static float[] awd = {40, 40, 40, 40, 40};
     static float[] out0 = {1,1}, out1 = {1,1}, out2 = {1,1}, out3 = {1,1}, out4 = {1,1};
-    static int lim0 = 12, lim1 = 12, lim2 = 9, lim3 = 12, lim4 = 9;
+    private static int[] lim = { 12, 12, 9, 12, 9 };
     
+    float GetLim(int i) { return lim[i]; }
+
     void Camps()
     {
         if(camps == null)
@@ -246,11 +248,11 @@ extern void LvlCntlr_main()
         {
             if(i >= sizeof(camps.awd) or camps.awd[i] < 0)
             {
-                if(i == 0){ out = camps.out0; lim = camps.lim0; }
-                if(i == 1){ out = camps.out1; lim = camps.lim1; }
-                if(i == 2){ out = camps.out2; lim = camps.lim2; }
-                if(i == 3){ out = camps.out3; lim = camps.lim3; }
-                if(i == 4){ out = camps.out4; lim = camps.lim4; }
+                if(i == 0){ out = camps.out0; lim = camps.GetLim(0); }
+                if(i == 1){ out = camps.out1; lim = camps.GetLim(1); }
+                if(i == 2){ out = camps.out2; lim = camps.GetLim(2); }
+                if(i == 3){ out = camps.out3; lim = camps.GetLim(3); }
+                if(i == 4){ out = camps.out4; lim = camps.GetLim(4); }
                 if(i > 4){ break; }
                 i2 = 0;
                 while(lim > 0 and i2 < sizeof(out))

@@ -138,17 +138,17 @@ CreateObject pos=-278.049;73.9151 dir=2 type=TitaniumOre
 CreateObject pos=-276.234;73.7295 dir=2 type=TitaniumOre
 CreateObject pos=-275.097;62.1727 dir=2 type=TitaniumOre
 CreateObject pos=-247.127;77.9935 dir=2 type=TitaniumOre
-CreateObject pos=-211.607;24.8935 dir=2 type=TitaniumOre
-CreateObject pos=-204.801;25.5489 dir=2 type=TitaniumOre
-CreateObject pos=-203.118;19.6432 dir=2 type=TitaniumOre
-CreateObject pos=-191.819;23.8793 dir=2 type=TitaniumOre
+// CreateObject pos=-211.607;24.8935 dir=2 type=TitaniumOre
+// CreateObject pos=-204.801;25.5489 dir=2 type=TitaniumOre
+// CreateObject pos=-203.118;19.6432 dir=2 type=TitaniumOre
+// CreateObject pos=-191.819;23.8793 dir=2 type=TitaniumOre
 CreateObject pos=-172.19;20.1029 dir=2 type=TitaniumOre
 CreateObject pos=-173.566;17.4123 dir=2 type=TitaniumOre
 CreateObject pos=-175.732;9.15524 dir=2 type=TitaniumOre
 CreateObject pos=-165.923;9.24632 dir=2 type=TitaniumOre
 CreateObject pos=-167.303;9.82948 dir=2 type=TitaniumOre
 CreateObject pos=-167.994;16.8791 dir=2 type=TitaniumOre
-CreateObject pos=-187.977;-27.1452 dir=2 type=TitaniumOre
+// CreateObject pos=-187.977;-27.1452 dir=2 type=TitaniumOre
 CreateObject pos=234.592;225.969 dir=2 type=TitaniumOre
 CreateObject pos=239.106;230.155 dir=2 type=TitaniumOre
 CreateObject pos=229.089;242.504 dir=2 type=TitaniumOre

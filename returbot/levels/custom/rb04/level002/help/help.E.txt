@@ -1,5 +1,7 @@
 \b;From Mission Control
-Radar station installed in this area is responsible for communication with Volcano. However, we are certain that quality of connection could be further improved by cleaning area around of various junk. This is your current task: remove all the \l;ruins\u object\ruin;, \l;wrecks\u object\wreck; and \l;any\u object\titanore; \l;other\u object\titan; \l;objects\u object\power cell; that you will discover within radius of 100 meters from the \l;radar station\u object\radar;.
+Radar station installed in this area is responsible for communication with Volcano. However, we are certain that quality of connection could be further improved by cleaning area around of various junk.
+
+Remove all the \l;ruins\u object\ruin;, \l;wrecks\u object\wreck; and \l;any\u object\titanore; \l;other\u object\titan; \l;objects\u object\power cell; that you will discover within radius of 100 meters from the \l;radar station\u object\radar;. Along with that recharge \l;power cell\u object\power cell; of a \l;defense tower\u object\tower; nearby.
 
 \key;\key help;\norm; allows you to review these instructions at all times on your personal SatCom \button 63;.
 

@@ -42,21 +42,30 @@ CreateObject pos=-125.821;87.1722 dir=0.268788 type=RuinSupport
 CreateObject pos=-112.294;141.699 dir=0.506769 type=RuinRadar
 CreateObject pos=-59.7012;66.6006 dir=1.21504 type=WreckBott2
 CreateObject pos=-180.85;125.76 dir=1.09781 type=WreckBotr2
-CreateObject pos=-65.9701;107.074 dir=1.32168 type=RuinSupport
-CreateObject pos=-67.5638;109.99 dir=0.0640681 type=WreckBotw2
-CreateObject pos=-76.9349;103.866 dir=0.801849 type=RuinSupport
+// CreateObject pos=-65.9701;107.074 dir=1.32168 type=RuinSupport
+// CreateObject pos=-67.5638;109.99 dir=0.0640681 type=WreckBotw2
+// CreateObject pos=-76.9349;103.866 dir=0.801849 type=RuinSupport
 CreateObject pos=-217.133;132.232 dir=0.00687086 type=RuinConvert
 CreateObject pos=-99.7413;124.373 dir=0.289461 type=WreckBott1
 CreateObject pos=-212.374;128.099 dir=1.65445 type=RuinSupport
 CreateObject pos=-214.589;134.358 dir=1.30698 type=RuinSupport
 CreateObject pos=-205.102;125.198 dir=1.20369 type=WreckBotw2
 CreateObject pos=-211.198;129.423 dir=2 type=PowerCell power=0.15
-CreateObject pos=-213.316;133.142 dir=2 type=PowerCell power=0.35
+CreateObject pos=-213.316;133.142 dir=2 type=PowerCell power=0.75
 CreateObject pos=-191.541;129.2 dir=2 type=PowerCell power=0.6
+CreateObject pos=-177.78;66.9943 dir=1.4981 type=RuinRadar
+CreateObject pos=-175.646;77.388 dir=0.574199 type=WreckBott1
+CreateObject pos=-175.865;69.7089 dir=0.262876 type=RuinSupport
+CreateObject pos=-176.579;79.0019 dir=2 type=PowerCell power=0.15
 
 CreateObject pos=-239.194;53.6668 dir=1.5071 type=RuinConvert
 CreateObject pos=-254.364;69.3789 dir=1.26153 type=WreckBott2
 CreateObject pos=-246.209;57.0516 dir=0.24136 type=RuinDoor
+
+CreateObject pos=-122.171;173.405 dir=1.69661 type=WreckBotr2
+CreateObject pos=-107.6;242.33 dir=0.490442 type=RuinRadar
+CreateObject pos=-107.247;243.94 dir=0.671883 type=WreckBott2
+CreateObject pos=-105.225;242.763 dir=0.807049 type=RuinSupport
 
 // CreateObject pos=-29.7625;-35.0046 dir=1.72566 type=RuinBotFactory
 CreateObject pos=-12.7376;-46.7702 dir=1.52716 type=RuinRadar
@@ -129,6 +138,25 @@ CreateObject pos=-278.049;73.9151 dir=2 type=TitaniumOre
 CreateObject pos=-276.234;73.7295 dir=2 type=TitaniumOre
 CreateObject pos=-275.097;62.1727 dir=2 type=TitaniumOre
 CreateObject pos=-247.127;77.9935 dir=2 type=TitaniumOre
+CreateObject pos=-211.607;24.8935 dir=2 type=TitaniumOre
+CreateObject pos=-204.801;25.5489 dir=2 type=TitaniumOre
+CreateObject pos=-203.118;19.6432 dir=2 type=TitaniumOre
+CreateObject pos=-191.819;23.8793 dir=2 type=TitaniumOre
+CreateObject pos=-172.19;20.1029 dir=2 type=TitaniumOre
+CreateObject pos=-173.566;17.4123 dir=2 type=TitaniumOre
+CreateObject pos=-175.732;9.15524 dir=2 type=TitaniumOre
+CreateObject pos=-165.923;9.24632 dir=2 type=TitaniumOre
+CreateObject pos=-167.303;9.82948 dir=2 type=TitaniumOre
+CreateObject pos=-167.994;16.8791 dir=2 type=TitaniumOre
+CreateObject pos=-187.977;-27.1452 dir=2 type=TitaniumOre
+CreateObject pos=234.592;225.969 dir=2 type=TitaniumOre
+CreateObject pos=239.106;230.155 dir=2 type=TitaniumOre
+CreateObject pos=229.089;242.504 dir=2 type=TitaniumOre
+CreateObject pos=230.813;239.475 dir=2 type=TitaniumOre
+CreateObject pos=233.223;244.874 dir=2 type=TitaniumOre
+CreateObject pos=242.095;235.326 dir=2 type=TitaniumOre
+CreateObject pos=234.796;233.954 dir=2 type=TitaniumOre
+CreateObject pos=227.4;252.739 dir=2 type=TitaniumOre
 
 CreateObject pos=89.2897;-9.15197 dir=0.181967 type=Greenery16
 CreateObject pos=76.5092;-0.162292 dir=1.84471 type=Greenery18
@@ -200,38 +228,6 @@ CreateFog pos=-160.183;208.521 height= 10 dim=30 delay=4.0 type=3
 CreateFog pos=-245.021;211.024 height= 10 dim=20 delay=4.0 type=3
 CreateFog pos= 223.030;-207.973 height= 20 dim=30 delay=4.0 type=3
 
-// // Epave.
-// CreateFog pos= 95; -70 height=-10 dim=10 delay=4.0 type=2
-// CreateFog pos= 95; -70 height=-11 dim=10 delay=5.0 type=2
-// CreateFog pos= 97; -96 height= 3 dim=20 delay=4.0 type=2
-// CreateFog pos= 97; -96 height= 4 dim=20 delay=5.0 type=2
-// CreateFog pos= 126;-102 height= 4 dim=20 delay=4.0 type=2
-// CreateFog pos= 126;-102 height= 5 dim=20 delay=5.0 type=2
-// CreateFog pos= 126;-139 height= 3 dim=20 delay=4.0 type=2
-// CreateFog pos= 126;-139 height= 4 dim=20 delay=5.0 type=2
-// CreateFog pos= 103;-134 height= 2 dim=30 delay=4.0 type=2
-// CreateFog pos= 103;-134 height= 3 dim=30 delay=5.0 type=2
-// CreateFog pos= 155;-125 height=-25 dim=20 delay=4.0 type=2
-// CreateFog pos= 155;-125 height=-26 dim=20 delay=5.0 type=2
-//
-// // Cratère ouest.
-// CreateFog pos=-217; -2 height= 3 dim=20 delay=4.0 type=2
-// CreateFog pos=-217; -2 height= 4 dim=20 delay=5.0 type=2
-// CreateFog pos=-233; 6 height= 2 dim=10 delay=4.0 type=2
-// CreateFog pos=-233; 6 height= 3 dim=10 delay=5.0 type=2
-// CreateFog pos=-186; -2 height= 3 dim=30 delay=4.0 type=2
-// CreateFog pos=-186; -2 height= 4 dim=30 delay=5.0 type=2
-//
-// // Cratère sud-ouest.
-// CreateFog pos=-138;-140 height= 3 dim=20 delay=4.0 type=2
-// CreateFog pos=-138;-140 height= 4 dim=20 delay=5.0 type=2
-// CreateFog pos=-112;-150 height= 3 dim=40 delay=4.0 type=2
-// CreateFog pos=-112;-150 height= 4 dim=40 delay=5.0 type=2
-//
-// // Cratère sud.
-// CreateFog pos= -13;-185 height= 4 dim=30 delay=4.0 type=2
-// CreateFog pos= -13;-185 height= 5 dim=30 delay=5.0 type=2
-
 CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
 CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
 CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
@@ -267,6 +263,7 @@ DoneResearch type=RECYCLER
 EndMissionTake pos=0.00; 0.00; dist=100000 tool=Grabber lost=0
 EndMissionTake pos=0.00; 0.00 dist=8.0 tool=Grabber min=1
 EndMissionTake pos=-126;92 dist=20 type=RadarStation min=1
+EndMissionTake pos=-126;92 dist=20 type=DefenseTower min=1 powermin=1
 EndMissionTake pos=-126;92 dist=100 type=Titanium min=0 max=2
 EndMissionTake pos=-126;92 dist=100 type=PowerCell min=0 max=2
 EndMissionTake pos=-126;92 dist=100 type=NuclearCell min=0 max=2
